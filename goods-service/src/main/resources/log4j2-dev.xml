@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration status="WARN">
+    <Properties>
+        <Property name="FILE_ROOT" value="."/>
+        <Property name="LOG_HOME" value="logs"/>
+        <Property name="FILE_SIZE" value="500 MB"/>
+        <Property name="CONSOLE_PATTERN" value="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%xEx%n"/>
+        <Property name="FILE_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%xEx%n"/>
+        <Property name="SQL_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level - %msg%xEx%n"/>
+    </Properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <!-- 控制台只输出level及其以上级别的信息 -->
+            <ThresholdFilter level="DEBUG" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="${CONSOLE_PATTERN}"/>
+        </Console>
+        <!-- 处理 DEBUG 级别的日志，并把该日志放到logs/debug.log文件中 -->
+        <!-- 打印出 DEBUG 级别日志，每次大小超过size，则这size大小的日志会自动存入按年份-月份建立的文件夹下面并进行压缩，作为存档 -->
+        <!--<TimeBasedTriggeringPolicy interval="1"/>可以指定每1天生成一个新文件-->
+        <RollingFile name="RollingFileDebug" fileName="${FILE_ROOT}/${LOG_HOME}/debug.log" filePattern="logs/$${date:yyyy-MM}/debug-%d{yyyy-MM-dd}-%i.log.gz">
+            <Filters>
+                <ThresholdFilter level="DEBUG"/>
+                <ThresholdFilter level="INFO" onMatch="DENY" onMismatch="NEUTRAL"/>
+            </Filters>
+            <PatternLayout pattern="${FILE_PATTERN}"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="${FILE_SIZE}"/>
+                <TimeBasedTriggeringPolicy/>
+            </Policies>
+        </RollingFile>
+        <!-- 处理 INFO 级别的日志，并把该日志放到logs/info.log文件中 -->
+        <RollingFile name="RollingFileInfo" fileName="${FILE_ROOT}/${LOG_HOME}/info.log" filePattern="logs/$${date:yyyy-MM}/info-%d{yyyy-MM-dd}-%i.log.gz">
+            <Filters>
+                <ThresholdFilter level="INFO"/>
+                <ThresholdFilter level="WARN" onMatch="DENY" onMismatch="NEUTRAL"/>
+            </Filters>
+            <PatternLayout pattern="${FILE_PATTERN}"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="${FILE_SIZE}"/>
+                <TimeBasedTriggeringPolicy/>
+            </Policies>
+        </RollingFile>
+        <!-- 处理 WARN 级别的日志，并把该日志放到logs/warn.log文件中 -->
+        <RollingFile name="RollingFileWarn" fileName="${FILE_ROOT}/${LOG_HOME}/warn.log" filePattern="logs/$${date:yyyy-MM}/warn-%d{yyyy-MM-dd}-%i.log.gz">
+            <Filters>
+                <ThresholdFilter level="WARN"/>
+                <ThresholdFilter level="ERROR" onMatch="DENY" onMismatch="NEUTRAL"/>
+            </Filters>
+            <PatternLayout pattern="${FILE_PATTERN}"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="${FILE_SIZE}"/>
+                <TimeBasedTriggeringPolicy/>
+            </Policies>
+        </RollingFile>
+        <!-- 处理 ERROR 级别的日志，并把该日志放到logs/error.log文件中 -->
+        <RollingFile name="RollingFileError" fileName="${FILE_ROOT}/${LOG_HOME}/error.log" filePattern="logs/$${date:yyyy-MM}/error-%d{yyyy-MM-dd}-%i.log.gz">
+            <ThresholdFilter level="ERROR"/>
+            <PatternLayout pattern="${FILE_PATTERN}"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="${FILE_SIZE}"/>
+                <TimeBasedTriggeringPolicy/>
+            </Policies>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <AsyncRoot level="DEBUG">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="RollingFileDebug"/>
+            <AppenderRef ref="RollingFileInfo"/>
+            <AppenderRef ref="RollingFileWarn"/>
+            <AppenderRef ref="RollingFileError"/>
+        </AsyncRoot>
+        <!-- Log4j2 自带过滤日志 -->
+        <Logger name="org.springframework" level="WARN"/>
+        <Logger name="org.mybatis" level="WARN"/>
+        <Logger name="org.apache.ibatis" level="WARN"/>
+    </Loggers>
+</Configuration>

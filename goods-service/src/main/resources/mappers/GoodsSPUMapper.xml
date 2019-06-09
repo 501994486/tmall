@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tmall.infrastructure.dao.GoodsSPUMapper">
+  <resultMap id="BaseResultMap" type="com.tmall.domain.entity.GoodsSPU">
+    <id column="spu_id" jdbcType="BIGINT" property="spuId" />
+    <result column="shop_id" jdbcType="INTEGER" property="shopId" />
+    <result column="category_id_path" jdbcType="VARCHAR" property="categoryIdPath" />
+    <result column="category_id" jdbcType="INTEGER" property="categoryId" />
+    <result column="brand_id" jdbcType="INTEGER" property="brandId" />
+    <result column="goods_name" jdbcType="VARCHAR" property="goodsName" />
+    <result column="goods_main_picture" jdbcType="VARCHAR" property="goodsMainPicture" />
+    <result column="goods_outline" jdbcType="VARCHAR" property="goodsOutline" />
+    <result column="goods_desc" jdbcType="VARCHAR" property="goodsDesc" />
+    <result column="goods_code" jdbcType="VARCHAR" property="goodsCode" />
+    <result column="market_price" jdbcType="DECIMAL" property="marketPrice" />
+    <result column="is_onSale" jdbcType="TINYINT" property="onSaleFlag" />
+    <result column="discount_price" jdbcType="DECIMAL" property="discountPrice" />
+    <result column="goods_tip" jdbcType="VARCHAR" property="goodsTip" />
+    <result column="good_stock" jdbcType="INTEGER" property="goodStock" />
+    <result column="stock_unit" jdbcType="CHAR" property="stockUnit" />
+    <result column="goods_seo_keywords" jdbcType="VARCHAR" property="goodsSeoKeywords" />
+    <result column="is_sku" jdbcType="TINYINT" property="skuFlag" />
+    <result column="is_sale" jdbcType="TINYINT" property="saleFlag" />
+    <result column="same_basic_setup_flag" jdbcType="TINYINT" property="sameBasicSetupFlag" />
+    <result column="each_buy_min_quantity" jdbcType="INTEGER" property="eachBuyMinQuantity" />
+    <result column="each_buy_max_quantity" jdbcType="INTEGER" property="eachBuyMaxQuantity" />
+    <result column="total_buy_max_quantity" jdbcType="INTEGER" property="totalBuyMaxQuantity" />
+    <result column="delivery_method_id" jdbcType="INTEGER" property="deliveryMethodId" />
+    <result column="sold_out_mail_flag" jdbcType="TINYINT" property="soldOutMailFlag" />
+    <result column="stock_warn_mail_flag" jdbcType="TINYINT" property="stockWarnMailFlag" />
+    <result column="warn_stock" jdbcType="INTEGER" property="warnStock" />
+    <result column="is_new" jdbcType="TINYINT" property="newFlag" />
+    <result column="is_best" jdbcType="TINYINT" property="bestFlag" />
+    <result column="is_hot" jdbcType="TINYINT" property="hotFlag" />
+    <result column="is_recom" jdbcType="TINYINT" property="recomFlag" />
+    <result column="is_delete" jdbcType="TINYINT" property="deleteFlag" />
+    <result column="spu_sale_num" jdbcType="INTEGER" property="spuSaleNum" />
+    <result column="sale_time" jdbcType="TIMESTAMP" property="saleTime" />
+    <result column="visit_num" jdbcType="INTEGER" property="visitNum" />
+    <result column="appraise_num" jdbcType="INTEGER" property="appraiseNum" />
+    <result column="award_integral" jdbcType="INTEGER" property="awardIntegral" />
+    <result column="goods_status" jdbcType="TINYINT" property="goodsStatus" />
+    <result column="illegal_remarks" jdbcType="VARCHAR" property="illegalRemarks" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    spu_id, shop_id, category_id_path, category_id, brand_id, goods_name, goods_main_picture, 
+    goods_outline, goods_desc, goods_code, market_price, is_onSale, discount_price, goods_tip, 
+    good_stock, stock_unit, goods_seo_keywords, is_sku, is_sale, same_basic_setup_flag, 
+    each_buy_min_quantity, each_buy_max_quantity, total_buy_max_quantity, delivery_method_id, 
+    sold_out_mail_flag, stock_warn_mail_flag, warn_stock, is_new, is_best, is_hot, is_recom, 
+    is_delete, spu_sale_num, sale_time, visit_num, appraise_num, award_integral, goods_status, 
+    illegal_remarks, create_time, update_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from GOODS_SPU
+    where spu_id = #{spuId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from GOODS_SPU
+    where spu_id = #{spuId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.tmall.domain.entity.GoodsSPU">
+    insert into GOODS_SPU (spu_id, shop_id, category_id_path, 
+      category_id, brand_id, goods_name, 
+      goods_main_picture, goods_outline, goods_desc, 
+      goods_code, market_price, is_onSale, 
+      discount_price, goods_tip, good_stock, 
+      stock_unit, goods_seo_keywords, is_sku, 
+      is_sale, same_basic_setup_flag, each_buy_min_quantity, 
+      each_buy_max_quantity, total_buy_max_quantity, 
+      delivery_method_id, sold_out_mail_flag, stock_warn_mail_flag, 
+      warn_stock, is_new, is_best, 
+      is_hot, is_recom, is_delete, 
+      spu_sale_num, sale_time, visit_num, 
+      appraise_num, award_integral, goods_status, 
+      illegal_remarks, create_time, update_time
+      )
+    values (#{spuId,jdbcType=BIGINT}, #{shopId,jdbcType=INTEGER}, #{categoryIdPath,jdbcType=VARCHAR}, 
+      #{categoryId,jdbcType=INTEGER}, #{brandId,jdbcType=INTEGER}, #{goodsName,jdbcType=VARCHAR}, 
+      #{goodsMainPicture,jdbcType=VARCHAR}, #{goodsOutline,jdbcType=VARCHAR}, #{goodsDesc,jdbcType=VARCHAR}, 
+      #{goodsCode,jdbcType=VARCHAR}, #{marketPrice,jdbcType=DECIMAL}, #{onSaleFlag,jdbcType=TINYINT}, 
+      #{discountPrice,jdbcType=DECIMAL}, #{goodsTip,jdbcType=VARCHAR}, #{goodStock,jdbcType=INTEGER}, 
+      #{stockUnit,jdbcType=CHAR}, #{goodsSeoKeywords,jdbcType=VARCHAR}, #{skuFlag,jdbcType=TINYINT}, 
+      #{saleFlag,jdbcType=TINYINT}, #{sameBasicSetupFlag,jdbcType=TINYINT}, #{eachBuyMinQuantity,jdbcType=INTEGER}, 
+      #{eachBuyMaxQuantity,jdbcType=INTEGER}, #{totalBuyMaxQuantity,jdbcType=INTEGER}, 
+      #{deliveryMethodId,jdbcType=INTEGER}, #{soldOutMailFlag,jdbcType=TINYINT}, #{stockWarnMailFlag,jdbcType=TINYINT}, 
+      #{warnStock,jdbcType=INTEGER}, #{newFlag,jdbcType=TINYINT}, #{bestFlag,jdbcType=TINYINT}, 
+      #{hotFlag,jdbcType=TINYINT}, #{recomFlag,jdbcType=TINYINT}, #{deleteFlag,jdbcType=TINYINT}, 
+      #{spuSaleNum,jdbcType=INTEGER}, #{saleTime,jdbcType=TIMESTAMP}, #{visitNum,jdbcType=INTEGER}, 
+      #{appraiseNum,jdbcType=INTEGER}, #{awardIntegral,jdbcType=INTEGER}, #{goodsStatus,jdbcType=TINYINT}, 
+      #{illegalRemarks,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.tmall.domain.entity.GoodsSPU">
+    insert into GOODS_SPU
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="spuId != null">
+        spu_id,
+      </if>
+      <if test="shopId != null">
+        shop_id,
+      </if>
+      <if test="categoryIdPath != null">
+        category_id_path,
+      </if>
+      <if test="categoryId != null">
+        category_id,
+      </if>
+      <if test="brandId != null">
+        brand_id,
+      </if>
+      <if test="goodsName != null">
+        goods_name,
+      </if>
+      <if test="goodsMainPicture != null">
+        goods_main_picture,
+      </if>
+      <if test="goodsOutline != null">
+        goods_outline,
+      </if>
+      <if test="goodsDesc != null">
+        goods_desc,
+      </if>
+      <if test="goodsCode != null">
+        goods_code,
+      </if>
+      <if test="marketPrice != null">
+        market_price,
+      </if>
+      <if test="onSaleFlag != null">
+        is_onSale,
+      </if>
+      <if test="discountPrice != null">
+        discount_price,
+      </if>
+      <if test="goodsTip != null">
+        goods_tip,
+      </if>
+      <if test="goodStock != null">
+        good_stock,
+      </if>
+      <if test="stockUnit != null">
+        stock_unit,
+      </if>
+      <if test="goodsSeoKeywords != null">
+        goods_seo_keywords,
+      </if>
+      <if test="skuFlag != null">
+        is_sku,
+      </if>
+      <if test="saleFlag != null">
+        is_sale,
+      </if>
+      <if test="sameBasicSetupFlag != null">
+        same_basic_setup_flag,
+      </if>
+      <if test="eachBuyMinQuantity != null">
+        each_buy_min_quantity,
+      </if>
+      <if test="eachBuyMaxQuantity != null">
+        each_buy_max_quantity,
+      </if>
+      <if test="totalBuyMaxQuantity != null">
+        total_buy_max_quantity,
+      </if>
+      <if test="deliveryMethodId != null">
+        delivery_method_id,
+      </if>
+      <if test="soldOutMailFlag != null">
+        sold_out_mail_flag,
+      </if>
+      <if test="stockWarnMailFlag != null">
+        stock_warn_mail_flag,
+      </if>
+      <if test="warnStock != null">
+        warn_stock,
+      </if>
+      <if test="newFlag != null">
+        is_new,
+      </if>
+      <if test="bestFlag != null">
+        is_best,
+      </if>
+      <if test="hotFlag != null">
+        is_hot,
+      </if>
+      <if test="recomFlag != null">
+        is_recom,
+      </if>
+      <if test="deleteFlag != null">
+        is_delete,
+      </if>
+      <if test="spuSaleNum != null">
+        spu_sale_num,
+      </if>
+      <if test="saleTime != null">
+        sale_time,
+      </if>
+      <if test="visitNum != null">
+        visit_num,
+      </if>
+      <if test="appraiseNum != null">
+        appraise_num,
+      </if>
+      <if test="awardIntegral != null">
+        award_integral,
+      </if>
+      <if test="goodsStatus != null">
+        goods_status,
+      </if>
+      <if test="illegalRemarks != null">
+        illegal_remarks,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="spuId != null">
+        #{spuId,jdbcType=BIGINT},
+      </if>
+      <if test="shopId != null">
+        #{shopId,jdbcType=INTEGER},
+      </if>
+      <if test="categoryIdPath != null">
+        #{categoryIdPath,jdbcType=VARCHAR},
+      </if>
+      <if test="categoryId != null">
+        #{categoryId,jdbcType=INTEGER},
+      </if>
+      <if test="brandId != null">
+        #{brandId,jdbcType=INTEGER},
+      </if>
+      <if test="goodsName != null">
+        #{goodsName,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsMainPicture != null">
+        #{goodsMainPicture,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsOutline != null">
+        #{goodsOutline,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsDesc != null">
+        #{goodsDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsCode != null">
+        #{goodsCode,jdbcType=VARCHAR},
+      </if>
+      <if test="marketPrice != null">
+        #{marketPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="onSaleFlag != null">
+        #{onSaleFlag,jdbcType=TINYINT},
+      </if>
+      <if test="discountPrice != null">
+        #{discountPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="goodsTip != null">
+        #{goodsTip,jdbcType=VARCHAR},
+      </if>
+      <if test="goodStock != null">
+        #{goodStock,jdbcType=INTEGER},
+      </if>
+      <if test="stockUnit != null">
+        #{stockUnit,jdbcType=CHAR},
+      </if>
+      <if test="goodsSeoKeywords != null">
+        #{goodsSeoKeywords,jdbcType=VARCHAR},
+      </if>
+      <if test="skuFlag != null">
+        #{skuFlag,jdbcType=TINYINT},
+      </if>
+      <if test="saleFlag != null">
+        #{saleFlag,jdbcType=TINYINT},
+      </if>
+      <if test="sameBasicSetupFlag != null">
+        #{sameBasicSetupFlag,jdbcType=TINYINT},
+      </if>
+      <if test="eachBuyMinQuantity != null">
+        #{eachBuyMinQuantity,jdbcType=INTEGER},
+      </if>
+      <if test="eachBuyMaxQuantity != null">
+        #{eachBuyMaxQuantity,jdbcType=INTEGER},
+      </if>
+      <if test="totalBuyMaxQuantity != null">
+        #{totalBuyMaxQuantity,jdbcType=INTEGER},
+      </if>
+      <if test="deliveryMethodId != null">
+        #{deliveryMethodId,jdbcType=INTEGER},
+      </if>
+      <if test="soldOutMailFlag != null">
+        #{soldOutMailFlag,jdbcType=TINYINT},
+      </if>
+      <if test="stockWarnMailFlag != null">
+        #{stockWarnMailFlag,jdbcType=TINYINT},
+      </if>
+      <if test="warnStock != null">
+        #{warnStock,jdbcType=INTEGER},
+      </if>
+      <if test="newFlag != null">
+        #{newFlag,jdbcType=TINYINT},
+      </if>
+      <if test="bestFlag != null">
+        #{bestFlag,jdbcType=TINYINT},
+      </if>
+      <if test="hotFlag != null">
+        #{hotFlag,jdbcType=TINYINT},
+      </if>
+      <if test="recomFlag != null">
+        #{recomFlag,jdbcType=TINYINT},
+      </if>
+      <if test="deleteFlag != null">
+        #{deleteFlag,jdbcType=TINYINT},
+      </if>
+      <if test="spuSaleNum != null">
+        #{spuSaleNum,jdbcType=INTEGER},
+      </if>
+      <if test="saleTime != null">
+        #{saleTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="visitNum != null">
+        #{visitNum,jdbcType=INTEGER},
+      </if>
+      <if test="appraiseNum != null">
+        #{appraiseNum,jdbcType=INTEGER},
+      </if>
+      <if test="awardIntegral != null">
+        #{awardIntegral,jdbcType=INTEGER},
+      </if>
+      <if test="goodsStatus != null">
+        #{goodsStatus,jdbcType=TINYINT},
+      </if>
+      <if test="illegalRemarks != null">
+        #{illegalRemarks,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tmall.domain.entity.GoodsSPU">
+    update GOODS_SPU
+    <set>
+      <if test="shopId != null">
+        shop_id = #{shopId,jdbcType=INTEGER},
+      </if>
+      <if test="categoryIdPath != null">
+        category_id_path = #{categoryIdPath,jdbcType=VARCHAR},
+      </if>
+      <if test="categoryId != null">
+        category_id = #{categoryId,jdbcType=INTEGER},
+      </if>
+      <if test="brandId != null">
+        brand_id = #{brandId,jdbcType=INTEGER},
+      </if>
+      <if test="goodsName != null">
+        goods_name = #{goodsName,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsMainPicture != null">
+        goods_main_picture = #{goodsMainPicture,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsOutline != null">
+        goods_outline = #{goodsOutline,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsDesc != null">
+        goods_desc = #{goodsDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsCode != null">
+        goods_code = #{goodsCode,jdbcType=VARCHAR},
+      </if>
+      <if test="marketPrice != null">
+        market_price = #{marketPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="onSaleFlag != null">
+        is_onSale = #{onSaleFlag,jdbcType=TINYINT},
+      </if>
+      <if test="discountPrice != null">
+        discount_price = #{discountPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="goodsTip != null">
+        goods_tip = #{goodsTip,jdbcType=VARCHAR},
+      </if>
+      <if test="goodStock != null">
+        good_stock = #{goodStock,jdbcType=INTEGER},
+      </if>
+      <if test="stockUnit != null">
+        stock_unit = #{stockUnit,jdbcType=CHAR},
+      </if>
+      <if test="goodsSeoKeywords != null">
+        goods_seo_keywords = #{goodsSeoKeywords,jdbcType=VARCHAR},
+      </if>
+      <if test="skuFlag != null">
+        is_sku = #{skuFlag,jdbcType=TINYINT},
+      </if>
+      <if test="saleFlag != null">
+        is_sale = #{saleFlag,jdbcType=TINYINT},
+      </if>
+      <if test="sameBasicSetupFlag != null">
+        same_basic_setup_flag = #{sameBasicSetupFlag,jdbcType=TINYINT},
+      </if>
+      <if test="eachBuyMinQuantity != null">
+        each_buy_min_quantity = #{eachBuyMinQuantity,jdbcType=INTEGER},
+      </if>
+      <if test="eachBuyMaxQuantity != null">
+        each_buy_max_quantity = #{eachBuyMaxQuantity,jdbcType=INTEGER},
+      </if>
+      <if test="totalBuyMaxQuantity != null">
+        total_buy_max_quantity = #{totalBuyMaxQuantity,jdbcType=INTEGER},
+      </if>
+      <if test="deliveryMethodId != null">
+        delivery_method_id = #{deliveryMethodId,jdbcType=INTEGER},
+      </if>
+      <if test="soldOutMailFlag != null">
+        sold_out_mail_flag = #{soldOutMailFlag,jdbcType=TINYINT},
+      </if>
+      <if test="stockWarnMailFlag != null">
+        stock_warn_mail_flag = #{stockWarnMailFlag,jdbcType=TINYINT},
+      </if>
+      <if test="warnStock != null">
+        warn_stock = #{warnStock,jdbcType=INTEGER},
+      </if>
+      <if test="newFlag != null">
+        is_new = #{newFlag,jdbcType=TINYINT},
+      </if>
+      <if test="bestFlag != null">
+        is_best = #{bestFlag,jdbcType=TINYINT},
+      </if>
+      <if test="hotFlag != null">
+        is_hot = #{hotFlag,jdbcType=TINYINT},
+      </if>
+      <if test="recomFlag != null">
+        is_recom = #{recomFlag,jdbcType=TINYINT},
+      </if>
+      <if test="deleteFlag != null">
+        is_delete = #{deleteFlag,jdbcType=TINYINT},
+      </if>
+      <if test="spuSaleNum != null">
+        spu_sale_num = #{spuSaleNum,jdbcType=INTEGER},
+      </if>
+      <if test="saleTime != null">
+        sale_time = #{saleTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="visitNum != null">
+        visit_num = #{visitNum,jdbcType=INTEGER},
+      </if>
+      <if test="appraiseNum != null">
+        appraise_num = #{appraiseNum,jdbcType=INTEGER},
+      </if>
+      <if test="awardIntegral != null">
+        award_integral = #{awardIntegral,jdbcType=INTEGER},
+      </if>
+      <if test="goodsStatus != null">
+        goods_status = #{goodsStatus,jdbcType=TINYINT},
+      </if>
+      <if test="illegalRemarks != null">
+        illegal_remarks = #{illegalRemarks,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where spu_id = #{spuId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tmall.domain.entity.GoodsSPU">
+    update GOODS_SPU
+    set shop_id = #{shopId,jdbcType=INTEGER},
+      category_id_path = #{categoryIdPath,jdbcType=VARCHAR},
+      category_id = #{categoryId,jdbcType=INTEGER},
+      brand_id = #{brandId,jdbcType=INTEGER},
+      goods_name = #{goodsName,jdbcType=VARCHAR},
+      goods_main_picture = #{goodsMainPicture,jdbcType=VARCHAR},
+      goods_outline = #{goodsOutline,jdbcType=VARCHAR},
+      goods_desc = #{goodsDesc,jdbcType=VARCHAR},
+      goods_code = #{goodsCode,jdbcType=VARCHAR},
+      market_price = #{marketPrice,jdbcType=DECIMAL},
+      is_onSale = #{onSaleFlag,jdbcType=TINYINT},
+      discount_price = #{discountPrice,jdbcType=DECIMAL},
+      goods_tip = #{goodsTip,jdbcType=VARCHAR},
+      good_stock = #{goodStock,jdbcType=INTEGER},
+      stock_unit = #{stockUnit,jdbcType=CHAR},
+      goods_seo_keywords = #{goodsSeoKeywords,jdbcType=VARCHAR},
+      is_sku = #{skuFlag,jdbcType=TINYINT},
+      is_sale = #{saleFlag,jdbcType=TINYINT},
+      same_basic_setup_flag = #{sameBasicSetupFlag,jdbcType=TINYINT},
+      each_buy_min_quantity = #{eachBuyMinQuantity,jdbcType=INTEGER},
+      each_buy_max_quantity = #{eachBuyMaxQuantity,jdbcType=INTEGER},
+      total_buy_max_quantity = #{totalBuyMaxQuantity,jdbcType=INTEGER},
+      delivery_method_id = #{deliveryMethodId,jdbcType=INTEGER},
+      sold_out_mail_flag = #{soldOutMailFlag,jdbcType=TINYINT},
+      stock_warn_mail_flag = #{stockWarnMailFlag,jdbcType=TINYINT},
+      warn_stock = #{warnStock,jdbcType=INTEGER},
+      is_new = #{newFlag,jdbcType=TINYINT},
+      is_best = #{bestFlag,jdbcType=TINYINT},
+      is_hot = #{hotFlag,jdbcType=TINYINT},
+      is_recom = #{recomFlag,jdbcType=TINYINT},
+      is_delete = #{deleteFlag,jdbcType=TINYINT},
+      spu_sale_num = #{spuSaleNum,jdbcType=INTEGER},
+      sale_time = #{saleTime,jdbcType=TIMESTAMP},
+      visit_num = #{visitNum,jdbcType=INTEGER},
+      appraise_num = #{appraiseNum,jdbcType=INTEGER},
+      award_integral = #{awardIntegral,jdbcType=INTEGER},
+      goods_status = #{goodsStatus,jdbcType=TINYINT},
+      illegal_remarks = #{illegalRemarks,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where spu_id = #{spuId,jdbcType=BIGINT}
+  </update>
+</mapper>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tmall.infrastructure.dao.BrandMapper">
+  <resultMap id="BaseResultMap" type="com.tmall.domain.entity.Brand">
+    <id column="brand_id" jdbcType="INTEGER" property="brandId" />
+    <result column="brand_name" jdbcType="VARCHAR" property="brandName" />
+    <result column="brand_img" jdbcType="VARCHAR" property="brandImg" />
+    <result column="brand_desc" jdbcType="VARCHAR" property="brandDesc" />
+    <result column="is_delete" jdbcType="TINYINT" property="deleteFlag" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    brand_id, brand_name, brand_img, brand_desc, is_delete, create_time, update_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from GOODS_BRAND
+    where brand_id = #{brandId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from GOODS_BRAND
+    where brand_id = #{brandId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.tmall.domain.entity.Brand">
+    insert into GOODS_BRAND (brand_id, brand_name, brand_img, 
+      brand_desc, is_delete, create_time, 
+      update_time)
+    values (#{brandId,jdbcType=INTEGER}, #{brandName,jdbcType=VARCHAR}, #{brandImg,jdbcType=VARCHAR}, 
+      #{brandDesc,jdbcType=VARCHAR}, #{deleteFlag,jdbcType=TINYINT}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.tmall.domain.entity.Brand">
+    insert into GOODS_BRAND
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="brandId != null">
+        brand_id,
+      </if>
+      <if test="brandName != null">
+        brand_name,
+      </if>
+      <if test="brandImg != null">
+        brand_img,
+      </if>
+      <if test="brandDesc != null">
+        brand_desc,
+      </if>
+      <if test="deleteFlag != null">
+        is_delete,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="brandId != null">
+        #{brandId,jdbcType=INTEGER},
+      </if>
+      <if test="brandName != null">
+        #{brandName,jdbcType=VARCHAR},
+      </if>
+      <if test="brandImg != null">
+        #{brandImg,jdbcType=VARCHAR},
+      </if>
+      <if test="brandDesc != null">
+        #{brandDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="deleteFlag != null">
+        #{deleteFlag,jdbcType=TINYINT},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tmall.domain.entity.Brand">
+    update GOODS_BRAND
+    <set>
+      <if test="brandName != null">
+        brand_name = #{brandName,jdbcType=VARCHAR},
+      </if>
+      <if test="brandImg != null">
+        brand_img = #{brandImg,jdbcType=VARCHAR},
+      </if>
+      <if test="brandDesc != null">
+        brand_desc = #{brandDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="deleteFlag != null">
+        is_delete = #{deleteFlag,jdbcType=TINYINT},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where brand_id = #{brandId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tmall.domain.entity.Brand">
+    update GOODS_BRAND
+    set brand_name = #{brandName,jdbcType=VARCHAR},
+      brand_img = #{brandImg,jdbcType=VARCHAR},
+      brand_desc = #{brandDesc,jdbcType=VARCHAR},
+      is_delete = #{deleteFlag,jdbcType=TINYINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where brand_id = #{brandId,jdbcType=INTEGER}
+  </update>
+</mapper>

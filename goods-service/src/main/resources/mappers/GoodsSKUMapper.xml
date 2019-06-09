@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tmall.infrastructure.dao.GoodsSKUMapper">
+  <resultMap id="BaseResultMap" type="com.tmall.domain.entity.GoodsSKU">
+    <id column="sku_id" jdbcType="BIGINT" property="skuId" />
+    <result column="spu_id" jdbcType="BIGINT" property="spuId" />
+    <result column="sku_spec" jdbcType="VARCHAR" property="skuSpec" />
+    <result column="market_price" jdbcType="DECIMAL" property="marketPrice" />
+    <result column="discount_price" jdbcType="DECIMAL" property="discountPrice" />
+    <result column="sku_stock" jdbcType="INTEGER" property="skuStock" />
+    <result column="sku_warn_num" jdbcType="INTEGER" property="skuWarnNum" />
+    <result column="sku_sale_num" jdbcType="INTEGER" property="skuSaleNum" />
+    <result column=" is_default" jdbcType="TINYINT" property="defaultFlag" />
+    <result column="is_delete" jdbcType="TINYINT" property="deleteFlag" />
+    <result column="sort_order" jdbcType="INTEGER" property="sortOrder" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    sku_id, spu_id, sku_spec, market_price, discount_price, sku_stock, sku_warn_num, 
+    sku_sale_num, 	is_default, is_delete, sort_order, create_time, update_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from GOODS_SKU
+    where sku_id = #{skuId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from GOODS_SKU
+    where sku_id = #{skuId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.tmall.domain.entity.GoodsSKU">
+    insert into GOODS_SKU (sku_id, spu_id, sku_spec, 
+      market_price, discount_price, sku_stock, 
+      sku_warn_num, sku_sale_num, 	is_default, 
+      is_delete, sort_order, create_time, 
+      update_time)
+    values (#{skuId,jdbcType=BIGINT}, #{spuId,jdbcType=BIGINT}, #{skuSpec,jdbcType=VARCHAR}, 
+      #{marketPrice,jdbcType=DECIMAL}, #{discountPrice,jdbcType=DECIMAL}, #{skuStock,jdbcType=INTEGER}, 
+      #{skuWarnNum,jdbcType=INTEGER}, #{skuSaleNum,jdbcType=INTEGER}, #{defaultFlag,jdbcType=TINYINT}, 
+      #{deleteFlag,jdbcType=TINYINT}, #{sortOrder,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.tmall.domain.entity.GoodsSKU">
+    insert into GOODS_SKU
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="skuId != null">
+        sku_id,
+      </if>
+      <if test="spuId != null">
+        spu_id,
+      </if>
+      <if test="skuSpec != null">
+        sku_spec,
+      </if>
+      <if test="marketPrice != null">
+        market_price,
+      </if>
+      <if test="discountPrice != null">
+        discount_price,
+      </if>
+      <if test="skuStock != null">
+        sku_stock,
+      </if>
+      <if test="skuWarnNum != null">
+        sku_warn_num,
+      </if>
+      <if test="skuSaleNum != null">
+        sku_sale_num,
+      </if>
+      <if test="defaultFlag != null">
+        	is_default,
+      </if>
+      <if test="deleteFlag != null">
+        is_delete,
+      </if>
+      <if test="sortOrder != null">
+        sort_order,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="skuId != null">
+        #{skuId,jdbcType=BIGINT},
+      </if>
+      <if test="spuId != null">
+        #{spuId,jdbcType=BIGINT},
+      </if>
+      <if test="skuSpec != null">
+        #{skuSpec,jdbcType=VARCHAR},
+      </if>
+      <if test="marketPrice != null">
+        #{marketPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="discountPrice != null">
+        #{discountPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="skuStock != null">
+        #{skuStock,jdbcType=INTEGER},
+      </if>
+      <if test="skuWarnNum != null">
+        #{skuWarnNum,jdbcType=INTEGER},
+      </if>
+      <if test="skuSaleNum != null">
+        #{skuSaleNum,jdbcType=INTEGER},
+      </if>
+      <if test="defaultFlag != null">
+        #{defaultFlag,jdbcType=TINYINT},
+      </if>
+      <if test="deleteFlag != null">
+        #{deleteFlag,jdbcType=TINYINT},
+      </if>
+      <if test="sortOrder != null">
+        #{sortOrder,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tmall.domain.entity.GoodsSKU">
+    update GOODS_SKU
+    <set>
+      <if test="spuId != null">
+        spu_id = #{spuId,jdbcType=BIGINT},
+      </if>
+      <if test="skuSpec != null">
+        sku_spec = #{skuSpec,jdbcType=VARCHAR},
+      </if>
+      <if test="marketPrice != null">
+        market_price = #{marketPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="discountPrice != null">
+        discount_price = #{discountPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="skuStock != null">
+        sku_stock = #{skuStock,jdbcType=INTEGER},
+      </if>
+      <if test="skuWarnNum != null">
+        sku_warn_num = #{skuWarnNum,jdbcType=INTEGER},
+      </if>
+      <if test="skuSaleNum != null">
+        sku_sale_num = #{skuSaleNum,jdbcType=INTEGER},
+      </if>
+      <if test="defaultFlag != null">
+        	is_default = #{defaultFlag,jdbcType=TINYINT},
+      </if>
+      <if test="deleteFlag != null">
+        is_delete = #{deleteFlag,jdbcType=TINYINT},
+      </if>
+      <if test="sortOrder != null">
+        sort_order = #{sortOrder,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where sku_id = #{skuId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tmall.domain.entity.GoodsSKU">
+    update GOODS_SKU
+    set spu_id = #{spuId,jdbcType=BIGINT},
+      sku_spec = #{skuSpec,jdbcType=VARCHAR},
+      market_price = #{marketPrice,jdbcType=DECIMAL},
+      discount_price = #{discountPrice,jdbcType=DECIMAL},
+      sku_stock = #{skuStock,jdbcType=INTEGER},
+      sku_warn_num = #{skuWarnNum,jdbcType=INTEGER},
+      sku_sale_num = #{skuSaleNum,jdbcType=INTEGER},
+      	is_default = #{defaultFlag,jdbcType=TINYINT},
+      is_delete = #{deleteFlag,jdbcType=TINYINT},
+      sort_order = #{sortOrder,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where sku_id = #{skuId,jdbcType=BIGINT}
+  </update>
+</mapper>

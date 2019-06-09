@@ -1,0 +1,1293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="GROUP_BY_SEVERITY" value="true" />
+  </component>
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="common:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d4f6aaf0-01c0-4b32-93cf-2676153eaa70" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/product-service/target/" />
+    <ignored path="$PROJECT_DIR$/goods-service/target/" />
+    <ignored path="$PROJECT_DIR$/common/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/constants/GoodsConstants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="4" selection-start-line="4" selection-end-line="27" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/goods-service/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1014" />
+          </provider>
+          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="115" column="19" selection-start-line="115" selection-start-column="19" selection-end-line="115" selection-end-column="19" />
+            </state>
+          </provider>
+          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/exception/NoFoundExceptionHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/exception/QueryException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="52">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/exception/ServiceException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="52">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/enums/AnnotationTypeEnum.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="52">
+              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/logging/SystemControllerLog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/logging/SystemLogAspect.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="78">
+              <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="jar://E:/mavenrepository/com/tmall/commons/1.0.1/commons-1.0.1.jar!/com/tm/technologyMall/ThreadUtils.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>MyException</find>
+      <find>isAjax</find>
+      <find>jackson</find>
+      <find>getDynamicData</find>
+      <find>url</find>
+      <find>电话</find>
+      <find>REGEX_DATE</find>
+      <find>REGEX_IP</find>
+      <find>REGEX_URL</find>
+      <find>HTTP_REGEXP</find>
+      <find>REGEX_DOUBLE_BYTE_CHAR</find>
+      <find>REGEX_BLANK_LINE</find>
+      <find>REGEXP_TTP</find>
+      <find>REGEXP_HTTP</find>
+      <find>getSplits</find>
+      <find>project.build.sourceEncoding</find>
+      <find>172.17.4.10:8081</find>
+      <find>goods_spu</find>
+      <find>is</find>
+      <find>Byte</find>
+      <find>Base_Column_List</find>
+      <find>&lt;sql id=&quot;Base_Column_List&quot;&gt;</find>
+      <find>BaseResultMap</find>
+      <find>isNew</find>
+      <find>isDefault</find>
+      <find>isDelete</find>
+      <find>&lt;resultMap id=&quot;BaseResultMap&quot;</find>
+      <find>&lt;resultMap id=&quot;BaseResultMap&quot;</find>
+      <find>SHARP</find>
+      <find>SYMBOL_SHARP</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>com.tmall.domain.entity.GoodsAttr</replace>
+      <replace>tmall.domain.entity.GoodsAttrName</replace>
+      <replace>tmall.domain.entity.GoodsAttrValue</replace>
+      <replace>tmall.domain.entity.GoodsSpecification</replace>
+      <replace>tmall.domain.entity.GoodsSKU</replace>
+      <replace>tmall.domain.entity.GoodsSPU</replace>
+      <replace>tmall.domain.entity.Category</replace>
+      <replace>ResultBean</replace>
+      <replace>QueryException</replace>
+      <replace>192.168.6.130:8081</replace>
+      <replace>GOODS_SPU</replace>
+      <replace>showFlag</replace>
+      <replace>newFlag</replace>
+      <replace>deleteFlag</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>E:\IdeaProjects2\technologyMall\product-service\src\main\java\demo1</dir>
+      <dir>E:\IdeaProjects2\technologyMall\goods-service</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/common/src/main/java/com/tm/technologyMall/SymbolConstants.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/tm/technologyMall/BigDecimalArithmeticUtils.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/tm/technologyMall/RegexUtils.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/tm/technologyMall/DateTimeUtils.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/tm/technologyMall/DetabaseUtils.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/tm/technologyMall/CommonLogic.java" />
+        <option value="$PROJECT_DIR$/goods-service/pom.xml" />
+        <option value="$PROJECT_DIR$/goods-service/src/test/java/com/tmall/Log4j2Test.java" />
+        <option value="$PROJECT_DIR$/common/pom.xml" />
+        <option value="$PROJECT_DIR$/goods-service/src/test/java/com/tmall/TestCommon.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/GoodsAttr.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/valueobject/GoodsAttrValue.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/valueobject/GoodsAttr.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/valueobject/Brand.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/Category.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/valueobject/GoodsSPU.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/valueobject/GoodsSKU.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/Brand.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/valueobject/GoodsImg.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/resources/generatorconfig.xml" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/GoodsBasicSetup.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/GoodsSPU.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/GoodsSpecification.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/GoodsSKU.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/GoodsImg.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/GoodsAttrName.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/GoodsAttrValue.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/resources/mappers/BrandMapper.xml" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/resources/mappers/CategoryMapper.xml" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/resources/mappers/GoodsAttrMapper.xml" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/resources/mappers/GoodsAttrNameMapper.xml" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/resources/mappers/GoodsAttrValueMapper.xml" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/resources/mappers/GoodsBasicSetupMapper.xml" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/resources/mappers/GoodsSKUMapper.xml" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/resources/mappers/GoodsSpecificationMapper.xml" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/resources/mappers/GoodsSPUMapper.xml" />
+        <option value="$PROJECT_DIR$/goods-service/src/test/java/com/tmall/GoodsServiceApplicationTests.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/dao/GoodsAttrMapper.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/dao/GoodsAttrValueMapper.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/dao/BrandMapper.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/dao/GoodsImgMapper.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/dao/GoodsAttrNameMapper.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/dao/GoodsSKUMapper.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/dao/GoodsSpecificationMapper.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/test/java/com/tmall/ToolClassTest.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/util/LogUtils.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/tm/technologyMall/ThreadUtils.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/tm/technologyMall/AppConstants.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/constants/GoodsConstants.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/logging/SystemLogAspect.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+        <option name="userSettingsFile" value="E:\mavenrepository\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="common" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="common" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="common" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="goods-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="goods-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="goods-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+          <item name="mybatis-generator" type="36feed69:MavenProjectsStructure$PluginNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="Spring Boot Starter Parent" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="Spring Boot Starter Parent" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="Spring Boot Starter Parent" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="77" />
+    <option name="width" value="1850" />
+    <option name="height" value="980" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tm" type="462c0819:PsiDirectoryNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="goods-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="goods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="goods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="goods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="goods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="goods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tmall" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="goods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tmall" type="462c0819:PsiDirectoryNode" />
+              <item name="infrastructure" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="goods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tmall" type="462c0819:PsiDirectoryNode" />
+              <item name="infrastructure" type="462c0819:PsiDirectoryNode" />
+              <item name="constants" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="goods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tmall" type="462c0819:PsiDirectoryNode" />
+              <item name="infrastructure" type="462c0819:PsiDirectoryNode" />
+              <item name="enums" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="goods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tmall" type="462c0819:PsiDirectoryNode" />
+              <item name="infrastructure" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="goods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tmall" type="462c0819:PsiDirectoryNode" />
+              <item name="infrastructure" type="462c0819:PsiDirectoryNode" />
+              <item name="logging" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="goods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="goods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="goods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="goods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="goods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tmall" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="goods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+              <item name="common_jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.tmall:commons:1.0.1" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.tmall:commons:1.0.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="commons-1.0.1.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.tmall:commons:1.0.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="commons-1.0.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.tmall:commons:1.0.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="commons-1.0.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.tmall:commons:1.0.1" type="70bed36:NamedLibraryElementNode" />
+              <item name="commons-1.0.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tm" type="462c0819:PsiDirectoryNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.18164062" />
+    <property name="project.structure.side.proportion" value="0.20336391" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.tm.technologyMall" />
+      <recent name="com.tmall.domain.valueobject" />
+      <recent name="com.tmall.domain.entity" />
+      <recent name="com.tmall.infrastructure.util" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects2\technologyMall\goods-service\src\main\java\com\tmall\domain\entity" />
+      <recent name="E:\IdeaProjects2\technologyMall\goods-service\src\main\java\com\tmall\domain\valueobject" />
+      <recent name="E:\IdeaProjects2\technologyMall\common\src\main\java\com\tm\technologyMall" />
+      <recent name="E:\IdeaProjects2\technologyMall\goods-service\src\main\java\com\tmall\infrastructure\constants" />
+      <recent name="E:\IdeaProjects2\technologyMall\goods-service\src\main\java\com\tmall\infrastructure\logging" />
+    </key>
+  </component>
+  <component name="RestServicesNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="Found 6 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+        </path>
+        <path>
+          <item name="Found 6 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+          <item name="goods-service" type="c588b436:RestServiceStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.GoodsServiceApplication">
+    <configuration name="GoodsServiceApplicationTests.testMysql" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="goods-service" />
+      <option name="PACKAGE_NAME" value="com.tmall" />
+      <option name="MAIN_CLASS_NAME" value="com.tmall.GoodsServiceApplicationTests" />
+      <option name="METHOD_NAME" value="testMysql" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ToolClassTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="goods-service" />
+      <option name="PACKAGE_NAME" value="com.tmall" />
+      <option name="MAIN_CLASS_NAME" value="com.tmall.ToolClassTest" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ToolClassTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="goods-service" />
+      <option name="PACKAGE_NAME" value="com.tmall" />
+      <option name="MAIN_CLASS_NAME" value="com.tmall.ToolClassTest" />
+      <option name="METHOD_NAME" value="test2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ToolClassTest.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="goods-service" />
+      <option name="PACKAGE_NAME" value="com.tmall" />
+      <option name="MAIN_CLASS_NAME" value="com.tmall.ToolClassTest" />
+      <option name="METHOD_NAME" value="test3" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ToolClassTest.test4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="goods-service" />
+      <option name="PACKAGE_NAME" value="com.tmall" />
+      <option name="MAIN_CLASS_NAME" value="com.tmall.ToolClassTest" />
+      <option name="METHOD_NAME" value="test4" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GoodsServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="goods-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tmall.GoodsServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ToolClassTest.test4" />
+        <item itemvalue="JUnit.ToolClassTest.test3" />
+        <item itemvalue="JUnit.ToolClassTest.test2" />
+        <item itemvalue="JUnit.ToolClassTest.test1" />
+        <item itemvalue="JUnit.GoodsServiceApplicationTests.testMysql" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="ToolClassTest_test2 - 2019.05.18 at 16h 22m 20s.xml">
+      <configuration name="ToolClassTest.test2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ToolClassTest_test2 - 2019.05.18 at 16h 23m 25s.xml">
+      <configuration name="ToolClassTest.test2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ToolClassTest_test3 - 2019.05.18 at 16h 36m 55s.xml">
+      <configuration name="ToolClassTest.test3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ToolClassTest_test3 - 2019.05.18 at 16h 37m 07s.xml">
+      <configuration name="ToolClassTest.test3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ToolClassTest_test3 - 2019.05.18 at 16h 37m 19s.xml">
+      <configuration name="ToolClassTest.test3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ToolClassTest_test3 - 2019.05.18 at 16h 37m 32s.xml">
+      <configuration name="ToolClassTest.test3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ToolClassTest_test3 - 2019.05.18 at 16h 38m 18s.xml">
+      <configuration name="ToolClassTest.test3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ToolClassTest_test3 - 2019.05.18 at 16h 41m 16s.xml">
+      <configuration name="ToolClassTest.test3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ToolClassTest_test4 - 2019.05.18 at 18h 51m 44s.xml">
+      <configuration name="ToolClassTest.test4" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ToolClassTest_test4 - 2019.05.18 at 18h 52m 21s.xml">
+      <configuration name="ToolClassTest.test4" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="62" y="0" width="1480" height="784" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2950704" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Web" order="2" side_tool="true" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49929577" visible="true" weight="0.4512" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.081001475" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3755523" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3298969" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3298969" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="11" sideWeight="0.5007042" side_tool="true" visible="true" weight="0.4512" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.3298969" />
+      <window_info anchor="bottom" id="Spring" order="13" weight="0.3298969" />
+      <window_info anchor="bottom" id="MyBatis Sql Log" order="14" weight="0.3814433" />
+      <window_info active="true" anchor="bottom" id="Inspection Results" order="15" visible="true" weight="0.3298969" />
+      <window_info anchor="bottom" id="Messages" order="16" weight="0.30044183" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24966443" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" weight="0.3295302" />
+      <window_info anchor="right" id="Maven" order="4" visible="true" weight="0.04859155" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="RestServices" order="6" weight="0.1147651" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/goods-service/src/test/java/com/tmall/ToolClassTest.java</url>
+          <line>26</line>
+          <properties class="com.tmall.ToolClassTest" method="test1">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/GoodsAttrName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/GoodsAttrValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/GoodsBasicSetup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="33" column="16" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/GoodsImg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/GoodsSKU.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="34" column="16" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/GoodsSpecification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="27" column="16" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/GoodsSPU.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-162">
+          <caret line="76" column="16" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/resources/mappers/BrandMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/resources/mappers/CategoryMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/resources/mappers/GoodsAttrMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2080">
+          <caret line="80" column="11" selection-start-line="80" selection-start-column="11" selection-end-line="80" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/resources/mappers/GoodsAttrNameMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3640">
+          <caret line="140" column="11" selection-start-line="140" selection-start-column="11" selection-end-line="140" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/resources/mappers/GoodsAttrValueMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2704">
+          <caret line="104" column="11" selection-start-line="104" selection-start-column="11" selection-end-line="104" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/resources/mappers/GoodsBasicSetupMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="203" column="24" selection-start-line="203" selection-start-column="24" selection-end-line="203" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/resources/mappers/GoodsImgMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-468" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/resources/mappers/GoodsSKUMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/resources/mappers/GoodsSpecificationMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2236">
+          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/resources/mappers/GoodsSPUMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="60" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/resources/generatorconfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/test/java/com/tmall/GoodsServiceApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="25" column="25" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/dao/GoodsAttrMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/dao/GoodsAttrValueMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/dao/BrandMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/dao/GoodsImgMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/dao/GoodsAttrNameMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/dao/GoodsSKUMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/dao/GoodsSpecificationMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/test/java/com/tmall/ToolClassTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="194" selection-start-line="194" selection-end-line="194" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/GoodsServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/tm/technologyMall/DateTimeUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/constants/SymbolConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/util/LogUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="873">
+          <caret line="92" column="32" lean-forward="true" selection-start-line="92" selection-start-column="32" selection-end-line="92" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/util/JsonUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/logging/SystemLogStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/logging/SystemServiceLog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/tm/technologyMall/CommonLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-427">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/tm/technologyMall/ThreadUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/util/ThreadUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="6" column="56" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/enums/ResultEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-583">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/exception/DBException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/constants/LogConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="25" column="41" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/tm/technologyMall/AppConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/constants/GoodsConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" selection-start-line="4" selection-end-line="27" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1014" />
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="115" column="19" selection-start-line="115" selection-start-column="19" selection-end-line="115" selection-end-column="19" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/exception/NoFoundExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/exception/QueryException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/exception/ServiceException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/enums/AnnotationTypeEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/logging/SystemControllerLog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/logging/SystemLogAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/mavenrepository/com/tmall/commons/1.0.1/commons-1.0.1.jar!/com/tm/technologyMall/ThreadUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>common:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.20336391" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.20336391" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>goods-service</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.20336391" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: cn.wolfcode:p2p:1.0.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.20336391" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

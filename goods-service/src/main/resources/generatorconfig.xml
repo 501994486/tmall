@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!--导入属性配置-->
+  <properties resource="db.properties"></properties>
+
+	<!-- mysql驱动的位置 这个是MySQL连接的jar包，你需要指定你自己计算机上的jar包的位置-->
+       <classPathEntry location="E:\mavenrepository\mysql\mysql-connector-java\5.1.30\mysql-connector-java-5.1.30.jar"/>
+ <!--targetRuntime="MyBatis3" 目标环境
+      MyBatis3：豪华版，复杂多条件查询
+      MyBatis3Simple：helloWorld 
+       defaultModelType:指定生成对象的样式
+       		flat：所有内容（主键，blob）等全部生成在一个对象中；
+      		hierarchical：主键生成一个XXKey对象(key class)
+      -->
+    <context id="default" targetRuntime="MyBatis3" defaultModelType="flat">
+
+        <!-- optional，旨在创建class时，对注释进行控制 -->
+        <commentGenerator>
+        	  <!-- 是否生成注释代时间戳 -->
+            <property name="suppressDate" value="true"/>
+             <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <!--jdbc的数据库连接 -->
+        <jdbcConnection
+                driverClass="${spring.datasource.driver-class-name}"
+                connectionURL="${spring.datasource.url}"
+                userId="${spring.datasource.username}"
+                password="${spring.datasource.password}">
+        </jdbcConnection>
+
+
+        <!-- 非必需，类型处理器，在数据库类型和java类型之间的转换控制-->
+        <!-- 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer，为 true时把JDBC DECIMAL 和
+         NUMERIC 类型解析为java.math.BigDecimal -->
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="true"/>
+        </javaTypeResolver>
+
+
+        <!-- Model模型生成器,用来生成含有主键key的类，记录类 以及查询Example类
+            targetPackage     指定生成的model生成所在的包名
+            targetProject     指定在该项目下所在的路径
+        -->
+        <javaModelGenerator targetPackage="com.tmall.domain.entity" targetProject="./src/main/java">
+            <!-- 是否允许子包，即targetPackage.schemaName.tableName -->
+            <property name="enableSubPackages" value="false"/>
+            <!-- 是否对model添加 构造函数 -->
+            <property name="constructorBased" value="ture"/>
+            <!-- 是否对类CHAR类型的列的数据进行trim操作 -->
+            <property name="trimStrings" value="true"/>
+            <!-- 建立的Model对象是否 不可改变  即生成的Model对象不会有 setter方法，只有构造方法 -->
+            <property name="immutable" value="false"/>
+        </javaModelGenerator>
+
+        <!--mapper映射文件生成所在的目录 为每一个数据库的表生成对应的SqlMap文件 (此处包不改)-->
+        <sqlMapGenerator targetPackage="mappers" targetProject="./src/main/resources">
+            <property name="enableSubPackages" value="false"/>
+        </sqlMapGenerator>
+
+        <!-- 客户端代码，生成易于使用的针对Model对象和XML配置文件 的代码
+                type="ANNOTATEDMAPPER",生成Java Model 和基于注解的Mapper对象
+                type="MIXEDMAPPER",生成基于注解的Java Model 和相应的Mapper对象
+                type="XMLMAPPER",生成SQLMap XML文件和独立的Mapper接口
+        -->
+
+        <!-- targetPackage：mapper接口dao生成的位置 -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.tmall.infrastructure.dao" targetProject="./src/main/java">
+            <!-- enableSubPackages:是否让schema作为包的后缀 -->
+            <property name="enableSubPackages" value="false"/>
+        </javaClientGenerator>
+
+
+ 		 <!-- 配置表信息 -->
+        <!-- tableName为对应的数据库表 domainObjectName是要生成的实体类 enable*ByExample
+            是否生成 example类 -->
+            <!-- 通过enableCountByExample, enableUpdateByExample, enableDeleteByExample, 
+            enableSelectByExample, selectByExampleQueryId等属性可以控制是否生成和使用xxxExample类在查询中替代模型类 -->
+        <table tableName="GOODS_SPU" domainObjectName="GoodsSPU" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+            <!-- 指定java类型-->
+            <columnOverride column="goods_tip" jdbcType="VARCHAR"/>
+            <columnOverride column="goods_desc" jdbcType="VARCHAR"/>
+        </table>
+        <table tableName="GOODS_BRAND" domainObjectName="Brand" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+            <!-- 指定java类型-->
+            <columnOverride column="brand_desc" jdbcType="VARCHAR"/></table>
+        <table tableName="GOODS_CATEGORY" domainObjectName="Category" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false"></table>
+
+        <table tableName="GOODS_SKU" domainObjectName="GoodsSKU" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false"></table>
+
+        <table tableName="GOODS_ATTR" domainObjectName="GoodsAttr" enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        <table tableName="GOODS_ATTR_NAME" domainObjectName="GoodsAttrName" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false"></table>
+        <table tableName="GOODS_ATTR_VALUE" domainObjectName="GoodsAttrValue" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false"></table>
+        <table tableName="GOODS_SPEC_ITEM" domainObjectName="GoodsSpecification" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false"></table>
+        <table tableName="GOODS_BASIC_SETUP" domainObjectName="GoodsBasicSetup" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false"></table>
+        <table tableName="GOODS_IMG" domainObjectName="GoodsImg" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false"></table>
+        <!-- geelynote mybatis插件的搭建 -->
+    </context>
+</generatorConfiguration>

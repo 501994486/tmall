@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tmall.infrastructure.dao.GoodsAttrMapper">
+  <resultMap id="BaseResultMap" type="com.tmall.domain.entity.GoodsAttr">
+    <id column="attr_id" jdbcType="BIGINT" property="attrId" />
+    <result column="goods_id" jdbcType="INTEGER" property="goodsId" />
+    <result column="goods_attr_name_id" jdbcType="INTEGER" property="goodsAttrNameId" />
+    <result column="goods_attr_value_id" jdbcType="INTEGER" property="goodsAttrValueId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    attr_id, goods_id, goods_attr_name_id, goods_attr_value_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from GOODS_ATTR
+    where attr_id = #{attrId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from GOODS_ATTR
+    where attr_id = #{attrId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.tmall.domain.entity.GoodsAttr">
+    insert into GOODS_ATTR (attr_id, goods_id, goods_attr_name_id, 
+      goods_attr_value_id)
+    values (#{attrId,jdbcType=BIGINT}, #{goodsId,jdbcType=INTEGER}, #{goodsAttrNameId,jdbcType=INTEGER}, 
+      #{goodsAttrValueId,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.tmall.domain.entity.GoodsAttr">
+    insert into GOODS_ATTR
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="attrId != null">
+        attr_id,
+      </if>
+      <if test="goodsId != null">
+        goods_id,
+      </if>
+      <if test="goodsAttrNameId != null">
+        goods_attr_name_id,
+      </if>
+      <if test="goodsAttrValueId != null">
+        goods_attr_value_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="attrId != null">
+        #{attrId,jdbcType=BIGINT},
+      </if>
+      <if test="goodsId != null">
+        #{goodsId,jdbcType=INTEGER},
+      </if>
+      <if test="goodsAttrNameId != null">
+        #{goodsAttrNameId,jdbcType=INTEGER},
+      </if>
+      <if test="goodsAttrValueId != null">
+        #{goodsAttrValueId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tmall.domain.entity.GoodsAttr">
+    update GOODS_ATTR
+    <set>
+      <if test="goodsId != null">
+        goods_id = #{goodsId,jdbcType=INTEGER},
+      </if>
+      <if test="goodsAttrNameId != null">
+        goods_attr_name_id = #{goodsAttrNameId,jdbcType=INTEGER},
+      </if>
+      <if test="goodsAttrValueId != null">
+        goods_attr_value_id = #{goodsAttrValueId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where attr_id = #{attrId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tmall.domain.entity.GoodsAttr">
+    update GOODS_ATTR
+    set goods_id = #{goodsId,jdbcType=INTEGER},
+      goods_attr_name_id = #{goodsAttrNameId,jdbcType=INTEGER},
+      goods_attr_value_id = #{goodsAttrValueId,jdbcType=INTEGER}
+    where attr_id = #{attrId,jdbcType=BIGINT}
+  </update>
+</mapper>

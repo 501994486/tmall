@@ -1,0 +1,12 @@
+2019-04-21 10:15:07 [main] WARN  com.tmall.Log4j2Test - warn level
+2019-04-21 10:15:07 [main] WARN  com.tmall.Log4j2Test - warn level
+2019-04-21 10:15:07 [main] WARN  com.tmall.Log4j2Test - warn level
+2019-04-21 10:15:07 [main] WARN  com.tmall.Log4j2Test - warn level
+2019-04-21 10:15:07 [main] WARN  com.tmall.Log4j2Test - warn level
+2019-04-21 10:15:07 [main] WARN  com.tmall.Log4j2Test - warn level
+2019-04-21 10:15:07 [main] WARN  com.tmall.Log4j2Test - warn level
+2019-04-21 10:15:07 [main] WARN  com.tmall.Log4j2Test - warn level
+2019-04-21 10:15:07 [main] WARN  com.tmall.Log4j2Test - warn level
+2019-04-21 10:15:07 [main] WARN  com.tmall.Log4j2Test - warn level
+2019-04-21 11:46:33 [restartedMain] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'classPathFileSystemWatcher' defined in class path resource [org/springframework/boot/devtools/autoconfigure/LocalDevToolsAutoConfiguration$RestartConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.devtools.classpath.ClassPathFileSystemWatcher]: Factory method 'classPathFileSystemWatcher' threw exception; nested exception is java.lang.IllegalArgumentException: Folder 'E:\IdeaProjects2\technologyMall\src\main\java\com\tmall' must exist and must be a directory
+2019-04-21 11:48:25 [restartedMain] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'classPathFileSystemWatcher' defined in class path resource [org/springframework/boot/devtools/autoconfigure/LocalDevToolsAutoConfiguration$RestartConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.devtools.classpath.ClassPathFileSystemWatcher]: Factory method 'classPathFileSystemWatcher' threw exception; nested exception is java.lang.IllegalArgumentException: Folder 'E:\IdeaProjects2\technologyMall\src\main\java\com\tmall' must exist and must be a directory
