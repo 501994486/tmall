@@ -3,6 +3,13 @@ package com.tmall.application.assembler;
 import com.tmall.infrastructure.enums.ResultEnum;
 import com.tmall.ui.dto.ResultBean;
 
+/**
+ * All rights Reserved, Designed By technologyMall
+ * @Description DTO结果组装器
+ * @author sun.h
+ * @date   2020年5月18日
+ * @version V1.0
+ */
 public class ResultAssembler {
 
 	/** 操作成功的处理流程 */
