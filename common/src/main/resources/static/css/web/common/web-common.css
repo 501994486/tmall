@@ -1,0 +1,1484 @@
+@charset "UTF-8";
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box; /* 1 */
+	padding: 0; /* 2 */
+	position: relative;
+	vertical-align: middle;
+	bottom: 1px;
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+/*
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+*/
+/* normalize.css end */
+
+input[type="checkbox"] {
+	position: relative;
+	vertical-align: middle;
+	bottom: 1px;
+}
+
+html {
+	overflow-y: auto;
+}
+body {
+	margin: 0px;
+	font-size: 13px;
+	line-height: 1.4;
+}
+body, textarea, input, select {
+	font-family:"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN",メイリオ,Meiryo,sans-serif;
+}
+textarea {
+	resize: none;
+}
+a:link, a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a img {
+    border-style:none;
+}
+
+/*-----汎用スタイル-----*/
+.tx-left {
+	text-align: left;
+}
+.tx-right {
+	text-align: right;
+}
+.tx-center {
+	text-align: center;
+}
+.tx-bold {
+	font-weight: bold;
+}
+
+/*ヘッダー*/
+#head {
+	margin-bottom: 6px;
+}
+#head2 {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	padding: 8px;
+	border: 1px solid;
+	border-right-style: none;
+	border-top-style: none;
+	border-bottom-left-radius: 16px;
+	clear: both;
+	background-color: #fff;
+}
+#head:after, #head2:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+#head-title {
+	float: left;
+	font-size: 14px;
+}
+#loginname, #no-login {
+	padding-left: 20px;
+	float: right;
+	margin-right: 10px;
+	height: 20px;
+	line-height: 20px;
+}
+#loginname i {
+	opacity: 0.8;
+	margin-right: 4px;
+}
+/*
+#no-login i {
+	opacity: 0.3;
+	margin-right: 4px;
+}
+*/
+/*プルダウンメニューアイコン*/
+.icon-menu {
+	margin-top: 1px;
+	padding-top: 1px;
+	height: 15px;
+	width: 18px;
+	float: right;
+	display: block;
+	position: relative;
+	text-align: center;
+	font-size: 14px;
+	cursor: pointer;
+	opacity: 0.6;
+	border: transparent 1px solid;
+	border-radius: 3px;
+}
+
+.icon-menu.over, .icon-menu.selected {
+	border: 1px solid;
+	border-radius: 3px;
+	opacity: 1;
+}
+
+/*プルダウンメニュー*/
+ul.pulldown-menu {
+	list-style-type: none;
+	margin: 0px;
+	padding-bottom: 2px;
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 2px;
+	width: 210px;
+}
+ul.pulldown-menu li a {
+	padding-top: 2px;
+	padding-left: 20px;
+	padding-bottom: 2px;
+	padding-right: 30px;
+	display: block;
+	text-decoration: none;
+}
+/*プルダウンメニュー吹き出しボックス*/
+.arrow_box {
+	display: none;
+	position: absolute;
+	padding: 0px;
+	border-radius: 3px;
+	top: 32px;
+	right: 2px;
+	z-index: 1;
+	border: 1px solid;
+}
+.arrow_box:after, .arrow_box:before {
+	bottom: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.arrow_box:after {
+	border-width: 5px;
+	right: 12px;
+}
+.arrow_box:before {
+	border-width: 6px;
+	right: 11px;
+}
+
+/*メンバーメニュー*/
+#menu-member {
+	border-radius: 0px;
+	padding: 5px;
+	border: 1px solid;
+	border-left-style: none;
+	border-right-style: none;
+}
+/*
+#menu-member :after {
+	content: "";
+	clear: both;
+	display: block;
+}
+*/
+#menu-member ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+#menu-member ul li {
+	float: left;
+	margin: 1px;
+}
+#menu-member ul li a {
+	display: block;
+	text-decoration: none;
+	padding-top: 4px;
+	padding-right: 8px;
+	padding-bottom: 4px;
+	padding-left: 8px;
+}
+#menu-member ul li a:hover {
+	border-radius: 3px;
+}
+#menu-member ul li a.selected {
+	font-weight: bold;
+	border-radius: 3px;
+	cursor: default;
+}
+
+#mainbtn {
+	float: left;
+	padding-right: 10px;
+}
+#mainbtn:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+#memberbtn {
+	padding-left: 10px;
+}
+#memberbtn:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+#wrap2 {
+	margin-top: 30px;
+	margin-bottom: 25px;
+}
+
+#wrap:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+#content-wrap {
+	width: 100%;
+	float:right;
+	margin-left:-230px; /*左メニューの幅*/
+}
+#content-area {
+	margin-left: 246px; /*左メニュー幅+マージン*/
+}
+
+/*サイドメニュー*/
+#menu-side {
+	width: 230px; /*左メニューの幅*/
+	float: right;
+}
+#menu-side ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	border-bottom: 1px solid;
+	border-right: 1px solid;
+	border-left: 1px solid;
+}
+#menu-side ul li {
+	border-top: 1px solid;
+}
+#menu-side ul li a {
+	padding-top: 4px;
+	padding-right: 4px;
+	padding-left: 17px;
+	padding-bottom: 4px;
+	display: block;
+	text-decoration: none;
+	text-indent: -11px;
+}
+#menu-side ul li a i {
+	font-size: 9px;
+	display: block;
+	float: left;
+	width: 11px;
+	margin-top: 5px;
+	opacity: 0.5;
+}
+#menu-side ul li a.arrow i {
+	font-size: 16px;
+	margin-top: 1px;
+	margin-left: 2px;
+	opacity: 0.8;
+}
+#menu-side ul li a.open i {
+	margin-left: 0px;
+	margin-right: 2px;
+}
+
+#menu-side ul li a.selected {
+	cursor:default;
+}
+#menu-side ul ul {
+	border-style: none;
+}
+#menu-side ul ul li {
+	border-style: none;
+}
+#menu-side ul ul li a {
+	padding-left: 29px;
+}
+#menu-side ul ul ul li {
+	border-style: none;
+}
+#menu-side ul ul ul li a {
+	padding-left: 41px;
+}
+
+/*フッターメニュー*/
+#menu-foot {
+	margin-top: 20px;
+	margin-bottom: 4px;
+	margin-left: 16px;
+	margin-right: 16px;
+}
+#menu-foot:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+#menu-foot ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+#menu-foot ul li {
+	float: left;
+	margin-bottom: 1px;
+	margin-left: -1px;
+	border-left: 1px solid;
+	border-right: 1px solid;
+}
+#menu-foot ul li a {
+	display: block;
+	text-decoration: none;
+	padding-right: 8px;
+	padding-left: 8px;
+}
+#menu-foot ul li a:hover {
+	text-decoration: underline;
+}
+
+/*コピーライト*/
+#copyright {
+	margin: 0px 16px 16px 16px;
+	border-top: 1px solid;
+	padding-top: 4px;
+	font-size: 11px;
+}
+#copyright span, #copyright a {
+	opacity: 0.6;
+}
+#copyright a:hover {
+	opacity: 1;
+}
+
+/*コンテンツ*/
+#content {
+	border: 1px solid;
+	border-radius: 5px;
+	padding: 12px;
+	position: relative;
+}
+#content:after, #content:before {
+	right: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+}
+#content:after {
+	border-width: 12px;
+	top: 41px;
+	border-color: rgba(255, 255, 255, 0);
+	border-right-color: #ffffff;
+}
+#content:before {
+	border-width: 13px;
+	top: 40px;
+	border-color: rgba(204, 204, 204, 0);
+	border-right-color: #CCCCCC;
+}
+#content .title {
+	margin-bottom: 5px;
+}
+.box-title {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	padding-top: 4px;
+	padding-right: 8px;
+	padding-left: 8px;
+	padding-bottom: 4px;
+	border-top: 1px solid;
+	border-right: 1px solid;
+	border-left: 1px solid;
+}
+.box-title:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+.box-body {
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	padding: 4px;
+	border: 1px solid;
+}
+
+/*マージン*/
+.margin-t5 {
+	margin-top: 5px;
+}
+.margin-t10 {
+	margin-top: 10px;
+}
+.margin-t15 {
+	margin-top: 15px;
+}
+.margin-t20 {
+	margin-top: 20px;
+}
+.margin-t30 {
+	margin-top: 30px;
+}
+.margin-t40 {
+	margin-top: 40px;
+}
+
+.margin-b5 {
+	margin-bottom: 5px;
+}
+.margin-b10 {
+	margin-bottom: 10px;
+}
+.margin-b12 {
+	margin-bottom: 12px;
+}
+.margin-b16 {
+	margin-bottom: 16px;
+}
+.margin-b20 {
+	margin-bottom: 20px;
+}
+.margin-b25 {
+	margin-bottom: 25px;
+}
+.margin-b30 {
+	margin-bottom: 30px;
+}
+.margin-b40 {
+	margin-bottom: 40px;
+}
+.date-opacity {
+	opacity: 0.6;	
+}
+
+/*テーブル*/
+.table-lefthead {
+	border-collapse:collapse;
+	width: 100%;
+}
+.table-lefthead th {
+	border: 1px solid;
+	font-weight: normal;
+	text-align: right;
+	padding: 4px;
+	white-space: nowrap;
+}
+.table-lefthead td {
+	border: 1px solid;
+	padding: 4px;
+}
+
+.border-top-radius {
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+.table-lefthead-title { /*タイトル角丸テーブル*/
+	border-spacing: 0;
+	border-top: 1px solid;
+	border-left: 1px solid;
+	margin-right: auto;
+	margin-left: auto;
+}
+.table-lefthead-title th {
+	font-weight: normal;
+	text-align: right;
+	padding: 4px;
+	border-bottom: 1px solid;
+	border-right: 1px solid;
+	white-space: nowrap;
+}
+.table-lefthead-title td {
+	text-align: left;
+	padding: 4px;
+	border-bottom: 1px solid;
+	border-right: 1px solid;
+}
+.table-lefthead-title td.tx-center {
+	text-align: center;
+}
+.table-lefthead-title .title {
+	text-align: left;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 4px;
+	padding-right: 8px;
+	padding-left: 8px;
+}
+
+.table-tophead {
+	border-collapse: collapse;
+	width: 100%;
+	font-size: 12px;
+}
+.table-tophead th {
+	border: 1px solid;
+	font-weight: normal;
+	text-align: center;
+	padding: 4px;
+	white-space: nowrap;
+}
+.table-tophead td {
+	border: 1px solid;
+	padding: 4px;
+}
+
+/*タブボタン*/
+.tab-btn:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+.tab-btn ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+.tab-btn ul li {
+	float: left;
+	margin-right: 2px;
+}
+.tab-btn ul li a {
+	display: block;
+	text-decoration: none;
+	padding-top: 4px;
+	padding-right: 8px;
+	padding-left: 8px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border: 1px solid;
+	height: 21px;
+}
+.tab-btn ul li a.selected {
+	cursor: default;
+	pointer-events: none;
+}
+.tab-base {
+	height: 4px;
+	margin-top: -1px;
+	border-top: 1px solid;
+	border-right: 1px solid;
+	border-left: 1px solid;
+}
+/*スイッチボタン*/
+.switch-btn {
+	border-top: 1px solid;
+	border-right: 1px solid;
+	border-left: 1px solid;
+	padding: 4px;
+}
+.switch-btn:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+.switch-btn ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+.switch-btn ul li {
+	float: left;
+	margin: 0px;
+}
+.switch-btn ul li a {
+	display: block;
+	text-decoration: none;
+	padding-top: 2px;
+	padding-right: 8px;
+	padding-bottom: 2px;
+	padding-left: 8px;
+}
+.switch-btn ul li a:hover {
+	border-radius: 3px;
+}
+.switch-btn ul li a.selected {
+	cursor: default;
+	pointer-events: none;
+}
+
+/*カレンダー*/
+.cal-head {
+	border-top: 1px solid;
+	border-right: 1px solid;
+	border-left: 1px solid;
+	padding-top: 4px;
+	padding-right: 4px;
+	padding-left: 12px;
+	padding-bottom: 4px;
+}
+.cal-head:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+.cal-title {
+	float: left;
+	font-size: 14px;
+	margin-top: 3px;
+}
+.cal-navi {
+	float: right;
+}
+.cal-navi ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+.cal-navi ul li {
+	float: left;
+	margin-top: 1px;
+	margin-right: 5px;
+	margin-left: 5px;
+	margin-bottom: 1px;
+}
+.cal-navi ul li a {
+	display: block;
+	text-decoration: none;
+	padding-top: 2px;
+	padding-right: 8px;
+	padding-bottom: 2px;
+	padding-left: 8px;
+}
+.cal-navi ul li a:hover {
+	border-radius: 3px;
+}
+.calendar {
+	border-collapse: collapse;
+	width: 100%;
+	font-size: 12px;
+	table-layout: fixed;
+}
+.calendar th {
+	border: 1px solid;
+	font-weight: normal;
+	text-align: center;
+	padding: 4px;
+	white-space: nowrap;
+}
+.calendar td {
+	border: 1px solid;
+	padding: 4px;
+	height: 50px;
+	text-align: right;
+	vertical-align: top;
+}
+.non-month {
+	opacity: 0.4;
+}
+.calendar td.schedule a {
+	display: block;
+	text-align: left;
+}
+
+/*ボタン*/
+.btn {
+	border: 1px solid;
+	padding: 5px;
+	position: relative;
+	overflow: hidden;
+	margin-top: -1px;
+}
+td.btn {
+	border-top-style: none;
+	border-left-style: none;
+}
+.btn:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+.btn ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+	position: relative;
+	left: 50%;
+	float: left;
+}
+.btn ul li {
+	float: left;
+	margin-top: 1px;
+	margin-right: 5px;
+	margin-left: 5px;
+	margin-bottom: 1px;
+	position: relative;
+	left: -50%;
+}
+.btn ul li a {
+	display: block;
+	text-decoration: none;
+	padding-top: 4px;
+	padding-right: 8px;
+	padding-bottom: 4px;
+	padding-left: 8px;
+}
+.btn ul li a:hover {
+	border-radius: 3px;
+}
+.btn ul li a.recommend {
+	font-weight: bold;
+}
+
+.btn-slide {
+	float: right;
+	font-size: 11px;
+	line-height: 18px;
+	opacity: 0.6;
+}
+.btn-slide:hover {
+	opacity: 1;
+}
+.btn-slide i {
+	margin-right: 4px;
+}
+.btn-slide a {
+	text-decoration: none;
+}
+.btn-close {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	cursor: pointer;
+	width: 16px;
+	height: 16px;
+	text-align: center;
+	line-height: 16px;
+	opacity: 0.6;
+	border: transparent 1px solid;
+}
+.btn-close:hover {
+	border: 1px solid;
+	border-radius: 3px;
+	opacity: 1;
+}
+
+/*-----フォーム関連-----*/
+.tx-required {
+	/* font-size: 0.8em; 
+	color: #C00; */
+	margin-right: 10px;
+	background-color: rgba(255, 255, 255, 0.9);
+	/*border-radius: 3px;
+	padding-left: 2px;
+	padding-right: 2px;*/
+}
+.txt-f-m, .txt-f-s, .txt-f-l {
+	border: 1px solid;
+	font-size: 12px;
+	padding: 2px;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+.txt-f-m {;
+	width: 200px;
+}
+.txt-f-s {
+	width: 100px;
+}
+.txt-f-l {
+	width: 300px;
+}
+
+/*ステップ*/
+
+.page-title {
+	margin-bottom: 16px;
+	font-weight: bold;
+}
+
+#step {
+	border-radius: 5px;
+	padding-top: 6px;
+	padding-right: 6px;
+	padding-left: 6px;
+	margin-bottom: 20px;
+	border: 1px solid;
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+}
+#step :after {
+	content: "";
+	clear: both;
+	display: block;
+}
+#step ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+#step ul li {
+	float: left;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-left: 24px;
+	padding-bottom: 5px;
+	position: relative;
+	height: 36px;
+	margin-bottom: 6px;
+	text-align: left;
+}
+#step ul li:first-child {
+	padding-left: 8px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+#step ul li:last-child {
+	padding-right:8px;
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
+}
+#step ul li:before, #step ul li:after {
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	position: absolute;
+	width: 0;
+	z-index: 1;
+	left: 100%;
+}
+#step ul li:before {
+	top: -6px;
+	border-top-width: 29px;
+	border-bottom-width: 28px;
+	border-right-width: 19px;
+	border-left-width: 21px;
+}
+#step ul li:after {
+	top: 0px;
+	border-top-width: 23px;
+	border-bottom-width: 23px;
+	border-right-width: 17px;
+	border-left-width: 17px;
+}
+#step ul li:last-child:before , #step ul li:last-child:after{
+	border-style: none;
+}
+#signup-area {
+	width: 620px;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+}
+#signup-area table {
+	width: 100%;
+}
+
+.scroll-box {
+	height: 100px;
+	overflow: auto;
+	border: 1px solid;
+	padding-right: 10px;
+	padding-left: 10px;
+	margin: 10px;
+}
+
+#return-btn {
+	position: relative;
+	left: 45%;
+	margin-top: 10px;
+	width: 80px;
+	border: none;
+	padding: 0px;
+	display: block;
+	cursor: pointer;
+}
+
+#return-btn a {
+	text-decoration: none;
+	text-align: center;
+	display: block;
+	width: 100%;
+	padding: 6px 0px;	
+	font-weight: bold;
+}
+
+.errorMessage {	
+    border: 1px solid #ccc;
+    margin: 10px auto;
+    padding: 10px 10px 10px 40px;
+    width: auto;
+    display: none;
+    background-image: url("../../../image/common/errormessage/stop.png");
+	background-repeat: no-repeat;
+	background-position: 1% 50%; 
+}
+
+.popup-under-checkbox {
+	padding: 16px;
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	border-left: none;
+	border-right: none;
+}
+
+.btn-alone, .btn-alone-small {
+	border: 1px solid #CCCCCC;
+	background-color: #EEF5FA;
+	position: relative;
+	overflow: hidden;
+	border-radius: 3px;
+	display: inline-block;
+	margin-left: 2px;
+	padding: 7px 12px;
+}
+.btn-alone {
+	padding: 7px 12px;
+}
+.btn-alone-small {
+	padding: 1px 3px;
+}
+
+.btn-alone:hover, .btn-alone-small:hover {
+	background-color: #ccdfed;
+	border-radius: 3px;
+	text-decoration: none;
+}
+
+.switch-btn {/*湾曲したボタン*/
+	border-right: 1px solid;
+	border-left: 1px solid;
+	padding: 6px;
+	border-color: #ccc;
+}
+.switch-btn:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+.switch-btn ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+.switch-btn ul li {
+	float: left;
+	border: 1px solid;
+	margin-left: -1px;
+	border-color: #CCC;
+}
+.switch-btn ul li a {
+	display: block;
+	text-decoration: none;
+	padding-top: 3px;
+	padding-right: 8px;
+	padding-bottom: 3px;
+	padding-left: 8px;
+	color: #333333;
+}
+.switch-btn ul li a.selected {
+	cursor: default;
+	pointer-events: none;
+	background-color: #E5E5E5;
+}
+.switch-btn ul li:first-child, .switch-btn ul li:first-child a {
+	border-top-left-radius: 12px;
+	border-bottom-left-radius: 12px;
+}
+.switch-btn ul li:last-child, .switch-btn ul li:last-child a {
+	border-bottom-right-radius: 12px;
+	border-top-right-radius: 12px;
+}
+.switch-btn ul li:first-child a {
+	padding-left: 12px;
+}
+.switch-btn ul li:last-child a {
+	padding-right: 12px;
+}
+
+.switch-btn i {
+	font-size: 14px;
+	margin-right: 4px;
+}
+
+.f-left {
+	float: left;
+}
+.f-right {
+	float: right;
+}
+.f-clear {
+	clear: both;
+}
+#wrap {margin: 16px;}
+
+.msg-board {
+	position: relative; padding: 6px; vertical-align: middle; background: #FFF; border-width: 1px; border-bottom-style: solid;
+	background-image: url("../../../image/web/toppage/alert-message.png");
+	background-position: 25px 50%; background-repeat: no-repeat;
+}
+.msg-board img {position:absolute; top:0px; bottom: 0px; margin: auto; margin-left: 20px;}
+.msg-board ul {color: #cc0000 !important;}
+.msg-board ul li {padding-top: 6px;}
+.msg-board ul li a:link {color: #cc0000 !important;}
+.msg-board:after {clear: both;}
+.msg-board .msg-close {float:right;display:block;margin:2px;padding:1px 0px;width:19px;height:16px;cursor:pointer;color:#333;opacity: 0.6;border: transparent 1px solid;text-align: center;font-size: 14px;border-radius: 3px;}
+.common-mouseover-box.over {
+	border: #ccc 1px solid !important;
+	border-radius: 3px;
+	opacity: 1 !important;
+}
+
+#left-panel {
+	min-width: 1px !important;
+}
+.ribbon {
+	display: block;
+	position: absolute;
+	top: 90px;
+	left: -110px;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform:    rotate(-45deg);
+	-ms-transform:     rotate(-45deg);
+	transform:         rotate(-45deg);
+	/*
+	right: -110px;
+	-webkit-transform: rotate(-135deg);
+	-moz-transform:    rotate(-135deg);
+	-ms-transform:     rotate(-135deg);
+	transform:         rotate(-135deg);
+	*/
+	width: 500px;
+	min-height: 60px;
+	line-height: 23px;
+	text-align: center;
+	opacity: 0.7;
+	font-size: 16px;
+	font-weight: 700;
+	color: white;
+	background-color: red;
+	border: 1px solid white;
+	padding-top: 12px;
+	padding-left: 60px;
+	padding-right: 70px;
+	z-index: 99999;
+	word-break: break-all;
+	word-wrap: break-word;
+}

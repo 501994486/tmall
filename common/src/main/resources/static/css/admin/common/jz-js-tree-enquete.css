@@ -1,0 +1,76 @@
+@import url("jz-js-tree.css");
+
+.jstree li[rel="drive"].jstree-closed > a > .jstree-icon,
+.jstree li[rel="folder"].jstree-closed > a > .jstree-icon,
+.jstree-leaf > a > .jstree-icon,
+.jstree-0 a > ins.jstree-icon,
+.jstree-0 li[rel="folder"] > a > ins.jstree-icon {
+ background         : url(../../../js/common/jstree/images/onlineshop/folder-closed.svg);
+}
+
+.jstree li[rel="drive"].jstree-closed > a.jstree-clicked > .jstree-icon,
+.jstree li[rel="folder"].jstree-closed > a.jstree-clicked > .jstree-icon,
+.jstree-leaf > a.jstree-clicked > .jstree-icon,
+.jstree-0 a.jstree-clicked > ins.jstree-icon,
+.jstree-0 li[rel="folder"] > a.jstree-clicked > ins.jstree-icon {
+ background         : url(../../../js/common/jstree/images/onlineshop/folder-closed-blue.svg);
+}
+
+.jstree li[rel="drive"].jstree-open > a > .jstree-icon,
+.jstree li[rel="folder"].jstree-open > a > .jstree-icon {
+ background         : url(../../../js/common/jstree/images/onlineshop/folder-open.svg);
+}
+
+.jstree li[rel="drive"].jstree-open > a.jstree-clicked > .jstree-icon,
+.jstree li[rel="folder"].jstree-open > a.jstree-clicked > .jstree-icon {
+ background         : url(../../../js/common/jstree/images/onlineshop/folder-open-blue.svg);
+}
+
+.jstree-0 li[rel="default"] > a > ins.jstree-icon {
+ 	background         : url(../../../js/common/jstree/images/enquete/tree_survey_form_3.svg);
+}
+
+.jstree-0 li[rel="default"] > a.jstree-clicked > ins.jstree-icon {
+ 	background         : url(../../../js/common/jstree/images/enquete/tree_survey_form-on_2.svg);
+}
+
+.jstree-0 li[rel="answer"] > a > ins.jstree-icon {
+ 	background         : url(../../../js/common/jstree/images/enquete/tree_survey02_3.svg);
+}
+
+.jstree-0 li[rel="answer"] > a.jstree-clicked > ins.jstree-icon {
+ 	background         : url(../../../js/common/jstree/images/enquete/tree_survey02-on_2.svg);
+}
+
+.jstree-0 li[rel="membership"] > a > ins.jstree-icon {
+ 	background         : url(../../../js/common/jstree/images/enquete/tree_survey02_3.svg);
+}
+
+.jstree-0 li[rel="membership"] > a.jstree-clicked > ins.jstree-icon {
+ 	background         : url(../../../js/common/jstree/images/enquete/tree_survey02-on_2.svg);
+}
+
+.jstree-0 li[rel="course"] > a > ins.jstree-icon {
+ 	background         : url(../../../js/common/jstree/images/enquete/tree_survey02_3.svg);
+}
+
+.jstree-0 li[rel="course"] > a.jstree-clicked > ins.jstree-icon {
+ 	background         : url(../../../js/common/jstree/images/enquete/tree_survey02-on_2.svg);
+}
+
+.jstree-0 li[rel="theme"] > a > ins.jstree-icon {
+ 	background         : url(../../../js/common/jstree/images/enquete/tree_survey02_3.svg);
+}
+
+.jstree-0 li[rel="theme"] > a.jstree-clicked > ins.jstree-icon {
+ 	background         : url(../../../js/common/jstree/images/enquete/tree_survey02-on_2.svg);
+}
+
+.jstree-0 li[rel="program"] > a > ins.jstree-icon {
+ 	background         : url(../../../js/common/jstree/images/enquete/tree_survey02_3.svg);
+}
+
+.jstree-0 li[rel="program"] > a.jstree-clicked > ins.jstree-icon {
+ 	background         : url(../../../js/common/jstree/images/enquete/tree_survey02-on_2.svg);
+}
+

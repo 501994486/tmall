@@ -1,0 +1,58 @@
+@import url("jz-js-tree.css");
+
+.jstree a > .jstree-icon {
+ background         : url(../../../js/common/jstree/images/onlineshop/folder-closed.svg);
+}
+
+.jstree a.jstree-clicked > .jstree-icon {
+ background         : url(../../../js/common/jstree/images/onlineshop/folder-closed-blue.svg);
+}
+
+.jstree .jstree-open > a > .jstree-icon {
+ background         : url(../../../js/common/jstree/images/onlineshop/folder-open.svg);
+}
+.jstree .jstree-open > a.jstree-clicked > .jstree-icon {
+ background         : url(../../../js/common/jstree/images/onlineshop/folder-open-blue.svg);
+}
+
+
+.jstree li[rel] > a.l-jstree-item > .jstree-icon {
+ background         : url(../../../js/common/jstree/images/onlineshop/c09.svg);
+}
+.jstree li[rel] > a.l-jstree-item.jstree-clicked > .jstree-icon {
+ background         : url(../../../js/common/jstree/images/onlineshop/c09-blue.svg);
+}
+
+.jstree li[rel] > a.l-jstree-var > .jstree-icon {
+ background         : none;
+}
+
+@import url("jz-js-tree.css");
+
+.jstree a > .jstree-icon {
+ background         : url(../../../js/common/jstree/images/onlineshop/folder-closed.svg);
+}
+
+.jstree a.jstree-clicked > .jstree-icon {
+ background         : url(../../../js/common/jstree/images/onlineshop/folder-closed-blue.svg);
+}
+
+.jstree .jstree-open > a > .jstree-icon {
+ background         : url(../../../js/common/jstree/images/onlineshop/folder-open.svg);
+}
+.jstree .jstree-open > a.jstree-clicked > .jstree-icon {
+ background         : url(../../../js/common/jstree/images/onlineshop/folder-open-blue.svg);
+}
+
+
+.jstree li[rel] > a.l-jstree-item > .jstree-icon {
+ background         : url(../../../js/common/jstree/images/onlineshop/c09.svg);
+}
+.jstree li[rel] > a.l-jstree-item.jstree-clicked > .jstree-icon {
+ background         : url(../../../js/common/jstree/images/onlineshop/c09-blue.svg);
+}
+
+.jstree li[rel] > a.l-jstree-var > .jstree-icon {
+ background         : none;
+}
+

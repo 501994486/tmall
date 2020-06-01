@@ -1,0 +1,76 @@
+@import url("new-admin-common.css");
+@import url("jz-js-tree-event.css");
+
+/* ---------------------------------------------- only event used START -------------------------------------------------- */
+
+#calendar-show {
+    --max-w: calc(var(--contents-max-width) - 100px);
+    max-width: var(--max-w);
+    min-width: 680px;
+    margin-bottom: 60px;
+}
+
+
+#entry-status-type-cnf i {
+    width: 10px;
+}
+
+.entry-status-disp-area__icon {
+    padding-left: 20px;
+}
+
+#modal-entry-status-type-div .stockStatusDiv > textarea{
+max-width:300px;
+}
+#entry-status-type-cnf input[type="text"]{
+    width: 6em;
+}
+.entry-status-disp-area {
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+/***entry status **/
+.entry-status-area {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.entry-status-list {
+    width: 30%;
+}
+
+.entry-status-list__row__title-cell {
+    font-weight: bold;
+    color: var(--jimzen-gray1);
+    width: 150px;
+    margin-right: auto;
+}
+
+.entry-status-list__row__content-cell {
+    text-align: right;
+}
+
+#ticketInfoTable  td:first-child{
+	width: 300px;
+}
+
+input[type="radio"]#another:checked+label{
+	border: 3px solid var(--jimzen-navy);
+	color: var(--jimzen-navy);
+}
+/*-----------------*/
+
+
+.addDeliDateSlot span {
+    padding: 0px 10px;
+}
+
+
+
+/* ---------------------------------------------- only event used END -------------------------------------------------- */
+
+
