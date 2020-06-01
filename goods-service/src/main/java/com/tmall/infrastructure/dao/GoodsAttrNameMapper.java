@@ -1,6 +1,6 @@
 package com.tmall.infrastructure.dao;
 
-import com.tmall.domain.entity.GoodsAttrName;
+import com.tmall.domain.entity.valueobject.GoodsAttrName;
 
 public interface GoodsAttrNameMapper {
     int deleteByPrimaryKey(Integer attrNameId);

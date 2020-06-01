@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.tmall.infrastructure.dao.GoodsBasicSetupMapper" >
-  <resultMap id="BaseResultMap" type="com.tmall.domain.entity.GoodsBasicSetup" >
-    <id column="baisc_setup_id" property="baiscSetupId" jdbcType="INTEGER" />
+  <resultMap id="BaseResultMap" type="com.tmall.domain.entity.valueobject.GoodsBasicSetup" >
+    <id column="shop_id" property="shopId" jdbcType="INTEGER" />
     <result column="each_buy_max_quantity" property="eachBuyMaxQuantity" jdbcType="INTEGER" />
     <result column="each_buy_min_quantity" property="eachBuyMinQuantity" jdbcType="INTEGER" />
     <result column="total_buy_max_quantity" property="totalBuyMaxQuantity" jdbcType="INTEGER" />
@@ -15,48 +15,40 @@
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
     <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
   </resultMap>
-  <resultMap id="ResultMapWithBLOBs" type="com.tmall.domain.entity.GoodsBasicSetup" extends="BaseResultMap" >
+  <resultMap id="ResultMapWithBLOBs" type="com.tmall.domain.entity.valueobject.GoodsBasicSetup" extends="BaseResultMap" >
     <result column="stock_status" property="stockStatus" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    baisc_setup_id, each_buy_max_quantity, each_buy_min_quantity, total_buy_max_quantity, 
-    delivery_method_id, is_new, sold_out_mail_flag, stock_warn_mail_flag, warn_stock, 
+    shop_id, each_buy_max_quantity, each_buy_min_quantity, total_buy_max_quantity,
+    delivery_method_id, is_new, sold_out_mail_flag, stock_warn_mail_flag, warn_stock,
     stock_show_way, create_time, update_time
   </sql>
-  <sql id="Blob_Column_List" >
-    stock_status
-  </sql>
-  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
-    select 
-    <include refid="Base_Column_List" />
-    ,
-    <include refid="Blob_Column_List" />
+
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select <include refid="Base_Column_List" />
+
     from GOODS_BASIC_SETUP
-    where baisc_setup_id = #{baiscSetupId,jdbcType=INTEGER}
+    where shop_id = #{shopId,jdbcType=INTEGER}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from GOODS_BASIC_SETUP
-    where baisc_setup_id = #{baiscSetupId,jdbcType=INTEGER}
-  </delete>
-  <insert id="insert" parameterType="com.tmall.domain.entity.GoodsBasicSetup" >
-    insert into GOODS_BASIC_SETUP (baisc_setup_id, each_buy_max_quantity, 
-      each_buy_min_quantity, total_buy_max_quantity, 
-      delivery_method_id, is_new, sold_out_mail_flag, 
-      stock_warn_mail_flag, warn_stock, stock_show_way, 
+  <insert id="insert" parameterType="com.tmall.domain.entity.valueobject.GoodsBasicSetup" >
+    insert into GOODS_BASIC_SETUP (shop_id, each_buy_max_quantity,
+      each_buy_min_quantity, total_buy_max_quantity,
+      delivery_method_id, is_new, sold_out_mail_flag,
+      stock_warn_mail_flag, warn_stock, stock_show_way,
       create_time, update_time, stock_status
       )
-    values (#{baiscSetupId,jdbcType=INTEGER}, #{eachBuyMaxQuantity,jdbcType=INTEGER}, 
-      #{eachBuyMinQuantity,jdbcType=INTEGER}, #{totalBuyMaxQuantity,jdbcType=INTEGER}, 
-      #{deliveryMethodId,jdbcType=INTEGER}, #{newFlag,jdbcType=TINYINT}, #{soldOutMailFlag,jdbcType=TINYINT}, 
-      #{stockWarnMailFlag,jdbcType=TINYINT}, #{warnStock,jdbcType=INTEGER}, #{stockShowWay,jdbcType=TINYINT}, 
+    values (#{shopId,jdbcType=INTEGER}, #{eachBuyMaxQuantity,jdbcType=INTEGER},
+      #{eachBuyMinQuantity,jdbcType=INTEGER}, #{totalBuyMaxQuantity,jdbcType=INTEGER},
+      #{deliveryMethodId,jdbcType=INTEGER}, #{newFlag,jdbcType=TINYINT}, #{soldOutMailFlag,jdbcType=TINYINT},
+      #{stockWarnMailFlag,jdbcType=TINYINT}, #{warnStock,jdbcType=INTEGER}, #{stockShowWay,jdbcType=TINYINT},
       #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{stockStatus,jdbcType=LONGVARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.tmall.domain.entity.GoodsBasicSetup" >
+  <insert id="insertSelective" parameterType="com.tmall.domain.entity.valueobject.GoodsBasicSetup" >
     insert into GOODS_BASIC_SETUP
     <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="baiscSetupId != null" >
-        baisc_setup_id,
+      <if test="shopId != null" >
+        shop_id,
       </if>
       <if test="eachBuyMaxQuantity != null" >
         each_buy_max_quantity,
@@ -96,8 +88,8 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="baiscSetupId != null" >
-        #{baiscSetupId,jdbcType=INTEGER},
+      <if test="shopId != null" >
+        #{shopId,jdbcType=INTEGER},
       </if>
       <if test="eachBuyMaxQuantity != null" >
         #{eachBuyMaxQuantity,jdbcType=INTEGER},
@@ -137,7 +129,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.tmall.domain.entity.GoodsBasicSetup" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.tmall.domain.entity.valueobject.GoodsBasicSetup" >
     update GOODS_BASIC_SETUP
     <set >
       <if test="eachBuyMaxQuantity != null" >
@@ -177,9 +169,9 @@
         stock_status = #{stockStatus,jdbcType=LONGVARCHAR},
       </if>
     </set>
-    where baisc_setup_id = #{baiscSetupId,jdbcType=INTEGER}
+    where shop_id = #{shopId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tmall.domain.entity.GoodsBasicSetup" >
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tmall.domain.entity.valueobject.GoodsBasicSetup" >
     update GOODS_BASIC_SETUP
     set each_buy_max_quantity = #{eachBuyMaxQuantity,jdbcType=INTEGER},
       each_buy_min_quantity = #{eachBuyMinQuantity,jdbcType=INTEGER},
@@ -193,9 +185,9 @@
       create_time = #{createTime,jdbcType=TIMESTAMP},
       update_time = #{updateTime,jdbcType=TIMESTAMP},
       stock_status = #{stockStatus,jdbcType=LONGVARCHAR}
-    where baisc_setup_id = #{baiscSetupId,jdbcType=INTEGER}
+    where shop_id = #{shopId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.tmall.domain.entity.GoodsBasicSetup" >
+  <update id="updateByPrimaryKey" parameterType="com.tmall.domain.entity.valueobject.GoodsBasicSetup" >
     update GOODS_BASIC_SETUP
     set each_buy_max_quantity = #{eachBuyMaxQuantity,jdbcType=INTEGER},
       each_buy_min_quantity = #{eachBuyMinQuantity,jdbcType=INTEGER},
@@ -208,6 +200,6 @@
       stock_show_way = #{stockShowWay,jdbcType=TINYINT},
       create_time = #{createTime,jdbcType=TIMESTAMP},
       update_time = #{updateTime,jdbcType=TIMESTAMP}
-    where baisc_setup_id = #{baiscSetupId,jdbcType=INTEGER}
+    where shop_id = #{shopId,jdbcType=INTEGER}
   </update>
 </mapper>

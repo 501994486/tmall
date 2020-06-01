@@ -4,7 +4,7 @@
   <resultMap id="BaseResultMap" type="com.tmall.domain.entity.Category">
     <id column="category_id" jdbcType="INTEGER" property="categoryId" />
     <result column="parent_category_id" jdbcType="INTEGER" property="parentCategoryId" />
-    <result column="shop_id" jdbcType="BIGINT" property="shopId" />
+    <result column="shopselectByPrimaryKey_id" jdbcType="BIGINT" property="shopId" />
     <result column="category_name" jdbcType="VARCHAR" property="categoryName" />
     <result column="status" jdbcType="TINYINT" property="status" />
     <result column="commission_rate" jdbcType="DECIMAL" property="commissionRate" />
@@ -14,6 +14,40 @@
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
   </resultMap>
+  <resultMap id="childrenCategoryResultMap" type="com.tmall.domain.entity.Category">
+    <id column="category_id" jdbcType="INTEGER" property="categoryId" />
+    <result column="parent_category_id" jdbcType="INTEGER" property="parentCategoryId" />
+    <result column="shopselectByPrimaryKey_id" jdbcType="BIGINT" property="shopId" />
+    <result column="category_name" jdbcType="VARCHAR" property="categoryName" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="commission_rate" jdbcType="DECIMAL" property="commissionRate" />
+    <result column="sort_order" jdbcType="INTEGER" property="sortOrder" />
+    <result column="is_show" jdbcType="TINYINT" property="showFlag" />
+    <result column="is_delete" jdbcType="TINYINT" property="deleteFlag" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <collection property="childrenCategoryList" ofType="com.tmall.domain.entity.Category"
+                select="selectChildrenCategoryListByParentCategoryId" column="parentCategoryId">
+    </collection>
+  </resultMap>
+
+  <resultMap id="parnetCategoryResultMap" type="com.tmall.domain.entity.Category">
+    <id column="category_id" jdbcType="INTEGER" property="categoryId" />
+    <result column="parent_category_id" jdbcType="INTEGER" property="parentCategoryId" />
+    <result column="shopselectByPrimaryKey_id" jdbcType="BIGINT" property="shopId" />
+    <result column="category_name" jdbcType="VARCHAR" property="categoryName" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="commission_rate" jdbcType="DECIMAL" property="commissionRate" />
+    <result column="sort_order" jdbcType="INTEGER" property="sortOrder" />
+    <result column="is_show" jdbcType="TINYINT" property="showFlag" />
+    <result column="is_delete" jdbcType="TINYINT" property="deleteFlag" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <association property="parentCategory" javaType="com.tmall.domain.entity.Category"
+                 select="selectParentCategoryByCategoryId" column="categoryId">
+    </association>
+  </resultMap>
+
   <sql id="Base_Column_List">
     category_id, parent_category_id, shop_id, category_name, status, commission_rate, 
     sort_order, is_show, is_delete, create_time, update_time
@@ -161,4 +195,30 @@
       update_time = #{updateTime,jdbcType=TIMESTAMP}
     where category_id = #{categoryId,jdbcType=INTEGER}
   </update>
+
+
+  <select id="selectChildrenCategoryListByParentCategoryId" resultMap="childrenCategoryResultMap">
+    select  <include refid="Base_Column_List" />
+    from GOODS_CATEGORY
+    where parent_category_id=#{parentCategoryId}
+  </select>
+
+  <select id="selectParentCategoryByCategoryId" resultMap="parnetCategoryResultMap">
+	select <include refid="Base_Column_List" />
+    from GOODS_CATEGORY
+    where category_id=#{categoryId}
+  </select>
+
+  <select id="selectParentCategoryMaxSortOrder" resultType="int">
+    select max(sortOrder)
+    from GOODS_CATEGORY
+    where category_id=#{categoryId} and shop_id = #{shopId}
+  </select>
+
+  <select id="selectAllCategoryByShopId" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List" />
+    from GOODS_CATEGORY
+    where shop_id = #{shopId}
+  </select>
+
 </mapper>

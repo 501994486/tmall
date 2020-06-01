@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.tmall.infrastructure.dao.GoodsSKUMapper">
-  <resultMap id="BaseResultMap" type="com.tmall.domain.entity.GoodsSKU">
+<mapper namespace="com.tmall.infrastructure.dao.GoodsSkuMapper">
+  <resultMap id="BaseResultMap" type="com.tmall.domain.entity.valueobject.GoodsSku">
     <id column="sku_id" jdbcType="BIGINT" property="skuId" />
     <result column="spu_id" jdbcType="BIGINT" property="spuId" />
     <result column="sku_spec" jdbcType="VARCHAR" property="skuSpec" />
@@ -16,10 +16,39 @@
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
   </resultMap>
+
+  <resultMap type="com.tmall.domain.entity.valueobject.GoodsSku" id="GoodsSkuSpecResultMap">
+    <id column="sku_id" jdbcType="BIGINT" property="skuId" />
+    <result column="spu_id" jdbcType="BIGINT" property="spuId" />
+    <result column="sku_spec" jdbcType="VARCHAR" property="skuSpec" />
+    <result column="market_price" jdbcType="DECIMAL" property="marketPrice" />
+    <result column="discount_price" jdbcType="DECIMAL" property="discountPrice" />
+    <result column="sku_stock" jdbcType="INTEGER" property="skuStock" />
+    <result column="sku_warn_num" jdbcType="INTEGER" property="skuWarnNum" />
+    <result column="sku_sale_num" jdbcType="INTEGER" property="skuSaleNum" />
+    <result column=" is_default" jdbcType="TINYINT" property="defaultFlag" />
+    <result column="is_delete" jdbcType="TINYINT" property="deleteFlag" />
+    <result column="sort_order" jdbcType="INTEGER" property="sortOrder" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <!-- property表示的是关联属性名(类中集合名) -->
+    <!-- select指向另一个查询并将 column内的值赋给另一个查询的参数-->
+    <!-- column的值是主查询查出来的字段值 -->
+    <collection property="goodsSpecificationList" ofType="com.tmall.domain.entity.valueobject.GoodsSpecification"
+                select="selectGoodsSpecBySpuId" column="spuId">
+    </collection>
+  </resultMap>
+
   <sql id="Base_Column_List">
     sku_id, spu_id, sku_spec, market_price, discount_price, sku_stock, sku_warn_num, 
     sku_sale_num, 	is_default, is_delete, sort_order, create_time, update_time
   </sql>
+  <sql id="Spec_Column_List">
+    item_id, category_id, sku_id, item_name, item_desc, item_img, is_delete, create_time,
+    update_time
+  </sql>
+
+
   <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
@@ -30,7 +59,7 @@
     delete from GOODS_SKU
     where sku_id = #{skuId,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.tmall.domain.entity.GoodsSKU">
+  <insert id="insert" parameterType="com.tmall.domain.entity.valueobject.GoodsSku">
     insert into GOODS_SKU (sku_id, spu_id, sku_spec, 
       market_price, discount_price, sku_stock, 
       sku_warn_num, sku_sale_num, 	is_default, 
@@ -42,7 +71,7 @@
       #{deleteFlag,jdbcType=TINYINT}, #{sortOrder,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, 
       #{updateTime,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.tmall.domain.entity.GoodsSKU">
+  <insert id="insertSelective" parameterType="com.tmall.domain.entity.valueobject.GoodsSku">
     insert into GOODS_SKU
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="skuId != null">
@@ -127,7 +156,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.tmall.domain.entity.GoodsSKU">
+  <update id="updateByPrimaryKeySelective" parameterType="com.tmall.domain.entity.valueobject.GoodsSku">
     update GOODS_SKU
     <set>
       <if test="spuId != null">
@@ -169,7 +198,7 @@
     </set>
     where sku_id = #{skuId,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.tmall.domain.entity.GoodsSKU">
+  <update id="updateByPrimaryKey" parameterType="com.tmall.domain.entity.valueobject.GoodsSku">
     update GOODS_SKU
     set spu_id = #{spuId,jdbcType=BIGINT},
       sku_spec = #{skuSpec,jdbcType=VARCHAR},
@@ -185,4 +214,19 @@
       update_time = #{updateTime,jdbcType=TIMESTAMP}
     where sku_id = #{skuId,jdbcType=BIGINT}
   </update>
+
+  <select id="selectGoodsSkuSpecBySkuId" parameterType="java.lang.Long" resultMap="GoodsSkuSpecResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from GOODS_SKU
+    where sku_id = #{skuId,jdbcType=BIGINT}
+  </select>
+
+  <select id="selectGoodsSpecBySpuId" parameterType="java.lang.Long" resultType="com.tmall.domain.entity.valueobject.GoodsSpecification">
+    select
+    <include refid="Spec_Column_List" />
+    from GOODS_SKU
+    where sku_id = #{skuId,jdbcType=BIGINT}
+  </select>
+
 </mapper>

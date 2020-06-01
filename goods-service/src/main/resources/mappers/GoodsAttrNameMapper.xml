@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.tmall.infrastructure.dao.GoodsAttrNameMapper">
-  <resultMap id="BaseResultMap" type="com.tmall.domain.entity.GoodsAttrName">
+  <resultMap id="BaseResultMap" type="com.tmall.domain.entity.valueobject.GoodsAttrName">
     <id column="attr_name_id" jdbcType="INTEGER" property="attrNameId" />
     <result column="attr_name" jdbcType="VARCHAR" property="attrName" />
+    <result column="shop_id" jdbcType="INTEGER" property="shopId" />
     <result column="category_id" jdbcType="INTEGER" property="categoryId" />
     <result column="is_essential_attr" jdbcType="TINYINT" property="essentialAttrFlag" />
     <result column="attr_type" jdbcType="TINYINT" property="attrType" />
@@ -13,7 +14,7 @@
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
   </resultMap>
   <sql id="Base_Column_List">
-    attr_name_id, attr_name, category_id, is_essential_attr, attr_type, is_show, sort_order, 
+    attr_name_id, attr_name,shop_id, category_id, is_essential_attr, attr_type, is_show, sort_order,
     create_time, update_time
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
@@ -26,17 +27,17 @@
     delete from GOODS_ATTR_NAME
     where attr_name_id = #{attrNameId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.tmall.domain.entity.GoodsAttrName">
-    insert into GOODS_ATTR_NAME (attr_name_id, attr_name, category_id, 
+  <insert id="insert" parameterType="com.tmall.domain.entity.valueobject.GoodsAttrName">
+    insert into GOODS_ATTR_NAME (attr_name_id, attr_name,shop_id, category_id,
       is_essential_attr, attr_type, is_show, 
       sort_order, create_time, update_time
       )
-    values (#{attrNameId,jdbcType=INTEGER}, #{attrName,jdbcType=VARCHAR}, #{categoryId,jdbcType=INTEGER}, 
+    values (#{attrNameId,jdbcType=INTEGER}, #{attrName,jdbcType=VARCHAR}, #{shopId,jdbcType=INTEGER}, #{categoryId,jdbcType=INTEGER},
       #{essentialAttrFlag,jdbcType=TINYINT}, #{attrType,jdbcType=TINYINT}, #{showFlag,jdbcType=TINYINT}, 
       #{sortOrder,jdbcType=TINYINT}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.tmall.domain.entity.GoodsAttrName">
+  <insert id="insertSelective" parameterType="com.tmall.domain.entity.valueobject.GoodsAttrName">
     insert into GOODS_ATTR_NAME
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="attrNameId != null">
@@ -44,6 +45,9 @@
       </if>
       <if test="attrName != null">
         attr_name,
+      </if>
+      <if test="shopId != null">
+        shop_id,
       </if>
       <if test="categoryId != null">
         category_id,
@@ -74,6 +78,9 @@
       <if test="attrName != null">
         #{attrName,jdbcType=VARCHAR},
       </if>
+      <if test="shopId != null">
+        #{shop_id,jdbcType=INTEGER},
+      </if>
       <if test="categoryId != null">
         #{categoryId,jdbcType=INTEGER},
       </if>
@@ -97,11 +104,14 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.tmall.domain.entity.GoodsAttrName">
+  <update id="updateByPrimaryKeySelective" parameterType="com.tmall.domain.entity.valueobject.GoodsAttrName">
     update GOODS_ATTR_NAME
     <set>
       <if test="attrName != null">
         attr_name = #{attrName,jdbcType=VARCHAR},
+      </if>
+      <if test="shopId != null">
+        shop_id = #{shopId,jdbcType=INTEGER},
       </if>
       <if test="categoryId != null">
         category_id = #{categoryId,jdbcType=INTEGER},
@@ -127,9 +137,10 @@
     </set>
     where attr_name_id = #{attrNameId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.tmall.domain.entity.GoodsAttrName">
+  <update id="updateByPrimaryKey" parameterType="com.tmall.domain.entity.valueobject.GoodsAttrName">
     update GOODS_ATTR_NAME
     set attr_name = #{attrName,jdbcType=VARCHAR},
+      shop_id = #{shopId,jdbcType=INTEGER},
       category_id = #{categoryId,jdbcType=INTEGER},
       is_essential_attr = #{essentialAttrFlag,jdbcType=TINYINT},
       attr_type = #{attrType,jdbcType=TINYINT},

@@ -1,4 +1,4 @@
-package com.tmall.domain.entity;
+package com.tmall.domain.entity.valueobject;
 
 import lombok.Data;
 
@@ -6,22 +6,18 @@ import java.util.Date;
 
 /**
  * All rights Reserved, Designed By technologyMall
- * @Description 商品属性名表
+ * @Description 商品属性值
  * @author sun.h
  * @date   2019年5月18日
  * @version V1.0
  */
 @Data
-public class GoodsAttrName {
-    private Integer attrNameId;
+public class GoodsAttrValue {
+    private Integer attrValueId;
 
-    private String attrName;
+    private String attrValue;
 
-    private Integer categoryId;
-
-    private Byte essentialAttrFlag;
-
-    private Byte attrType;
+    private Integer shopId;
 
     private Byte showFlag;
 
@@ -30,4 +26,5 @@ public class GoodsAttrName {
     private Date createTime;
 
     private Date updateTime;
+
 }

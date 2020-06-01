@@ -5,7 +5,7 @@ import com.tmall.domain.entity.Brand;
 public interface BrandMapper {
     int deleteByPrimaryKey(Integer brandId);
 
-    int insert(Brand record);
+    int insertBrandAndGetBrandId(Brand record);
 
     int insertSelective(Brand record);
 

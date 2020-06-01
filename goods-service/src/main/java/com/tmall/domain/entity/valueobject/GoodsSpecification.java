@@ -1,4 +1,4 @@
-package com.tmall.domain.entity;
+package com.tmall.domain.entity.valueobject;
 
 import lombok.Data;
 
@@ -17,7 +17,7 @@ public class GoodsSpecification {
 
     private Integer categoryId;
 
-    private Long goodsId;
+    private Long skuId;
 
     private String itemName;
 

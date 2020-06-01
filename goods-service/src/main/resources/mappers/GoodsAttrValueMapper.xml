@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.tmall.infrastructure.dao.GoodsAttrValueMapper">
-  <resultMap id="BaseResultMap" type="com.tmall.domain.entity.GoodsAttrValue">
+  <resultMap id="BaseResultMap" type="com.tmall.domain.entity.valueobject.GoodsAttrValue">
     <id column="attr_value_id" jdbcType="INTEGER" property="attrValueId" />
     <result column="attr_value" jdbcType="VARCHAR" property="attrValue" />
+    <result column="shop_id" jdbcType="INTEGER" property="shopId" />
     <result column="is_show" jdbcType="TINYINT" property="showFlag" />
     <result column="sort_order" jdbcType="TINYINT" property="sortOrder" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
   </resultMap>
   <sql id="Base_Column_List">
-    attr_value_id, attr_value, is_show, sort_order, create_time, update_time
+    attr_value_id, attr_value,shop_id is_show, sort_order, create_time, update_time
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
@@ -22,15 +23,15 @@
     delete from GOODS_ATTR_VALUE
     where attr_value_id = #{attrValueId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.tmall.domain.entity.GoodsAttrValue">
-    insert into GOODS_ATTR_VALUE (attr_value_id, attr_value, is_show, 
+  <insert id="insert" parameterType="com.tmall.domain.entity.valueobject.GoodsAttrValue">
+    insert into GOODS_ATTR_VALUE (attr_value_id, attr_value,shop_id, is_show,
       sort_order, create_time, update_time
       )
-    values (#{attrValueId,jdbcType=INTEGER}, #{attrValue,jdbcType=VARCHAR}, #{showFlag,jdbcType=TINYINT}, 
+    values (#{attrValueId,jdbcType=INTEGER}, #{attrValue,jdbcType=VARCHAR}, #{shopId,jdbcType=INTEGER}, #{showFlag,jdbcType=TINYINT},
       #{sortOrder,jdbcType=TINYINT}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.tmall.domain.entity.GoodsAttrValue">
+  <insert id="insertSelective" parameterType="com.tmall.domain.entity.valueobject.GoodsAttrValue">
     insert into GOODS_ATTR_VALUE
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="attrValueId != null">
@@ -38,6 +39,9 @@
       </if>
       <if test="attrValue != null">
         attr_value,
+      </if>
+      <if test="shopId != null">
+        shop_id,
       </if>
       <if test="showFlag != null">
         is_show,
@@ -59,6 +63,9 @@
       <if test="attrValue != null">
         #{attrValue,jdbcType=VARCHAR},
       </if>
+      <if test="shopId != null">
+        #{shopId,jdbcType=INTEGER},
+      </if>
       <if test="showFlag != null">
         #{showFlag,jdbcType=TINYINT},
       </if>
@@ -73,11 +80,14 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.tmall.domain.entity.GoodsAttrValue">
+  <update id="updateByPrimaryKeySelective" parameterType="com.tmall.domain.entity.valueobject.GoodsAttrValue">
     update GOODS_ATTR_VALUE
     <set>
       <if test="attrValue != null">
         attr_value = #{attrValue,jdbcType=VARCHAR},
+      </if>
+      <if test="shopId != null">
+        shop_id = #{shopId,jdbcType=INTEGER},
       </if>
       <if test="showFlag != null">
         is_show = #{showFlag,jdbcType=TINYINT},
@@ -94,9 +104,10 @@
     </set>
     where attr_value_id = #{attrValueId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.tmall.domain.entity.GoodsAttrValue">
+  <update id="updateByPrimaryKey" parameterType="com.tmall.domain.entity.valueobject.GoodsAttrValue">
     update GOODS_ATTR_VALUE
     set attr_value = #{attrValue,jdbcType=VARCHAR},
+      shop_id = #{shopId,jdbcType=INTEGER},
       is_show = #{showFlag,jdbcType=TINYINT},
       sort_order = #{sortOrder,jdbcType=TINYINT},
       create_time = #{createTime,jdbcType=TIMESTAMP},

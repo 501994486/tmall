@@ -1,9 +1,13 @@
 package com.tmall.domain.entity;
 
+import com.tmall.domain.entity.valueobject.GoodsAttr;
+import com.tmall.domain.entity.valueobject.GoodsImg;
+import com.tmall.domain.entity.valueobject.GoodsSku;
 import lombok.Data;
 
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
 /**
  * All rights Reserved, Designed By technologyMall
@@ -13,7 +17,8 @@ import java.util.Date;
  * @version V1.0
  */
 @Data
-public class GoodsSPU {
+public class Goods {
+
     private Long spuId;
 
     private Integer shopId;
@@ -68,6 +73,8 @@ public class GoodsSPU {
 
     private Integer warnStock;
 
+    private Integer sortOrder;
+
     private Byte newFlag;
 
     private Byte bestFlag;
@@ -95,4 +102,11 @@ public class GoodsSPU {
     private Date createTime;
 
     private Date updateTime;
+
+    private List<GoodsSku> goodsSKUList;
+
+    private List<GoodsAttr> goodsAttrs;
+
+    private List<GoodsImg> goodsImgList;
+
 }

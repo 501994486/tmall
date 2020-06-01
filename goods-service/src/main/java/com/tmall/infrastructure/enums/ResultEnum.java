@@ -1,5 +1,12 @@
 package com.tmall.infrastructure.enums;
 
+/**
+ * All rights Reserved, Designed By technologyMall
+ * @Description 返回结果枚举类
+ * @author sun.h
+ * @date   2019年7月11日
+ * @version V1.0
+ */
 public enum ResultEnum{
 	SUCCESS(200,"成功"),
 
@@ -23,6 +30,12 @@ public enum ResultEnum{
 
 	/**参数验证错误. ErrorCode : 06*/
 	PARAM_EXCEPTION(06,"参数验证错误"),
+
+	UPDATE_EXCEPTION(12,"更新数据异常"),
+
+	ADD_EXCEPTION(10,"新增数据异常"),
+
+	DELETE_EXCEPTION(11,"删除数据异常"),
 
 	/**权限验证错误. ErrorCode : 101*/
 	NO_LOGIN(101,"未登录"),

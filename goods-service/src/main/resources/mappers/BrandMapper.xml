@@ -3,6 +3,7 @@
 <mapper namespace="com.tmall.infrastructure.dao.BrandMapper">
   <resultMap id="BaseResultMap" type="com.tmall.domain.entity.Brand">
     <id column="brand_id" jdbcType="INTEGER" property="brandId" />
+    <result column="category_id" jdbcType="INTEGER" property="categoryId" />
     <result column="brand_name" jdbcType="VARCHAR" property="brandName" />
     <result column="brand_img" jdbcType="VARCHAR" property="brandImg" />
     <result column="brand_desc" jdbcType="VARCHAR" property="brandDesc" />
@@ -14,8 +15,7 @@
     brand_id, brand_name, brand_img, brand_desc, is_delete, create_time, update_time
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
+    select <include refid="Base_Column_List" />
     from GOODS_BRAND
     where brand_id = #{brandId,jdbcType=INTEGER}
   </select>
@@ -23,7 +23,10 @@
     delete from GOODS_BRAND
     where brand_id = #{brandId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.tmall.domain.entity.Brand">
+  <insert id="insertBrandAndGetBrandId" parameterType="com.tmall.domain.entity.Brand">
+    <selectKey keyProperty="brandId" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
     insert into GOODS_BRAND (brand_id, brand_name, brand_img, 
       brand_desc, is_delete, create_time, 
       update_time)

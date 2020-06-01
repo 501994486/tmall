@@ -1,4 +1,4 @@
-package com.tmall.domain.entity;
+package com.tmall.domain.entity.valueobject;
 
 import lombok.Data;
 
@@ -13,7 +13,7 @@ import java.util.Date;
  */
 @Data
 public class GoodsBasicSetup {
-    private Integer baiscSetupId;
+    private Integer shopId;
 
     private Integer eachBuyMaxQuantity;
 

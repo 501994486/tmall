@@ -15,6 +15,8 @@ import java.util.Date;
 public class Brand {
     private Integer brandId;
 
+    private Integer categoryId;
+
     private String brandName;
 
     private String brandImg;

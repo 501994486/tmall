@@ -1,6 +1,6 @@
 package com.tmall.infrastructure.dao;
 
-import com.tmall.domain.entity.GoodsSpecification;
+import com.tmall.domain.entity.valueobject.GoodsSpecification;
 
 public interface GoodsSpecificationMapper {
     int deleteByPrimaryKey(Integer itemId);

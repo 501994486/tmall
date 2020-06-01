@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.tmall.infrastructure.dao.GoodsSPUMapper">
-  <resultMap id="BaseResultMap" type="com.tmall.domain.entity.GoodsSPU">
+<mapper namespace="com.tmall.infrastructure.dao.GoodsSpuMapper">
+  <resultMap id="BaseResultMap" type="com.tmall.domain.entity.Goods">
     <id column="spu_id" jdbcType="BIGINT" property="spuId" />
     <result column="shop_id" jdbcType="INTEGER" property="shopId" />
     <result column="category_id_path" jdbcType="VARCHAR" property="categoryIdPath" />
@@ -44,6 +44,14 @@
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
   </resultMap>
+
+  <resultMap id="GoodsAttrResultMap" type="com.tmall.domain.entity.valueobject.GoodsAttr">
+    <id column="attr_id" jdbcType="BIGINT" property="attrId" />
+    <result column="spu_id" jdbcType="BIGINT" property="spuId" />
+    <result column="attr_name_id" jdbcType="INTEGER" property="attrNameId" />
+    <result column="attr_value_id" jdbcType="INTEGER" property="attrValueId" />
+  </resultMap>
+
   <sql id="Base_Column_List">
     spu_id, shop_id, category_id_path, category_id, brand_id, goods_name, goods_main_picture, 
     goods_outline, goods_desc, goods_code, market_price, is_onSale, discount_price, goods_tip, 
@@ -63,7 +71,7 @@
     delete from GOODS_SPU
     where spu_id = #{spuId,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.tmall.domain.entity.GoodsSPU">
+  <insert id="insert" parameterType="com.tmall.domain.entity.Goods">
     insert into GOODS_SPU (spu_id, shop_id, category_id_path, 
       category_id, brand_id, goods_name, 
       goods_main_picture, goods_outline, goods_desc, 
@@ -95,7 +103,7 @@
       #{illegalRemarks,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.tmall.domain.entity.GoodsSPU">
+  <insert id="insertSelective" parameterType="com.tmall.domain.entity.Goods">
     insert into GOODS_SPU
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="spuId != null">
@@ -348,7 +356,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.tmall.domain.entity.GoodsSPU">
+  <update id="updateByPrimaryKeySelective" parameterType="com.tmall.domain.entity.Goods">
     update GOODS_SPU
     <set>
       <if test="shopId != null">
@@ -474,7 +482,7 @@
     </set>
     where spu_id = #{spuId,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.tmall.domain.entity.GoodsSPU">
+  <update id="updateByPrimaryKey" parameterType="com.tmall.domain.entity.Goods">
     update GOODS_SPU
     set shop_id = #{shopId,jdbcType=INTEGER},
       category_id_path = #{categoryIdPath,jdbcType=VARCHAR},
@@ -518,4 +526,18 @@
       update_time = #{updateTime,jdbcType=TIMESTAMP}
     where spu_id = #{spuId,jdbcType=BIGINT}
   </update>
+
+  <select id="selectGoodsProductSPUListByShopId" resultMap="BaseResultMap" parameterType="map">
+    select
+    <include refid="Base_Column_List" />
+	from GOODS_SPU
+	where shop_id = #{shopId} and is_delete = 1 order by category_id, update_time
+  </select>
+
+  <select id="selectGoodsProductSPUListByShopIdAndCategoryId" resultMap="BaseResultMap" parameterType="map" timeout="10">
+	select
+    <include refid="Base_Column_List" />
+	from GOODS_SPEC_ITEM
+	where shop_id = #{shopId} and category_id = #{categoryId} and is_delete = 1
+  </select>
 </mapper>

@@ -7,13 +7,13 @@ public class ResultAssembler {
 
 	/** 操作成功的处理流程 */
 	public static ResultBean getSuccess(Object object){
-		ResultBean ResultBean = new ResultBean();
+		ResultBean resultBean = new ResultBean();
 		//设置操作成功的返回码
-		ResultBean.setCode(ResultEnum.SYSTEM_EXCEPTION.getCode());
+		resultBean.setCode(ResultEnum.SYSTEM_EXCEPTION.getCode());
 		//设置操作成功的消息
-		ResultBean.setMsg(ResultEnum.SYSTEM_EXCEPTION.getMsg());
-		ResultBean.setData(object);
-		return ResultBean;
+		resultBean.setMsg(ResultEnum.SYSTEM_EXCEPTION.getMsg());
+		resultBean.setData(object);
+		return resultBean;
 	}
 
 	/** 重载返回成功的方法，因为有时候我们不需要任何的消息数据被返回*/

@@ -1,4 +1,4 @@
-package com.tmall.domain.entity;
+package com.tmall.domain.entity.valueobject;
 
 import lombok.Data;
 
@@ -30,7 +30,5 @@ public class GoodsImg {
     private Integer sortOrder;
 
     private Date createTime;
-
-    private Date updateTime;
     
 }

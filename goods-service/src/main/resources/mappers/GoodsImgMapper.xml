@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.tmall.infrastructure.dao.GoodsImgMapper" >
-  <resultMap id="BaseResultMap" type="com.tmall.domain.entity.GoodsImg" >
+  <resultMap id="BaseResultMap" type="com.tmall.domain.entity.valueobject.GoodsImg" >
     <id column="img_id" property="imgId" jdbcType="BIGINT" />
     <result column="spu_id" property="spuId" jdbcType="BIGINT" />
     <result column="sku_id" property="skuId" jdbcType="BIGINT" />
@@ -11,11 +11,10 @@
     <result column="img_desc" property="imgDesc" jdbcType="VARCHAR" />
     <result column="sort_order" property="sortOrder" jdbcType="INTEGER" />
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
-    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
   </resultMap>
   <sql id="Base_Column_List" >
     img_id, spu_id, sku_id, img_file_name, img_path, img_title, img_desc, sort_order, 
-    create_time, update_time
+    create_time
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select 
@@ -23,21 +22,43 @@
     from GOODS_IMG
     where img_id = #{imgId,jdbcType=BIGINT}
   </select>
+  <select id="selectBySpuId" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select
+    <include refid="Base_Column_List" />
+    from GOODS_IMG
+    where spu_id = #{spuId,jdbcType=BIGINT}
+    ORDER BY sort_order
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
     delete from GOODS_IMG
     where img_id = #{imgId,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.tmall.domain.entity.GoodsImg" >
+  <delete id="deleteBySpuId" parameterType="java.lang.Long" >
+    delete from GOODS_IMG
+    where spu_id = #{spuId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.tmall.domain.entity.valueobject.GoodsImg" >
     insert into GOODS_IMG (img_id, spu_id, sku_id, 
       img_file_name, img_path, img_title, 
-      img_desc, sort_order, create_time, 
-      update_time)
+      img_desc, sort_order, create_time)
     values (#{imgId,jdbcType=BIGINT}, #{spuId,jdbcType=BIGINT}, #{skuId,jdbcType=BIGINT}, 
       #{imgFileName,jdbcType=VARCHAR}, #{imgPath,jdbcType=VARCHAR}, #{imgTitle,jdbcType=VARCHAR}, 
-      #{imgDesc,jdbcType=VARCHAR}, #{sortOrder,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, 
-      #{updateTime,jdbcType=TIMESTAMP})
+      #{imgDesc,jdbcType=VARCHAR}, #{sortOrder,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.tmall.domain.entity.GoodsImg" >
+
+  <insert id="batchInsert" parameterType="com.tmall.domain.entity.valueobject.GoodsImg">
+    insert into GOODS_IMG (img_id, spu_id, sku_id,
+    img_file_name, img_path, img_title,
+    img_desc, sort_order, create_time)
+    values
+    <foreach collection="list" item="item" index="index" separator="," >
+      (#{item.imgId,jdbcType=BIGINT}, #{item.spuId,jdbcType=BIGINT}, #{item.skuId,jdbcType=BIGINT},
+      #{item.imgFileName,jdbcType=VARCHAR}, #{item.imgPath,jdbcType=VARCHAR}, #{item.imgTitle,jdbcType=VARCHAR},
+      #{item.imgDesc,jdbcType=VARCHAR}, #{item.sortOrder,jdbcType=INTEGER}, #{item.createTime,jdbcType=TIMESTAMP})
+    </foreach>
+  </insert>
+
+  <insert id="insertSelective" parameterType="com.tmall.domain.entity.valueobject.GoodsImg" >
     insert into GOODS_IMG
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="imgId != null" >
@@ -66,9 +87,6 @@
       </if>
       <if test="createTime != null" >
         create_time,
-      </if>
-      <if test="updateTime != null" >
-        update_time,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -99,12 +117,9 @@
       <if test="createTime != null" >
         #{createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="updateTime != null" >
-        #{updateTime,jdbcType=TIMESTAMP},
-      </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.tmall.domain.entity.GoodsImg" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.tmall.domain.entity.valueobject.GoodsImg" >
     update GOODS_IMG
     <set >
       <if test="spuId != null" >
@@ -131,13 +146,10 @@
       <if test="createTime != null" >
         create_time = #{createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="updateTime != null" >
-        update_time = #{updateTime,jdbcType=TIMESTAMP},
-      </if>
     </set>
     where img_id = #{imgId,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.tmall.domain.entity.GoodsImg" >
+  <update id="updateByPrimaryKey" parameterType="com.tmall.domain.entity.valueobject.GoodsImg" >
     update GOODS_IMG
     set spu_id = #{spuId,jdbcType=BIGINT},
       sku_id = #{skuId,jdbcType=BIGINT},
@@ -146,8 +158,7 @@
       img_title = #{imgTitle,jdbcType=VARCHAR},
       img_desc = #{imgDesc,jdbcType=VARCHAR},
       sort_order = #{sortOrder,jdbcType=INTEGER},
-      create_time = #{createTime,jdbcType=TIMESTAMP},
-      update_time = #{updateTime,jdbcType=TIMESTAMP}
+      create_time = #{createTime,jdbcType=TIMESTAMP}
     where img_id = #{imgId,jdbcType=BIGINT}
   </update>
 </mapper>

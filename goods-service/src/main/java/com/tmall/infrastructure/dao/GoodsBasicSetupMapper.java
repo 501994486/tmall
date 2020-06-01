@@ -1,15 +1,14 @@
 package com.tmall.infrastructure.dao;
 
-import com.tmall.domain.entity.GoodsBasicSetup;
+import com.tmall.domain.entity.valueobject.GoodsBasicSetup;
 
 public interface GoodsBasicSetupMapper {
-    int deleteByPrimaryKey(Integer baiscSetupId);
 
     int insert(GoodsBasicSetup record);
 
     int insertSelective(GoodsBasicSetup record);
 
-    GoodsBasicSetup selectByPrimaryKey(Integer baiscSetupId);
+    GoodsBasicSetup selectByPrimaryKey(Integer shopId);
 
     int updateByPrimaryKeySelective(GoodsBasicSetup record);
 

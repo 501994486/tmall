@@ -1,9 +1,9 @@
 package com.tmall.infrastructure.logging;
 
 
-import com.tm.technologyMall.ThreadUtils;
 import com.tmall.infrastructure.enums.AnnotationTypeEnum;
-import com.tmall.infrastructure.util.JsonUtil;
+import com.tmall.technologyMall.utils.JsonUtil;
+import com.tmall.technologyMall.utils.ThreadUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.Around;
@@ -64,6 +64,7 @@ public class SystemLogAspect {
 	private void printLog(ProceedingJoinPoint pjp, Object result, long elapsedTime) {
 		SystemLogStrategy strategy = getFocus(pjp);
 
+		//如果没有注解
 		if (null != strategy) {
 			strategy.setThreadId(ThreadUtils.getThreadId());
 			strategy.setResult(JsonUtil.toJSONString(result));

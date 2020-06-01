@@ -47,7 +47,7 @@
             targetPackage     指定生成的model生成所在的包名
             targetProject     指定在该项目下所在的路径
         -->
-        <javaModelGenerator targetPackage="com.tmall.domain.entity" targetProject="./src/main/java">
+        <javaModelGenerator targetPackage="com.tmall.infrastructure.po" targetProject="./src/main/java">
             <!-- 是否允许子包，即targetPackage.schemaName.tableName -->
             <property name="enableSubPackages" value="false"/>
             <!-- 是否对model添加 构造函数 -->
@@ -81,7 +81,7 @@
             是否生成 example类 -->
             <!-- 通过enableCountByExample, enableUpdateByExample, enableDeleteByExample, 
             enableSelectByExample, selectByExampleQueryId等属性可以控制是否生成和使用xxxExample类在查询中替代模型类 -->
-        <table tableName="GOODS_SPU" domainObjectName="GoodsSPU" enableCountByExample="false"
+        <table tableName="GOODS_SPU" domainObjectName="GoodsSpu" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">
             <!-- 指定java类型-->
@@ -97,7 +97,7 @@
                enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false"></table>
 
-        <table tableName="GOODS_SKU" domainObjectName="GoodsSKU" enableCountByExample="false"
+        <table tableName="GOODS_SKU" domainObjectName="GoodsSku" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false"></table>
 

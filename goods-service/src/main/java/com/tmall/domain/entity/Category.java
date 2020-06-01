@@ -4,6 +4,7 @@ import lombok.Data;
 
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
 /**
  * All rights Reserved, Designed By technologyMall
@@ -35,4 +36,12 @@ public class Category {
     private Date createTime;
 
     private Date updateTime;
+
+    private List<Category> childrenCategoryList;
+
+    private Category parentCategory;
+
+    public int getNewShowOrder(int maxSortOrder){
+        return maxSortOrder + 1;
+    }
 }

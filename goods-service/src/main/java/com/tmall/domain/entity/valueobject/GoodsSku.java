@@ -1,9 +1,10 @@
-package com.tmall.domain.entity;
+package com.tmall.domain.entity.valueobject;
 
 import lombok.Data;
 
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
 /**
  * All rights Reserved, Designed By technologyMall
@@ -13,7 +14,7 @@ import java.util.Date;
  * @version V1.0
  */
 @Data
-public class GoodsSKU {
+public class GoodsSku {
     private Long skuId;
 
     private Long spuId;
@@ -39,4 +40,9 @@ public class GoodsSKU {
     private Date createTime;
 
     private Date updateTime;
+
+    private List<GoodsSpecification> goodsSpecificationList;
+
+    private List<GoodsImg> goodsImgList;
+
 }
