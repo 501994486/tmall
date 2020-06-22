@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tmall.mail.dao.MailBasicSetupMapper" >
+  <resultMap id="BaseResultMap" type="com.tmall.mail.pojo.MailBasicSetup" >
+    <id column="shop_id" property="shopId" jdbcType="INTEGER" />
+    <result column="return_address" property="returnAddress" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.tmall.mail.pojo.MailBasicSetup" extends="BaseResultMap" >
+    <result column="header_text" property="headerText" jdbcType="LONGVARCHAR" />
+    <result column="header_html" property="headerHtml" jdbcType="LONGVARCHAR" />
+    <result column="footer_text" property="footerText" jdbcType="LONGVARCHAR" />
+    <result column="footer_html" property="footerHtml" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    shop_id, return_address, create_time, update_time
+  </sql>
+  <sql id="Blob_Column_List" >
+    header_text, header_html, footer_text, footer_html
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from MAIL_BASIC_SETUP
+    where shop_id = #{shopId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from MAIL_BASIC_SETUP
+    where shop_id = #{shopId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.tmall.mail.pojo.MailBasicSetup" >
+    insert into MAIL_BASIC_SETUP (shop_id, return_address, create_time, 
+      update_time, header_text, header_html, 
+      footer_text, footer_html)
+    values (#{shopId,jdbcType=INTEGER}, #{returnAddress,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP}, #{headerText,jdbcType=LONGVARCHAR}, #{headerHtml,jdbcType=LONGVARCHAR}, 
+      #{footerText,jdbcType=LONGVARCHAR}, #{footerHtml,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.tmall.mail.pojo.MailBasicSetup" >
+    insert into MAIL_BASIC_SETUP
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="shopId != null" >
+        shop_id,
+      </if>
+      <if test="returnAddress != null" >
+        return_address,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="headerText != null" >
+        header_text,
+      </if>
+      <if test="headerHtml != null" >
+        header_html,
+      </if>
+      <if test="footerText != null" >
+        footer_text,
+      </if>
+      <if test="footerHtml != null" >
+        footer_html,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="shopId != null" >
+        #{shopId,jdbcType=INTEGER},
+      </if>
+      <if test="returnAddress != null" >
+        #{returnAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="headerText != null" >
+        #{headerText,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="headerHtml != null" >
+        #{headerHtml,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="footerText != null" >
+        #{footerText,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="footerHtml != null" >
+        #{footerHtml,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tmall.mail.pojo.MailBasicSetup" >
+    update MAIL_BASIC_SETUP
+    <set >
+      <if test="returnAddress != null" >
+        return_address = #{returnAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="headerText != null" >
+        header_text = #{headerText,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="headerHtml != null" >
+        header_html = #{headerHtml,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="footerText != null" >
+        footer_text = #{footerText,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="footerHtml != null" >
+        footer_html = #{footerHtml,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where shop_id = #{shopId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tmall.mail.pojo.MailBasicSetup" >
+    update MAIL_BASIC_SETUP
+    set return_address = #{returnAddress,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      header_text = #{headerText,jdbcType=LONGVARCHAR},
+      header_html = #{headerHtml,jdbcType=LONGVARCHAR},
+      footer_text = #{footerText,jdbcType=LONGVARCHAR},
+      footer_html = #{footerHtml,jdbcType=LONGVARCHAR}
+    where shop_id = #{shopId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tmall.mail.pojo.MailBasicSetup" >
+    update MAIL_BASIC_SETUP
+    set return_address = #{returnAddress,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where shop_id = #{shopId,jdbcType=INTEGER}
+  </update>
+</mapper>

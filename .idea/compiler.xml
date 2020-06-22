@@ -6,14 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="tmsecuritycore" />
-        <module name="common" />
-        <module name="tmsecuritydemo" />
-        <module name="tmsecuritybrowser" />
-        <module name="goodsservice" />
-        <module name="tmsecurityapp" />
-        <module name="mailservice" />
+        <module name="tm-security-core" />
         <module name="orderservice" />
+        <module name="tmsecuritybrowser" />
+        <module name="tm-security-browser" />
+        <module name="goodsservice" />
+        <module name="tm-security-demo" />
+        <module name="tmsecuritydemo" />
+        <module name="order-service" />
+        <module name="tmsecuritycore" />
+        <module name="mailservice" />
+        <module name="tm-security-app" />
+        <module name="tmsecurityapp" />
+        <module name="common" />
+        <module name="mail-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -32,14 +38,20 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="common" options="-parameters" />
       <module name="goodsservice" options="-parameters" />
+      <module name="mail-service" options="-parameters" />
       <module name="mailservice" options="-parameters" />
+      <module name="order-service" options="-parameters" />
       <module name="orderservice" options="-parameters" />
       <module name="ssoclient1" options="-parameters" />
       <module name="ssoclient2" options="-parameters" />
       <module name="ssodemo" options="-parameters" />
       <module name="ssoserver" options="-parameters" />
       <module name="testsecurity" options="-parameters" />
+      <module name="tm-security-app" options="-parameters" />
       <module name="tm-security-authorize" options="-parameters" />
+      <module name="tm-security-browser" options="-parameters" />
+      <module name="tm-security-core" options="-parameters" />
+      <module name="tm-security-demo" options="-parameters" />
       <module name="tmeurekaserver" options="-parameters" />
       <module name="tmsecurityapp" options="-parameters" />
       <module name="tmsecurityauthorize" options="-parameters" />
