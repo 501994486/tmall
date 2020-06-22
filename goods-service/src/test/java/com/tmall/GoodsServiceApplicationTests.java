@@ -3,7 +3,7 @@ package com.tmall;
 import com.tmall.domain.entity.Category;
 import com.tmall.domain.entity.Goods;
 import com.tmall.infrastructure.dao.CategoryMapper;
-import com.tmall.technologyMall.snowflakeId.SnowflakeIdWorker;
+import com.tmall.common.snowflakeId.SnowflakeIdWorker;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mybatis.spring.annotation.MapperScan;

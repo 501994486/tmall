@@ -3,53 +3,54 @@
     <output-path>$PROJECT_DIR$/out/artifacts/common_jar</output-path>
     <root id="archive" name="common.jar">
       <element id="module-output" name="common" />
-      <element id="extracted-dir" path="E:/mavenrepository/org/springframework/spring-webmvc/5.0.7.RELEASE/spring-webmvc-5.0.7.RELEASE.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/org/springframework/spring-core/5.0.7.RELEASE/spring-core-5.0.7.RELEASE.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/com/fasterxml/jackson/core/jackson-core/2.9.6/jackson-core-2.9.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/com/itextpdf/itextpdf/5.5.13/itextpdf-5.5.13.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/org/springframework/boot/spring-boot-starter-json/2.0.3.RELEASE/spring-boot-starter-json-2.0.3.RELEASE.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/org/springframework/spring-expression/5.0.7.RELEASE/spring-expression-5.0.7.RELEASE.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/org/springframework/boot/spring-boot-configuration-processor/2.0.3.RELEASE/spring-boot-configuration-processor-2.0.3.RELEASE.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.6/jackson-datatype-jdk8-2.9.6.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/org/apache/tomcat/embed/tomcat-embed-websocket/8.5.31/tomcat-embed-websocket-8.5.31.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.6/jackson-datatype-jsr310-2.9.6.jar" path-in-jar="/" />
       <element id="extracted-dir" path="E:/mavenrepository/org/springframework/spring-beans/5.0.7.RELEASE/spring-beans-5.0.7.RELEASE.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/org/freemarker/freemarker/2.3.28/freemarker-2.3.28.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/org/yaml/snakeyaml/1.19/snakeyaml-1.19.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/org/apache/logging/log4j/log4j-core/2.10.0/log4j-core-2.10.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/org/apache/logging/log4j/log4j-jul/2.10.0/log4j-jul-2.10.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/commons-beanutils/commons-beanutils/1.9.3/commons-beanutils-1.9.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/org/apache/logging/log4j/log4j-slf4j-impl/2.10.0/log4j-slf4j-impl-2.10.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/org/apache/logging/log4j/log4j-api/2.10.0/log4j-api-2.10.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/org/springframework/spring-jcl/5.0.7.RELEASE/spring-jcl-5.0.7.RELEASE.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/org/springframework/boot/spring-boot-starter/2.0.3.RELEASE/spring-boot-starter-2.0.3.RELEASE.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/org/springframework/spring-context/5.0.7.RELEASE/spring-context-5.0.7.RELEASE.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/com/lmax/disruptor/3.4.2/disruptor-3.4.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/org/springframework/spring-context-support/5.0.7.RELEASE/spring-context-support-5.0.7.RELEASE.jar" path-in-jar="/" />
       <element id="extracted-dir" path="E:/mavenrepository/org/springframework/boot/spring-boot-starter-log4j2/2.0.3.RELEASE/spring-boot-starter-log4j2-2.0.3.RELEASE.jar" path-in-jar="/" />
       <element id="extracted-dir" path="E:/mavenrepository/org/apache/tomcat/embed/tomcat-embed-el/8.5.31/tomcat-embed-el-8.5.31.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar" path-in-jar="/" />
       <element id="extracted-dir" path="E:/mavenrepository/org/apache/tomcat/embed/tomcat-embed-core/8.5.31/tomcat-embed-core-8.5.31.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/org/apache/logging/log4j/log4j-slf4j-impl/2.10.0/log4j-slf4j-impl-2.10.0.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/org/slf4j/jul-to-slf4j/1.7.25/jul-to-slf4j-1.7.25.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/org/apache/tomcat/embed/tomcat-embed-websocket/8.5.31/tomcat-embed-websocket-8.5.31.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/org/springframework/spring-context-support/5.0.7.RELEASE/spring-context-support-5.0.7.RELEASE.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/org/springframework/boot/spring-boot/2.0.3.RELEASE/spring-boot-2.0.3.RELEASE.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/org/springframework/boot/spring-boot-starter-web/2.0.3.RELEASE/spring-boot-starter-web-2.0.3.RELEASE.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/org/apache/logging/log4j/log4j-core/2.10.0/log4j-core-2.10.0.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/org/yaml/snakeyaml/1.19/snakeyaml-1.19.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/org/freemarker/freemarker/2.3.28/freemarker-2.3.28.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/org/springframework/boot/spring-boot-starter-freemarker/2.0.3.RELEASE/spring-boot-starter-freemarker-2.0.3.RELEASE.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.6/jackson-datatype-jdk8-2.9.6.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/org/springframework/spring-context/5.0.7.RELEASE/spring-context-5.0.7.RELEASE.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/org/springframework/spring-jcl/5.0.7.RELEASE/spring-jcl-5.0.7.RELEASE.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.6/jackson-datatype-jsr310-2.9.6.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/org/springframework/boot/spring-boot-starter-json/2.0.3.RELEASE/spring-boot-starter-json-2.0.3.RELEASE.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/org/springframework/boot/spring-boot-autoconfigure/2.0.3.RELEASE/spring-boot-autoconfigure-2.0.3.RELEASE.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/org/springframework/boot/spring-boot-starter-tomcat/2.0.3.RELEASE/spring-boot-starter-tomcat-2.0.3.RELEASE.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/org/apache/logging/log4j/log4j-api/2.10.0/log4j-api-2.10.0.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/org/springframework/boot/spring-boot-starter/2.0.3.RELEASE/spring-boot-starter-2.0.3.RELEASE.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/org/apache/logging/log4j/log4j-jul/2.10.0/log4j-jul-2.10.0.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/com/lmax/disruptor/3.4.2/disruptor-3.4.2.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/org/springframework/spring-expression/5.0.7.RELEASE/spring-expression-5.0.7.RELEASE.jar" path-in-jar="/" />
       <element id="extracted-dir" path="E:/mavenrepository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.9.6/jackson-module-parameter-names-2.9.6.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/com/fasterxml/jackson/core/jackson-core/2.9.6/jackson-core-2.9.6.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/com/tmall/commons/1.0.0/commons-1.0.0.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/com/itextpdf/itextpdf/5.5.13/itextpdf-5.5.13.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/joda-time/joda-time/2.9.4/joda-time-2.9.4.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/com/fasterxml/classmate/1.3.4/classmate-1.3.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/org/springframework/boot/spring-boot/2.0.3.RELEASE/spring-boot-2.0.3.RELEASE.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/com/tmall/commons/1.0.1/commons-1.0.1.jar" path-in-jar="/" />
       <element id="extracted-dir" path="E:/mavenrepository/org/hibernate/validator/hibernate-validator/6.0.10.Final/hibernate-validator-6.0.10.Final.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/com/fasterxml/classmate/1.3.4/classmate-1.3.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/org/springframework/boot/spring-boot-starter-tomcat/2.0.3.RELEASE/spring-boot-starter-tomcat-2.0.3.RELEASE.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/org/springframework/boot/spring-boot-starter-web/2.0.3.RELEASE/spring-boot-starter-web-2.0.3.RELEASE.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/org/springframework/boot/spring-boot-autoconfigure/2.0.3.RELEASE/spring-boot-autoconfigure-2.0.3.RELEASE.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/org/slf4j/jul-to-slf4j/1.7.25/jul-to-slf4j-1.7.25.jar" path-in-jar="/" />
       <element id="extracted-dir" path="E:/mavenrepository/org/springframework/spring-aop/5.0.7.RELEASE/spring-aop-5.0.7.RELEASE.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/org/springframework/boot/spring-boot-starter-freemarker/2.0.3.RELEASE/spring-boot-starter-freemarker-2.0.3.RELEASE.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/org/springframework/spring-webmvc/5.0.7.RELEASE/spring-webmvc-5.0.7.RELEASE.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="E:/mavenrepository/joda-time/joda-time/2.9.4/joda-time-2.9.4.jar" path-in-jar="/" />
       <element id="extracted-dir" path="E:/mavenrepository/org/springframework/spring-web/5.0.7.RELEASE/spring-web-5.0.7.RELEASE.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/org/springframework/spring-core/5.0.7.RELEASE/spring-core-5.0.7.RELEASE.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/commons-beanutils/commons-beanutils/1.9.3/commons-beanutils-1.9.3.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="E:/mavenrepository/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

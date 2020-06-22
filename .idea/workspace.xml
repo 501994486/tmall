@@ -9,17 +9,105 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4f6aaf0-01c0-4b32-93cf-2676153eaa70" name="Default Changelist" comment="" />
+    <list default="true" id="d4f6aaf0-01c0-4b32-93cf-2676153eaa70" name="Default Changelist" comment="validate">
+      <change afterPath="$PROJECT_DIR$/common/src/main/java/com/tmall/common/base/CompositeValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/ui/controller/GoodsMailController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail-service/mailservice.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/service/MailNoticeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/service/MailSendService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/service/MailSendServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail-service/src/main/resources/db.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail-service/src/main/resources/generatorconfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/orderservice.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm-eureka-server/tmeurekaserver.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm-security-app/src/main/java/com/tmall/security/app/AppSecurityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm-security-app/src/main/java/com/tmall/security/app/SpringSocialConfigureProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm-security-app/src/main/java/com/tmall/security/app/TmallAuthorizationServerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm-security-app/src/main/java/com/tmall/security/app/authentication/TmallAuthenticationFailureHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm-security-app/src/main/java/com/tmall/security/app/authentication/TmallAuthenticationSucessHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm-security-app/src/main/java/com/tmall/security/app/social/AppSignUpUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm-security-app/src/main/java/com/tmall/security/app/social/impl/AppSocialAuthenticationFilterPostProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm-security-app/src/main/java/com/tmall/security/app/social/openid/OpenIdAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm-security-app/src/main/java/com/tmall/security/app/social/openid/OpenIdAuthenticationProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm-security-app/src/main/java/com/tmall/security/app/social/openid/OpenIdAuthenticationSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm-security-app/src/main/java/com/tmall/security/app/social/openid/OpenIdAuthenticationToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm-security-app/src/main/resources/static/imooc-banding.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm-security-app/src/main/resources/static/imooc-signIn.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm-security-app/src/main/resources/static/imooc-signUp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm-security-app/src/main/resources/static/session/invalid.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm-security-app/tmsecurityapp.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm-security-browser/src/main/resources/static/imooc-banding.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm-security-browser/src/main/resources/static/imooc-signIn.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm-security-browser/src/main/resources/static/imooc-signUp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm-security-browser/src/main/resources/static/session/invalid.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm-security-demo/src/main/java/com/tmall/user/infrastructure/security/DemoAuthorizeConfigProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm-security-demo/src/main/java/com/tmall/user/infrastructure/security/MySecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm-security-demo/src/main/java/com/tmall/user/infrastructure/security/MyUserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tm-security-demo/tmsecuritydemo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/common_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/common_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tmall/technologyMall/AppConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tmall/common/AppConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tmall/technologyMall/CommonLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tmall/common/CommonLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tmall/technologyMall/base/BaseCommonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tmall/common/base/BaseCommonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tmall/technologyMall/base/DateConvert.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tmall/common/base/DateConvert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tmall/technologyMall/snowflakeId/SnowflakeIdWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tmall/common/snowflakeId/SnowflakeIdWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tmall/technologyMall/snowflakeId/SnowflakeIdWorkerAutoConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tmall/common/snowflakeId/SnowflakeIdWorkerAutoConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tmall/technologyMall/snowflakeId/SnowflakeIdWorkerProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tmall/common/snowflakeId/SnowflakeIdWorkerProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tmall/technologyMall/utils/BigDecimalArithmeticUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tmall/common/utils/BigDecimalArithmeticUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tmall/technologyMall/utils/DateTimeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tmall/common/utils/DateTimeUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tmall/technologyMall/utils/DetabaseUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tmall/common/utils/DetabaseUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tmall/technologyMall/utils/JsonUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tmall/common/utils/JsonUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tmall/technologyMall/utils/LogUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tmall/common/utils/LogUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tmall/technologyMall/utils/RegexUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tmall/common/utils/RegexUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/tmall/technologyMall/utils/ThreadUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/tmall/common/utils/ThreadUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/test/java/com/tmall/technologyMall/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/test/java/com/tmall/common/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/goods-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/enums/ResultEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/enums/ResultEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/exception/ExceptionHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/exception/ExceptionHandle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/logging/SystemLogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/logging/SystemLogAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods-service/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/goods-service/src/main/resources/application-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods-service/src/test/java/com/tmall/GoodsServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/goods-service/src/test/java/com/tmall/GoodsServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/info.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/info.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/warn.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/warn.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/common_jar/common.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/common_jar/common.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/product-service/target/" />
     <ignored path="$PROJECT_DIR$/goods-service/target/" />
     <ignored path="$PROJECT_DIR$/common/target/" />
+    <ignored path="$PROJECT_DIR$/testsecurity/target/" />
+    <ignored path="$PROJECT_DIR$/tm-security-core/target/" />
+    <ignored path="$PROJECT_DIR$/tm-security-browser/target/" />
+    <ignored path="$PROJECT_DIR$/tm-security-demo/target/" />
+    <ignored path="$PROJECT_DIR$/tm-security-app/target/" />
+    <ignored path="$PROJECT_DIR$/sso-demo/target/" />
+    <ignored path="$PROJECT_DIR$/sso-server/target/" />
+    <ignored path="$PROJECT_DIR$/sso-client1/target/" />
+    <ignored path="$PROJECT_DIR$/sso-client2/target/" />
+    <ignored path="$PROJECT_DIR$/tmall-security-authorize/target/" />
+    <ignored path="$PROJECT_DIR$/tm-security-authorize/target/" />
+    <ignored path="$PROJECT_DIR$/tm-eureka-client/target/" />
+    <ignored path="$PROJECT_DIR$/order-service/target/" />
+    <ignored path="$PROJECT_DIR$/mail-service/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -38,91 +126,106 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/constants/GoodsConstants.java">
+        <entry file="file://$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/service/MailNoticeServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="4" selection-start-line="4" selection-end-line="27" selection-end-column="1" />
+            <state relative-caret-position="153">
+              <caret line="123" column="69" lean-forward="true" selection-start-line="123" selection-start-column="38" selection-end-line="123" selection-end-column="69" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/goods-service/pom.xml">
+        <entry file="file://$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/service/MailSendServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1014" />
-          </provider>
-          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="115" column="19" selection-start-line="115" selection-start-column="19" selection-end-line="115" selection-end-column="19" />
-            </state>
-          </provider>
-          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/exception/NoFoundExceptionHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="595">
+              <caret line="109" column="72" selection-start-line="109" selection-start-column="72" selection-end-line="109" selection-end-column="72" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/exception/QueryException.java">
+        <entry file="file://$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/openservice/MailOpenService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="413">
+              <caret line="32" column="18" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/exception/ServiceException.java">
+        <entry file="file://$PROJECT_DIR$/order-service/src/main/java/com/tmall/order/infrastructure/feign/GoodsService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="182">
+              <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/enums/AnnotationTypeEnum.java">
+        <entry file="file://$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/service/MailNoticeService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/logging/SystemControllerLog.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/logging/SystemLogAspect.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+            <state relative-caret-position="390">
+              <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="jar://E:/mavenrepository/com/tmall/commons/1.0.1/commons-1.0.1.jar!/com/tm/technologyMall/ThreadUtils.class">
+        <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/feign/MailServiceHystric.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="312">
+              <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/feign/MailService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/ui/controller/GoodsMailController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="5" selection-start-line="5" selection-end-line="10" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/ui/controller/GoodsManagementController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="215">
+              <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/ui/controller/GoodsBasicSetUpController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="29" selection-start-line="29" selection-end-line="29" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -133,121 +236,151 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="XHTML File" />
+        <option value="package.json" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>MyException</find>
-      <find>isAjax</find>
-      <find>jackson</find>
-      <find>getDynamicData</find>
-      <find>url</find>
-      <find>电话</find>
-      <find>REGEX_DATE</find>
-      <find>REGEX_IP</find>
-      <find>REGEX_URL</find>
-      <find>HTTP_REGEXP</find>
-      <find>REGEX_DOUBLE_BYTE_CHAR</find>
-      <find>REGEX_BLANK_LINE</find>
-      <find>REGEXP_TTP</find>
-      <find>REGEXP_HTTP</find>
-      <find>getSplits</find>
-      <find>project.build.sourceEncoding</find>
-      <find>172.17.4.10:8081</find>
-      <find>goods_spu</find>
-      <find>is</find>
-      <find>Byte</find>
-      <find>Base_Column_List</find>
-      <find>&lt;sql id=&quot;Base_Column_List&quot;&gt;</find>
-      <find>BaseResultMap</find>
-      <find>isNew</find>
-      <find>isDefault</find>
-      <find>isDelete</find>
-      <find>&lt;resultMap id=&quot;BaseResultMap&quot;</find>
-      <find>&lt;resultMap id=&quot;BaseResultMap&quot;</find>
-      <find>SHARP</find>
-      <find>SYMBOL_SHARP</find>
+      <find>CSVPrinter</find>
+      <find>getGoodsManagementTreeData</find>
+      <find>TreeDomainService</find>
+      <find>printRecords</find>
+      <find>request</find>
+      <find>LogUtils</find>
+      <find>easyexcel</find>
+      <find>sc</find>
+      <find>switch</find>
+      <find>foreach</find>
+      <find>@RequestParam</find>
+      <find>fastdfs-client</find>
+      <find>reqHost</find>
+      <find>GOODS_SPEC_ITEM</find>
+      <find>membershipAssignInfoService</find>
+      <find>membershipSetupService</find>
+      <find>eventNoticeService</find>
+      <find>eventBasicConfigService</find>
+      <find>membershipService</find>
+      <find>AppConstants</find>
+      <find>deleteByPrimaryKey</find>
+      <find>attachmentId</find>
+      <find>SAME_fLAG</find>
+      <find>SAME</find>
+      <find>MailContants</find>
+      <find>resultMap</find>
+      <find>/tmall</find>
+      <find>tmall</find>
+      <find>getResAccessUrl</find>
+      <find>goods-service</find>
     </findStrings>
     <replaceStrings>
-      <replace>com.tmall.domain.entity.GoodsAttr</replace>
-      <replace>tmall.domain.entity.GoodsAttrName</replace>
-      <replace>tmall.domain.entity.GoodsAttrValue</replace>
-      <replace>tmall.domain.entity.GoodsSpecification</replace>
-      <replace>tmall.domain.entity.GoodsSKU</replace>
-      <replace>tmall.domain.entity.GoodsSPU</replace>
-      <replace>tmall.domain.entity.Category</replace>
-      <replace>ResultBean</replace>
-      <replace>QueryException</replace>
-      <replace>192.168.6.130:8081</replace>
-      <replace>GOODS_SPU</replace>
-      <replace>showFlag</replace>
-      <replace>newFlag</replace>
-      <replace>deleteFlag</replace>
+      <replace>infrastructure.po</replace>
+      <replace>infrastructure.po.BrandPO</replace>
+      <replace>infrastructure.po.CategoryPO</replace>
+      <replace>infrastructure.po.GoodsAttrPO</replace>
+      <replace>infrastructure.po.GoodsAttrName</replace>
+      <replace>infrastructure.po.GoodsAttrValuePO</replace>
+      <replace>infrastructure.po.GoodsBasicSetupPO</replace>
+      <replace>tmall.infrastructure.po.GoodsImgPO</replace>
+      <replace>infrastructure.po.GoodsSKUPO</replace>
+      <replace>infrastructure.po.GoodsSpecificationPO</replace>
+      <replace>infrastructure.po.GoodsSPUPO</replace>
+      <replace>goodsId,jdbcType=BIGINT</replace>
+      <replace>ValidateCodeProcessor.SESSION_KEY_PREFIX+&quot;SMS</replace>
+      <replace>QQService</replace>
+      <replace>com.tmall.domain.entity.Goods</replace>
+      <replace>com.tmall.domain.entity.Brand</replace>
+      <replace>com.tmall.domain.entity.Category</replace>
+      <replace>com.tmall.domain.entity.valueobject.GoodsAttr</replace>
+      <replace>attr_value_id</replace>
+      <replace>com.tmall.domain.entity.valueobject.GoodsAttrName</replace>
+      <replace>com.tmall.domain.entity.valueobject.GoodsAttrValue</replace>
+      <replace>com.tmall.domain.entity.valueobject.GoodsSpecification</replace>
+      <replace>sku_id</replace>
+      <replace>com.tmall.domain.entity.valueobject</replace>
+      <replace>shopId</replace>
+      <replace>com.tmall.security</replace>
+      <replace>tmall.security</replace>
+      <replace>TmallSpringSocialConfigurer</replace>
+      <replace>com.tmall</replace>
+      <replace>com.tmall.domain.entity.valueobject.GoodsImg</replace>
     </replaceStrings>
     <dirStrings>
       <dir>E:\IdeaProjects2\technologyMall\product-service\src\main\java\demo1</dir>
       <dir>E:\IdeaProjects2\technologyMall\goods-service</dir>
+      <dir>E:\IdeaProjects2\technologyMall\tm-security-core\src\main</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/goods-service/src/main/resources/templates/setup/showGoodsBasicSetupMainAdmin.html" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/goods-service/src/main/resources/templates/setup/showGoodsBasicSetupTempleAdmin.html" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/common/src/main/java/com/tm/technologyMall/SymbolConstants.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/tm/technologyMall/BigDecimalArithmeticUtils.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/tm/technologyMall/RegexUtils.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/tm/technologyMall/DateTimeUtils.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/tm/technologyMall/DetabaseUtils.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/tm/technologyMall/CommonLogic.java" />
-        <option value="$PROJECT_DIR$/goods-service/pom.xml" />
-        <option value="$PROJECT_DIR$/goods-service/src/test/java/com/tmall/Log4j2Test.java" />
-        <option value="$PROJECT_DIR$/common/pom.xml" />
-        <option value="$PROJECT_DIR$/goods-service/src/test/java/com/tmall/TestCommon.java" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/GoodsAttr.java" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/valueobject/GoodsAttrValue.java" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/valueobject/GoodsAttr.java" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/valueobject/Brand.java" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/Category.java" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/valueobject/GoodsSPU.java" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/valueobject/GoodsSKU.java" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/Brand.java" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/valueobject/GoodsImg.java" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/resources/generatorconfig.xml" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/GoodsBasicSetup.java" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/GoodsSPU.java" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/GoodsSpecification.java" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/GoodsSKU.java" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/GoodsImg.java" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/GoodsAttrName.java" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/GoodsAttrValue.java" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/resources/mappers/BrandMapper.xml" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/resources/mappers/CategoryMapper.xml" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/resources/mappers/GoodsAttrMapper.xml" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/resources/mappers/GoodsAttrNameMapper.xml" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/resources/mappers/GoodsAttrValueMapper.xml" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/resources/mappers/GoodsBasicSetupMapper.xml" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/resources/mappers/GoodsSKUMapper.xml" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/resources/mappers/GoodsSpecificationMapper.xml" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/resources/mappers/GoodsSPUMapper.xml" />
-        <option value="$PROJECT_DIR$/goods-service/src/test/java/com/tmall/GoodsServiceApplicationTests.java" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/dao/GoodsAttrMapper.java" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/dao/GoodsAttrValueMapper.java" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/dao/BrandMapper.java" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/dao/GoodsImgMapper.java" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/dao/GoodsAttrNameMapper.java" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/dao/GoodsSKUMapper.java" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/dao/GoodsSpecificationMapper.java" />
-        <option value="$PROJECT_DIR$/goods-service/src/test/java/com/tmall/ToolClassTest.java" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/util/LogUtils.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/tm/technologyMall/ThreadUtils.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/tm/technologyMall/AppConstants.java" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/constants/GoodsConstants.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/tmall/technologyMall/AppConstants.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/repositoryimpl/GoodsRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/repository/GoodsRepository.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/enums/ResultEnum.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/application/service/GoodsService.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/service/FileDomainService.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/application/service/GoodsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/ui/controller/GoodsManagementController.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/vo/GoodsVO.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/service/FileDomainServiceImpl.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/logging/SystemLogAspect.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/fastDFS/FdfsConfiguration.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/resources/application-dev.properties" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/fastDFS/FastDFSClientUtil.java" />
+        <option value="$PROJECT_DIR$/mail-service/src/main/resources/db.properties" />
+        <option value="$PROJECT_DIR$/mail-service/src/main/resources/generatorconfig.xml" />
+        <option value="$PROJECT_DIR$/order-service/pom.xml" />
+        <option value="$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/DemoApplication.java" />
+        <option value="$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/MailApplication.java" />
+        <option value="$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/pojo/MailAttachment.java" />
+        <option value="$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/pojo/MailBasicSetup.java" />
+        <option value="$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/pojo/MailDeliveryHistory.java" />
+        <option value="$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/service/SendMailService.java" />
+        <option value="$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/service/SendMailServiceImpl.java" />
+        <option value="$PROJECT_DIR$/mail-service/src/test/java/com/tmall/mail/MailServiceTest.java" />
+        <option value="$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/service/MailNoticeEditServiceImpl.java" />
+        <option value="$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/dao/MailNoticeMapper.java" />
+        <option value="$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/pojo/MailNotice.java" />
+        <option value="$PROJECT_DIR$/mail-service/src/main/resources/mappers/MailNoticeMapper.xml" />
+        <option value="$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/dao/MailAttachmentMapper.java" />
+        <option value="$PROJECT_DIR$/mail-service/src/main/resources/mappers/MailAttachmentMapper.xml" />
+        <option value="$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/common/MailContants.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/tmall/common/dto/MailDeliveryDTO.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/tmall/common/AppConstants.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/tmall/common/dto/MailNoticeDTO.java" />
+        <option value="$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/service/MailServiceImpl.java" />
+        <option value="$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/service/MailNoticeService.java" />
+        <option value="$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/service/MailSendServiceImpl.java" />
+        <option value="$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/service/MailSendService.java" />
+        <option value="$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/service/MailNoticeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/mail-service/src/test/java/com/tmall/common/MailServiceTest.java" />
+        <option value="$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/openservice/GoodsOpenController.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/ui/openservice/GoodsOpenController.java" />
+        <option value="$PROJECT_DIR$/mail-service/pom.xml" />
+        <option value="$PROJECT_DIR$/goods-service/pom.xml" />
+        <option value="$PROJECT_DIR$/mail-service/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/feign/GoodsService.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/ui/controller/GoodsMailController.java" />
+        <option value="$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/openservice/MailOpenService.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/feign/MailService.java" />
+        <option value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/feign/MailServiceHystric.java" />
       </list>
     </option>
   </component>
@@ -270,61 +403,40 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="common" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="common" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="common" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="goods-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="goods-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="mail-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="mail-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="goods-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="mail-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
           <item name="mybatis-generator" type="36feed69:MavenProjectsStructure$PluginNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="Spring Boot Starter Parent" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="Spring Boot Starter Parent" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="Spring Boot Starter Parent" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
         </path>
       </expand>
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="77" />
-    <option name="width" value="1850" />
-    <option name="height" value="980" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-175" />
+    <option name="y" value="195" />
+    <option name="width" value="1800" />
+    <option name="height" value="1005" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -375,7 +487,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="tm" type="462c0819:PsiDirectoryNode" />
+              <item name="tmall" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
@@ -385,8 +497,20 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="tm" type="462c0819:PsiDirectoryNode" />
+              <item name="tmall" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
               <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tmall" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
@@ -432,6 +556,76 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="tmall" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="goods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tmall" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="goods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tmall" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="assembler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="goods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tmall" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="convert" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="goods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tmall" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="goods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tmall" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="goods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tmall" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
@@ -454,7 +648,7 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="tmall" type="462c0819:PsiDirectoryNode" />
               <item name="infrastructure" type="462c0819:PsiDirectoryNode" />
-              <item name="constants" type="462c0819:PsiDirectoryNode" />
+              <item name="fastDFS" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
@@ -466,7 +660,7 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="tmall" type="462c0819:PsiDirectoryNode" />
               <item name="infrastructure" type="462c0819:PsiDirectoryNode" />
-              <item name="enums" type="462c0819:PsiDirectoryNode" />
+              <item name="feign" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
@@ -478,7 +672,7 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="tmall" type="462c0819:PsiDirectoryNode" />
               <item name="infrastructure" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
+              <item name="repositoryimpl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
@@ -489,8 +683,19 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="tmall" type="462c0819:PsiDirectoryNode" />
-              <item name="infrastructure" type="462c0819:PsiDirectoryNode" />
-              <item name="logging" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="goods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tmall" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
@@ -503,14 +708,102 @@
             <path>
               <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
               <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
-              <item name="goods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="mail-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="mail-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="mail-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="mail-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="mail-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="mail-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tmall" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="mail-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tmall" type="462c0819:PsiDirectoryNode" />
+              <item name="mail" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="mail-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tmall" type="462c0819:PsiDirectoryNode" />
+              <item name="mail" type="462c0819:PsiDirectoryNode" />
+              <item name="openservice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="mail-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tmall" type="462c0819:PsiDirectoryNode" />
+              <item name="mail" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="mail-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="mail-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
               <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
-              <item name="goods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="mail-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -518,7 +811,7 @@
             <path>
               <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
               <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
-              <item name="goods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="mail-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -527,7 +820,7 @@
             <path>
               <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
               <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
-              <item name="goods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="mail-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -537,106 +830,150 @@
             <path>
               <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
               <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
-              <item name="goods-service" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="mail-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tmall" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
               <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="order-service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
               <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+              <item name="order-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
               <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-              <item name="common_jar" type="462c0819:PsiDirectoryNode" />
+              <item name="order-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="order-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.tmall:commons:1.0.1" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.tmall:commons:1.0.1" type="70bed36:NamedLibraryElementNode" />
-              <item name="commons-1.0.1.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.tmall:commons:1.0.1" type="70bed36:NamedLibraryElementNode" />
-              <item name="commons-1.0.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="order-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.tmall:commons:1.0.1" type="70bed36:NamedLibraryElementNode" />
-              <item name="commons-1.0.1.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="order-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="tm" type="462c0819:PsiDirectoryNode" />
+              <item name="tmall" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="order-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tmall" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="order-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tmall" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="infrastructure" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
+              <item name="order-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="tmall" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
+              <item name="infrastructure" type="462c0819:PsiDirectoryNode" />
+              <item name="feign" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="technologyMall" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.tmall:commons:1.0.1" type="70bed36:NamedLibraryElementNode" />
-              <item name="commons-1.0.1.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="tm" type="462c0819:PsiDirectoryNode" />
-              <item name="technologyMall" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="XHTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.18164062" />
     <property name="project.structure.side.proportion" value="0.20336391" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="vcs.Subversion.Presentation" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.tm.technologyMall" />
-      <recent name="com.tmall.domain.valueobject" />
-      <recent name="com.tmall.domain.entity" />
-      <recent name="com.tmall.infrastructure.util" />
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.tmall" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\IdeaProjects2\technologyMall\goods-service\src\main\java\com\tmall\domain\entity" />
-      <recent name="E:\IdeaProjects2\technologyMall\goods-service\src\main\java\com\tmall\domain\valueobject" />
-      <recent name="E:\IdeaProjects2\technologyMall\common\src\main\java\com\tm\technologyMall" />
-      <recent name="E:\IdeaProjects2\technologyMall\goods-service\src\main\java\com\tmall\infrastructure\constants" />
-      <recent name="E:\IdeaProjects2\technologyMall\goods-service\src\main\java\com\tmall\infrastructure\logging" />
+      <recent name="E:\IdeaProjects2\technologyMall\goods-service\src\main\java\com\tmall\infrastructure" />
+      <recent name="E:\IdeaProjects2\technologyMall\mail-service\src\main\java\com\tmall\mail\service" />
+      <recent name="E:\IdeaProjects2\technologyMall\mail-service\src\test\java\com\tmall\mail" />
+      <recent name="E:\IdeaProjects2\technologyMall\mail-service\src\main\java\com\tmall\mail" />
+      <recent name="E:\IdeaProjects2\technologyMall\mail-service\src\main\resources\templates" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.tmall.mail.openservice" />
+      <recent name="com.tmall.common.dto" />
+      <recent name="com.tmall.infrastructure.vo" />
+      <recent name="com.tmall.domain.service" />
+      <recent name="com.tmall.ui.dto" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects2\technologyMall\tm-security-demo\src\main\resources\static" />
+      <recent name="E:\IdeaProjects2\technologyMall\tm-security-demo\src\main\resources" />
+      <recent name="E:\IdeaProjects2\technologyMall\tm-security-browser\src\main\resources\static" />
+      <recent name="E:\IdeaProjects2\technologyMall\testsecurity\src\main\resources\static" />
+      <recent name="E:\IdeaProjects2\technologyMall\common\src\main\resources\templates\error" />
     </key>
   </component>
   <component name="RestServicesNavigator">
@@ -665,71 +1002,97 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.GoodsServiceApplication">
-    <configuration name="GoodsServiceApplicationTests.testMysql" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="goods-service" />
+  <component name="RunManager" selected="Spring Boot.OrderServiceApplication">
+    <configuration name="SnowflakeIdWorker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.tmall.infrastructure.snowflakeId.SnowflakeIdWorker" />
+      <module name="goodsservice" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GoodsServiceApplicationTests.testSnowId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="goodsservice" />
       <option name="PACKAGE_NAME" value="com.tmall" />
       <option name="MAIN_CLASS_NAME" value="com.tmall.GoodsServiceApplicationTests" />
-      <option name="METHOD_NAME" value="testMysql" />
+      <option name="METHOD_NAME" value="testSnowId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ToolClassTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="goods-service" />
-      <option name="PACKAGE_NAME" value="com.tmall" />
-      <option name="MAIN_CLASS_NAME" value="com.tmall.ToolClassTest" />
-      <option name="METHOD_NAME" value="test1" />
+    <configuration name="UserControllerTest.whenQuerySuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tmsecuritydemo" />
+      <option name="PACKAGE_NAME" value="com.tmall.security.ui.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.tmall.security.ui.controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="whenQuerySuccess" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ToolClassTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="goods-service" />
-      <option name="PACKAGE_NAME" value="com.tmall" />
-      <option name="MAIN_CLASS_NAME" value="com.tmall.ToolClassTest" />
-      <option name="METHOD_NAME" value="test2" />
-      <option name="TEST_OBJECT" value="method" />
+    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="tmsecuritydemo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tmall.DemoApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ToolClassTest.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="goods-service" />
-      <option name="PACKAGE_NAME" value="com.tmall" />
-      <option name="MAIN_CLASS_NAME" value="com.tmall.ToolClassTest" />
-      <option name="METHOD_NAME" value="test3" />
-      <option name="TEST_OBJECT" value="method" />
+    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="tmsecuritydemo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tmall.DemoApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ToolClassTest.test4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="goods-service" />
-      <option name="PACKAGE_NAME" value="com.tmall" />
-      <option name="MAIN_CLASS_NAME" value="com.tmall.ToolClassTest" />
-      <option name="METHOD_NAME" value="test4" />
-      <option name="TEST_OBJECT" value="method" />
+    <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="tmeurekaserver" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tmall.eureka.EurekaServerApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="GoodsServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="goods-service" />
+      <module name="goodsservice" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.tmall.GoodsServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MailApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="mailservice" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tmall.mail.MailApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MailApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="mailservice" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tmall.common.MailApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="orderservice" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tmall.order.OrderServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PermissionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="testsecurity" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tmall.PermissionApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ToolClassTest.test4" />
-        <item itemvalue="JUnit.ToolClassTest.test3" />
-        <item itemvalue="JUnit.ToolClassTest.test2" />
-        <item itemvalue="JUnit.ToolClassTest.test1" />
-        <item itemvalue="JUnit.GoodsServiceApplicationTests.testMysql" />
+        <item itemvalue="Spring Boot.OrderServiceApplication" />
+        <item itemvalue="JUnit.UserControllerTest.whenQuerySuccess" />
+        <item itemvalue="Spring Boot.PermissionApplication" />
+        <item itemvalue="JUnit.GoodsServiceApplicationTests.testSnowId" />
+        <item itemvalue="Application.SnowflakeIdWorker" />
       </list>
     </recent_temporary>
   </component>
@@ -737,35 +1100,35 @@
     <configuration />
   </component>
   <component name="TestHistory">
-    <history-entry file="ToolClassTest_test2 - 2019.05.18 at 16h 22m 20s.xml">
-      <configuration name="ToolClassTest.test2" configurationId="JUnit" />
+    <history-entry file="GoodsServiceApplicationTests_testSnowId - 2019.09.23 at 19h 58m 29s.xml">
+      <configuration name="GoodsServiceApplicationTests.testSnowId" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ToolClassTest_test2 - 2019.05.18 at 16h 23m 25s.xml">
-      <configuration name="ToolClassTest.test2" configurationId="JUnit" />
+    <history-entry file="GoodsServiceApplicationTests_testSnowId - 2019.09.23 at 20h 03m 03s.xml">
+      <configuration name="GoodsServiceApplicationTests.testSnowId" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ToolClassTest_test3 - 2019.05.18 at 16h 36m 55s.xml">
-      <configuration name="ToolClassTest.test3" configurationId="JUnit" />
+    <history-entry file="GoodsServiceApplicationTests_testSnowId - 2019.09.23 at 20h 05m 08s.xml">
+      <configuration name="GoodsServiceApplicationTests.testSnowId" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ToolClassTest_test3 - 2019.05.18 at 16h 37m 07s.xml">
-      <configuration name="ToolClassTest.test3" configurationId="JUnit" />
+    <history-entry file="GoodsServiceApplicationTests_testSnowId - 2019.09.23 at 21h 05m 48s.xml">
+      <configuration name="GoodsServiceApplicationTests.testSnowId" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ToolClassTest_test3 - 2019.05.18 at 16h 37m 19s.xml">
-      <configuration name="ToolClassTest.test3" configurationId="JUnit" />
+    <history-entry file="GoodsServiceApplicationTests_testSnowId - 2019.09.23 at 21h 16m 38s.xml">
+      <configuration name="GoodsServiceApplicationTests.testSnowId" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ToolClassTest_test3 - 2019.05.18 at 16h 37m 32s.xml">
-      <configuration name="ToolClassTest.test3" configurationId="JUnit" />
+    <history-entry file="UserControllerTest_whenQuerySuccess - 2020.02.19 at 15h 54m 55s.xml">
+      <configuration name="UserControllerTest.whenQuerySuccess" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ToolClassTest_test3 - 2019.05.18 at 16h 38m 18s.xml">
-      <configuration name="ToolClassTest.test3" configurationId="JUnit" />
+    <history-entry file="UserControllerTest_whenQuerySuccess - 2020.02.19 at 15h 56m 06s.xml">
+      <configuration name="UserControllerTest.whenQuerySuccess" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ToolClassTest_test3 - 2019.05.18 at 16h 41m 16s.xml">
-      <configuration name="ToolClassTest.test3" configurationId="JUnit" />
+    <history-entry file="UserControllerTest_whenQuerySuccess - 2020.02.19 at 15h 57m 10s.xml">
+      <configuration name="UserControllerTest.whenQuerySuccess" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ToolClassTest_test4 - 2019.05.18 at 18h 51m 44s.xml">
-      <configuration name="ToolClassTest.test4" configurationId="JUnit" />
+    <history-entry file="UserControllerTest_whenQuerySuccess - 2020.02.19 at 16h 00m 08s.xml">
+      <configuration name="UserControllerTest.whenQuerySuccess" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ToolClassTest_test4 - 2019.05.18 at 18h 52m 21s.xml">
-      <configuration name="ToolClassTest.test4" configurationId="JUnit" />
+    <history-entry file="UserControllerTest_whenQuerySuccess - 2020.02.19 at 16h 03m 30s.xml">
+      <configuration name="UserControllerTest.whenQuerySuccess" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -778,42 +1141,60 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="62" y="0" width="1480" height="784" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2950704" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7444609" visible="true" weight="0.31073827" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Web" order="2" side_tool="true" />
+      <window_info id="Web" order="2" sideWeight="0.25553915" side_tool="true" visible="true" weight="0.31073827" />
       <window_info id="Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49929577" visible="true" weight="0.4512" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.081001475" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3755523" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49530202" weight="0.14475627" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8948078" weight="0.1506647" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.78152394" weight="0.33183858" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3298969" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3298969" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="11" sideWeight="0.5007042" side_tool="true" visible="true" weight="0.4512" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.3298969" />
-      <window_info anchor="bottom" id="Spring" order="13" weight="0.3298969" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4986577" weight="0.13530326" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49865046" weight="0.32791728" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.10519218" side_tool="true" weight="0.12855007" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" sideWeight="0.49932885" weight="0.3293944" />
+      <window_info anchor="bottom" id="Spring" order="13" weight="0.3293944" />
       <window_info anchor="bottom" id="MyBatis Sql Log" order="14" weight="0.3814433" />
       <window_info active="true" anchor="bottom" id="Inspection Results" order="15" visible="true" weight="0.3298969" />
-      <window_info anchor="bottom" id="Messages" order="16" weight="0.30044183" />
+      <window_info anchor="bottom" id="Messages" order="16" sideWeight="0.6605938" weight="0.25560537" />
+      <window_info anchor="bottom" id="Duplicates" order="17" weight="0.3293944" />
+      <window_info anchor="bottom" id="Problems" order="18" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24966443" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.2181208" />
       <window_info anchor="right" id="Database" order="3" weight="0.3295302" />
-      <window_info anchor="right" id="Maven" order="4" visible="true" weight="0.04859155" />
+      <window_info anchor="right" id="Maven" order="4" visible="true" weight="0.10067114" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="right" id="RestServices" order="6" weight="0.1147651" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="初次导入" />
+    <MESSAGE value="add" />
+    <MESSAGE value="添加注释" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加注释" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -826,378 +1207,443 @@
           </properties>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/tm-security-demo/src/main/java/com/tmall/security/MyUserDetailsService.java</url>
+          <line>24</line>
+          <properties class="com.tmall.security.MyUserDetailsService">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/goods-service/src/test/java/com/tmall/TestCommon.java</url>
+          <line>14</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/tm-security-demo/src/main/java/com/tmall/security/MyUserDetailsService.java</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/tm-security-demo/src/main/java/com/tmall/user/application/service/UserServiceImpl.java</url>
+          <line>20</line>
+          <properties />
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/tm-security-demo/src/main/java/com/tmall/user/application/convert/UserDTOConvert.java</url>
+          <line>12</line>
+          <properties />
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/order-service/src/main/java/com/tmall/order/ui/OrderAdminController.java</url>
+          <line>18</line>
+          <properties />
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/ui/controller/Demo.java</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="codeInRequest" />
+        <watch expression="this" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/GoodsAttrName.java">
+    <entry file="file://$PROJECT_DIR$/mail-service/src/main/resources/db.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+        <state>
+          <caret column="75" selection-start-column="75" selection-end-column="75" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/GoodsAttrValue.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+        <state relative-caret-position="5720">
+          <caret line="220" column="6" selection-start-line="220" selection-start-column="6" selection-end-line="224" selection-end-column="25" />
         </state>
       </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/GoodsBasicSetup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="33" column="16" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/GoodsImg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/GoodsSKU.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="34" column="16" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/GoodsSpecification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="27" column="16" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/GoodsSPU.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-162">
-          <caret line="76" column="16" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/resources/mappers/BrandMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/resources/mappers/CategoryMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/resources/mappers/GoodsAttrMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2080">
-          <caret line="80" column="11" selection-start-line="80" selection-start-column="11" selection-end-line="80" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/resources/mappers/GoodsAttrNameMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3640">
-          <caret line="140" column="11" selection-start-line="140" selection-start-column="11" selection-end-line="140" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/resources/mappers/GoodsAttrValueMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2704">
-          <caret line="104" column="11" selection-start-line="104" selection-start-column="11" selection-end-line="104" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/resources/mappers/GoodsBasicSetupMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="203" column="24" selection-start-line="203" selection-start-column="24" selection-end-line="203" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/resources/mappers/GoodsImgMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-468" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/resources/mappers/GoodsSKUMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/resources/mappers/GoodsSpecificationMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2236">
-          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/resources/mappers/GoodsSPUMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="60" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/resources/generatorconfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="123" selection-end-line="123" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/test/java/com/tmall/GoodsServiceApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="25" column="25" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/dao/GoodsAttrMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/dao/GoodsAttrValueMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/dao/BrandMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/dao/GoodsImgMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/dao/GoodsAttrNameMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/dao/GoodsSKUMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/dao/GoodsSpecificationMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/test/java/com/tmall/ToolClassTest.java">
+    <entry file="file://$PROJECT_DIR$/mail-service/src/main/resources/generatorconfig.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
-          <caret line="194" selection-start-line="194" selection-end-line="194" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="75" column="23" selection-start-line="75" selection-start-column="23" selection-end-line="75" selection-end-column="23" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail-service/src/main/resources/templates/emailTemplate.html">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/GoodsServiceApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        <state relative-caret-position="130">
+          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/tm/technologyMall/DateTimeUtils.java">
+    <entry file="file://$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/MailApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        <state relative-caret-position="286">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/constants/SymbolConstants.java">
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/domain/entity/Brand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        <state relative-caret-position="286">
+          <caret line="13" selection-start-line="13" selection-end-line="13" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/util/LogUtils.java">
+    <entry file="file://E:/mavenrepository/org/springframework/boot/spring-boot-starter-mail/2.0.3.RELEASE/spring-boot-starter-mail-2.0.3.RELEASE.pom">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="873">
-          <caret line="92" column="32" lean-forward="true" selection-start-line="92" selection-start-column="32" selection-end-line="92" selection-end-column="32" />
-        </state>
+        <state relative-caret-position="-1404" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/util/JsonUtil.java">
+    <entry file="file://$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/pojo/MailBasicSetup.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/logging/SystemLogStrategy.java">
+    <entry file="file://$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/pojo/MailDeliveryHistory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/service/SendMailService.java" />
+    <entry file="file://$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/dao/MailNoticeMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail-service/src/main/resources/mappers/MailNoticeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="53" column="39" selection-start-line="53" selection-start-column="39" selection-end-line="53" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/pojo/MailNotice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-295">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/application/service/GoodsServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/application/assembler/DTOAssembler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="24" column="69" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/application/convert/GoodsDTOConvert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="31" column="30" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/repositoryimpl/GoodsRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="44" selection-start-line="44" selection-end-line="45" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/application/assembler/ResultAssembler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/tmall/common/dto/MailDeliveryDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/tmall/common/dto/MailNoticeDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/logging/SystemServiceLog.java">
+    <entry file="file://$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/service/SendMailServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/tmall/common/AppConstants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        <state relative-caret-position="2834">
+          <caret line="109" column="42" selection-start-line="109" selection-start-column="29" selection-end-line="109" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/tm/technologyMall/CommonLogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-427">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/tm/technologyMall/ThreadUtils.java">
+    <entry file="file://$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/common/MailContants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/util/ThreadUtils.java">
+    <entry file="file://$PROJECT_DIR$/mail-service/src/main/resources/mappers/MailAttachmentMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="6" column="56" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="56" />
+        <state relative-caret-position="754">
+          <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/enums/ResultEnum.java">
+    <entry file="file://$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/pojo/MailAttachment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-583">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        <state relative-caret-position="286">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/exception/DBException.java">
+    <entry file="file://$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/dao/MailAttachmentMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="130">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/constants/LogConstants.java">
+    <entry file="file://$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/service/MailSendService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="12" column="109" selection-start-line="12" selection-start-column="109" selection-end-line="12" selection-end-column="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/fastDFS/FdfsConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/mavenrepository/com/github/tobato/fastdfs-client/1.26.6/fastdfs-client-1.26.6.jar!/com/github/tobato/fastdfs/service/FastFileStorageClient.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/fastDFS/FastDFSClientUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="60" column="90" selection-start-line="60" selection-start-column="79" selection-end-line="60" selection-end-column="90" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail-service/src/test/java/com/tmall/common/MailServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
-          <caret line="25" column="41" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="41" />
+          <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/tm/technologyMall/AppConstants.java">
+    <entry file="file://$PROJECT_DIR$/mail-service/src/test/java/com/tmall/common/AppTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="79" selection-start-line="79" selection-end-line="79" />
+        <state relative-caret-position="182">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/constants/GoodsConstants.java">
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/ui/controller/GoodsAttrController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" selection-start-line="4" selection-end-line="27" selection-end-column="1" />
+        <state relative-caret-position="449">
+          <caret line="42" column="52" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/ui/openservice/GoodsOpenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="36" column="21" selection-start-line="25" selection-start-column="8" selection-end-line="36" selection-end-column="21" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail-service/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="61" column="21" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="21" />
+        </state>
+      </provider>
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/resources/application-dev.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1342">
+          <caret line="65" selection-start-line="65" selection-end-line="67" selection-end-column="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/goods-service/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1014" />
-      </provider>
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="115" column="19" selection-start-line="115" selection-start-column="19" selection-end-line="115" selection-end-column="19" />
+        <state relative-caret-position="491">
+          <caret line="96" column="13" lean-forward="true" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
         </state>
       </provider>
       <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/exception/NoFoundExceptionHandler.java">
+    <entry file="file://$PROJECT_DIR$/order-service/src/main/java/com/tmall/order/infrastructure/feign/GoodsServiceHystric.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/exception/QueryException.java">
+    <entry file="file://$PROJECT_DIR$/order-service/src/main/java/com/tmall/order/infrastructure/feign/GoodsService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="182">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/exception/ServiceException.java">
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/ui/controller/GoodsBasicSetUpController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="189">
+          <caret line="29" selection-start-line="29" selection-end-line="29" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/enums/AnnotationTypeEnum.java">
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/ui/controller/GoodsManagementController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        <state relative-caret-position="215">
+          <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/logging/SystemControllerLog.java">
+    <entry file="file://$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/service/MailNoticeServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        <state relative-caret-position="153">
+          <caret line="123" column="69" lean-forward="true" selection-start-line="123" selection-start-column="38" selection-end-line="123" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/logging/SystemLogAspect.java">
+    <entry file="file://$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/service/MailSendServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+        <state relative-caret-position="595">
+          <caret line="109" column="72" selection-start-line="109" selection-start-column="72" selection-end-line="109" selection-end-column="72" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://E:/mavenrepository/com/tmall/commons/1.0.1/commons-1.0.1.jar!/com/tm/technologyMall/ThreadUtils.class">
+    <entry file="file://$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/service/MailNoticeService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="390">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mail-service/src/main/java/com/tmall/mail/openservice/MailOpenService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="32" column="18" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/ui/controller/GoodsMailController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="5" selection-start-line="5" selection-end-line="10" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/feign/MailService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goods-service/src/main/java/com/tmall/infrastructure/feign/MailServiceHystric.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1212,7 +1658,6 @@
             <option name="proportions">
               <list>
                 <option value="0.20336391" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1220,7 +1665,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Web</last-edited>
+          <last-edited>Web (common)|Web</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1254,11 +1699,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>goods-service</last-edited>
+          <last-edited>mailservice</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.20336391" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

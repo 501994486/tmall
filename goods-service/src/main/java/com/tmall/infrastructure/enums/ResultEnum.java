@@ -31,6 +31,9 @@ public enum ResultEnum{
 	/**参数验证错误. ErrorCode : 06*/
 	PARAM_EXCEPTION(06,"参数验证错误"),
 
+	/**参数验证错误. ErrorCode : 06*/
+	DATA_EXCEPTION(07,"数据错误"),
+
 	UPDATE_EXCEPTION(12,"更新数据异常"),
 
 	ADD_EXCEPTION(10,"新增数据异常"),

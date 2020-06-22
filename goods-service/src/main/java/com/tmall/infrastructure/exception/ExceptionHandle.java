@@ -2,7 +2,7 @@ package com.tmall.infrastructure.exception;
 
 import com.tmall.application.assembler.ResultAssembler;
 import com.tmall.infrastructure.enums.ResultEnum;
-import com.tmall.technologyMall.AppConstants;
+import com.tmall.common.AppConstants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.ConversionNotSupportedException;

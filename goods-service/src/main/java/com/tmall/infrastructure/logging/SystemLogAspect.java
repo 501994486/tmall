@@ -2,8 +2,8 @@ package com.tmall.infrastructure.logging;
 
 
 import com.tmall.infrastructure.enums.AnnotationTypeEnum;
-import com.tmall.technologyMall.utils.JsonUtil;
-import com.tmall.technologyMall.utils.ThreadUtils;
+import com.tmall.common.utils.JsonUtil;
+import com.tmall.common.utils.ThreadUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.Around;
