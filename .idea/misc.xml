@@ -19,6 +19,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/product-service/pom.xml" />
+        <option value="$PROJECT_DIR$/scheduler-service/pom.xml" />
         <option value="$PROJECT_DIR$/sso-client1/pom.xml" />
         <option value="$PROJECT_DIR$/sso-client2/pom.xml" />
         <option value="$PROJECT_DIR$/sso-demo/pom.xml" />

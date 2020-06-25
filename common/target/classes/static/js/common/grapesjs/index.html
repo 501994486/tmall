@@ -1,0 +1,690 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Jimzen – テストテナント</title><link rel="icon" type="image/png" href="https://fs.t1.jimzen.biz/res/32241/image/common/favicon/admin-favicon.png">
+    <link type="text/css" rel="stylesheet" href="https://fs.t1.jimzen.biz/res/32241/css/admin/font-awesome/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="https://fs.t1.jimzen.biz/res/32241/js/common/jstree/themes/default/style.css">
+    <link type="text/css" rel="stylesheet" href="https://fs.t1.jimzen.biz/res/32241/js/common/yscommonui/css/yscommonui-1.0.css">
+    <link type="text/css" rel="stylesheet" href="https://fs.t1.jimzen.biz/res/32241/css/admin/common/admin-common.css">
+    <link type="text/css" rel="stylesheet" href="https://fs.t1.jimzen.biz/res/32241/js/common/ysvalidation/css/validationEngine.jquery.css">
+    <link type="text/css" rel="stylesheet" media="screen" href="https://fs.t1.jimzen.biz/res/32241/js/admin/sitePageDesign/jquery-ui.min.css">
+    <link type="text/css" rel="stylesheet" media="screen" href="https://fs.t1.jimzen.biz/res/32241/css/admin/sitePageDesign/sitePageDesignMain.css">
+    <link type="text/css" rel="stylesheet" media="screen" href="https://fs.t1.jimzen.biz/res/32241/js/common/spectrum/spectrum.css">
+
+  </head>
+  <body>
+
+    <div id="head">
+    	<div id="head-title">
+    		<img src="https://fs.t1.jimzen.biz/res/32241/image/admin/logo/logo_JimzenConsole.svg" style="width: 232px; height: 35px; vertical-align:-5px;">
+    		<a id="popup-tenantinfo" href="https://tdemo1.t1.jimzen.biz/admin/dashboard/showTenantName" style="margin-left:20px;">テストテナント</a>
+    	</div>
+    	<div class="icon-menu">
+    		<a href="javascript:;" class=""><span><i class="fa fa-bars"></i></span></a>
+    	</div>
+    	<div class="arrow_box" style="right: 16px; display: none;">
+    		<ul class="pulldown-menu">
+    			<li><a href="javascript:" onclick="showServicePage();">Webサイトを表示</a></li>
+    			<li><a id="open-sys-msg" href="javascript:" onclick="openServiceMessages();">サービスメッセージを表示</a></li>
+    			<li><a id="help-display-btn" href="javascript:">ヘルプを非表示にする</a></li>
+    			<li><a href="javascript:" onclick="window.open('', '_self', '').close();">このJimzenコンソールを閉じる</a></li>
+    			<li><a id="logout-btn" href="#confirm-logout">ログアウト</a></li>
+    		</ul>
+    	</div>
+    	<div id="head-info">
+    			<a id="popup-tenantownerinfo" href="https://tdemo1.t1.jimzen.biz/member/info/tenant-owner-member-info/service">naoi</a>
+    	</div>
+    </div>
+
+    <div id="navi"><!-- close tag in inner menu file -->
+    <div id="navi-main">
+       <ul>
+         <li><a href="https://tdemo1.t1.jimzen.biz/admin/dashboard/dashboard/init">ダッシュボード</a></li>
+
+    	     <li>
+    		     <a id="navi-member" href="javascript:void(0)" class="">
+    		     	<div id="navi-member-menu" class="navi-menu-font">メンバー</div>
+    		     </a>
+    		     <div id="navi-member-box" class="navi-arrow-box" style="display: none;">
+    				<div class="navi-arrow-box-body">
+    					<table width="100%" rules="cols" style="table-layout:fixed;" cellspacing="0" cellpadding="0">
+    						<colgroup>
+    							<col width="66%">
+    							<col width="34%">
+    						</colgroup>
+    						<tbody><tr>
+    							<td class="navi-arrow-box-sub">
+    								<div>
+    									<ul>
+    										<li class="btn-large">
+    										 	<a href="https://tdemo1.t1.jimzen.biz/admin/member/membership/init"><div class="navi-font-title-large">メンバーシップ&nbsp;＆&nbsp;メンバー</div></a>
+    										</li>
+    								<!--  	<li class="btn-large">
+    										 	<a href="https://tdemo1.t1.jimzen.biz/admin/member/hierarchy/init"><div class="navi-font-title-large">ヒエラルキー</div></a>
+    										</li>
+    										<li class="btn-large">
+    											<a href="https://tdemo1.t1.jimzen.biz/admin/member/query/init"><div class="navi-font-title-large">クエリー</div></a>
+    										</li>   -->
+    									</ul>
+    								</div>
+    								<div>
+    									<ul>
+    										<li>
+    										 	<a href="https://tdemo1.t1.jimzen.biz/admin/member/membership-setup/init"><div class="navi-font-title">基本設定</div></a>
+    										</li>
+    										<li>
+    											<a href="https://tdemo1.t1.jimzen.biz/admin/member/registeration-form/init"><div class="navi-font-title">登録フォーム</div></a>
+    										</li>
+    										<li>
+    											<a href="https://tdemo1.t1.jimzen.biz/admin/member/etc/mail-setup/init"><div class="navi-font-title">通知メール</div></a>
+    										</li>
+    										<li>
+    											<a href="https://tdemo1.t1.jimzen.biz/admin/member/etc/enquete-setup/init"><div class="navi-font-title">アンケート</div></a>
+    										</li>
+    										<li>
+    											<a href="https://tdemo1.t1.jimzen.biz/admin/member/etc/agreement/init"><div class="navi-font-title">規約</div></a>
+    										</li>
+    									</ul>
+    								</div>
+    								<div>
+    									<ul>
+    										<li>
+    										 	<a href="https://tdemo1.t1.jimzen.biz/admin/member/etc/extend-field/init?type=member"><div class="navi-font-title">メンバーマスター</div></a>
+    										</li>
+    									</ul>
+    								</div>
+    							</td>
+    							<td class="navi-arrow-box-content">
+    								<div class="navi-content-div">
+    									 <p class="navi-title-font">メンバー</p>
+    									 <p class="navi-content-font"></p>
+    								</div>
+    							</td>
+    						</tr>
+    					</tbody></table>
+    				</div>
+    				<div id="navi-box-close" class="navi-arrow-box-close" style="display: none;"></div>
+    			</div>
+    	     </li>
+
+    	     <li>
+    		     <a id="navi-event" href="javascript:void(0)" class="">
+    		     	<div id="navi-event-menu" class="navi-menu-font">イベント</div>
+    		     </a>
+    		     <div id="navi-event-box" class="navi-arrow-box" style="display: none;">
+    				<div class="navi-arrow-box-body">
+    					<table width="100%" rules="cols" style="table-layout:fixed;" cellspacing="0" cellpadding="0">
+    						<colgroup>
+    							<col width="66%">
+    							<col width="34%">
+    						</colgroup>
+    						<tbody><tr>
+    							<td class="navi-arrow-box-sub">
+    								<div>
+    									<ul>
+    										 <li class="btn-large">
+    										 	<a href="https://tdemo1.t1.jimzen.biz/admin/event/management/init"><div class="navi-font-title-large">イベントテーマ&nbsp;＆&nbsp;開催イベント</div></a>
+    										</li>
+    									</ul>
+    									 <ul>
+    										<li class="btn-large">
+    											<a href="https://tdemo1.t1.jimzen.biz/admin/event/course/init"><div class="navi-font-title-large">コース&nbsp;＆&nbsp;カリキュラム</div></a>
+    										</li>
+    									</ul>
+    								</div>
+    								<div>
+    									<ul>
+    										<li>
+    											<a href="https://tdemo1.t1.jimzen.biz/admin/event/etc/basic-config/init"><div class="navi-font-title">基本設定</div></a>
+    										</li>
+    										<li>
+    										   <a href="https://tdemo1.t1.jimzen.biz/admin/event/etc/instructor/init"><div class="navi-font-title">インストラクター</div></a>
+    										</li>
+    										<li>
+    										    <a href="https://tdemo1.t1.jimzen.biz/admin/event/etc/place/init"><div class="navi-font-title">会場</div></a>
+    										</li>
+    									</ul>
+    								</div>
+    								<div>
+    								  	<ul>
+    								     	<li>
+    								       	 	<a href="https://tdemo1.t1.jimzen.biz/admin/event-setup/registeration-form/init"><div class="navi-font-title">エントリーフォーム</div></a>
+    								    	</li>
+    								     	<li>
+    								        	<a href="https://tdemo1.t1.jimzen.biz/admin/event/etc/cancelrule/init"><div class="navi-font-title">キャンセル規定</div></a>
+    								     	</li>
+    								     	<li>
+    								       	 	<a href="https://tdemo1.t1.jimzen.biz/admin/event/etc/ticket/init"><div class="navi-font-title">チケット</div></a>
+    								    	</li>
+    									     <li>
+    									        <a href="https://tdemo1.t1.jimzen.biz/admin/event/etc/enquete-setup/init"><div class="navi-font-title">アンケート</div></a>
+    									     </li>
+    								     </ul>
+    								 </div>
+    								 <div>
+    								     <ul>
+    								        <li>
+    								           <a href="https://tdemo1.t1.jimzen.biz/admin/event/etc/mail-setup/init"><div class="navi-font-title">通知メール</div></a>
+    								        </li>
+    								        <li>
+    								           <a href="https://tdemo1.t1.jimzen.biz/admin/event/etc/agreement/init"><div class="navi-font-title">規約</div></a>
+    								        </li>
+    								        <li>
+    								           <div> <a href="https://tdemo1.t1.jimzen.biz/admin/event/etc/extend-field/init"><div class="navi-font-title">イベント管理メモ&nbsp;＆&nbsp;チケット管理メモ</div></a>
+    								        </div></li>
+    								        <li>
+    								            <a href="https://tdemo1.t1.jimzen.biz/admin/event/etc/report-setup/init"><div class="navi-font-title">チケットイメージ</div></a>
+    								        </li>
+    								     </ul>
+    								 </div>
+    								 <div>
+    									<ul>
+    										<li class="btn-large">
+    										 	<div><div class="navi-font-text">ファシリティ(施設,備品)</div></div>
+    											<ul>
+    												<li><a href="https://tdemo1.t1.jimzen.biz/admin/event/facility/init"><div class="navi-font-title">ファシリティーツリー</div></a></li>
+    												<li><a href="https://tdemo1.t1.jimzen.biz/admin/event/facility-type/init"><div class="navi-font-title">タイプ定義</div></a></li>
+    											</ul>
+    										</li>
+    									</ul>
+    								</div>
+    							</td>
+    							<td class="navi-arrow-box-content">
+    								<div class="navi-content-div">
+    									 <p class="navi-title-font">イベント</p>
+    									 <p class="navi-content-font">
+    											オフラインイベント（セミナー、レッスンなども含む）の企画・集客・運営で発生する作業全般を、網羅的に管理できるメニューです。これによって、オフラインイベントの開催を、収益管理しつつ効率よく実施することができます。<br><br>
+    											まずは、「イベント企画」で開催するイベントの内容を具体化し、イベントを告知してください。その後「イベント運営」で随時状況を確認しながら適切なアクションを取ります。また、イベント当日の受付業務にも便利に使えます。
+    									 </p>
+    								</div>
+    							</td>
+    						</tr>
+    					</tbody></table>
+    				</div>
+    				<div id="navi-box-close" class="navi-arrow-box-close" style="display: none;"></div>
+    			</div>
+    	     </li>
+
+    	     <li>
+    		     <a id="navi-shop" href="javascript:void(0)" class="">
+    		     	<div id="navi-shop-menu" class="navi-menu-font">オンラインショップ</div>
+    		     </a>
+    		      <div id="navi-shop-box" class="navi-arrow-box" style="display: none;">
+    				<div class="navi-arrow-box-body">
+    					<table width="100%" rules="cols" style="table-layout:fixed;" cellspacing="0" cellpadding="0">
+    						<colgroup>
+    							<col width="66%">
+    							<col width="34%">
+    						</colgroup>
+    						<tbody><tr>
+    							<td class="navi-arrow-box-sub">
+    								<div>
+    									<ul>
+    										 <li class="btn-large">
+    										 	<a href="https://tdemo1.t1.jimzen.biz/admin/shop/shop-order-management/init"><div class="navi-font-title-large">注文管理</div></a>
+    											<ul>
+
+    												<li>
+    													<div id="waitingForTheShipment-div"><a href="https://tdemo1.t1.jimzen.biz/admin/shop/shop-order-management/init?type=shipping_wait"><div class="navi-font">出荷待ち&nbsp;&nbsp;<span class="navi-font-num"><span id="waitingForTheShipment">17</span>人</span></div></a>
+    													<div id="waitingForTheShipment-hide-div" class="navi-div-hide" style="display: none;">出荷待ち&nbsp;&nbsp;0人</div>
+    												</div></li>
+    												<li>
+    													<div id="waitingForTheRefund-div"><a href="https://tdemo1.t1.jimzen.biz/admin/shop/shop-order-management/init?type=refund_wait"><div class="navi-font">返金待ち&nbsp;&nbsp;<span class="navi-font-num"><span id="waitingForTheRefund">4</span>人</span></div></a>
+    													<div id="waitingForTheRefund-hide-div" class="navi-div-hide" style="display: none;">返金待ち&nbsp;&nbsp;0人</div>
+    												</div></li>
+    											</ul>
+    										</li>
+    									</ul>
+    								</div>
+    								<div>
+    									<ul>
+    										<li class="btn-large">
+    											<a href="https://tdemo1.t1.jimzen.biz/admin/shop/product-management/init"><div class="navi-font-title-large">商品管理</div></a>
+    										</li>
+    									</ul>
+    								</div>
+    								<div>
+    									<ul>
+    										<li>
+    											<a href="https://tdemo1.t1.jimzen.biz/admin/shop/shop-setup/init"><div class="navi-font-title">基本設定</div></a>
+    										</li>
+    										<li>
+    											<a href="https://tdemo1.t1.jimzen.biz/admin/shop/etc/mail-setup/init"><div class="navi-font-title">通知メール</div></a>
+    										</li>
+    										<li>
+    											<a href="https://tdemo1.t1.jimzen.biz/admin/shop/etc/agreement/init"><div class="navi-font-title">規約</div></a>
+    										</li>
+    										<li>
+    											<a href="https://tdemo1.t1.jimzen.biz/admin/shop/delivery-method/init"><div class="navi-font-title">配送方法</div></a>
+    										</li>
+    									</ul>
+    								</div>
+    								<div>
+    									<ul>
+    											<li>
+    												<a href="https://tdemo1.t1.jimzen.biz/admin/shop/etc/report-setup/init"><div class="navi-font-title">納品書</div></a>
+    											</li>
+    										<li>
+    											<a href="https://tdemo1.t1.jimzen.biz/admin/shop/etc/extend-field/init"><div class="navi-font-title">商品管理&nbsp;＆&nbsp;注文メモ</div></a>
+    										</li>
+    									</ul>
+    								</div>
+    							</td>
+
+    							<td class="navi-arrow-box-content">
+    								<div class="navi-content-div">
+    									 <p class="navi-title-font">オンラインショップ</p>
+    									 <p class="navi-content-font">
+    									 	オンラインショップを開設するメニューです。これを利用することで、テナント上にフル機能を持つオンラインショップを簡単に加えることができます。<br><br>
+    									 	掲載商品を「商品管理」でJimzen上に登録するところから始めましょう。その後注文に関するルールを設定。オンラインショップのデザインに関しては「Webサイトデザイン」メニューでドラッグ＆ドロップ形式で行います。Jimzenでは、注文以降の手続きに沿った「注文管理」も容易に行えるため、テナントオーナーはスムーズに販売活動を展開できます。
+    									 </p>
+    								</div>
+    							</td>
+    						</tr>
+    					</tbody></table>
+    				</div>
+    				<div id="navi-box-close" class="navi-arrow-box-close" style="display: none;"></div>
+    			</div>
+    	     </li>
+
+    		<li>
+    			<a id="navi-crm" href="javascript:void(0)">
+    				<div id="navi-crm-menu" class="navi-menu-font">CRMツール</div>
+    			</a>
+    			<div id="navi-crm-box" class="navi-arrow-box">
+    				<div class="navi-arrow-box-body">
+    					<table width="100%" rules="cols" style="table-layout:fixed;" cellspacing="0" cellpadding="0">
+    						<colgroup>
+    							<col width="66%">
+    							<col width="34%">
+    						</colgroup>
+    						<tbody><tr>
+    							<td class="navi-arrow-box-sub">
+    								<div>
+    									<ul>
+    										 <li class="btn-large">
+    										 	<div><div class="navi-font-text">お知らせ</div></div>
+    											<ul>
+    												<li><a href="https://tdemo1.t1.jimzen.biz/admin/notice/init"><div class="navi-font-title-large">編集&nbsp;＆&nbsp;管理</div></a></li>
+    											</ul>
+    										</li>
+    										<li class="btn-large">
+    											<div><div class="navi-font-text">ニュースレター</div></div>
+    											<ul>
+    												<li><a href="https://tdemo1.t1.jimzen.biz/admin/mail-mag/init"><div class="navi-font-title-large">編集&nbsp;＆&nbsp;配信</div></a></li>
+    												<li><a href="https://tdemo1.t1.jimzen.biz/admin/effect/init"><div class="navi-font-title">効果測定</div></a></li>
+    											</ul>
+    										</li>
+    										<li class="btn-large">
+    											<div><div class="navi-font-text">メーリングリスト</div></div>
+    											<ul>
+    												<li><a href="https://tdemo1.t1.jimzen.biz/admin/mailing-list/init"><div class="navi-font-title-tool">設定&nbsp;＆&nbsp;アーカイブ</div></a></li>
+    												<li><a href="https://tdemo1.t1.jimzen.biz/admin/mailing-list/mail-inform/init"><div class="navi-font-title-tool">通知メール</div></a></li>
+    											</ul>
+    										</li>
+    									</ul>
+    								</div>
+    								<div>
+    									<ul>
+    										 <li class="btn-large">
+    										 	<div><div class="navi-font-text">アンケート</div></div>
+    											<ul>
+    												<li><a href="https://tdemo1.t1.jimzen.biz/admin/enquete/enquete-setup/init"><div class="navi-font-title-large">一般アンケート</div></a></li>
+    												<li><a href="https://tdemo1.t1.jimzen.biz/admin/enquete/agreement/init"><div class="navi-font-title-tool">規約</div></a></li>
+    												<li><a href="https://tdemo1.t1.jimzen.biz/admin/member/etc/enquete-setup/init" target="_blank"><div class="navi-font-title-tool">メンバーシップアンケート&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i></div></a></li>
+    												<li><a href="https://tdemo1.t1.jimzen.biz/admin/event/etc/enquete-setup/init" target="_blank"><div class="navi-font-title-tool">イベントアンケート&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i></div></a></li>
+    											</ul>
+    										</li>
+    										<li class="btn-large">
+    											<div><div class="navi-font-text">ファックス</div></div>
+    											<ul>
+    												<li><a href="https://tdemo1.t1.jimzen.biz/admin/fax/fax-job/init"><div class="navi-font-title-large">編集&nbsp;＆&nbsp;配信</div></a></li>
+    												<li><a href="https://tdemo1.t1.jimzen.biz/admin/fax/fax-cover-sheet/init"><div class="navi-font-title-tool">カバーシート</div></a></li>
+    												<li><a href="https://tdemo1.t1.jimzen.biz/admin/fax/send-fax-history/init"><div class="navi-font-title-tool">配信履歴</div></a></li>
+    												<li><a href="https://tdemo1.t1.jimzen.biz/admin/fax/fax-basic-config/init"><div class="navi-font-title-tool">基本設定</div></a></li>
+    											</ul>
+    										</li>
+    									</ul>
+    								</div>
+    								<div>
+    									<ul>
+    										 <li class="btn-large">
+    										 	<div><div class="navi-font-text">コンタクト</div></div>
+    											<ul>
+    												<li><a href="https://tdemo1.t1.jimzen.biz/admin/contact/setup/init"><div class="navi-font-title-large">コンタクトウィンドウ設定</div></a></li>
+    												<li><a href="https://tdemo1.t1.jimzen.biz/admin/contact/mail-setup/init"><div class="navi-font-title-tool">通知メール</div></a></li>
+    												<li><a href="https://tdemo1.t1.jimzen.biz/admin/contact/agreement/init"><div class="navi-font-title-tool">規約</div></a></li>
+    											</ul>
+    										</li>
+    										<li class="btn-large">
+    											<div><div class="navi-font-text">掲示板</div></div>
+    											<ul>
+    												<li><a href="javascript:void(0)"><div class="navi-font-title-tool">テーマ&nbsp;＆&nbsp;投稿管理</div></a></li>
+    												<li><a href="javascript:void(0)"><div class="navi-font-title-tool">規約</div></a></li>
+    											</ul>
+    										</li>
+    										<li class="btn-large">
+    											<div><div class="navi-font-text">ギャラリー</div></div>
+    											<ul>
+    												<li><a href="javascript:void(0)"><div class="navi-font-title-tool">ライブラリ</div></a></li>
+    												<li><a href="javascript:void(0)"><div class="navi-font-title-tool">規約</div></a></li>
+    											</ul>
+    										</li>
+    									</ul>
+    								</div>
+    							</td>
+    							<td class="navi-arrow-box-content">
+    								<div class="navi-content-div">
+    									 <p class="navi-title-font">CRMツール</p>
+    									 <p class="navi-content-font">
+    									 	この文章はダミーです。この文章はダミーです。この文章はダミーです。この文章はダミーです。網羅的に管理できるメニューです。これによって、オフラインイベントの開催を、収益管理しつつ効率よく実施することができます。<br><br>
+    									 	まずは、「イベント企画」で開催するイベントの内容を具体化し、イベントを告知してください。その後「イベント運営」で随時状況を確認しながら適切なアクションを取ります。また、イベント当日の受付業務にも便利に使えます。
+    									 </p>
+    								</div>
+    							</td>
+    						</tr>
+    					</tbody></table>
+    				</div>
+    				<div id="navi-box-close" class="navi-arrow-box-close" style="display: none;"></div>
+    			</div>
+    	     </li>
+    		<li>
+    			<a id="navi-association" href="javascript:void(0)">
+    				<div id="navi-association-menu" class="navi-menu-font">アソシエーション</div>
+    			</a>
+    			<div id="navi-association-box" class="navi-arrow-box">
+    				<div class="navi-arrow-box-body">
+    					<table width="100%" rules="cols" style="table-layout:fixed;" cellspacing="0" cellpadding="0">
+    						<colgroup>
+    							<col width="66%">
+    							<col width="34%">
+    						</colgroup>
+    						<tbody><tr>
+    							<td class="navi-arrow-box-sub">
+    								<div>
+    									<ul>
+    										<li class="btn-large">
+    										 	<a href="https://tdemo1.t1.jimzen.biz/admin/member/hierarchy/init"><div class="navi-font-title-large">ヒエラルキー</div></a>
+    										</li>
+    										<li class="btn-large">
+    											<a href="https://tdemo1.t1.jimzen.biz/admin/member/query/init"><div class="navi-font-title-large">クエリー</div></a>
+    										</li>
+    										<li class="btn-large">
+    											<a href="https://tdemo1.t1.jimzen.biz/admin/relation/init"><div class="navi-font-title-large">リレーション</div></a>
+    										</li>
+    									</ul>
+    								</div>
+
+    								<div>
+    									<ul>
+    										<li class="btn-large">
+    											<div><div class="navi-font-title-large-gray">ポイント</div></div>
+    											<ul>
+    												<li><a href="https://tdemo1.t1.jimzen.biz/admin/point/point-earn/init"><div class="navi-font-title-tool">管理</div></a></li>
+    												<li><a href="https://tdemo1.t1.jimzen.biz/admin/point/point-basic-config/init"><div class="navi-font-title-tool">基本設定</div></a></li>
+    												<li><a href="https://tdemo1.t1.jimzen.biz/admin/point/mail-setup/init"><div class="navi-font-title-tool">通知メール</div></a></li>
+    											</ul>
+    										</li>
+    									</ul>
+    								</div>
+    								<div>
+    									<ul>
+    										<li class="btn-large">
+    											<a href="https://tdemo1.t1.jimzen.biz/admin/target-coupon/management/init"><div class="navi-font-title-large">限定クーポン</div></a>
+    										</li>
+    										<li class="btn-large" style="margin-top:-10px;">
+    											<a href="https://tdemo1.t1.jimzen.biz/admin/point-coupon/management/init"><div class="navi-font-title-large">ポイントクーポン</div></a>
+    										</li>
+    									</ul>
+    								</div>
+    							</td>
+    							<td class="navi-arrow-box-content">
+    								<div class="navi-content-div">
+    									 <p class="navi-title-font">アソシエーション</p>
+    								</div>
+    							</td>
+    						</tr>
+    					</tbody></table>
+    				</div>
+    				<div id="navi-box-close" class="navi-arrow-box-close" style="display: none;"></div>
+    			</div>
+    	     </li>
+
+    	     <li>
+    		     <a id="navi-account" href="javascript:void(0)" class="">
+    		     	<div id="navi-account-menu" class="navi-menu-font">会計</div>
+    		     </a>
+    		     <div id="navi-account-box" class="navi-arrow-box" style="display: none;">
+    				<div class="navi-arrow-box-body">
+    					<table width="100%" rules="cols" style="table-layout:fixed;" cellspacing="0" cellpadding="0">
+    						<colgroup>
+    							<col width="66%">
+    							<col width="34%">
+    						</colgroup>
+    						<tbody><tr>
+    							<td class="navi-arrow-box-sub">
+    								<div>
+    									<ul>
+    										 <li class="btn-large">
+    										 	<a href="https://tdemo1.t1.jimzen.biz/admin/cashier/search/init/"><div class="navi-font-title-large">メンバー会計</div></a>
+    										 	<ul>
+    												<li>
+    													<div id="payment-show-btn"><a href=" https://tdemo1.t1.jimzen.biz/admin/account/payment-waiting/init/ "><div class="navi-font">入金待ち&nbsp;&nbsp;<span class="navi-font-num"><span id="payment-btn">79</span>人</span></div></a></div>
+    													<div id="payment-hide-btn" class="navi-div-hide" style="display: none;">入金待ち&nbsp;&nbsp;0人</div>
+    												</li>
+    												<li>
+    													<div id="refund-show-btn"><a href="https://tdemo1.t1.jimzen.biz/admin/account/refund-waiting/init/"><div class="navi-font">未返金　&nbsp;&nbsp;<span class="navi-font-num"><span id="refund-btn">5</span>人</span></div></a></div>
+    													<div id="refund-hide-btn" class="navi-div-hide" style="display: none;">未返金　&nbsp;&nbsp;0人</div>
+    												</li>
+    											</ul>
+    										</li>
+    									</ul>
+    								</div>
+    								<div>
+    									<ul>
+    										<li>
+    										 	<a href="https://tdemo1.t1.jimzen.biz/admin/cashier/etc/tenant-tax-setup/init"><div class="navi-font-title">基本設定</div></a>
+    										</li>
+    										<li>
+    										 	<a href="https://tdemo1.t1.jimzen.biz/admin/cashier/etc/payment-setup/init"><div class="navi-font-title">決済方法</div></a>
+    										</li>
+    										 <li class="btn-large">
+    											<a href="https://tdemo1.t1.jimzen.biz/admin/cashier/etc/mail-setup/init"><div class="navi-font-title">通知メール</div></a>
+    										</li>
+    										<li>
+    										 	<a href="https://tdemo1.t1.jimzen.biz/admin/cashier/etc/report-setup/init"><div class="navi-font-title-large">帳票</div></a>
+    											<ul>
+    												<li><a href="https://tdemo1.t1.jimzen.biz/admin/cashier/etc/report-setup/init?type=account_invoice"><div class="navi-font-title">請求書</div></a></li>
+    												<li><a href="https://tdemo1.t1.jimzen.biz/admin/cashier/etc/report-setup/init?type=account_receipt"><div class="navi-font-title">領収書</div></a></li>
+    											</ul>
+    										</li>
+    									</ul>
+    								</div>
+    							</td>
+    							<td class="navi-arrow-box-content">
+    								<div class="navi-content-div">
+    									 <p class="navi-title-font">会計</p>
+    									 <p class="navi-content-font">
+    									 	テナント活動で生じる収支を管理するための集計メニューです。Jimzen利用料、イベント、コース、オンラインショップなどの活動別、決済方法別にリアルタイムベースで売り上げを把握することができます。また、未領収や未返金などのステータス管理も随時行えるため、迅速に次のアクションに移れます。さらに、特定の目的で会計情報を検索することもできます。<br><br>
+    										ここには特にテナントオーナーが設定する項目はありません。
+    									 </p>
+    								</div>
+    							</td>
+    						</tr>
+    					</tbody></table>
+    				</div>
+    				<div id="navi-box-close" class="navi-arrow-box-close" style="display: none;"></div>
+    			</div>
+    	     </li>
+
+    	 	<li>
+    		     <a id="navi-site-design" href="javascript:void(0)" class="selected">
+    		     	<div id="navi-site-design-menu" class="navi-menu-font">Webサイトデザイン</div>
+    		     </a>
+    		     <div id="navi-site-design-box" class="navi-arrow-box" style="display: none;">
+    				<div class="navi-arrow-box-body">
+    					<table width="100%" rules="cols" style="table-layout:fixed;" cellspacing="0" cellpadding="0">
+    						<colgroup>
+    							<col width="66%">
+    							<col width="34%">
+    						</colgroup>
+    						<tbody><tr>
+    							<td class="navi-arrow-box-sub">
+    								<div>
+    									<ul>
+    										 <li>
+    										 	<a href="https://tdemo1.t1.jimzen.biz/admin/website/site-page/init"><div class="navi-font-title-large">ページ</div></a>
+    										</li>
+    										<li>
+    											<a href="https://tdemo1.t1.jimzen.biz/admin/website/site-widget/init"><div class="navi-font-title-large">ウィジェット</div></a>
+    										</li>
+    										<li>
+    											<a href="https://tdemo1.t1.jimzen.biz/admin/website/publish/init"><div class="navi-font-title">公開</div></a>
+    										</li>
+    										<li>
+    											<a href="https://tdemo1.t1.jimzen.biz/admin/website/backup/init"><div class="navi-font-title">バックアップ &amp; 復元</div></a>
+    										</li>
+    									</ul>
+    								</div>
+    								<div>
+    									<ul>
+    										<li>
+    											<a href="https://tdemo1.t1.jimzen.biz/admin/website/basic-config/init"><div class="navi-font-title">基本設定</div></a>
+    										</li>
+    										<li>
+    											<a href="https://tdemo1.t1.jimzen.biz/admin/website/theme/init"><div class="navi-font-title">デザインテーマ</div></a>
+    										</li>
+    										 <li>
+    										 	<a href="https://tdemo1.t1.jimzen.biz/admin/website/color/init"><div class="navi-font-title">表現</div></a>
+    										</li>
+    									</ul>
+    								</div>
+    								<div>
+    									<ul>
+    										<li>
+    										 	<a href="https://tdemo1.t1.jimzen.biz/admin/site-design/page/init"><div class="navi-font-title" style="color: yellow;">レイアウト（~）</div></a>
+    										</li>
+    									</ul>
+    								</div>
+    							</td>
+    							<td class="navi-arrow-box-content">
+    								<div class="navi-content-div">
+    									 <p class="navi-title-font">Webサイトデザイン</p>
+    									 <p class="navi-content-font">
+    									 </p>
+    								</div>
+    							</td>
+    						</tr>
+    					</tbody></table>
+    				</div>
+    				<div id="navi-box-close" class="navi-arrow-box-close" style="display: none;"></div>
+    			</div>
+    	     </li>
+
+    	     <li>
+    		     <a id="navi-service" href="javascript:void(0)" class="">
+    		     	<div id="navi-service-menu" class="navi-menu-font">共通設定</div>
+    		     </a>
+    		     <div id="navi-service-box" class="navi-arrow-box" style="display: none;">
+    				<div class="navi-arrow-box-body">
+    					<table width="100%" rules="cols" style="table-layout:fixed;" cellspacing="0" cellpadding="0">
+    						<colgroup>
+    							<col width="66%">
+    							<col width="34%">
+    						</colgroup>
+    						<tbody><tr>
+    							<td class="navi-arrow-box-sub">
+
+    								<div>
+    									<ul>
+    										<li>
+    										 	<a href="https://tdemo1.t1.jimzen.biz/admin/etc/uim-setup/init"><div class="navi-font-title">用語変更</div></a>
+    										</li>
+
+    										<li>
+    										 	<a href="https://tdemo1.t1.jimzen.biz/admin/etc/original-domain/init"><div class="navi-font-title">独自ドメイン</div></a>
+    										</li>
+    										<li>
+    										    <a href="https://tdemo1.t1.jimzen.biz/admin/etc/mail-setup/init"><div class="navi-font-title">メール基本設定</div></a>
+    										</li>
+    										<li>
+    										 	<a href="https://tdemo1.t1.jimzen.biz/admin/etc/default-setup/init"><div class="navi-font-title">設定の初期化</div></a>
+    										</li>
+    									</ul>
+    								</div>
+    								<div>
+    									<ul>
+    										<li>
+    										 	<a href="https://tdemo1.t1.jimzen.biz/admin/etc/time-zone-setup/init"><div class="navi-font-title">タイムゾーン</div></a>
+    										</li>
+    										<li>
+    										 	<a href="https://tdemo1.t1.jimzen.biz/admin/etc/holiday-setup/init"><div class="navi-font-title">休日設定</div></a>
+    										</li>
+    									</ul>
+    								</div>
+    								<div>
+    									<ul>
+    										<li class="btn-large">
+    										 	<div><div class="navi-font-text">セキュリティ</div></div>
+    											<ul>
+    												<li><a href="https://tdemo1.t1.jimzen.biz/admin/security/function-access-auth/init"><div class="navi-font-title-tool">Jimzenコンソール操作権限</div></a></li>
+    												<li><a href="https://tdemo1.t1.jimzen.biz/admin/security/management-operation-history/init"><div class="navi-font-title-tool">Jimzenコンソール操作履歴</div></a></li>
+    												<li><a href="https://tdemo1.t1.jimzen.biz/admin/security/static-ip-access/init"><div class="navi-font-title-tool">Jimzenコンソールアクセス制限</div></a></li>
+    												<li><a href="https://tdemo1.t1.jimzen.biz/admin/security/data-access-auth/init"><div class="navi-font-title-tool">データアクセス(未)</div></a></li>
+    											</ul>
+    										</li>
+    									</ul>
+    								</div>
+    								<div>
+    									<ul>
+    										<li class="btn-large">
+    										 	<div><div class="navi-font-text">NGワード</div></div>
+    											<ul>
+    												<li><a href="https://tdemo1.t1.jimzen.biz/admin/security/ng-word-config/init"><div class="navi-font-title-tool">編集</div></a></li>
+    												<li><a href="javascript:void(0)"><div class="navi-font-title-tool">履歴</div></a></li>
+    												<li><a href="https://tdemo1.t1.jimzen.biz/admin/security/ng-word-mail-setup/init"><div class="navi-font-title-tool">通知メール</div></a></li>
+    											</ul>
+    										</li>
+    									</ul>
+    								</div>
+    							</td>
+    							<td class="navi-arrow-box-content">
+    								<div class="navi-content-div">
+    									 <p class="navi-title-font">共通設定</p>
+    									 <p class="navi-content-font">
+    									 	Jimzen上で利用する多様なリソースを設定・登録しておくメニューです。ここで設定した情報や文章、フォーマットがテナント活動のさまざまな場面で反映されます。このメニューをうまく利用することによって、Jimzenをテナントの属性に合わせてカスタマイズでき、首尾一貫したテナントを作りあげることができます。<br><br>
+    									 	サブメニューは豊富です。まずは、マスター情報を登録し、テナントメンバー向けの登録フォームを作成するところからスタートしてください。
+    									 </p>
+    								</div>
+    							</td>
+    						</tr>
+    					</tbody></table>
+    				</div>
+    				<div id="navi-box-close" class="navi-arrow-box-close" style="display: none;"></div>
+    			</div>
+    	     </li>
+
+    	 <li>
+    		</li>
+       </ul>
+    </div>
+    </div>
+
+    <div id="breadcrumb-innerMenu" style="margin:10px;">
+	     <a href="javascript:;" onclick="$('#navi-site-design').click();headMenuClick = false;">Webサイトデザイン</a><i class="fa fa-angle-right"></i>ページ
+
+     </div>
+
+     <div id="page-name-bar"　style="margin: 10px;">
+      <div id="page-name">トップ</div>
+      <a id="standard-mode-btn" href="javascript:;">
+        <div class="site-page-icon-btn help-bubble-popup" style="background: url('https://fs.t1.jimzen.biz/res/32241/image/admin/sitepage/btn_page2.svg')" position="left" custom-width="70" guidance="標準モード<br/>へ移行します" module-name="site-page"></div>
+      </a>
+     </div>
+
+     <iframe src="grapesjs.html" width="100%" height="750px" style="border:none;"></iframe>
+     
+  </body>
+</html>

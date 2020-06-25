@@ -28,6 +28,7 @@
         <module>tm-security-app</module>
         <module>order-service</module>
         <module>mail-service</module>
+        <module>schedule-service</module>
     </modules>
 
     <!-- 集中定义依赖版本号 -->

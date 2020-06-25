@@ -18,12 +18,14 @@
         <module name="mailservice" />
         <module name="tm-security-app" />
         <module name="tmsecurityapp" />
+        <module name="schedule-service" />
         <module name="common" />
         <module name="mail-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="productservice" target="1.8" />
+      <module name="schedulerservice" target="1.7" />
       <module name="ssoclient1" target="1.7" />
       <module name="ssoclient2" target="1.7" />
       <module name="ssodemo" target="1.7" />
@@ -42,6 +44,8 @@
       <module name="mailservice" options="-parameters" />
       <module name="order-service" options="-parameters" />
       <module name="orderservice" options="-parameters" />
+      <module name="schedule-service" options="-parameters" />
+      <module name="schedulerservice" options="-parameters" />
       <module name="ssoclient1" options="-parameters" />
       <module name="ssoclient2" options="-parameters" />
       <module name="ssodemo" options="-parameters" />

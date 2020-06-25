@@ -1,0 +1,500 @@
+<#import "${spring}" as spring />
+<#escape x as x!"">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style id="balloon-left-style"></style>
+</head>
+
+    <div id="breadcrumb-innerMenu" class="breadcrumb-area">
+        <a href="javascript:;" onclick="$('#navi-shop').click();headMenuClick = false;"><m>ショップ</m></a><i class="fa fa-angle-right"></i><m>基本設定</m>
+    </div>
+    <div id="right-panel" class="single-panel">
+        <div class="single-panel-wrap">
+            <div id="YSContainer">
+                <div id="yscontainer-wrap" class="right-panel-detail" >
+                    <div class="ctrl-area">
+                        <div class="font-sub-title"><m>基本設定</m></div>
+                        <div class="ctrl-area__main add-bg">
+                            <a class="ctrl-area__main__btn save-btn" id="save-btn" onclick="saveShopSetup();" href="javascript:;"><span><m>保存</m></span></a>
+                        </div>
+                    </div>
+
+                    <div id="yscontainer_contents"><div id="yscontainer-close-icon" class="yscontainer-close-icon-default"></div>
+
+                        <a id="payment-method-link" href="<@spring.url '${_domain}/admin/shop/shop-setup/popup-shop-payment-method'/>" class="is-hidden"></a>
+                        <a id="popup-payment-membership-link" href="<@spring.url '${_domain}/admin/cashier/etc/payment-setup/show-popup-payment-membership-admin'/>" class="is-hidden"></a>
+                        <a id="popup-payment-ticket-link" href="<@spring.url '${_domain}/admin/cashier/etc/payment-setup/show-popup-payment-ticket-admin'/>" class="is-hidden"></a>
+                        <a id="popup-payment-menu-page-link" href="<@spring.url '${_domain}/admin/cashier/etc/payment-setup/popup-payment-menu-page'/>"></a>
+                        <a id="pay-method-setup-link" href="<@spring.url '${_domain}/admin/cashier/etc/payment-setup/popup-payment-menu'/>"></a>
+                        <input type="hidden" id="deleteDeliveryMethodId" name="deleteDeliveryMethodId" value=""/>
+                        <input type="hidden" id="click-mail-member-flag" name="click-mail-member-flag" value=""/>
+                        <form id="shopsetup-form" name="shopsetup-form" method="post"><input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+                            <input type="hidden" name="memberUsersId" id="memberUsersId" value="${memberUsersId}"/>
+                            <input type="hidden" id="message-val" name="message-val" value=""/>
+                            <input type="hidden" id="stockInfo" name="stockInfo" value=""/>
+                            <input type="hidden" id="deliveryMethodIdCheck" name="deliveryMethodIdCheck" value=""/>
+                            <input type="hidden" id="orderConfirmMailCheckCopy" name="orderConfirmMailCheckCopy" value="${shopSetup.orderConfirmMailCheckCopy}"/>
+                            <input type="hidden" id="orderConfirmMailCopyUsersId" name="orderConfirmMailCopyUsersId" value="${shopMailCopyUsersId}"/>
+                            <input type="hidden" id="paymentMethodIds" name="paymentMethodIds" value=""/>
+                            <input type="hidden" id="initDeliveryMethodIds" name="initDeliveryMethodIds" value=""/>
+                            <input type="hidden" id="initPaymentMethods" name="initPaymentMethods" value=""/>
+                            <input type="hidden" id="deleteObjectMethodId" name="deleteObjectMethodId" value=""/>
+                            <input type="hidden" id="deleteObjectMethodName" name="deleteObjectMethodName" value=""/>
+                            <input type="hidden" id="offlinePaymentMethod" name="offlinePaymentMethod" value=""/>
+                            <ul class="detail-form check-save-excepted non-mg-btm">
+                                <li class="detail-form__row--head-title">
+                                    <div class="detail-form__row__title-cell title-name">
+                                        <div class="detail-form__row__mark-area"></div>
+                                        <div>
+                                            <span class="detail-form__row__title-cell__node-name"><m>基本設定</m></span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="detail-form__row detail-form__row__brank"></li>
+                                <li class="detail-form__row">
+                                    <div class="detail-form__row__title-cell">
+                                        <div class="detail-form__row__mark-area"></div>
+                                        <m>注文可能金額</m><i class="fa fa-question-circle fa-question-circle-green question-bubble-popup" position="left" custom-width="140" guidance="<m>設定した範囲内の金額で注文を受けられるようにしま</m>"></i>
+                                    </div>
+                                    <div class="detail-form__row__content-cell">
+                                        <div class="hide-same-flag-div" data-type="radioText">
+                                            <div class="detail-form__row__sub">
+                                                <div id="minOrderAmountLimitFlag-div" class="select-button-text-input-div">
+                                                    <div class="select-button-input">
+                                                        <@spring.formRadioButton "shopSetup.minOrderAmountLimitFlag" "${_SHOP_SETUP_MIN_ORDER_AMOUNT_FLAG_NO}" "minOrderAmountLimitFlag" "minOrderAmountLimitFlagNO" "<m>制限しない</m>" />
+                                                        <input type="hidden" name="minOrderAmountVal" id="minOrderAmountVal"  />
+                                                    </div>
+                                                    <div class="select-text-input">
+                                                        <@spring.formRadioButton "shopSetup.minOrderAmountLimitFlag" "${_SHOP_SETUP_MIN_ORDER_AMOUNT_FLAG_YES}" "minOrderAmountLimitFlag" "minOrderAmountLimitFlagYES" "" />
+                                                        ${_CURRENCY_SYMBOL}<@spring.formInput "shopSetup.minOrderAmount", " maxlength='7' class='txt-f-l validate[required, custom[onlyNumberSp], maxSize[10], funcCall[minOrderAmountBiggerThanMaxOrderAmount]] number auto-resize'" />
+                                                    </div>
+                                                </div>
+                                                <span><m>～</m></span>
+                                                <div id="maxOrderAmountLimitFlag-div" class="select-button-text-input-div">
+                                                    <div class="select-button-input">
+                                                        <@spring.formRadioButton "shopSetup.maxOrderAmountLimitFlag" "${_SHOP_SETUP_MAX_ORDER_AMOUNT_FLAG_NO}" "maxOrderAmountLimitFlag" "maxOrderAmountLimitFlagNO" "<m>制限しない</m>" />
+                                                        <input type="hidden" name="maxOrderAmountVal" id="maxOrderAmountVal"  />
+                                                    </div>
+                                                    <div class="select-text-input">
+                                                        <@spring.formRadioButton "shopSetup.maxOrderAmountLimitFlag" "${_SHOP_SETUP_MAX_ORDER_AMOUNT_FLAG_YES}" "maxOrderAmountLimitFlag" "maxOrderAmountLimitFlagYES" "" />
+                                                        ${_CURRENCY_SYMBOL}<@spring.formInput "shopSetup.maxOrderAmount", " maxlength='7' class='txt-f-l validate[required, custom[onlyNumberSp], maxSize[10]]] number auto-resize'" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="detail-form__row">
+                                    <div class="detail-form__row__title-cell">
+                                        <div class="detail-form__row__mark-area">
+                                            <i class="fa fa-asterisk question-bubble-popup must-item" position="center" custom-width="100" guidance="<m>省略できません</m>"></i>
+                                        </div>
+                                        <m>決済方法</m><i class="fa fa-question-circle fa-question-circle-green question-bubble-popup" position="left" custom-width="140" guidance="<m>メンバーが支払いで利用できる決済方法を登録しますメンバーが支払いで利用できる決済方法を登録します</m>"></i>
+                                    </div>
+                                    <div class="detail-form__row__content-cell">
+                                        <div id="add-payment-method-div">
+                                            <a id="paymentMethod" class="txt-link">
+                                                <#if paymentMethodShopOfflineList??>
+                                                <#list paymentMethodShopOfflineList as paymentMethodShopOfflineListEach>
+                                                <#if paymentMethodShopOfflineListEach.offlinePayFlag == _YES>
+                                                <div id="${paymentMethodShopOfflineListEach.paymentMethodId}" name="offlinePaymentMethod">
+                                                    <div id="paymentMethod-${paymentMethodShopOfflineListEach.paymentMethodId}" name="offlinePaymentMethod">
+                                                        <#if paymentMethodShopOfflineListEach.paymentMethodId?number == _MEMBERSHIP_PAYMENT_ID_CREDIT_CARD>
+                                                        <i class="fa fa-credit-card"></i>
+                                                        <#elseif paymentMethodShopOfflineListEach.paymentMethodId?number == _MEMBERSHIP_PAYMENT_ID_PAYPAL>
+                                                        <i class="fa fa-paypal"></i>
+                                                        <#else>
+                                                        <i class="fa fa-money"></i>
+                                                    </#if>
+                                                    ${paymentMethodShopOfflineListEach.offlinePayName?html}
+                                                </div>
+                                        </div>
+                                    </#if>
+                                </#list>
+                            </#if>
+                            </a>
+                            <a id="payment-method-select-no" href="javascript:;" class="txt-link is-display-none">
+                                <span id="add-payment-method-set-val" class="span-change-trigger"><m>設定されていません</m></span>
+                            </a>
+                    </div>
+                </div>
+                </li>
+                <li class="detail-form__row">
+                    <div class="detail-form__row__title-cell">
+                        <div class="detail-form__row__mark-area"></div>
+                        <m>注文可能数</m><i class="fa fa-question-circle fa-question-circle-green question-bubble-popup" position="center" guidance="<m>設定した範囲内の数量で注文を受けられるようにします</m>"></i>
+                    </div>
+                    <div class="detail-form__row__content-cell">
+                        <div class="hide-same-flag-div" data-type="radioText">
+                            <div class="detail-form__row__sub">
+                                <div id="minOrderCountLimitFlag-div" class="select-button-text-input-div">
+                                    <div class="select-button-input">
+                                        <@spring.formRadioButton "shopSetup.minOrderCountLimit" "${_SHOP_PRODUCT_MIN_ORDER_COUNT_LIMIT_ON}" "minOrderCountLimit" "minOrderCountLimitON" "<m>制限しない</m>" />
+                                        <input type="hidden" name="minOrderCountVal" id="minOrderCountVal"  />
+                                    </div>
+                                    <div class="select-text-input">
+                                        <@spring.formRadioButton "shopSetup.minOrderCountLimit" "${_SHOP_PRODUCT_MIN_ORDER_COUNT_LIMIT_OFF}" "minOrderCountLimit" "minOrderCountLimitOFF" "" />
+                                        <@spring.formInput "shopSetup.minOrderCount" "class='tx-right txt-f-l validate[required, custom[integer]], min[1], max[2147483647] number auto-resize' maxlength='7'" />
+                                    </div>
+                                </div>
+                                <span><m>～</m></span>
+                                <div id="maxOrderCountLimitFlag-div" class="select-button-text-input-div">
+                                    <div class="select-button-input">
+                                        <@spring.formRadioButton "shopSetup.maxOrderCountLimit" "${_SHOP_PRODUCT_MAX_ORDER_COUNT_LIMIT_ON}" "maxOrderCountLimit" "maxOrderCountLimitON" "<m>制限しない</m>" />
+                                        <input type="hidden" name="maxOrderCountVal" id="maxOrderCountVal"  />
+                                    </div>
+                                    <div class="select-text-input">
+                                        <@spring.formRadioButton "shopSetup.maxOrderCountLimit" "${_SHOP_PRODUCT_MAX_ORDER_COUNT_LIMIT_OFF}" "maxOrderCountLimit" "maxOrderCountLimitOFF" "" />
+                                        <@spring.formInput "shopSetup.maxOrderCount" "class='tx-right txt-f-l validate[required, custom[integer]], min[1], max[2147483647] number auto-resize' maxlength='7'" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="detail-form__row__sub">
+                                <div class="detail-form__row__sub-title"><m>最小ロット数</m></div>
+                                <div class="detail-form__row__sub-val"><@spring.formInput "shopSetup.minLotCount" "class='tx-right txt-f-l validate[required, custom[integer]], min[1], max[2147483647] number auto-resize' maxlength='7'" /><m>ずつ</m></div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="detail-form__row">
+                    <div class="detail-form__row__title-cell">
+                        <div class="detail-form__row__mark-area"></div><m>選択可能注文数</m><i class="fa fa-question-circle fa-question-circle-green question-bubble-popup" position="center" guidance="<m>Webサイトの商品ページの「数量」にプルダウン表示する、一回の購入で注文を受けられる数量です※数字をカンマで区切って入力してください</m>"></i>
+                    </div>
+                    <div class="detail-form__row__content-cell">
+                        <div id="availableOrderNumSameFlag-div" class="hide-same-flag-div" data-type="txt">
+                            <@spring.formInput "shopSetup.availableOrderNum" "class='txt-separator[split[,] max[9],required] number auto-resize'" />
+                        </div>
+                    </div>
+                </li>
+                <li class="detail-form__row">
+                    <div class="detail-form__row__title-cell">
+                        <div class="detail-form__row__mark-area"></div>
+                        <m>配送方法</m><i class="fa fa-question-circle fa-question-circle-green question-bubble-popup" position="left" custom-width="140" guidance="<m>メンバーが注文手続きで選択できる配送方法を登録します</m>"></i>
+                    </div>
+                    <div class="detail-form__row__content-cell">
+                        <div id="add-delivery-method-div">
+                            <a id="add-delivery-method" class="txt-link">
+                                <#if shopDeliveryMethodList??>
+                                <#list shopDeliveryMethodList as shopDeliveryMethod>
+                                <div id="${shopDeliveryMethod.deliveryMethodId}" name="shopDeliveryMethod">
+                                    <div id = "delivery-method-${shopDeliveryMethod.deliveryMethodId}" name="shopDeliveryMethod">
+                                        <i class="fa fa-truck"></i>${shopDeliveryMethod.deliveryMethodName?html}
+                                    </div>
+                                </div>
+                            </#list>
+                        </#if>
+                        </a>
+                        <a id="add-delivery-method-select-no" href="javascript:;" class="txt-link is-display-none">
+                            <span id="add-delivery-method-set-val" class="div-change-trigger"><m>設定されていません</m></span>
+                        </a>
+                    </div>
+            </div>
+            </li>
+            <li class="detail-form__row">
+                <div class="detail-form__row__title-cell">
+                    <div class="detail-form__row__mark-area"></div>
+                    <m>オンラインショップ利用規約</m><i class="fa fa-question-circle fa-question-circle-green question-bubble-popup" position="left" custom-width="140" guidance="<m>注文手続きの際、メンバーに同意を求めるための、規約の設定ができます</m>"></i>
+                </div>
+                <div class="detail-form__row__content-cell">
+                    <div>
+                        <@spring.formRadioButton "shopSetup.agreementCheckFlag" "${_SHOP_SETUP_AGREEMENT_CHECK_FLAG_NO}" "agreementCheckFlag" "agreementCheckFlagNO" "<m>使用しない</m>" />
+                        <@spring.formRadioButton "shopSetup.agreementCheckFlag" "${_SHOP_SETUP_AGREEMENT_CHECK_FLAG_YES}" "agreementCheckFlag" "agreementCheckFlagYES" "<m>使用する</m>" />
+                        <a id="agreement-setup-link" href="<@spring.url '${_domain}/admin/common/agreement/show-agreement-setup/order'/>" class="is-hidden"></a>
+                    </div>
+                </div>
+            </li>
+            <li class="detail-form__row">
+                <div class="detail-form__row__title-cell">
+                    <div class="detail-form__row__mark-area"></div>
+                    <m>商品の状態</m><i class="fa fa-question-circle fa-question-circle-green question-bubble-popup" position="center" guidance="<m>Webサイトに表示される商品の状態です</m>"></i></th>
+                </div>
+                <div class="detail-form__row__content-cell">
+                    <div>
+                        <div id="productStateSameFlag-div" class="hide-same-flag-div" data-type="sp">
+                            <@spring.formRadioButton "shopSetup.productState" "1" "productState" "productState1" "<m>新品</m>" />
+                            <@spring.formRadioButton "shopSetup.productState" "2" "productState" "productState2" "<m>中古品</m>" />
+                            <@spring.formRadioButton "shopSetup.productState" "3" "productState" "productState3" "<m>再生品</m>" />
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="detail-form__row">
+                <div class="detail-form__row__title-cell">
+                    <div class="detail-form__row__mark-area"></div>
+                    <m>通知メール</m>
+                </div>
+                <div class="detail-form__row__content-cell">
+                    <div class="detail-form__row__sub">
+                        <div class="detail-form__row__sub-title"><m>メンバー宛</m></div>
+                        <div class="detail-form__row__sub-val">
+                            <div class="hide-same-flag-div">
+                                <div class="mail-alt-val" id="confirmMail">
+                                    <@spring.formCheckBoxNoHidden "shopSetup.orderConfirmMailCheckFlag" "${_SHOP_SETUP_ORDER_CONFIRM_MAIL_CHECK_FLAG_YES}" "orderConfirmMailCheckFlag" "orderConfirmMailCheckFlag" "<m>注文受付</m>" "" "class=' chk-switch'" />
+                                    <a id="stock-alarm-mail-setup" href="javascript:;" onclick="commonSetup('mailCheckFlag', ${_NOTICE_MAIL_SHOP_MAIL_TYPE_ORDER_CONFIRM_MAIL});" class="external-icon-link"><i class="icon-external-link question-bubble-popup" aria-hidden="true" guidance="<m>注文を受付けた時点で自動送信するメールを設定できます</m>"></i></a>
+                                </div>
+                                <div class="mail-alt-val" id="orderConfirmMail">
+                                    <input class="chk-switch question-bubble-popup" type="checkbox" name="orderConfirmMailCheckCopyFlag" id="orderConfirmMailCheckCopyFlag"/><label for="orderConfirmMailCheckCopyFlag"><m>コピーを転送</m></label><i class="fa fa-question-circle fa-question-circle-green question-bubble-popup" position="center" guidance="<m>注文受付の通知メールと同じ内容のメールを転送できます。ショップ管理者などに注文が入ったことを知らせることができます</m>"></i>
+
+                                    <a id="orderConfirmMailCheckCopyMailPopup" href="javascript:;" class="txt-link" onclick="popupOrderConfirmMailMember();">
+												<span id="div_member">
+												<#if orderConfirmMailCheckCopyCount == 0>
+													<span id="no-member" ><m>送信するメンバーがいません</m></span>
+													<span id="shop-member-link"  style="display:none">
+														<span  class="txt-mark">
+															<span id="order_confirm_member_number">${orderConfirmMailCheckCopyCount}</span>
+															<m>人</m>
+														</span>
+														<span><m>に送信</m></span>
+													</span>
+												<#else>
+													<span id="no-member" style="display:none"><m>送信するメンバーがいません</m></span>
+													<span id="shop-member-link">
+														<span  class="txt-mark">
+															<span id="order_confirm_member_number">${orderConfirmMailCheckCopyCount}</span>
+															<m>人</m>
+														</span>
+														<span><m>に送信</m></span>
+													</span>
+												</#if>
+                                        </span>
+                                    </a>
+
+                                </div>
+                                <div class="mail-alt-val" id="cancelMail">
+                                    <@spring.formCheckBoxNoHidden "shopSetup.cancelMailCheckFlag" "${_SHOP_SETUP_CANCEL_MAIL_CHECK_FLAG_YES}" "cancelMailCheckFlag" "cancelMailCheckFlag" "<m>キャンセル受付</m>" "" "class=' chk-switch'" />
+                                    <a id="cancel-setup" href="javascript:;" onclick="commonSetup('mailCheckFlag', ${_NOTICE_MAIL_SHOP_MAIL_TYPE_CANCEL_MAIL});" class="external-icon-link"><i class="icon-external-link question-bubble-popup" aria-hidden="true" guidance="<m>注文をキャンセルした時点で自動送信するメールを設定できます</m>"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="detail-form__row__sub">
+                        <div class="detail-form__row__sub-title"><m>管理者宛</m></div>
+                        <div class="detail-form__row__sub-val">
+                            <div class="hide-same-flag-div">
+                                <div class="mail-alt-val">
+                                    <@spring.formCheckBoxNoHidden "shopSetup.soldOutMailFlag" "${_SHOP_PRODUCT_SOLD_OUT_MAIL_FLAG_YES}" "soldOutMailFlag" "soldOutMailFlag" "<m>欠品</m>" "" "class=' chk-switch'" />
+                                    <a id="soldOutMail-setup" href="javascript:;" onclick="commonSetup('mailCheckFlag','${_NOTICE_MAIL_SHOP_MAIL_TYPE_SOLD_OUT_MAIL}');" class="external-icon-link"><i class="icon-external-link" aria-hidden="true"></i></a>
+                                    <input type="hidden" name="soldOutMailFlag" value="${_SHOP_PRODUCT_SOLD_OUT_MAIL_FLAG_NO}">
+                                </div>
+                                <div class="mail-alt-val">
+                                    <span class="btn-alone-small btn-disabled is-hidden" id="sold-out-mail-setup-disable"><m>設定</m> <i class="icon-external-link" aria-hidden="true"></i></span>
+                                    <@spring.formCheckBoxNoHidden "shopSetup.stockAlarmMailFlag" "${_SHOP_PRODUCT_STOCK_ALARM_MAIL_FLAG_YES}" "stockAlarmMailFlag" "stockAlarmMailFlag" "<m>在庫数</m>" "" "class=' chk-switch'" />
+                                    <#if shopSetup.stockAlarmMailFlag?? && shopSetup.stockAlarmMailFlag == _SHOP_PRODUCT_STOCK_ALARM_MAIL_FLAG_NO>
+                                    <@spring.formInput "shopSetup.stockMinQuantity" "class='txt-f-l number auto-resize' maxlength='7' disabled='disabled'" />
+                                    <#else>
+                                    <@spring.formInput "shopSetup.stockMinQuantity" "class='txt-f-l number auto-resize' maxlength='7'" />
+                                </#if>
+                                <m>個以下</m>
+                                <a id="stock-alarm-mail-setup" href="javascript:;" onclick="commonSetup('mailCheckFlag','${_NOTICE_MAIL_SHOP_MAIL_TYPE_STOCK_ALARM_MAIL}');" class="external-icon-link"><i class="icon-external-link" aria-hidden="true"></i></a>
+                                <input type="hidden" name="stockAlarmMailFlag" value="${_SHOP_PRODUCT_SOLD_OUT_MAIL_FLAG_NO}">
+                            </div>
+                            <span class="btn-alone-small btn-disabled is-hidden" id="stock-alarm-mail-setup-disable"><m>設定</m> <i class="icon-external-link" aria-hidden="true"></i></span>
+                            <div class="switch-btn-on-inputs__mem-num">
+                                <a id="popup-mail-member-set" href="javascript:;" class="txt-link" onclick="popupMailMember();">
+											<span id="div_member">
+											<#if memberUsersCount == 0>
+												<m>送信するメンバーがいません</m>
+											<#else>
+												<span id="shop-member-link" class="txt-mark"><span id="member_number">${memberUsersCount}</span><span><m>人</m></span></span>
+												<span class="is-hidden" id="member_number_span">${memberUsersCount}<m>人</m></span><m>に送信</m>
+											</#if>
+                                    </span>
+                                </a>
+                                <input id="instructorDetailFlag" type="checkbox"  hidden="hidden" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a id="notice-mail-setup-link" href="<@spring.url '${_domain}/admin/etc/mail-setup/show-noticemail-setup'/>" class="is-hidden"></a>
+        </div>
+        </li>
+        <li class="detail-form__row">
+            <div class="detail-form__row__title-cell">
+                <div class="detail-form__row__mark-area"></div>
+                <m>在庫表示</m>
+            </div>
+            <div class="detail-form__row__content-cell">
+                <div class="bg-gray">
+                    <input name="stockShowType" id="stockShowType1" type="radio" checked="checked" value="${_SHOP_SETUP_STOCK_SHOW_TYPE_YES}"><label for="stockShowType1" class="question-bubble-popup" position="center" custom-width="140" guidance="<m>Webサイトの商品ページに表示する在庫数です</m>"><m>在庫数</m></label>
+                    <input name="stockShowType" id="stockShowType2" type="radio" onclick="openModalStockShowConf();" value="${_SHOP_SETUP_STOCK_SHOW_TYPE_NO}" <#if stockShowType?? && stockShowType == _SHOP_SETUP_STOCK_SHOW_TYPE_NO>checked="checked"</#if>"><label for="stockShowType2" class="question-bubble-popup" position="center" custom-width="140" guidance="<m>Webサイトの商品ページに表示する在庫状況です。具体的な在庫数ではなく、文章でメンバーに在庫状況を知らせたい場合に設定します</m>"><m>在庫状況</m></label>
+            </div>
+            <div  class="radio-sub-area" >
+                <div class="detail-form__row__sub">
+                    <div class="detail-form__row__sub-title">
+                        <span><m>表示コメント</m></span>
+                    </div>
+                    <div class="detail-form__row__sub-val" id="stock-show-set"></div>
+                </div>
+            </div>
+    </div>
+    </li>
+    <li class="detail-form__row detail-form__row--blank"></li>
+    </ul>
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+    <a id="membership-update-link" href="" class="is-display-none'></a>
+<a id="popup-payment-menu" href="#popup-payment-menu-div" class="is-hidden"></a>
+    <a id="popup-creditCard-menu" href="#popup-creditCard-menu-div" class="is-hidden"></a>
+    <a id="modal-stock-show-link" href="#modal-stock-show-conf" class="is-hidden"></a>
+    <div id="modal-stock-show-conf" class="tx-center ysdialog">
+        <div class="ctrl-area">
+            <div class="ctrl-area__main">
+                <a class="ctrl-area__main__btn ysdialog-close" href="javascript:;"><span><m>キャンセル</m></span></a>
+                <a class="ctrl-area__main__btn ysdialog-close save-btn" id="stock-sure-btn" onclick="saveStockShow();" href="javascript:;"><span><m>OK</m></span></a>
+            </div>
+        </div>
+        <div class="ysdialog-contents">
+            <div class="jz-table-wrapper">
+                <table id="stock-show-cnf" class="jz-table"><tbody>
+                <tr class="jz-table__row header">
+                    <td id="1" class="jz-table__cell ui-resizable" style=""><m>在庫数</m></td>
+                    <td id="2" class="jz-table__cell"><m>表示文言</m></td>
+                </tr>
+                <tr class="jz-table__row">
+                    <td class="jz-table__cell"><div class="l-align-r">0</div></td>
+                    <td class="jz-table__cell">
+                        <div class="stockStatusDiv">
+                            <textarea class="is-dis-enterkey auto-resize validate[maxSize[45], funcCall[groupRequiredStockStatus3]]" placeholder="<m>在庫なし</m>" name="stockStatus"></textarea>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="jz-table__row">
+                    <td class="jz-table__cell">
+                        <div class="l-align-r"><span>1</span>～
+                            <input name="stockStatusValue"  onchange="addRow(this)" placeholder="<m>それ以上</m>"
+                                   class="auto-resize number validate[custom[onlyNumberSp], maxSize[10], funcCall[groupRequiredStockStatusValue3], funcCall[smallerThanStockStatus]]" type="text" autocomplete="off" maxlength="6">
+                        </div>
+                    </td>
+                    <td class="jz-table__cell">
+                        <div class="stock-status-disp-area stockStatusDiv">
+                            <textarea class="is-dis-enterkey auto-resize validate[maxSize[45], funcCall[groupRequiredStockStatus3]]" placeholder="<m>在庫あり</m>" name="stockStatus"></textarea>
+                        </div>
+
+                    </td>
+                </tr>
+                </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+    <div id="popup-payment-menu-div" class="tx-center ysdialog" >
+        <div class="ysdialog-contents">
+            <p><m>PayPalの決済方法が未設定なので、選択できません。</m></p>
+            <p><m>PayPalの決済方法を設定しますか？</m></p>
+        </div>
+        <div class="btn">
+            <ul>
+                <li><a class="ysdialog-close recommend" id="sure-btn" onclick="paymentMenuClick('payPal');" href="javascript:;"><span><m>設定する</m></span></a></li>
+                <li><a class="ysdialog-close" href="javascript:;"><span><m>設定しない</m></span></a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="popup-creditCard-menu-div" class="tx-center ysdialog" >
+        <div class="ysdialog-contents">
+            <p><m>クレジットカードの決済方法が未設定なので、選択できません。</m></p>
+            <p><m>クレジットカードの決済方法を設定しますか？</m></p>
+        </div>
+        <div class="btn">
+            <ul>
+                <li><a class="ysdialog-close recommend" id="sure-btn" onclick="paymentMenuClick('creditCard');" href="javascript:;"><span><m>設定する</m></span></a></li>
+                <li><a class="ysdialog-close" href="javascript:;"><span><m>設定しない</m></span></a></li>
+            </ul>
+        </div>
+    </div>
+    <a id="delete-delivery-method-link" href="#delete-delivery-method-div"></a>
+    <div id="delete-delivery-method-div" class="ysdialog">
+        <div class="ysdialog-contents">
+            <m>配送方法</m>「<span id="deliveryMethodName"></span>」<m>を削除します</m>
+        </div>
+        <div class="btn btn-no-border">
+            <ul>
+                <li><a href="javascript:;" class="ysdialog-close" id="close-btn"><span><m>閉じる</m></span></a></li>
+                <li><a id="delete-delivery-method-btn" class="yssubmit recommend" href="javascript:;" onclick="deliveryMethodDelete();"><span><m>削除</m></span></a></li>
+            </ul>
+        </div>
+    </div>
+    <a id="mail-basic-setup-link" href="" class="is-hidden"></a>
+    <form id="product-payment-form" method="post" target="ysIframe">
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+        <input type="hidden" name="paymentName" id="paymentName"/>
+    </form>
+
+    <a id="delivery-method-link" href="<@spring.url '${_domain}/admin/shop/shop-setup/edit-shop-delivery-method'/>" class="is-hidden"></a>
+    <a id="common-setup-link" href="#common-setup-div" class="is-hidden"></a>
+    <a id="popup-mail-member-link" href="javascript:void(0)" class="is-hidden"></a>
+    <a id="modal-stock-show-link" href="javascript:void(0)" class="is-hidden"></a>
+
+    <div id="common-setup-div" class="ysdialog" >
+        <div class="ysdialog-contents">
+            <p><m>設定画面を新しいタブで表示します</m></p>
+            <p><input type="checkbox" name="setupDisablePromptFlag" id="setupDisablePromptFlag" value="${_YES}" /><label for="setupDisablePromptFlag" class="prompt-checkbox-font"><m>次回からこの確認画面を省略する</m></label></p>
+        </div>
+        <div class="ctrl-area">
+            <div class="ctrl-area__main">
+                <a class="ctrl-area__main__btn ysdialog-close" id="cancel-common-btn" href="javascript:void(0)" ><span><m>キャンセル</m></span></a>
+                <a class="ctrl-area__main__btn save-btn ysdialog-close" id="ok-common-btn" href="javascript:void(0)" ><span><m>表示する</m></span></a>
+            </div>
+        </div>
+    </div>
+    <a id="add-time-slot-link" href="#add-time-slot-div" class="is-hidden"></a>
+    <div id="add-time-slot-div" class="ysdialog">
+        <form id="addTimeSlotForm" name="addTimeSlotForm">
+            <div class="ysdialog-contents">
+                <select id="delivery-start-time">
+                    <#list 0..23 as deliveryStartTime>
+                    <option value = "${deliveryStartTime}">
+                        ${deliveryStartTime}:00
+                    </option>
+                </#list>
+                </select><span>-</span>
+                <select id="delivery-end-time">
+                    <#list 1..24 as deliveryEndTime>
+                    <option value = "${deliveryEndTime}">
+                        ${deliveryEndTime}:00
+                    </option>
+                </#list>
+                </select>
+            </div>
+            <div class="btn">
+                <ul>
+                    <li><a id="ysdialog-close" href="javascript:void(0)" class="ysdialog-close"><span><m>閉じる</m></span></a></li>
+                    <li><a id="save-btn" class="yssubmit recommend" href="javascript:void(0)" onclick="saveDeliveryTimeSlot();"><span><m>保存</m></span></a></li>
+                </ul>
+            </div>
+        </form>
+    </div>
+    <a id="delete-time-slot-link" href="#delete-time-slot-div"></a>
+    <div id="delete-time-slot-div" class="ysdialog">
+        <div>
+            <p><m>配送時間帯</m>「<span id="delete-time-slot"></span>」<m>を削除します</m></p>
+        </div>
+        <div class="btn btn-no-border">
+            <ul>
+                <li><a href="javascript:void(0)" class="ysdialog-close" id="close-btn"><span><m>閉じる</m></span></a></li>
+                <li><a id="delete-time-slot-btn" class="yssubmit recommend" href="javascript:void(0)" onclick="timeSlotDelete();"><span><m>削除</m></span></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <a id="delete-payment-method-link" href="#delete-payment-method-div"></a>
+    <div id="delete-payment-method-div" class="ysdialog">
+        <div class="ysdialog-contents">
+            <m>決済方法</m>「<span id="paymentMethodName"></span>」<m>を削除します</m>
+        </div>
+        <div class="btn btn-no-border">
+            <ul>
+                <li><a href="javascript:;" class="ysdialog-close" id="close-btn"><span><m>閉じる</m></span></a></li>
+                <li><a id="delete-payment-method-btn" class="yssubmit recommend" href="javascript:;" onclick="paymentMethodDelete();"><span><m>削除</m></span></a></li>
+            </ul>
+        </div>
+    </div>
+</#escape>

@@ -1,0 +1,36 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.tmall.security.core.properties.SecurityProperties",
+      "name": "tmall.security",
+      "type": "com.tmall.security.core.properties.SecurityProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.tmall.security.core.properties.SecurityProperties",
+      "name": "tmall.security.browser",
+      "description": "浏览器环境配置",
+      "type": "com.tmall.security.core.properties.BrowserProperties"
+    },
+    {
+      "sourceType": "com.tmall.security.core.properties.SecurityProperties",
+      "name": "tmall.security.code",
+      "description": "验证码配置",
+      "type": "com.tmall.security.core.properties.ValidateCodeProperties"
+    },
+    {
+      "sourceType": "com.tmall.security.core.properties.SecurityProperties",
+      "name": "tmall.security.oauth2",
+      "description": "OAuth2认证服务器配置",
+      "type": "com.tmall.security.core.properties.OAuth2Properties"
+    },
+    {
+      "sourceType": "com.tmall.security.core.properties.SecurityProperties",
+      "name": "tmall.security.social",
+      "description": "社交登录配置",
+      "type": "com.tmall.security.core.properties.SocialProperties"
+    }
+  ]
+}

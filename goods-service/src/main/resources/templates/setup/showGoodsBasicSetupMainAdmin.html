@@ -1,0 +1,53 @@
+<#import "${spring}" as spring />
+<#escape x as x!"">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Jimzen – ${_tenantName}</title><link rel="icon" type="image/png" href="${_favicon}" />
+    <link type="text/css" rel="stylesheet" href="<@spring.url '${_RESOURCE_SERVER_URL}/js/common/ysvalidation/css/validationEngine.jquery.css'/>"></link>
+    <link type="text/css" rel="stylesheet" href="${_RESOURCE_SERVER_URL}/css/admin/font-awesome/css/font-awesome.css"></link>
+    <link type="text/css" rel="stylesheet" href="${_RESOURCE_SERVER_URL}/js/common/fileUpload/ysFileUpload.css"/>
+    <link type="text/css" rel="stylesheet" media="screen" href="<@spring.url '${_RESOURCE_SERVER_URL}/js/common/jqueryui/css/jquery-ui-1.8.21.css'/>" />
+    <link type="text/css" rel="stylesheet" href="<@spring.url '${_RESOURCE_SERVER_URL}/js/common/iziModal/css/iziModal.min.css'/>"></link>
+    <link type="text/css" rel="stylesheet" href="<@spring.url '${_RESOURCE_SERVER_URL}/css/admin/common/modal.css'/>"></link>
+    <link type="text/css" rel="stylesheet" href="<@spring.url '${_RESOURCE_SERVER_URL}/css/admin/common/helpModal.css'/>"></link>
+    <link type="text/css" rel="stylesheet" href="<@spring.url '${_RESOURCE_SERVER_URL}/css/admin/common/admin-common-shop.css'/>"></link>
+    <script type="text/javascript" src="<@spring.url '${_RESOURCE_SERVER_URL}/js/common/jquery-1.7.2.min.js'/>"></script>
+    <script type="text/javascript" src="<@spring.url '${_RESOURCE_SERVER_URL}/js/common/jqueryui/js/jquery-ui-1.8.21.min.js'/>"></script>
+    <script type="text/javascript" src="<@spring.url '${_RESOURCE_SERVER_URL}/js/common/blockui/jquery.block.ui.js'/>"></script>
+    <script type="text/javascript" src="<@spring.url '${_RESOURCE_SERVER_URL}/js/common/autoexpand/jquery.autoexpand.js'/>"></script>
+    <script type="text/javascript" src="<@spring.url '${_RESOURCE_SERVER_URL}/js/common/ckeditor/ckeditor.js'/>"></script>
+    <script type="text/javascript" src="<@spring.url '${_RESOURCE_SERVER_URL}/js/common/iziModal/js/iziModal.min.js'/>"></script>
+    <script type="text/javascript" src="<@spring.url '${_RESOURCE_SERVER_URL}/js/common/fullcalendar/js/fullcalendar.min.js'/>"></script>
+    <script type="text/javascript" src="<@spring.url '${_RESOURCE_SERVER_URL}/js/common/jqueryui/js/i18n/jquery.ui.datepicker-${_LOCALE_LANG}.min.js'/>"></script>
+    <script type="text/javascript" src="<@spring.url '${_RESOURCE_SERVER_URL}/js/common/formErrorInfoDispaly.js'/>"></script>
+</head>
+<body>
+<header>
+    <#include "headerAdmin">
+    <script type="text/javascript" src="<@spring.url '${_RESOURCE_SERVER_URL}/js/common/jqueryui/js/jquery-ui-1.8.21.min.js'/>"></script>
+    <script type="text/javascript" src="<@spring.url '${_RESOURCE_SERVER_URL}/js/common/formatCurrency/jquery.formatCurrency.min.js'/>"></script>
+    <#include "topMenuAdmin">
+</header>
+<section>
+    <#include "showGoodsBasicSetupTempleAdmin">
+    <footer>
+        <#include "footerAdmin">
+    </footer>
+</section>
+<script src="<@spring.url '${_RESOURCE_SERVER_URL}/js/common/lightbox/js/lightbox.min.js'/>"></script>
+<script type="text/javascript" src="<@spring.url '${_RESOURCE_SERVER_URL}/js/common/ysvalidation/js/jquery.validationEngine.js'/>"></script>
+<script type="text/javascript" src="<@spring.url '${_RESOURCE_SERVER_URL}/js/common/yscommonui/yscommonui-1.0.min.js'/>"></script>
+<script type="text/javascript" src="<@spring.url '${_RESOURCE_SERVER_URL}/js/common/jstree/jquery.jstree_new.js'/>"></script>
+<script type="text/javascript" src="<@spring.url '${_RESOURCE_SERVER_URL}/js/admin/adminCommon.js'/>"></script>
+<script type="text/javascript" src="<@spring.url '${_RESOURCE_SERVER_URL}/js/common/autoNumeric/autoNumeric-min.js'/>"></script>
+<#include "messagePropJS">
+<#include "showShopSetupJSAdmin">
+<#include "showShopStockSetupJSAdmin">
+</body>
+</html>
+</#escape>

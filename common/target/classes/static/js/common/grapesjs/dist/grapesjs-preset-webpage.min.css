@@ -1,0 +1,67 @@
+.gjs-one-bg {
+  background-color: #f6f6f6
+}
+
+.gjs-one-color {
+  color: #f6f6f6
+}
+
+.gjs-one-color-h:hover {
+  color: #f6f6f6
+}
+
+.gjs-two-bg {
+  background-color: #2e8fbf
+}
+
+.gjs-two-color {
+  color: #2e8fbf
+}
+
+.gjs-two-color-h:hover {
+  color: #2e8fbf
+}
+
+.gjs-three-bg {
+  background-color: #804f7b
+}
+
+.gjs-three-color {
+  color: #804f7b
+}
+
+.gjs-three-color-h:hover {
+  color: #804f7b
+}
+
+.gjs-four-bg {
+  background-color: #2e8fbf
+}
+
+.gjs-four-color {
+  color: #2e8fbf
+}
+
+.gjs-four-color-h:hover {
+  color: #2e8fbf
+}
+
+.gjs-block{
+	width : 100%;
+	height : 100px;
+}
+
+.gjs-am-file-uploader{
+	display: none;
+}
+
+.gjs-am-add-field{
+	display: none;
+}
+.gjs-am-assets-cont {
+	width: 100%;	
+}
+.gjs-am-add-asset button {
+    width: 25%;
+    float: left;
+}

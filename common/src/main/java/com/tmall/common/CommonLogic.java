@@ -83,6 +83,19 @@ public class CommonLogic {
 		return result;
 	}
 
+	/**
+	 * 通过间隔符将list转换为字符串
+	 * @param list
+	 * @param interval
+	 * @return
+	 */
+	public static String getListToStringByInterval(List<String> list,String interval) {
+		StringBuilder result = new StringBuilder();
+		for (String s : list) {
+			result.append(s).append(interval);
+		}
+		return result.toString();
+	}
 
 	/**
 	 * 比较两个List集合是否相等

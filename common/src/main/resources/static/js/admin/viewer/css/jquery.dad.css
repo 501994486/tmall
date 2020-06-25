@@ -1,0 +1,7 @@
+.item_content ul { list-style: none; }
+.item_content ul li { width: 200px; height: 220px; float: left; margin: 6px }
+.item_content { width: 100%; height: auto;  float: left; }
+.item_content .item { width: 200px; height: 160px; line-height: 160px; text-align: center; cursor: pointer; background: #ccc; }
+.item_content .item img { width: 200px; height: 120px; border-radius: 6px; }
+.close { display: block; width: 20px; height: 20px; top: 0; right: 0; z-index: 2222; position: absolute; text-align: center; font-size: 16px; cursor: pointer; color: aliceblue }
+.picSize{width: 170px; height: 150px;}

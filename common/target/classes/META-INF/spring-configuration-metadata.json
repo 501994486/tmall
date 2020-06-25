@@ -1,0 +1,26 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.tmall.common.snowflakeId.SnowflakeIdWorkerProperties",
+      "name": "snowflakeid",
+      "type": "com.tmall.common.snowflakeId.SnowflakeIdWorkerProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.tmall.common.snowflakeId.SnowflakeIdWorkerProperties",
+      "defaultValue": 0,
+      "name": "snowflakeid.datacenter",
+      "description": "数据中心ID(0~31)",
+      "type": "java.lang.Long"
+    },
+    {
+      "sourceType": "com.tmall.common.snowflakeId.SnowflakeIdWorkerProperties",
+      "defaultValue": 0,
+      "name": "snowflakeid.worker",
+      "description": "工作机器ID(0~31)",
+      "type": "java.lang.Long"
+    }
+  ]
+}

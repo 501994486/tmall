@@ -1,0 +1,180 @@
+@CHARSET "UTF-8";
+
+.ysdialog {display: none;}
+
+.shadowbox_up {
+	width: 230px;
+	height: 20px;
+	padding: 8px;
+	background-color: #FFF;
+	box-shadow: 4px 4px 5px #666666;
+	-moz-box-shadow: 4px 4px 5px #666666;
+	-webkit-box-shadow: 4px 4px 5px #666666;
+}
+
+#yscontainer_contents {
+	position: relative;
+	min-height: 100px;
+	border: none;
+	padding: 0px;
+}
+
+.shadowbox-arrow-up {
+	background-image: url("../images/arrow_shadowbox_up.png");
+	background-repeat: no-repeat;
+	height: 20px;
+	width: 9px;
+	left: 225px;
+	top: -20px;
+}
+
+#shadowbox-arrow-left {
+	position: absolute;
+	left: -20px;
+    top: 50px;
+	width: 20px;
+    height: 9px;
+	background-image: url("../images/content_fukidashi.gif");
+    background-repeat: no-repeat;
+}
+
+.yscontainer-close-icon-default {
+	position: absolute;
+	background-image: url("../images/btn_close.gif");
+	background-repeat: no-repeat;
+	height: 13px;
+	width: 14px;
+	top: -5px;
+	right: -5px;
+	cursor: pointer;
+	visibility: hidden;
+}
+
+.yscontainer-close-icon-hover {
+	position: absolute;
+	background-image: url("../images/btn_close_hover.gif");
+	background-repeat: no-repeat;
+	height: 13px;
+	width: 14px;
+	top: -5px;
+	right: -5px;
+	cursor: pointer;
+}
+
+#panel {
+	background-color: #fff;
+	/*white-space: nowrap;*/
+}
+
+#left-panel {
+	display: table-cell;
+	vertical-align: top;
+	min-width: 320px;
+}
+
+#right-panel {
+	display: table-cell;
+	vertical-align: top;
+	padding-left: 30px;
+	width: 100%;
+}
+
+/* Web-end only */
+#center-panel {
+	clear: both;
+}
+
+/* Web-end only */
+#bottom-panel {
+	
+}
+
+#right-panel:after {
+	clear: both;
+}
+
+.ysdialog-contents {
+	border: none;
+	overflow: auto;
+	padding: 30px;
+}
+
+.popup-member-list-size {
+	width: 1200px;
+	height: 600px;
+}
+
+.fa-times {
+	padding-top: 1px;
+	padding-right: 1px;
+}
+
+#yscontainer-wrap {
+	position:relative;
+	content: "\00a0";
+	width: 100%;
+	margin: 0px auto;	
+}
+
+.btn-no-border {
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+}
+
+.ysdropdown {
+	display: none;
+	position: absolute;
+	padding: 0px;
+	/* z-index: 99999; */
+	border: 1px solid;
+}
+
+.ysdropdown-before, .ysdropdown-after {
+	bottom: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.ysdropdown-after {
+	border-width: 5px;
+	left: 12px;
+}
+.ysdropdown-before {
+	border-width: 6px;
+	left: 11px;
+}
+
+.ysdropdown ul {
+	list-style-type: none;
+	margin: 0px;
+	padding-bottom: 2px;
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 2px;
+}
+.ysdropdown ul > li a {
+	padding-top: 2px;
+	padding-left: 20px;
+	padding-bottom: 2px;
+	padding-right: 30px;
+	display: block;
+	text-decoration: none;
+}
+.ystable {
+	width:100%;
+	border: 1px solid;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+.ystable tr {
+	height: 25px;
+	line-height: 25px;
+}
+.ystable td {
+	padding-left: 6px;
+	padding-right: 6px;
+}

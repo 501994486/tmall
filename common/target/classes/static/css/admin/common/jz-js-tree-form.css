@@ -1,0 +1,83 @@
+@import url("jz-js-tree.css");
+
+/* survey-form-tree */
+.jstree li[rel="drive"].jstree-closed > a > .jstree-icon,
+.jstree li[rel="folder"].jstree-closed > a > .jstree-icon,
+.jstree-leaf > a > .jstree-icon,
+.jstree-0 a > ins.jstree-icon,
+.jstree-0 li[rel="folder"] > a > ins.jstree-icon {
+ background         : url(../../../js/common/jstree/images/onlineshop/folder-closed.svg);
+}
+
+.jstree li[rel="drive"].jstree-closed > a.jstree-clicked > .jstree-icon,
+.jstree li[rel="folder"].jstree-closed > a.jstree-clicked > .jstree-icon,
+.jstree-leaf > a.jstree-clicked > .jstree-icon,
+.jstree-0 a.jstree-clicked > ins.jstree-icon,
+.jstree-0 li[rel="folder"] > a.jstree-clicked > ins.jstree-icon {
+ background         : url(../../../js/common/jstree/images/onlineshop/folder-closed-blue.svg);
+}
+
+.jstree li[rel="drive"].jstree-open > a > .jstree-icon,
+.jstree li[rel="folder"].jstree-open > a > .jstree-icon {
+ background         : url(../../../js/common/jstree/images/onlineshop/folder-open.svg);
+}
+
+.jstree li[rel="drive"].jstree-open > a.jstree-clicked > .jstree-icon,
+.jstree li[rel="folder"].jstree-open > a.jstree-clicked > .jstree-icon {
+ background         : url(../../../js/common/jstree/images/onlineshop/folder-open-blue.svg);
+}
+
+.jstree.jstree-form a > .jstree-icon {
+ 	background: url(../../../js/common/jstree/images/enquete/tree_survey01_3.svg);
+}
+
+.jstree.jstree-form a.jstree-clicked > .jstree-icon {
+ 	background: url(../../../js/common/jstree/images/enquete/tree_survey01-on_2.svg);
+}
+
+.jstree.jstree-form a.jstree-selected > .jstree-icon {
+ 	background: url(../../../js/common/jstree/images/enquete/tree_survey01-on_2.svg);
+}
+
+.jstree .jstree-open > a > .jstree-icon {
+ 	background: url(../../../js/common/jstree/images/onlineshop/folder-open.svg);
+}
+
+.jstree .jstree-open > a.jstree-clicked > .jstree-icon {
+ 	background: url(../../../js/common/jstree/images/onlineshop/folder-open-blue.svg);
+}
+
+.jstree .jstree-closed > a > .jstree-icon {
+ 	background: url(../../../js/common/jstree/images/onlineshop/folder-closed.svg);
+}
+
+.jstree .jstree-closed > a.jstree-clicked > .jstree-icon {
+ 	background: url(../../../js/common/jstree/images/onlineshop/folder-closed-blue.svg);
+}
+
+/* survey-item-tree */
+.jstree a > .jstree-icon {
+ 	background: url(../../../js/common/jstree/images/surveyItem/tree_survey_itembank_3.svg);
+}
+
+.jstree a.jstree-clicked > .jstree-icon {
+ 	background: url(../../../js/common/jstree/images/surveyItem/tree_survey_itembank-on_2.svg);
+}
+
+.jstree li[rel] > a.l-jstree-folder > .jstree-icon {
+    background: url(../../../js/common/jstree/images/onlineshop/folder-closed.svg);
+}
+
+.jstree li[rel] > a.l-jstree-folder.jstree-clicked > .jstree-icon {
+ 	background: url(../../../js/common/jstree/images/onlineshop/folder-closed-blue.svg);
+}
+
+.jstree li[rel] .jstree-open > a.l-jstree-folder > .jstree-icon {
+ 	background: url(../../../js/common/jstree/images/onlineshop/folder-open.svg);
+}
+
+.jstree li[rel] .jstree-open > a.l-jstree-folder.jstree-clicked > .jstree-icon {
+ 	background: url(../../../js/common/jstree/images/onlineshop/folder-open-blue.svg);
+}
+
+	
