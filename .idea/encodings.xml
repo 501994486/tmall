@@ -3,16 +3,17 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gateway-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/goods-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mail-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/order-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/schedule-service" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/scheduler-service" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/scheduler-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tm-eureka-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tm-security-app" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tm-security-browser" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tm-security-core" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tm-security-demo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/turbine-service" charset="UTF-8" />
   </component>
 </project>

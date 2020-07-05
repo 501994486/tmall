@@ -5,10 +5,12 @@ import com.tmall.domain.entity.Goods;
 import com.tmall.domain.repository.CategoryRepository;
 import com.tmall.domain.service.TreeDomainService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;
 
+@Service
 public class CategoryServiceImpl implements CategoryService {
 
 	@Autowired

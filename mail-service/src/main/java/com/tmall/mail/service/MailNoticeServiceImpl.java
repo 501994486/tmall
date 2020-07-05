@@ -3,7 +3,6 @@ package com.tmall.mail.service;
 import com.tmall.common.AppConstants;
 import com.tmall.common.dto.MailDeliveryDTO;
 import com.tmall.common.dto.MailNoticeDTO;
-import com.tmall.common.snowflakeId.SnowflakeIdWorker;
 import com.tmall.common.utils.DateTimeUtils;
 import com.tmall.mail.common.MailContants;
 import com.tmall.mail.dao.MailAttachmentMapper;
@@ -34,9 +33,6 @@ public class MailNoticeServiceImpl implements MailNoticeService{
 
 	@Autowired
 	private MailBasicSetupMapper mailBasicSetupMapper;
-
-	@Autowired
-	private SnowflakeIdWorker snowflakeIdWorker;
 
 	@Autowired
 	private MailSendService mailSendService;

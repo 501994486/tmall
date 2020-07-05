@@ -16,9 +16,9 @@ public class ResultAssembler {
 	public static ResultBean getSuccess(Object object){
 		ResultBean resultBean = new ResultBean();
 		//设置操作成功的返回码
-		resultBean.setCode(ResultEnum.SYSTEM_EXCEPTION.getCode());
+		resultBean.setCode(ResultEnum.SUCCESS.getCode());
 		//设置操作成功的消息
-		resultBean.setMsg(ResultEnum.SYSTEM_EXCEPTION.getMsg());
+		resultBean.setMsg(ResultEnum.SUCCESS.getMsg());
 		resultBean.setData(object);
 		return resultBean;
 	}

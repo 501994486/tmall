@@ -29,6 +29,9 @@
         <module>order-service</module>
         <module>mail-service</module>
         <module>schedule-service</module>
+        <module>eureka-server</module>
+        <module>turbine-service</module>
+        <module>gateway-service</module>
     </modules>
 
     <!-- 集中定义依赖版本号 -->
@@ -63,16 +66,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-logging</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-log4j2</artifactId>
@@ -223,10 +217,13 @@
                 <groupId>com.github.tobato</groupId>
                 <artifactId>fastdfs-client</artifactId>
                 <version>1.26.6</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>ch.qos.logback</groupId>
+                        <artifactId>logback-classic</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
-
-
-
 
         </dependencies>
     </dependencyManagement>

@@ -10,4 +10,9 @@ public class MailServiceHystric implements MailService {
 
 		return false;
 	}
+
+	@Override
+	public String test(String name) {
+		return "default："+name;
+	}
 }

@@ -42,8 +42,8 @@ public class GoodsRepositoryImpl implements GoodsRepository {
 	@Autowired
 	private GoodsAttrValueMapper goodsAttrValueMapper;
 
-	@Autowired
-	private SnowflakeIdWorker snowflakeIdWorker;
+	/*@Autowired
+	private SnowflakeIdWorker snowflakeIdWorker;*/
 	/**
 	 * 添加商品
 	 * @param goods
@@ -53,7 +53,7 @@ public class GoodsRepositoryImpl implements GoodsRepository {
 	@Transactional
 	@Override
 	public boolean addGoods(Goods goods)  {
-		Long goodsId = snowflakeIdWorker.nextId(); //分布式id 去除换行符
+		//Long goodsId = snowflakeIdWorker.nextId(); //分布式id 去除换行符
 
 		// 增加GOODS_SPU表数据
 		goodsSPUMapper.insert(goods);

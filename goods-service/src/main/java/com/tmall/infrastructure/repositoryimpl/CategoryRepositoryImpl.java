@@ -4,6 +4,7 @@ import com.tmall.domain.entity.Category;
 import com.tmall.domain.repository.CategoryRepository;
 import com.tmall.infrastructure.dao.CategoryMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -14,6 +15,7 @@ import java.util.List;
  * @date   2020年5月18日
  * @version V1.0
  */
+@Repository
 public class CategoryRepositoryImpl implements CategoryRepository {
 
 	@Autowired

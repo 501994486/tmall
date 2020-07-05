@@ -9,6 +9,7 @@ import com.tmall.application.service.GoodsService;
 import com.tmall.domain.entity.Category;
 import com.tmall.domain.entity.Goods;
 import com.tmall.infrastructure.enums.ResultEnum;
+import com.tmall.infrastructure.feign.MailService;
 import com.tmall.infrastructure.filter.CrossDomainFilter;
 import com.tmall.infrastructure.logging.SystemControllerLog;
 import com.tmall.common.AppConstants;
@@ -88,6 +89,21 @@ public class GoodsManagementController {
 	@Autowired
 	@Qualifier("goodsDTOConvert")
 	private DTOConvert goodsDTOConvert;
+
+	@Autowired
+	private MailService mailService;
+
+	/**
+	 * 取得树数据
+	 * @return
+	 * @throws InterruptedException
+	 */
+	@GetMapping("test-mail")
+	public ResultBean testMail() {
+
+		String result = mailService.test("zhangsan");
+		return ResultAssembler.getSuccess(result);
+	}
 
 	/**
 	 * 取得树数据
@@ -271,7 +287,7 @@ public class GoodsManagementController {
 	 * @param categoryId
 	 * @throws Exception
 	 */
-	@PostMapping("actions/export/{categoryId}")
+	@PostMapping("actions/export7z/{categoryId}")
 	@SystemControllerLog(description="商品下载")
 	public void download7zFile(@PathVariable int categoryId) throws Exception{
 		int shopId = CommonLogic.getShopId(session);

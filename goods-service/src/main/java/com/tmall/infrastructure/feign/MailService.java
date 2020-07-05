@@ -11,4 +11,8 @@ public interface MailService {
 
 	@RequestMapping(value = "/tmall/send-mail",method = RequestMethod.GET)
 	boolean sendNoticeMail(@RequestParam(value = "mailDeliveryDTO") MailDeliveryDTO mailDeliveryDTO);
+
+	@RequestMapping(value = "/tmall/test",method = RequestMethod.GET)
+	String test(@RequestParam(value = "name") String name);
+
 }

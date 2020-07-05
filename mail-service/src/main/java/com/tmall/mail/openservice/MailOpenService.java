@@ -5,9 +5,11 @@ import com.tmall.common.dto.MailDeliveryDTO;
 import com.tmall.mail.service.MailNoticeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpSession;
 import java.lang.reflect.InvocationTargetException;
@@ -19,7 +21,7 @@ import java.lang.reflect.InvocationTargetException;
  * @date   2019年5月18日
  * @version V1.0
  */
-@Controller
+@RestController
 @RequestMapping
 public class MailOpenService {
 
@@ -33,5 +35,11 @@ public class MailOpenService {
 	public boolean getMailNoticeByType(@RequestParam(value = "mailDeliveryDTO") MailDeliveryDTO mailDeliveryDTO) throws InvocationTargetException, IllegalAccessException {
 		int shopId = CommonLogic.getShopId(session);
 		return mailNoticeService.sendTextNoticeMail(mailDeliveryDTO);
+	}
+
+	@RequestMapping(value="/test",method = RequestMethod.GET)
+	public String test(@RequestParam(value = "name") String name)  {
+
+		return "I'm "+name;
 	}
 }
