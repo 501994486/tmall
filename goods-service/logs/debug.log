@@ -1,0 +1,822 @@
+2020-06-28 20:03:32 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.jdbc.Driver found in Thread context class loader sun.misc.Launcher$AppClassLoader@18b4aac2
+2020-06-28 20:03:32 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.jdbc.Driver found in Thread context class loader sun.misc.Launcher$AppClassLoader@18b4aac2
+2020-06-28 20:03:35 [main] DEBUG com.github.tobato.fastdfs.domain.conn.ConnectionManager - init trackerLocator [- 192.168.8.130:22122]
+2020-06-28 20:03:35 [main] DEBUG io.netty.util.internal.logging.InternalLoggerFactory - Using SLF4J as the default logging framework
+2020-06-28 20:03:35 [main] DEBUG io.lettuce.core.resource.DefaultClientResources - -Dio.netty.eventLoopThreads: 8
+2020-06-28 20:03:35 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+2020-06-28 20:03:35 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+2020-06-28 20:03:35 [main] DEBUG io.netty.util.internal.PlatformDependent - Platform: Windows
+2020-06-28 20:03:35 [main] DEBUG io.netty.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+2020-06-28 20:03:35 [main] DEBUG io.netty.util.internal.PlatformDependent0 - Java version: 8
+2020-06-28 20:03:35 [main] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+2020-06-28 20:03:35 [main] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+2020-06-28 20:03:35 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+2020-06-28 20:03:35 [main] DEBUG io.netty.util.internal.PlatformDependent0 - direct buffer constructor: available
+2020-06-28 20:03:35 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+2020-06-28 20:03:35 [main] DEBUG io.netty.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2020-06-28 20:03:35 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, int): available
+2020-06-28 20:03:35 [main] DEBUG io.netty.util.internal.PlatformDependent - sun.misc.Unsafe: available
+2020-06-28 20:03:35 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.tmpdir: C:\Users\sunhao\AppData\Local\Temp (java.io.tmpdir)
+2020-06-28 20:03:35 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2020-06-28 20:03:35 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+2020-06-28 20:03:35 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: 1884815360 bytes
+2020-06-28 20:03:35 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2020-06-28 20:03:35 [main] DEBUG io.netty.util.internal.CleanerJava6 - java.nio.ByteBuffer.cleaner(): available
+2020-06-28 20:03:35 [main] DEBUG io.netty.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@4f081b5d
+2020-06-28 20:03:35 [main] DEBUG io.netty.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+2020-06-28 20:03:35 [main] DEBUG reactor.util.Loggers$LoggerFactory - Using Slf4j logging framework
+2020-06-28 20:03:35 [main] DEBUG reactor.core.publisher.UnsafeSupport - Starting UnsafeSupport init in Java 1.8
+2020-06-28 20:03:35 [main] DEBUG reactor.core.publisher.UnsafeSupport - Unsafe is available
+2020-06-28 20:03:35 [main] DEBUG io.lettuce.core.resource.DefaultClientResources - LatencyUtils/HdrUtils are not available, metrics are disabled
+2020-06-28 20:03:35 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 16
+2020-06-28 20:03:35 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 16
+2020-06-28 20:03:35 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
+2020-06-28 20:03:35 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 11
+2020-06-28 20:03:35 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 16777216
+2020-06-28 20:03:35 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.tinyCacheSize: 512
+2020-06-28 20:03:35 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
+2020-06-28 20:03:35 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
+2020-06-28 20:03:35 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2020-06-28 20:03:35 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
+2020-06-28 20:03:35 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: true
+2020-06-28 20:03:35 [main] DEBUG io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2020-06-28 20:03:35 [main] DEBUG io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2020-06-28 20:03:35 [main] DEBUG org.hibernate.validator.internal.engine.resolver.TraversableResolvers - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2020-06-28 20:03:35 [main] DEBUG org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL
+2020-06-28 20:03:35 [main] DEBUG org.hibernate.validator.internal.engine.resolver.TraversableResolvers - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2020-06-28 20:03:35 [main] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2020-06-28 20:03:35 [main] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2020-06-28 20:03:35 [main] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+2020-06-28 20:03:35 [main] DEBUG org.hibernate.validator.internal.xml.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2020-06-28 20:03:35 [main] DEBUG org.hibernate.validator.internal.xml.ResourceLoaderHelper - Trying to load META-INF/validation.xml via user class loader
+2020-06-28 20:03:35 [main] DEBUG org.hibernate.validator.internal.xml.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL
+2020-06-28 20:03:35 [main] DEBUG org.hibernate.validator.internal.xml.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2020-06-28 20:03:35 [main] DEBUG org.hibernate.validator.internal.xml.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
+2020-06-28 20:03:35 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2020-06-28 20:03:35 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2020-06-28 20:03:35 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2020-06-28 20:03:35 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2020-06-28 20:03:35 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2020-06-28 20:03:41 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [force_merge], size [1], queue size [unbounded]
+2020-06-28 20:03:41 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [fetch_shard_started], core [1], max [16], keep alive [5m]
+2020-06-28 20:03:41 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [listener], size [4], queue size [unbounded]
+2020-06-28 20:03:41 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [index], size [8], queue size [200]
+2020-06-28 20:03:41 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [refresh], core [1], max [4], keep alive [5m]
+2020-06-28 20:03:41 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [generic], core [4], max [128], keep alive [30s]
+2020-06-28 20:03:41 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [warmer], core [1], max [4], keep alive [5m]
+2020-06-28 20:03:41 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [search], size [13], queue size [1k]
+2020-06-28 20:03:41 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [flush], core [1], max [4], keep alive [5m]
+2020-06-28 20:03:41 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [fetch_shard_store], core [1], max [16], keep alive [5m]
+2020-06-28 20:03:41 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [management], core [1], max [5], keep alive [5m]
+2020-06-28 20:03:41 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [get], size [8], queue size [1k]
+2020-06-28 20:03:41 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [bulk], size [8], queue size [200]
+2020-06-28 20:03:41 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [snapshot], core [1], max [4], keep alive [5m]
+2020-06-28 20:03:46 [main] DEBUG org.elasticsearch.common.network.IfConfig - configuration:
+
+lo
+        Software Loopback Interface 1
+        inet 127.0.0.1 netmask:255.0.0.0 broadcast:127.255.255.255 scope:host
+        inet6 ::1 prefixlen:128 scope:host
+        UP MULTICAST LOOPBACK mtu:-1 index:1
+
+net0
+        Microsoft 6to4 Adapter
+        MULTICAST mtu:-1 index:2
+
+eth0
+        Realtek PCIe GBE Family Controller
+        inet 192.168.1.107 netmask:255.255.255.0 broadcast:192.168.1.255 scope:site
+        inet6 fe80::fdc3:19e6:3b48:3dce prefixlen:64 scope:link
+        hardware B0:25:AA:28:D6:88
+        UP MULTICAST mtu:1500 index:3
+
+eth1
+        WAN Miniport (IP)
+        MULTICAST mtu:-1 index:4
+
+eth2
+        ASIX AX88179 USB 3.0 to Gigabit Ethernet Adapter
+        MULTICAST mtu:-1 index:5
+
+net1
+        WAN Miniport (SSTP)
+        MULTICAST mtu:-1 index:6
+
+net2
+        Microsoft IP-HTTPS Platform Adapter
+        MULTICAST mtu:-1 index:7
+
+eth3
+        Bluetooth Device (Personal Area Network)
+        inet6 fe80::d9b2:efb5:9994:9dbc prefixlen:64 scope:link
+        hardware 7C:2A:31:4F:DC:64
+        MULTICAST mtu:1500 index:8
+
+net3
+        WAN Miniport (IKEv2)
+        MULTICAST mtu:-1 index:9
+
+eth4
+        WAN Miniport (Network Monitor)
+        MULTICAST mtu:-1 index:10
+
+ppp0
+        WAN Miniport (PPPOE)
+        MULTICAST mtu:-1 index:11
+
+wlan0
+        Microsoft Wi-Fi Direct Virtual Adapter
+        MULTICAST mtu:-1 index:12
+
+eth5
+        VMware Virtual Ethernet Adapter for VMnet1
+        inet 192.168.15.1 netmask:255.255.255.0 broadcast:192.168.15.255 scope:site
+        inet6 fe80::e0bf:4086:15a4:7765 prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:01
+        UP MULTICAST mtu:1500 index:13
+
+eth6
+        Apple Mobile Device Ethernet
+        MULTICAST mtu:-1 index:14
+
+eth7
+        WAN Miniport (IPv6)
+        MULTICAST mtu:-1 index:15
+
+wlan1
+        Intel(R) Wireless-AC 9462
+        inet6 fe80::e1bb:be8c:338:d6c9 prefixlen:64 scope:link
+        hardware 7C:2A:31:4F:DC:60
+        MULTICAST mtu:1500 index:16
+
+net4
+        Microsoft Teredo Tunneling Adapter
+        MULTICAST mtu:-1 index:17
+
+wlan2
+        Microsoft Wi-Fi Direct Virtual Adapter #3
+        inet6 fe80::fdd1:2f0c:babb:c88 prefixlen:64 scope:link
+        hardware 7E:2A:31:4F:DC:60
+        MULTICAST mtu:1500 index:18
+
+eth8
+        Microsoft Kernel Debug Network Adapter
+        MULTICAST mtu:-1 index:19
+
+net5
+        WAN Miniport (L2TP)
+        MULTICAST mtu:-1 index:20
+
+eth9
+        VMware Virtual Ethernet Adapter for VMnet8
+        inet 192.168.6.1 netmask:255.255.255.0 broadcast:192.168.6.255 scope:site
+        inet6 fe80::79a9:a359:f98b:db75 prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:08
+        UP MULTICAST mtu:1500 index:21
+
+wlan3
+        Microsoft Wi-Fi Direct Virtual Adapter #2
+        inet6 fe80::c879:1885:196:856b prefixlen:64 scope:link
+        hardware 7C:2A:31:4F:DC:61
+        MULTICAST mtu:1500 index:22
+
+net6
+        WAN Miniport (PPTP)
+        MULTICAST mtu:-1 index:23
+
+eth10
+        Realtek PCIe GBE Family Controller-WFP Native MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:24
+
+eth11
+        Realtek PCIe GBE Family Controller-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:25
+
+eth12
+        Realtek PCIe GBE Family Controller-WFP 802.3 MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:26
+
+wlan4
+        Intel(R) Wireless-AC 9462-WFP Native MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:27
+
+wlan5
+        Intel(R) Wireless-AC 9462-Virtual WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:28
+
+wlan6
+        Intel(R) Wireless-AC 9462-Native WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:29
+
+wlan7
+        Intel(R) Wireless-AC 9462-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:30
+
+wlan8
+        Intel(R) Wireless-AC 9462-WFP 802.3 MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:31
+
+eth13
+        WAN Miniport (IP)-WFP Native MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:32
+
+eth14
+        WAN Miniport (IP)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:33
+
+eth15
+        WAN Miniport (IPv6)-WFP Native MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:34
+
+eth16
+        WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:35
+
+eth17
+        WAN Miniport (Network Monitor)-WFP Native MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:36
+
+eth18
+        WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:37
+
+wlan9
+        Microsoft Wi-Fi Direct Virtual Adapter #2-WFP Native MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:38
+
+wlan10
+        Microsoft Wi-Fi Direct Virtual Adapter #2-Native WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:39
+
+wlan11
+        Microsoft Wi-Fi Direct Virtual Adapter #2-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:40
+
+wlan12
+        Microsoft Wi-Fi Direct Virtual Adapter #2-WFP 802.3 MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:41
+
+wlan13
+        Microsoft Wi-Fi Direct Virtual Adapter #3-WFP Native MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:42
+
+wlan14
+        Microsoft Wi-Fi Direct Virtual Adapter #3-Native WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:43
+
+wlan15
+        Microsoft Wi-Fi Direct Virtual Adapter #3-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:44
+
+wlan16
+        Microsoft Wi-Fi Direct Virtual Adapter #3-WFP 802.3 MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:45
+
+2020-06-28 20:07:30 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.jdbc.Driver found in Thread context class loader sun.misc.Launcher$AppClassLoader@18b4aac2
+2020-06-28 20:07:30 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.jdbc.Driver found in Thread context class loader sun.misc.Launcher$AppClassLoader@18b4aac2
+2020-06-28 20:07:33 [main] DEBUG com.github.tobato.fastdfs.domain.conn.ConnectionManager - init trackerLocator [- 192.168.8.130:22122]
+2020-06-28 20:07:33 [main] DEBUG io.netty.util.internal.logging.InternalLoggerFactory - Using SLF4J as the default logging framework
+2020-06-28 20:07:33 [main] DEBUG io.lettuce.core.resource.DefaultClientResources - -Dio.netty.eventLoopThreads: 8
+2020-06-28 20:07:33 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+2020-06-28 20:07:33 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+2020-06-28 20:07:34 [main] DEBUG io.netty.util.internal.PlatformDependent - Platform: Windows
+2020-06-28 20:07:34 [main] DEBUG io.netty.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+2020-06-28 20:07:34 [main] DEBUG io.netty.util.internal.PlatformDependent0 - Java version: 8
+2020-06-28 20:07:34 [main] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+2020-06-28 20:07:34 [main] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+2020-06-28 20:07:34 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+2020-06-28 20:07:34 [main] DEBUG io.netty.util.internal.PlatformDependent0 - direct buffer constructor: available
+2020-06-28 20:07:34 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+2020-06-28 20:07:34 [main] DEBUG io.netty.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2020-06-28 20:07:34 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, int): available
+2020-06-28 20:07:34 [main] DEBUG io.netty.util.internal.PlatformDependent - sun.misc.Unsafe: available
+2020-06-28 20:07:34 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.tmpdir: C:\Users\sunhao\AppData\Local\Temp (java.io.tmpdir)
+2020-06-28 20:07:34 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2020-06-28 20:07:34 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+2020-06-28 20:07:34 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: 1884815360 bytes
+2020-06-28 20:07:34 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2020-06-28 20:07:34 [main] DEBUG io.netty.util.internal.CleanerJava6 - java.nio.ByteBuffer.cleaner(): available
+2020-06-28 20:07:34 [main] DEBUG io.netty.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@4f081b5d
+2020-06-28 20:07:34 [main] DEBUG io.netty.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+2020-06-28 20:07:34 [main] DEBUG reactor.util.Loggers$LoggerFactory - Using Slf4j logging framework
+2020-06-28 20:07:34 [main] DEBUG reactor.core.publisher.UnsafeSupport - Starting UnsafeSupport init in Java 1.8
+2020-06-28 20:07:34 [main] DEBUG reactor.core.publisher.UnsafeSupport - Unsafe is available
+2020-06-28 20:07:34 [main] DEBUG io.lettuce.core.resource.DefaultClientResources - LatencyUtils/HdrUtils are not available, metrics are disabled
+2020-06-28 20:07:34 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 16
+2020-06-28 20:07:34 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 16
+2020-06-28 20:07:34 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
+2020-06-28 20:07:34 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 11
+2020-06-28 20:07:34 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 16777216
+2020-06-28 20:07:34 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.tinyCacheSize: 512
+2020-06-28 20:07:34 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
+2020-06-28 20:07:34 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
+2020-06-28 20:07:34 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2020-06-28 20:07:34 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
+2020-06-28 20:07:34 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: true
+2020-06-28 20:07:34 [main] DEBUG io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2020-06-28 20:07:34 [main] DEBUG io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2020-06-28 20:07:34 [main] DEBUG org.hibernate.validator.internal.engine.resolver.TraversableResolvers - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2020-06-28 20:07:34 [main] DEBUG org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL
+2020-06-28 20:07:34 [main] DEBUG org.hibernate.validator.internal.engine.resolver.TraversableResolvers - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2020-06-28 20:07:34 [main] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2020-06-28 20:07:34 [main] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2020-06-28 20:07:34 [main] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+2020-06-28 20:07:34 [main] DEBUG org.hibernate.validator.internal.xml.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2020-06-28 20:07:34 [main] DEBUG org.hibernate.validator.internal.xml.ResourceLoaderHelper - Trying to load META-INF/validation.xml via user class loader
+2020-06-28 20:07:34 [main] DEBUG org.hibernate.validator.internal.xml.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL
+2020-06-28 20:07:34 [main] DEBUG org.hibernate.validator.internal.xml.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2020-06-28 20:07:34 [main] DEBUG org.hibernate.validator.internal.xml.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
+2020-06-28 20:07:34 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2020-06-28 20:07:34 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2020-06-28 20:07:34 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2020-06-28 20:07:34 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2020-06-28 20:07:34 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2020-06-28 20:07:39 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [force_merge], size [1], queue size [unbounded]
+2020-06-28 20:07:39 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [fetch_shard_started], core [1], max [16], keep alive [5m]
+2020-06-28 20:07:39 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [listener], size [4], queue size [unbounded]
+2020-06-28 20:07:39 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [index], size [8], queue size [200]
+2020-06-28 20:07:39 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [refresh], core [1], max [4], keep alive [5m]
+2020-06-28 20:07:39 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [generic], core [4], max [128], keep alive [30s]
+2020-06-28 20:07:39 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [warmer], core [1], max [4], keep alive [5m]
+2020-06-28 20:07:39 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [search], size [13], queue size [1k]
+2020-06-28 20:07:39 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [flush], core [1], max [4], keep alive [5m]
+2020-06-28 20:07:39 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [fetch_shard_store], core [1], max [16], keep alive [5m]
+2020-06-28 20:07:39 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [management], core [1], max [5], keep alive [5m]
+2020-06-28 20:07:39 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [get], size [8], queue size [1k]
+2020-06-28 20:07:39 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [bulk], size [8], queue size [200]
+2020-06-28 20:07:39 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [snapshot], core [1], max [4], keep alive [5m]
+2020-06-28 20:07:44 [main] DEBUG org.elasticsearch.common.network.IfConfig - configuration:
+
+lo
+        Software Loopback Interface 1
+        inet 127.0.0.1 netmask:255.0.0.0 broadcast:127.255.255.255 scope:host
+        inet6 ::1 prefixlen:128 scope:host
+        UP MULTICAST LOOPBACK mtu:-1 index:1
+
+net0
+        Microsoft 6to4 Adapter
+        MULTICAST mtu:-1 index:2
+
+eth0
+        Realtek PCIe GBE Family Controller
+        inet 192.168.1.107 netmask:255.255.255.0 broadcast:192.168.1.255 scope:site
+        inet6 fe80::fdc3:19e6:3b48:3dce prefixlen:64 scope:link
+        hardware B0:25:AA:28:D6:88
+        UP MULTICAST mtu:1500 index:3
+
+eth1
+        WAN Miniport (IP)
+        MULTICAST mtu:-1 index:4
+
+eth2
+        ASIX AX88179 USB 3.0 to Gigabit Ethernet Adapter
+        MULTICAST mtu:-1 index:5
+
+net1
+        WAN Miniport (SSTP)
+        MULTICAST mtu:-1 index:6
+
+net2
+        Microsoft IP-HTTPS Platform Adapter
+        MULTICAST mtu:-1 index:7
+
+eth3
+        Bluetooth Device (Personal Area Network)
+        inet6 fe80::d9b2:efb5:9994:9dbc prefixlen:64 scope:link
+        hardware 7C:2A:31:4F:DC:64
+        MULTICAST mtu:1500 index:8
+
+net3
+        WAN Miniport (IKEv2)
+        MULTICAST mtu:-1 index:9
+
+eth4
+        WAN Miniport (Network Monitor)
+        MULTICAST mtu:-1 index:10
+
+ppp0
+        WAN Miniport (PPPOE)
+        MULTICAST mtu:-1 index:11
+
+wlan0
+        Microsoft Wi-Fi Direct Virtual Adapter
+        MULTICAST mtu:-1 index:12
+
+eth5
+        VMware Virtual Ethernet Adapter for VMnet1
+        inet 192.168.15.1 netmask:255.255.255.0 broadcast:192.168.15.255 scope:site
+        inet6 fe80::e0bf:4086:15a4:7765 prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:01
+        UP MULTICAST mtu:1500 index:13
+
+eth6
+        Apple Mobile Device Ethernet
+        MULTICAST mtu:-1 index:14
+
+eth7
+        WAN Miniport (IPv6)
+        MULTICAST mtu:-1 index:15
+
+wlan1
+        Intel(R) Wireless-AC 9462
+        inet6 fe80::e1bb:be8c:338:d6c9 prefixlen:64 scope:link
+        hardware 7C:2A:31:4F:DC:60
+        MULTICAST mtu:1500 index:16
+
+net4
+        Microsoft Teredo Tunneling Adapter
+        MULTICAST mtu:-1 index:17
+
+wlan2
+        Microsoft Wi-Fi Direct Virtual Adapter #3
+        inet6 fe80::fdd1:2f0c:babb:c88 prefixlen:64 scope:link
+        hardware 7E:2A:31:4F:DC:60
+        MULTICAST mtu:1500 index:18
+
+eth8
+        Microsoft Kernel Debug Network Adapter
+        MULTICAST mtu:-1 index:19
+
+net5
+        WAN Miniport (L2TP)
+        MULTICAST mtu:-1 index:20
+
+eth9
+        VMware Virtual Ethernet Adapter for VMnet8
+        inet 192.168.6.1 netmask:255.255.255.0 broadcast:192.168.6.255 scope:site
+        inet6 fe80::79a9:a359:f98b:db75 prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:08
+        UP MULTICAST mtu:1500 index:21
+
+wlan3
+        Microsoft Wi-Fi Direct Virtual Adapter #2
+        inet6 fe80::c879:1885:196:856b prefixlen:64 scope:link
+        hardware 7C:2A:31:4F:DC:61
+        MULTICAST mtu:1500 index:22
+
+net6
+        WAN Miniport (PPTP)
+        MULTICAST mtu:-1 index:23
+
+eth10
+        Realtek PCIe GBE Family Controller-WFP Native MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:24
+
+eth11
+        Realtek PCIe GBE Family Controller-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:25
+
+eth12
+        Realtek PCIe GBE Family Controller-WFP 802.3 MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:26
+
+wlan4
+        Intel(R) Wireless-AC 9462-WFP Native MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:27
+
+wlan5
+        Intel(R) Wireless-AC 9462-Virtual WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:28
+
+wlan6
+        Intel(R) Wireless-AC 9462-Native WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:29
+
+wlan7
+        Intel(R) Wireless-AC 9462-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:30
+
+wlan8
+        Intel(R) Wireless-AC 9462-WFP 802.3 MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:31
+
+eth13
+        WAN Miniport (IP)-WFP Native MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:32
+
+eth14
+        WAN Miniport (IP)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:33
+
+eth15
+        WAN Miniport (IPv6)-WFP Native MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:34
+
+eth16
+        WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:35
+
+eth17
+        WAN Miniport (Network Monitor)-WFP Native MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:36
+
+eth18
+        WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:37
+
+wlan9
+        Microsoft Wi-Fi Direct Virtual Adapter #2-WFP Native MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:38
+
+wlan10
+        Microsoft Wi-Fi Direct Virtual Adapter #2-Native WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:39
+
+wlan11
+        Microsoft Wi-Fi Direct Virtual Adapter #2-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:40
+
+wlan12
+        Microsoft Wi-Fi Direct Virtual Adapter #2-WFP 802.3 MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:41
+
+wlan13
+        Microsoft Wi-Fi Direct Virtual Adapter #3-WFP Native MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:42
+
+wlan14
+        Microsoft Wi-Fi Direct Virtual Adapter #3-Native WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:43
+
+wlan15
+        Microsoft Wi-Fi Direct Virtual Adapter #3-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:44
+
+wlan16
+        Microsoft Wi-Fi Direct Virtual Adapter #3-WFP 802.3 MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:45
+
+2020-06-28 20:10:15 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.jdbc.Driver found in Thread context class loader sun.misc.Launcher$AppClassLoader@18b4aac2
+2020-06-28 20:10:15 [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class com.mysql.jdbc.Driver found in Thread context class loader sun.misc.Launcher$AppClassLoader@18b4aac2
+2020-06-28 20:10:18 [main] DEBUG com.github.tobato.fastdfs.domain.conn.ConnectionManager - init trackerLocator [- 192.168.8.130:22122]
+2020-06-28 20:10:18 [main] DEBUG io.netty.util.internal.logging.InternalLoggerFactory - Using SLF4J as the default logging framework
+2020-06-28 20:10:18 [main] DEBUG io.lettuce.core.resource.DefaultClientResources - -Dio.netty.eventLoopThreads: 8
+2020-06-28 20:10:18 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+2020-06-28 20:10:18 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+2020-06-28 20:10:18 [main] DEBUG io.netty.util.internal.PlatformDependent - Platform: Windows
+2020-06-28 20:10:18 [main] DEBUG io.netty.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+2020-06-28 20:10:18 [main] DEBUG io.netty.util.internal.PlatformDependent0 - Java version: 8
+2020-06-28 20:10:18 [main] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+2020-06-28 20:10:18 [main] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+2020-06-28 20:10:18 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+2020-06-28 20:10:18 [main] DEBUG io.netty.util.internal.PlatformDependent0 - direct buffer constructor: available
+2020-06-28 20:10:18 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+2020-06-28 20:10:18 [main] DEBUG io.netty.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2020-06-28 20:10:18 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, int): available
+2020-06-28 20:10:18 [main] DEBUG io.netty.util.internal.PlatformDependent - sun.misc.Unsafe: available
+2020-06-28 20:10:18 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.tmpdir: C:\Users\sunhao\AppData\Local\Temp (java.io.tmpdir)
+2020-06-28 20:10:18 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2020-06-28 20:10:18 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+2020-06-28 20:10:18 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: 1884815360 bytes
+2020-06-28 20:10:18 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2020-06-28 20:10:18 [main] DEBUG io.netty.util.internal.CleanerJava6 - java.nio.ByteBuffer.cleaner(): available
+2020-06-28 20:10:18 [main] DEBUG io.netty.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@4f081b5d
+2020-06-28 20:10:18 [main] DEBUG io.netty.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+2020-06-28 20:10:18 [main] DEBUG reactor.util.Loggers$LoggerFactory - Using Slf4j logging framework
+2020-06-28 20:10:18 [main] DEBUG reactor.core.publisher.UnsafeSupport - Starting UnsafeSupport init in Java 1.8
+2020-06-28 20:10:18 [main] DEBUG reactor.core.publisher.UnsafeSupport - Unsafe is available
+2020-06-28 20:10:18 [main] DEBUG io.lettuce.core.resource.DefaultClientResources - LatencyUtils/HdrUtils are not available, metrics are disabled
+2020-06-28 20:10:19 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 16
+2020-06-28 20:10:19 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 16
+2020-06-28 20:10:19 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
+2020-06-28 20:10:19 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 11
+2020-06-28 20:10:19 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 16777216
+2020-06-28 20:10:19 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.tinyCacheSize: 512
+2020-06-28 20:10:19 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
+2020-06-28 20:10:19 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
+2020-06-28 20:10:19 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2020-06-28 20:10:19 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
+2020-06-28 20:10:19 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: true
+2020-06-28 20:10:19 [main] DEBUG io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2020-06-28 20:10:19 [main] DEBUG io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2020-06-28 20:10:19 [main] DEBUG org.hibernate.validator.internal.engine.resolver.TraversableResolvers - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2020-06-28 20:10:19 [main] DEBUG org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator - Loaded expression factory via original TCCL
+2020-06-28 20:10:19 [main] DEBUG org.hibernate.validator.internal.engine.resolver.TraversableResolvers - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2020-06-28 20:10:19 [main] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2020-06-28 20:10:19 [main] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2020-06-28 20:10:19 [main] DEBUG org.hibernate.validator.internal.engine.ConfigurationImpl - Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+2020-06-28 20:10:19 [main] DEBUG org.hibernate.validator.internal.xml.ValidationXmlParser - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2020-06-28 20:10:19 [main] DEBUG org.hibernate.validator.internal.xml.ResourceLoaderHelper - Trying to load META-INF/validation.xml via user class loader
+2020-06-28 20:10:19 [main] DEBUG org.hibernate.validator.internal.xml.ResourceLoaderHelper - Trying to load META-INF/validation.xml via TCCL
+2020-06-28 20:10:19 [main] DEBUG org.hibernate.validator.internal.xml.ResourceLoaderHelper - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2020-06-28 20:10:19 [main] DEBUG org.hibernate.validator.internal.xml.ValidationXmlParser - No META-INF/validation.xml found. Using annotation based configuration only.
+2020-06-28 20:10:19 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2020-06-28 20:10:19 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2020-06-28 20:10:19 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2020-06-28 20:10:19 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2020-06-28 20:10:19 [main] DEBUG org.hibernate.validator.internal.engine.ValidatorFactoryImpl - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2020-06-28 20:10:24 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [force_merge], size [1], queue size [unbounded]
+2020-06-28 20:10:24 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [fetch_shard_started], core [1], max [16], keep alive [5m]
+2020-06-28 20:10:24 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [listener], size [4], queue size [unbounded]
+2020-06-28 20:10:24 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [index], size [8], queue size [200]
+2020-06-28 20:10:24 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [refresh], core [1], max [4], keep alive [5m]
+2020-06-28 20:10:24 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [generic], core [4], max [128], keep alive [30s]
+2020-06-28 20:10:24 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [warmer], core [1], max [4], keep alive [5m]
+2020-06-28 20:10:24 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [search], size [13], queue size [1k]
+2020-06-28 20:10:24 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [flush], core [1], max [4], keep alive [5m]
+2020-06-28 20:10:24 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [fetch_shard_store], core [1], max [16], keep alive [5m]
+2020-06-28 20:10:24 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [management], core [1], max [5], keep alive [5m]
+2020-06-28 20:10:24 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [get], size [8], queue size [1k]
+2020-06-28 20:10:24 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [bulk], size [8], queue size [200]
+2020-06-28 20:10:24 [main] DEBUG org.elasticsearch.threadpool.ThreadPool - created thread pool: name [snapshot], core [1], max [4], keep alive [5m]
+2020-06-28 20:10:30 [main] DEBUG org.elasticsearch.common.network.IfConfig - configuration:
+
+lo
+        Software Loopback Interface 1
+        inet 127.0.0.1 netmask:255.0.0.0 broadcast:127.255.255.255 scope:host
+        inet6 ::1 prefixlen:128 scope:host
+        UP MULTICAST LOOPBACK mtu:-1 index:1
+
+net0
+        Microsoft 6to4 Adapter
+        MULTICAST mtu:-1 index:2
+
+eth0
+        Realtek PCIe GBE Family Controller
+        inet 192.168.1.107 netmask:255.255.255.0 broadcast:192.168.1.255 scope:site
+        inet6 fe80::fdc3:19e6:3b48:3dce prefixlen:64 scope:link
+        hardware B0:25:AA:28:D6:88
+        UP MULTICAST mtu:1500 index:3
+
+eth1
+        WAN Miniport (IP)
+        MULTICAST mtu:-1 index:4
+
+eth2
+        ASIX AX88179 USB 3.0 to Gigabit Ethernet Adapter
+        MULTICAST mtu:-1 index:5
+
+net1
+        WAN Miniport (SSTP)
+        MULTICAST mtu:-1 index:6
+
+net2
+        Microsoft IP-HTTPS Platform Adapter
+        MULTICAST mtu:-1 index:7
+
+eth3
+        Bluetooth Device (Personal Area Network)
+        inet6 fe80::d9b2:efb5:9994:9dbc prefixlen:64 scope:link
+        hardware 7C:2A:31:4F:DC:64
+        MULTICAST mtu:1500 index:8
+
+net3
+        WAN Miniport (IKEv2)
+        MULTICAST mtu:-1 index:9
+
+eth4
+        WAN Miniport (Network Monitor)
+        MULTICAST mtu:-1 index:10
+
+ppp0
+        WAN Miniport (PPPOE)
+        MULTICAST mtu:-1 index:11
+
+wlan0
+        Microsoft Wi-Fi Direct Virtual Adapter
+        MULTICAST mtu:-1 index:12
+
+eth5
+        VMware Virtual Ethernet Adapter for VMnet1
+        inet 192.168.15.1 netmask:255.255.255.0 broadcast:192.168.15.255 scope:site
+        inet6 fe80::e0bf:4086:15a4:7765 prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:01
+        UP MULTICAST mtu:1500 index:13
+
+eth6
+        Apple Mobile Device Ethernet
+        MULTICAST mtu:-1 index:14
+
+eth7
+        WAN Miniport (IPv6)
+        MULTICAST mtu:-1 index:15
+
+wlan1
+        Intel(R) Wireless-AC 9462
+        inet6 fe80::e1bb:be8c:338:d6c9 prefixlen:64 scope:link
+        hardware 7C:2A:31:4F:DC:60
+        MULTICAST mtu:1500 index:16
+
+net4
+        Microsoft Teredo Tunneling Adapter
+        MULTICAST mtu:-1 index:17
+
+wlan2
+        Microsoft Wi-Fi Direct Virtual Adapter #3
+        inet6 fe80::fdd1:2f0c:babb:c88 prefixlen:64 scope:link
+        hardware 7E:2A:31:4F:DC:60
+        MULTICAST mtu:1500 index:18
+
+eth8
+        Microsoft Kernel Debug Network Adapter
+        MULTICAST mtu:-1 index:19
+
+net5
+        WAN Miniport (L2TP)
+        MULTICAST mtu:-1 index:20
+
+eth9
+        VMware Virtual Ethernet Adapter for VMnet8
+        inet 192.168.6.1 netmask:255.255.255.0 broadcast:192.168.6.255 scope:site
+        inet6 fe80::79a9:a359:f98b:db75 prefixlen:64 scope:link
+        hardware 00:50:56:C0:00:08
+        UP MULTICAST mtu:1500 index:21
+
+wlan3
+        Microsoft Wi-Fi Direct Virtual Adapter #2
+        inet6 fe80::c879:1885:196:856b prefixlen:64 scope:link
+        hardware 7C:2A:31:4F:DC:61
+        MULTICAST mtu:1500 index:22
+
+net6
+        WAN Miniport (PPTP)
+        MULTICAST mtu:-1 index:23
+
+eth10
+        Realtek PCIe GBE Family Controller-WFP Native MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:24
+
+eth11
+        Realtek PCIe GBE Family Controller-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:25
+
+eth12
+        Realtek PCIe GBE Family Controller-WFP 802.3 MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:26
+
+wlan4
+        Intel(R) Wireless-AC 9462-WFP Native MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:27
+
+wlan5
+        Intel(R) Wireless-AC 9462-Virtual WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:28
+
+wlan6
+        Intel(R) Wireless-AC 9462-Native WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:29
+
+wlan7
+        Intel(R) Wireless-AC 9462-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:30
+
+wlan8
+        Intel(R) Wireless-AC 9462-WFP 802.3 MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:31
+
+eth13
+        WAN Miniport (IP)-WFP Native MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:32
+
+eth14
+        WAN Miniport (IP)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:33
+
+eth15
+        WAN Miniport (IPv6)-WFP Native MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:34
+
+eth16
+        WAN Miniport (IPv6)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:35
+
+eth17
+        WAN Miniport (Network Monitor)-WFP Native MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:36
+
+eth18
+        WAN Miniport (Network Monitor)-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:37
+
+wlan9
+        Microsoft Wi-Fi Direct Virtual Adapter #2-WFP Native MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:38
+
+wlan10
+        Microsoft Wi-Fi Direct Virtual Adapter #2-Native WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:39
+
+wlan11
+        Microsoft Wi-Fi Direct Virtual Adapter #2-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:40
+
+wlan12
+        Microsoft Wi-Fi Direct Virtual Adapter #2-WFP 802.3 MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:41
+
+wlan13
+        Microsoft Wi-Fi Direct Virtual Adapter #3-WFP Native MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:42
+
+wlan14
+        Microsoft Wi-Fi Direct Virtual Adapter #3-Native WiFi Filter Driver-0000
+        MULTICAST mtu:-1 index:43
+
+wlan15
+        Microsoft Wi-Fi Direct Virtual Adapter #3-QoS Packet Scheduler-0000
+        MULTICAST mtu:-1 index:44
+
+wlan16
+        Microsoft Wi-Fi Direct Virtual Adapter #3-WFP 802.3 MAC Layer LightWeight Filter-0000
+        MULTICAST mtu:-1 index:45
+

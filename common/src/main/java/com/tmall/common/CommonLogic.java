@@ -35,6 +35,19 @@ public class CommonLogic {
 	}
 
 	/**
+	 * 取得userId.
+	 * @param session
+	 * @return
+	 */
+	public static Integer getUserId(HttpSession session) {
+		Integer userId =  (Integer) CommonLogic.getSession(session,AppConstants.SESSION_KEY_USER_ID);
+		if(userId == null){
+			userId = 1;
+		}
+		return userId;
+	}
+
+	/**
 	 * 取得session.
 	 * @param session
 	 * @param sessionKey

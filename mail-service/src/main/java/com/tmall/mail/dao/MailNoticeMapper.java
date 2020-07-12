@@ -4,11 +4,13 @@ import com.tmall.mail.pojo.MailNotice;
 import org.apache.ibatis.annotations.Param;
 
 public interface MailNoticeMapper {
-    int deleteByPrimaryKey(@Param("shopId") Integer shopId, @Param("mailType") Short mailType);
 
+    /**
+     * 返回自增主键的id值
+     * @param record
+     * @return
+     */
     int insert(MailNotice record);
-
-    int insertSelective(MailNotice record);
 
     MailNotice selectByPrimaryKey(int mailId);
 

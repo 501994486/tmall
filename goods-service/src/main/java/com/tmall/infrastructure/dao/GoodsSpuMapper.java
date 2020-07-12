@@ -8,6 +8,8 @@ import java.util.List;
 public interface GoodsSpuMapper {
     int deleteByPrimaryKey(Long spuId);
 
+    int batchDeleteGoodsSpu(List<Long> spuIdList);
+
     int insert(Goods record);
 
     int insertSelective(Goods record);
@@ -27,4 +29,11 @@ public interface GoodsSpuMapper {
      * @return
      */
     List<Goods> selectGoodsProductSPUListByShopIdAndCategoryId(@Param("shopId") int shopId, @Param("categoryId") int categoryId);
+
+    /**
+     * 通过商品代码查找商品
+     * @param goodsCode
+     * @return
+     */
+    Goods selectGoodsSpuByGoodsCode(String goodsCode);
 }

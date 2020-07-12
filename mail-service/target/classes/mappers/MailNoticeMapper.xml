@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tmall.mail.dao.MailNoticeMapper" >
+  <resultMap id="BaseResultMap" type="com.tmall.mail.pojo.MailNotice" >
+    <id column="shop_id" property="shopId" jdbcType="INTEGER" />
+    <id column="mail_type" property="mailType" jdbcType="SMALLINT" />
+    <result column="mail_name" property="mailName" jdbcType="VARCHAR" />
+    <result column="return_address_same_flag" property="returnAddressSameFlag" jdbcType="BIT" />
+    <result column="return_address" property="returnAddress" jdbcType="VARCHAR" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="content_type" property="contentType" jdbcType="TINYINT" />
+    <result column="insert_sentence" property="insertSentence" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.tmall.mail.pojo.MailNotice" extends="BaseResultMap" >
+    <result column="content_text" property="contentText" jdbcType="LONGVARCHAR" />
+    <result column="content_html" property="contentHtml" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    shop_id, mail_type, mail_name, return_address_same_flag, return_address, title, content_type, 
+    attachment_id, insert_sentence, create_time, update_time
+  </sql>
+  <sql id="Blob_Column_List" >
+    content_text, content_html
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="map" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from MAIL_NOTICE
+    where mail_id = #{shopId,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectByMailType" resultMap="ResultMapWithBLOBs" parameterType="map" >
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from MAIL_NOTICE
+    where shop_id = #{shopId,jdbcType=INTEGER}
+    and mail_type = #{mailType,jdbcType=TINYINT}
+  </select>
+
+  <insert id="insert" parameterType="com.tmall.mail.pojo.MailNotice" >
+    insert into MAIL_NOTICE (shop_id, mail_type, mail_name, 
+      return_address_same_flag, return_address, title, 
+      content_type, attachment_id, insert_sentence, 
+      create_time, update_time, content_text, 
+      content_html)
+    values (#{shopId,jdbcType=INTEGER}, #{mailType,jdbcType=SMALLINT}, #{mailName,jdbcType=VARCHAR}, 
+      #{returnAddressSameFlag,jdbcType=BIT}, #{returnAddress,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, 
+      #{contentType,jdbcType=TINYINT},  #{insertSentence,jdbcType=VARCHAR},
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{contentText,jdbcType=LONGVARCHAR}, 
+      #{contentHtml,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.tmall.mail.pojo.MailNotice" >
+    insert into MAIL_NOTICE
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="shopId != null" >
+        shop_id,
+      </if>
+      <if test="mailType != null" >
+        mail_type,
+      </if>
+      <if test="mailName != null" >
+        mail_name,
+      </if>
+      <if test="returnAddressSameFlag != null" >
+        return_address_same_flag,
+      </if>
+      <if test="returnAddress != null" >
+        return_address,
+      </if>
+      <if test="title != null" >
+        title,
+      </if>
+      <if test="contentType != null" >
+        content_type,
+      </if>
+      <if test="insertSentence != null" >
+        insert_sentence,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="contentText != null" >
+        content_text,
+      </if>
+      <if test="contentHtml != null" >
+        content_html,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="shopId != null" >
+        #{shopId,jdbcType=INTEGER},
+      </if>
+      <if test="mailType != null" >
+        #{mailType,jdbcType=SMALLINT},
+      </if>
+      <if test="mailName != null" >
+        #{mailName,jdbcType=VARCHAR},
+      </if>
+      <if test="returnAddressSameFlag != null" >
+        #{returnAddressSameFlag,jdbcType=BIT},
+      </if>
+      <if test="returnAddress != null" >
+        #{returnAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null" >
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="contentType != null" >
+        #{contentType,jdbcType=TINYINT},
+      </if>
+      <if test="insertSentence != null" >
+        #{insertSentence,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="contentText != null" >
+        #{contentText,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="contentHtml != null" >
+        #{contentHtml,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tmall.mail.pojo.MailNotice" >
+    update MAIL_NOTICE
+    <set >
+      <if test="mailName != null" >
+        mail_name = #{mailName,jdbcType=VARCHAR},
+      </if>
+      <if test="returnAddressSameFlag != null" >
+        return_address_same_flag = #{returnAddressSameFlag,jdbcType=BIT},
+      </if>
+      <if test="returnAddress != null" >
+        return_address = #{returnAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null" >
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="contentType != null" >
+        content_type = #{contentType,jdbcType=TINYINT},
+      </if>
+      <if test="insertSentence != null" >
+        insert_sentence = #{insertSentence,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="contentText != null" >
+        content_text = #{contentText,jdbcType=LONGVARCHAR},
+      </if>
+      <if test="contentHtml != null" >
+        content_html = #{contentHtml,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where shop_id = #{shopId,jdbcType=INTEGER}
+      and mail_type = #{mailType,jdbcType=SMALLINT}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.tmall.mail.pojo.MailNotice" >
+    update MAIL_NOTICE
+    set mail_name = #{mailName,jdbcType=VARCHAR},
+      return_address_same_flag = #{returnAddressSameFlag,jdbcType=BIT},
+      return_address = #{returnAddress,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      content_type = #{contentType,jdbcType=TINYINT},
+      insert_sentence = #{insertSentence,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      content_text = #{contentText,jdbcType=LONGVARCHAR},
+      content_html = #{contentHtml,jdbcType=LONGVARCHAR}
+    where shop_id = #{shopId,jdbcType=INTEGER}
+      and mail_type = #{mailType,jdbcType=SMALLINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tmall.mail.pojo.MailNotice" >
+    update MAIL_NOTICE
+    set mail_name = #{mailName,jdbcType=VARCHAR},
+      return_address_same_flag = #{returnAddressSameFlag,jdbcType=BIT},
+      return_address = #{returnAddress,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      content_type = #{contentType,jdbcType=TINYINT},
+      insert_sentence = #{insertSentence,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where shop_id = #{shopId,jdbcType=INTEGER}
+      and mail_type = #{mailType,jdbcType=SMALLINT}
+  </update>
+</mapper>

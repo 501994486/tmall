@@ -9,6 +9,8 @@ package com.tmall.infrastructure.redis;
  */
 public class RedisKeyUtil {
 
+	public final static String MAP_KEY_GOODS_COLLECT = "MAP_GOODS_COLLECT";
+
 	/**
 	 * redis的key
 	 * 形式为：

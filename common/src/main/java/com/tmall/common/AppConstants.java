@@ -14,6 +14,9 @@ public class AppConstants {
 	/** THE KEY OF SESSION SHOP ID */
 	public static final String SESSION_KEY_SHOP_ID = "_shop";
 
+	/** THE KEY OF SESSION SHOP ID */
+	public static final String SESSION_KEY_USER_ID = "_user";
+
 	/** SESSION KEY: SERVICE LOGIN INFO MAP*/
 	public static final String SESSION_KEY_LOGIN_INFO_MAP = "_loginInfoMap";
 
@@ -109,4 +112,6 @@ public class AppConstants {
 	/** 是否与基本设定相同 0:不同 1：相同*/
 	public static final byte SAME_FLAG_YES = 1;
 	public static final byte SAME_FLAG_NO = 0;
+
+	public static final int ERROR_CODE = -1;
 }

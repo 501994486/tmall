@@ -45,20 +45,13 @@
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
   </resultMap>
 
-  <resultMap id="GoodsAttrResultMap" type="com.tmall.domain.entity.valueobject.GoodsAttr">
-    <id column="attr_id" jdbcType="BIGINT" property="attrId" />
-    <result column="spu_id" jdbcType="BIGINT" property="spuId" />
-    <result column="attr_name_id" jdbcType="INTEGER" property="attrNameId" />
-    <result column="attr_value_id" jdbcType="INTEGER" property="attrValueId" />
-  </resultMap>
-
   <sql id="Base_Column_List">
     spu_id, shop_id, category_id_path, category_id, brand_id, goods_name, goods_main_picture, 
     goods_outline, goods_desc, goods_code, market_price, is_onSale, discount_price, goods_tip, 
     good_stock, stock_unit, goods_seo_keywords, is_sku, is_sale, same_basic_setup_flag, 
     each_buy_min_quantity, each_buy_max_quantity, total_buy_max_quantity, delivery_method_id, 
     sold_out_mail_flag, stock_warn_mail_flag, warn_stock, is_new, is_best, is_hot, is_recom, 
-    is_delete, spu_sale_num, sale_time, visit_num, appraise_num, award_integral, goods_status, 
+    is_delete, spu_sale_num, sale_time, visit_num, appraise_num, award_integral, goods_status,
     illegal_remarks, create_time, update_time
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
@@ -71,6 +64,14 @@
     delete from GOODS_SPU
     where spu_id = #{spuId,jdbcType=BIGINT}
   </delete>
+
+  <delete id="batchDeleteGoodsSpu" parameterType="java.util.List">
+    DELETE FROM GOODS_SPU WHERE spu_id IN
+    <foreach collection="list" index="index" item="item" open="(" separator="," close=")">
+      #{item}
+    </foreach>
+  </delete>
+
   <insert id="insert" parameterType="com.tmall.domain.entity.Goods">
     insert into GOODS_SPU (spu_id, shop_id, category_id_path, 
       category_id, brand_id, goods_name, 
@@ -537,7 +538,14 @@
   <select id="selectGoodsProductSPUListByShopIdAndCategoryId" resultMap="BaseResultMap" parameterType="map" timeout="10">
 	select
     <include refid="Base_Column_List" />
-	from GOODS_SPEC_ITEM
+	from GOODS_SPU
 	where shop_id = #{shopId} and category_id = #{categoryId} and is_delete = 1
+  </select>
+
+  <select id="selectGoodsSpuByGoodsCode" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from GOODS_SPU
+    where binary goods_code = #{goodsCode}
   </select>
 </mapper>

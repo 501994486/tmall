@@ -21,6 +21,7 @@ public class CategoryDTOConvert implements DTOConvert<CategoryDTO, Category>{
 	public Category convertNewData(CategoryDTO categoryDTO, int shopId) throws Exception {
 
 		Category category = new Category();
+
 		BeanUtils.copyProperties(category,categoryDTO);
 
 		Timestamp currentTime = DateTimeUtils.getCurrentTimestamp();

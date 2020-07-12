@@ -222,11 +222,4 @@
     where sku_id = #{skuId,jdbcType=BIGINT}
   </select>
 
-  <select id="selectGoodsSpecBySpuId" parameterType="java.lang.Long" resultType="com.tmall.domain.entity.valueobject.GoodsSpecification">
-    select
-    <include refid="Spec_Column_List" />
-    from GOODS_SKU
-    where sku_id = #{skuId,jdbcType=BIGINT}
-  </select>
-
 </mapper>

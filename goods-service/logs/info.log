@@ -1,0 +1,27 @@
+2020-06-28 20:03:28 [main] INFO  com.tmall.RedisTest - The following profiles are active: dev
+2020-06-28 20:03:37 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-06-28 20:03:37 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-06-28 20:03:41 [main] INFO  org.elasticsearch.plugins.PluginsService - no modules loaded
+2020-06-28 20:03:41 [main] INFO  org.elasticsearch.plugins.PluginsService - loaded plugin [org.elasticsearch.index.reindex.ReindexPlugin]
+2020-06-28 20:03:41 [main] INFO  org.elasticsearch.plugins.PluginsService - loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020-06-28 20:03:41 [main] INFO  org.elasticsearch.plugins.PluginsService - loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020-06-28 20:03:41 [main] INFO  org.elasticsearch.plugins.PluginsService - loaded plugin [org.elasticsearch.script.mustache.MustachePlugin]
+2020-06-28 20:03:41 [main] INFO  org.elasticsearch.plugins.PluginsService - loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020-06-28 20:07:28 [main] INFO  com.tmall.RedisTest - The following profiles are active: dev
+2020-06-28 20:07:36 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-06-28 20:07:36 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-06-28 20:07:39 [main] INFO  org.elasticsearch.plugins.PluginsService - no modules loaded
+2020-06-28 20:07:39 [main] INFO  org.elasticsearch.plugins.PluginsService - loaded plugin [org.elasticsearch.index.reindex.ReindexPlugin]
+2020-06-28 20:07:39 [main] INFO  org.elasticsearch.plugins.PluginsService - loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020-06-28 20:07:39 [main] INFO  org.elasticsearch.plugins.PluginsService - loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020-06-28 20:07:39 [main] INFO  org.elasticsearch.plugins.PluginsService - loaded plugin [org.elasticsearch.script.mustache.MustachePlugin]
+2020-06-28 20:07:39 [main] INFO  org.elasticsearch.plugins.PluginsService - loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020-06-28 20:10:07 [main] INFO  com.tmall.RedisTest - The following profiles are active: dev
+2020-06-28 20:10:20 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-06-28 20:10:20 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-06-28 20:10:24 [main] INFO  org.elasticsearch.plugins.PluginsService - no modules loaded
+2020-06-28 20:10:24 [main] INFO  org.elasticsearch.plugins.PluginsService - loaded plugin [org.elasticsearch.index.reindex.ReindexPlugin]
+2020-06-28 20:10:24 [main] INFO  org.elasticsearch.plugins.PluginsService - loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020-06-28 20:10:24 [main] INFO  org.elasticsearch.plugins.PluginsService - loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020-06-28 20:10:24 [main] INFO  org.elasticsearch.plugins.PluginsService - loaded plugin [org.elasticsearch.script.mustache.MustachePlugin]
+2020-06-28 20:10:24 [main] INFO  org.elasticsearch.plugins.PluginsService - loaded plugin [org.elasticsearch.transport.Netty4Plugin]

@@ -45,4 +45,10 @@ public class GoodsSku {
 
     private List<GoodsImg> goodsImgList;
 
+    public int decreaseStock(int quantity){
+        if(this.skuStock - quantity < 0){
+            return -1;
+        }
+        return this.skuStock - quantity;
+    }
 }
