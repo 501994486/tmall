@@ -1,40 +1,30 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.tmall.mail.dao.MailAttachmentMapper" >
-  <resultMap id="BaseResultMap" type="com.tmall.mail.pojo.MailAttachment" >
-    <id column="attachment_id" property="attachmentId" jdbcType="BIGINT" />
-    <result column="mail_id" property="mailId" jdbcType="INTEGER" />
-    <result column="attachment_filename" property="attachmentFilename" jdbcType="VARCHAR" />
-    <result column="disp_filename" property="dispFilename" jdbcType="VARCHAR" />
-    <result column="file_size" property="fileSize" jdbcType="DOUBLE" />
-    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
-    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tmall.common.dao.MailAttachmentMapper">
+  <resultMap id="BaseResultMap" type="com.tmall.common.pojo.MailAttachment">
+    <id column="attachment_id" jdbcType="BIGINT" property="attachmentId" />
+    <result column="mail_id" jdbcType="INTEGER" property="mailId" />
+    <result column="attachment_filename" jdbcType="VARCHAR" property="attachmentFilename" />
+    <result column="disp_filename" jdbcType="VARCHAR" property="dispFilename" />
+    <result column="file_size" jdbcType="DOUBLE" property="fileSize" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
   </resultMap>
-  <sql id="Base_Column_List" >
+  <sql id="Base_Column_List">
     attachment_id, mail_id, attachment_filename, disp_filename, file_size, create_time, 
     update_time
   </sql>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from MAIL_ATTACHMENT
     where attachment_id = #{attachmentId,jdbcType=BIGINT}
   </select>
-  <select id="selectByMailId" resultMap="BaseResultMap" >
-    select
-    <include refid="Base_Column_List" />
-    from MAIL_ATTACHMENT
-    where mail_id = #{mailId,jdbcType=INT}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from MAIL_ATTACHMENT
     where attachment_id = #{attachmentId,jdbcType=BIGINT}
   </delete>
-  <delete id="deleteByMailId"  >
-    delete from MAIL_ATTACHMENT
-    where mail_id = #{attachmentId,jdbcType=INT}
-  </delete>
-  <insert id="insert" parameterType="com.tmall.mail.pojo.MailAttachment" >
+  <insert id="insert" parameterType="com.tmall.common.pojo.MailAttachment">
     insert into MAIL_ATTACHMENT (attachment_id, mail_id, attachment_filename, 
       disp_filename, file_size, create_time, 
       update_time)
@@ -42,80 +32,204 @@
       #{dispFilename,jdbcType=VARCHAR}, #{fileSize,jdbcType=DOUBLE}, #{createTime,jdbcType=TIMESTAMP}, 
       #{updateTime,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.tmall.mail.pojo.MailAttachment" >
+  <insert id="insertSelective" parameterType="com.tmall.common.pojo.MailAttachment">
     insert into MAIL_ATTACHMENT
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="attachmentId != null" >
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="attachmentId != null">
         attachment_id,
       </if>
-      <if test="mailId != null" >
+      <if test="mailId != null">
         mail_id,
       </if>
-      <if test="attachmentFilename != null" >
+      <if test="attachmentFilename != null">
         attachment_filename,
       </if>
-      <if test="dispFilename != null" >
+      <if test="dispFilename != null">
         disp_filename,
       </if>
-      <if test="fileSize != null" >
+      <if test="fileSize != null">
         file_size,
       </if>
-      <if test="createTime != null" >
+      <if test="createTime != null">
         create_time,
       </if>
-      <if test="updateTime != null" >
+      <if test="updateTime != null">
         update_time,
       </if>
     </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="attachmentId != null" >
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="attachmentId != null">
         #{attachmentId,jdbcType=BIGINT},
       </if>
-      <if test="mailId != null" >
+      <if test="mailId != null">
         #{mailId,jdbcType=INTEGER},
       </if>
-      <if test="attachmentFilename != null" >
+      <if test="attachmentFilename != null">
         #{attachmentFilename,jdbcType=VARCHAR},
       </if>
-      <if test="dispFilename != null" >
+      <if test="dispFilename != null">
         #{dispFilename,jdbcType=VARCHAR},
       </if>
-      <if test="fileSize != null" >
+      <if test="fileSize != null">
         #{fileSize,jdbcType=DOUBLE},
       </if>
-      <if test="createTime != null" >
+      <if test="createTime != null">
         #{createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="updateTime != null" >
+      <if test="updateTime != null">
         #{updateTime,jdbcType=TIMESTAMP},
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.tmall.mail.pojo.MailAttachment" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.tmall.common.pojo.MailAttachment">
     update MAIL_ATTACHMENT
-    <set >
-      <if test="mailId != null" >
+    <set>
+      <if test="mailId != null">
         mail_id = #{mailId,jdbcType=INTEGER},
       </if>
-      <if test="attachmentFilename != null" >
+      <if test="attachmentFilename != null">
         attachment_filename = #{attachmentFilename,jdbcType=VARCHAR},
       </if>
-      <if test="dispFilename != null" >
+      <if test="dispFilename != null">
         disp_filename = #{dispFilename,jdbcType=VARCHAR},
       </if>
-      <if test="fileSize != null" >
+      <if test="fileSize != null">
         file_size = #{fileSize,jdbcType=DOUBLE},
       </if>
-      <if test="createTime != null" >
+      <if test="createTime != null">
         create_time = #{createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="updateTime != null" >
+      <if test="updateTime != null">
         update_time = #{updateTime,jdbcType=TIMESTAMP},
       </if>
     </set>
     where attachment_id = #{attachmentId,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.tmall.mail.pojo.MailAttachment" >
+  <update id="updateByPrimaryKey" parameterType="com.tmall.common.pojo.MailAttachment">
+    update MAIL_ATTACHMENT
+    set mail_id = #{mailId,jdbcType=INTEGER},
+      attachment_filename = #{attachmentFilename,jdbcType=VARCHAR},
+      disp_filename = #{dispFilename,jdbcType=VARCHAR},
+      file_size = #{fileSize,jdbcType=DOUBLE},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where attachment_id = #{attachmentId,jdbcType=BIGINT}
+  </update>
+  <resultMap id="BaseResultMap" type="com.tmall.mail.pojo.MailAttachment">
+    <id column="attachment_id" jdbcType="BIGINT" property="attachmentId" />
+    <result column="mail_id" jdbcType="INTEGER" property="mailId" />
+    <result column="attachment_filename" jdbcType="VARCHAR" property="attachmentFilename" />
+    <result column="disp_filename" jdbcType="VARCHAR" property="dispFilename" />
+    <result column="file_size" jdbcType="DOUBLE" property="fileSize" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    attachment_id, mail_id, attachment_filename, disp_filename, file_size, create_time, 
+    update_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from MAIL_ATTACHMENT
+    where attachment_id = #{attachmentId,jdbcType=BIGINT}
+  </select>
+  <select id="selectByMailId" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from MAIL_ATTACHMENT
+    where mail_id = #{mailId,jdbcType=INT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from MAIL_ATTACHMENT
+    where attachment_id = #{attachmentId,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByMailId">
+    delete from MAIL_ATTACHMENT
+    where mail_id = #{attachmentId,jdbcType=INT}
+  </delete>
+  <insert id="insert" parameterType="com.tmall.mail.pojo.MailAttachment">
+    insert into MAIL_ATTACHMENT (attachment_id, mail_id, attachment_filename, 
+      disp_filename, file_size, create_time, 
+      update_time)
+    values (#{attachmentId,jdbcType=BIGINT}, #{mailId,jdbcType=INTEGER}, #{attachmentFilename,jdbcType=VARCHAR}, 
+      #{dispFilename,jdbcType=VARCHAR}, #{fileSize,jdbcType=DOUBLE}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.tmall.mail.pojo.MailAttachment">
+    insert into MAIL_ATTACHMENT
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="attachmentId != null">
+        attachment_id,
+      </if>
+      <if test="mailId != null">
+        mail_id,
+      </if>
+      <if test="attachmentFilename != null">
+        attachment_filename,
+      </if>
+      <if test="dispFilename != null">
+        disp_filename,
+      </if>
+      <if test="fileSize != null">
+        file_size,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="attachmentId != null">
+        #{attachmentId,jdbcType=BIGINT},
+      </if>
+      <if test="mailId != null">
+        #{mailId,jdbcType=INTEGER},
+      </if>
+      <if test="attachmentFilename != null">
+        #{attachmentFilename,jdbcType=VARCHAR},
+      </if>
+      <if test="dispFilename != null">
+        #{dispFilename,jdbcType=VARCHAR},
+      </if>
+      <if test="fileSize != null">
+        #{fileSize,jdbcType=DOUBLE},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tmall.mail.pojo.MailAttachment">
+    update MAIL_ATTACHMENT
+    <set>
+      <if test="mailId != null">
+        mail_id = #{mailId,jdbcType=INTEGER},
+      </if>
+      <if test="attachmentFilename != null">
+        attachment_filename = #{attachmentFilename,jdbcType=VARCHAR},
+      </if>
+      <if test="dispFilename != null">
+        disp_filename = #{dispFilename,jdbcType=VARCHAR},
+      </if>
+      <if test="fileSize != null">
+        file_size = #{fileSize,jdbcType=DOUBLE},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where attachment_id = #{attachmentId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tmall.mail.pojo.MailAttachment">
     update MAIL_ATTACHMENT
     set mail_id = #{mailId,jdbcType=INTEGER},
       attachment_filename = #{attachmentFilename,jdbcType=VARCHAR},
