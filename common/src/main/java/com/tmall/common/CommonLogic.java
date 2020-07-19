@@ -3,6 +3,7 @@ package com.tmall.common;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import javax.servlet.http.HttpSession;
@@ -307,4 +308,5 @@ public class CommonLogic {
 
 		parentTreeMap.put(id, newNodeMap);
 	}
+
 }
