@@ -29,7 +29,7 @@ import java.util.stream.Stream;
 @Component
 public class RedisService {
 
-	private final static Logger logger = LoggerFactory.getLogger(CrossDomainFilter.class);
+	private final static Logger logger = LoggerFactory.getLogger(RedisService.class);
 
 	@Autowired
 	private RedisTemplate<String, String> redisTemplate;

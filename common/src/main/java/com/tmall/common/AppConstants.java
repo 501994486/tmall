@@ -114,4 +114,9 @@ public class AppConstants {
 	public static final byte SAME_FLAG_NO = 0;
 
 	public static final int ERROR_CODE = -1;
+
+
+	public static final String SUCCESS_RESULT = "SUCCSSS";
+	public static final String ERROR_RESULT = "ERROR";
+	public static final String ERROR_REPEAT = "REPEAT";
 }
