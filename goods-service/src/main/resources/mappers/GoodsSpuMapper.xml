@@ -548,4 +548,5 @@
     from GOODS_SPU
     where binary goods_code = #{goodsCode}
   </select>
+
 </mapper>

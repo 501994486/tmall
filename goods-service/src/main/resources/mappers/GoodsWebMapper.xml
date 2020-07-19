@@ -99,4 +99,11 @@
     update GOODS_SKU set sku_stock= #{skuStock}, update_time = #{updateTime} where spu_id =#{spuId} and update_time = #{updateTimeVersion}
   </update>
 
+  <select id="selectAllHotGoods" resultMap="SpuResultMap">
+    select
+    <include refid="Spu_Column_List" />
+    from GOODS_SPU
+    where is_delete = 1 and is_hot = 1
+  </select>
+
 </mapper>

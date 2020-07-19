@@ -1,4 +1,4 @@
-package com.tmall.infrastructure.servlet;
+package com.tmall.infrastructure.init;
 
 import com.tmall.common.AppConstants;
 import org.springframework.context.ApplicationContext;

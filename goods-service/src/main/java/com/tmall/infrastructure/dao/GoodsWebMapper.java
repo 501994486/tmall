@@ -26,4 +26,10 @@ public interface GoodsWebMapper {
      * @return
      */
     int updateGoodsSkuStock(Map<String,Object> params);
+
+    /**
+     * 获取所有热销商品
+     * @return
+     */
+    List<Goods> selectAllHotGoods();
 }

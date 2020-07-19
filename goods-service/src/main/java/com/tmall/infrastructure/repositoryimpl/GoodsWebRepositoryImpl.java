@@ -11,6 +11,9 @@ import com.tmall.infrastructure.dao.GoodsCollectMapper;
 import com.tmall.infrastructure.dao.GoodsWebMapper;
 import com.tmall.infrastructure.redis.RedisKeyUtil;
 import com.tmall.infrastructure.redis.RedisService;
+import com.tmall.infrastructure.vo.GoodsHotVo;
+import org.apache.commons.collections.CollectionUtils;
+import org.elasticsearch.common.util.set.Sets;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.Cursor;
 import org.springframework.data.redis.core.HashOperations;
@@ -21,6 +24,12 @@ import java.util.stream.Stream.Builder;
 import java.sql.Timestamp;
 import java.util.*;
 
+/**
+ * 商品用户册相关功能
+ * @author sunhao
+ * @date   2020年7月11日
+ * @version V1.0
+ */
 @Repository
 public class GoodsWebRepositoryImpl implements GoodsWebRepository {
 
@@ -32,6 +41,9 @@ public class GoodsWebRepositoryImpl implements GoodsWebRepository {
 
 	@Autowired
 	private HashOperations<String, String, Object> hashOperations;
+
+	@Autowired
+	private ZSetOperations<String, GoodsHotVo> zSetOperations;
 
 	/**
 	 * 更新商品库存，使用乐观锁解决并发问题
@@ -94,6 +106,10 @@ public class GoodsWebRepositoryImpl implements GoodsWebRepository {
 		return true;
 	}
 
+	/**
+	 * 从redis库存中获取到商品收藏信息
+	 * @return
+	 */
 	private List<GoodsCollect> getGoodsCollectDataFromRedis() {
 
 		Cursor<Map.Entry<String, Object>> cursor = hashOperations.scan(RedisKeyUtil.MAP_KEY_GOODS_COLLECT, ScanOptions.NONE);
@@ -135,5 +151,43 @@ public class GoodsWebRepositoryImpl implements GoodsWebRepository {
 		goodsCollectMapper.batchInsert(goodsCollectList);
 
 		return  true;
+	}
+
+	/**
+	 * 初始化 热销商品到redis
+	 */
+	@Override
+	public void initGoodsSellTop() {
+
+		List<Goods> allHotGoods = goodsWebMapper.selectAllHotGoods();
+
+		List<GoodsHotVo> goodsVoList = new ArrayList<>();
+		for (Goods hotGoods : allHotGoods) {
+			GoodsHotVo goodsHotVo = GoodsHotVo.builder()
+					.spuId(hotGoods.getSpuId())
+					.goodsName(hotGoods.getGoodsName())
+					.goodsMainPicture(hotGoods.getGoodsMainPicture())
+					.goodsCode(hotGoods.getGoodsCode())
+					.spuSaleNum(hotGoods.getSpuSaleNum())
+					.build();
+
+			zSetOperations.add(RedisKeyUtil.ZSET_KEY_GOODS_SALES_RANDING,goodsHotVo,goodsHotVo.getSpuSaleNum());
+		}
+	}
+
+	/**
+	 * 获取热卖排行榜
+	 * @param pageNum
+	 * @param rows
+	 * @return
+	 */
+	@Override
+	public List<GoodsHotVo> getGoodsHotTop(int pageNum,int rows){
+		Set<GoodsHotVo> goodsHotTop = zSetOperations.reverseRange(RedisKeyUtil.ZSET_KEY_GOODS_SALES_RANDING,0,-1);
+
+		List<GoodsHotVo> goodsHotTopList = new ArrayList<>();
+		goodsHotTopList.addAll(goodsHotTop);
+
+		return new ArrayList<>(goodsHotTopList.subList(pageNum,rows));
 	}
 }

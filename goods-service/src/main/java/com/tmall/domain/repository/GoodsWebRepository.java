@@ -1,6 +1,7 @@
 package com.tmall.domain.repository;
 
 import com.tmall.domain.entity.Goods;
+import com.tmall.infrastructure.vo.GoodsHotVo;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
@@ -19,4 +20,8 @@ public interface GoodsWebRepository {
 	boolean updateGoodsCollectStatus(int userId, int sputId,int status);
 
 	boolean transGoodsCollectDataFromRedis();
+
+	void initGoodsSellTop();
+
+	List<GoodsHotVo> getGoodsHotTop(int pageNum, int rows);
 }

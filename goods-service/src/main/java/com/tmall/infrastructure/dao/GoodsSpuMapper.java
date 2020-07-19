@@ -36,4 +36,5 @@ public interface GoodsSpuMapper {
      * @return
      */
     Goods selectGoodsSpuByGoodsCode(String goodsCode);
+
 }

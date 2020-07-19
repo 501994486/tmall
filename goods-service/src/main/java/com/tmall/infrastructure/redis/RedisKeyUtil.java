@@ -9,7 +9,9 @@ package com.tmall.infrastructure.redis;
  */
 public class RedisKeyUtil {
 
-	public final static String MAP_KEY_GOODS_COLLECT = "MAP_GOODS_COLLECT";
+	public final static String MAP_KEY_GOODS_COLLECT = "tm:goods:collect";
+
+	public final static String ZSET_KEY_GOODS_SALES_RANDING = "tm:goods:randing";
 
 	/**
 	 * redis的key
