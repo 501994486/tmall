@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tmall.order.infrastructure.dao.OrderDetailMapper" >
+  <resultMap id="BaseResultMap" type="com.tmall.order.domain.entity.OrderDetail" >
+    <id column="detail_id" property="detailId" jdbcType="INTEGER" />
+    <result column="order_id" property="orderId" jdbcType="BIGINT" />
+    <result column="spu_id" property="spuId" jdbcType="BIGINT" />
+    <result column="sku_id" property="skuId" jdbcType="BIGINT" />
+    <result column="sku_desc" property="skuDesc" jdbcType="VARCHAR" />
+    <result column="spu_name" property="spuName" jdbcType="VARCHAR" />
+    <result column="goods_code" property="goodsCode" jdbcType="VARCHAR" />
+    <result column="price" property="price" jdbcType="DECIMAL" />
+    <result column="discount_price" property="discountPrice" jdbcType="DECIMAL" />
+    <result column="goods_main_picture" property="goodsMainPicture" jdbcType="VARCHAR" />
+    <result column="goods_amount" property="goodsAmount" jdbcType="INTEGER" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    detail_id, order_id, spu_id, sku_id, sku_desc, spu_name, goods_code, price, discount_price, 
+    goods_main_picture, goods_amount, remark
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from TM_ORDER_DETAIL
+    where detail_id = #{detailId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from TM_ORDER_DETAIL
+    where detail_id = #{detailId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.tmall.order.domain.entity.OrderDetail" >
+    insert into TM_ORDER_DETAIL (detail_id, order_id, spu_id, 
+      sku_id, sku_desc, spu_name, 
+      goods_code, price, discount_price, 
+      goods_main_picture, goods_amount, remark
+      )
+    values (#{detailId,jdbcType=INTEGER}, #{orderId,jdbcType=BIGINT}, #{spuId,jdbcType=BIGINT}, 
+      #{skuId,jdbcType=BIGINT}, #{skuDesc,jdbcType=VARCHAR}, #{spuName,jdbcType=VARCHAR}, 
+      #{goodsCode,jdbcType=VARCHAR}, #{price,jdbcType=DECIMAL}, #{discountPrice,jdbcType=DECIMAL}, 
+      #{goodsMainPicture,jdbcType=VARCHAR}, #{goodsAmount,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.tmall.order.domain.entity.OrderDetail" >
+    insert into TM_ORDER_DETAIL
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="detailId != null" >
+        detail_id,
+      </if>
+      <if test="orderId != null" >
+        order_id,
+      </if>
+      <if test="spuId != null" >
+        spu_id,
+      </if>
+      <if test="skuId != null" >
+        sku_id,
+      </if>
+      <if test="skuDesc != null" >
+        sku_desc,
+      </if>
+      <if test="spuName != null" >
+        spu_name,
+      </if>
+      <if test="goodsCode != null" >
+        goods_code,
+      </if>
+      <if test="price != null" >
+        price,
+      </if>
+      <if test="discountPrice != null" >
+        discount_price,
+      </if>
+      <if test="goodsMainPicture != null" >
+        goods_main_picture,
+      </if>
+      <if test="goodsAmount != null" >
+        goods_amount,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="detailId != null" >
+        #{detailId,jdbcType=INTEGER},
+      </if>
+      <if test="orderId != null" >
+        #{orderId,jdbcType=BIGINT},
+      </if>
+      <if test="spuId != null" >
+        #{spuId,jdbcType=BIGINT},
+      </if>
+      <if test="skuId != null" >
+        #{skuId,jdbcType=BIGINT},
+      </if>
+      <if test="skuDesc != null" >
+        #{skuDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="spuName != null" >
+        #{spuName,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsCode != null" >
+        #{goodsCode,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null" >
+        #{price,jdbcType=DECIMAL},
+      </if>
+      <if test="discountPrice != null" >
+        #{discountPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="goodsMainPicture != null" >
+        #{goodsMainPicture,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsAmount != null" >
+        #{goodsAmount,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tmall.order.domain.entity.OrderDetail" >
+    update TM_ORDER_DETAIL
+    <set >
+      <if test="orderId != null" >
+        order_id = #{orderId,jdbcType=BIGINT},
+      </if>
+      <if test="spuId != null" >
+        spu_id = #{spuId,jdbcType=BIGINT},
+      </if>
+      <if test="skuId != null" >
+        sku_id = #{skuId,jdbcType=BIGINT},
+      </if>
+      <if test="skuDesc != null" >
+        sku_desc = #{skuDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="spuName != null" >
+        spu_name = #{spuName,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsCode != null" >
+        goods_code = #{goodsCode,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null" >
+        price = #{price,jdbcType=DECIMAL},
+      </if>
+      <if test="discountPrice != null" >
+        discount_price = #{discountPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="goodsMainPicture != null" >
+        goods_main_picture = #{goodsMainPicture,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsAmount != null" >
+        goods_amount = #{goodsAmount,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where detail_id = #{detailId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tmall.order.domain.entity.OrderDetail" >
+    update TM_ORDER_DETAIL
+    set order_id = #{orderId,jdbcType=BIGINT},
+      spu_id = #{spuId,jdbcType=BIGINT},
+      sku_id = #{skuId,jdbcType=BIGINT},
+      sku_desc = #{skuDesc,jdbcType=VARCHAR},
+      spu_name = #{spuName,jdbcType=VARCHAR},
+      goods_code = #{goodsCode,jdbcType=VARCHAR},
+      price = #{price,jdbcType=DECIMAL},
+      discount_price = #{discountPrice,jdbcType=DECIMAL},
+      goods_main_picture = #{goodsMainPicture,jdbcType=VARCHAR},
+      goods_amount = #{goodsAmount,jdbcType=INTEGER},
+      remark = #{remark,jdbcType=VARCHAR}
+    where detail_id = #{detailId,jdbcType=INTEGER}
+  </update>
+
+  <insert id="batchInsert" parameterType="java.util.List">
+    INSERT INTO TM_ORDER_DETAIL (order_id, spu_id,
+    sku_id, sku_desc, spu_name,
+    goods_code, price, discount_price,
+    goods_main_picture, goods_amount, remark
+    )
+    VALUES
+    <foreach collection="list" item="item" index="index" separator="," >
+      (#{orderId,jdbcType=BIGINT}, #{spuId,jdbcType=BIGINT},
+      #{skuId,jdbcType=BIGINT}, #{skuDesc,jdbcType=VARCHAR}, #{spuName,jdbcType=VARCHAR},
+      #{goodsCode,jdbcType=VARCHAR}, #{price,jdbcType=DECIMAL}, #{discountPrice,jdbcType=DECIMAL},
+      #{goodsMainPicture,jdbcType=VARCHAR}, #{goodsAmount,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR}
+      )
+    </foreach>
+  </insert>
+
+</mapper>

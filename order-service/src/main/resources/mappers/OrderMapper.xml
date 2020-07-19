@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tmall.order.infrastructure.dao.OrderMapper" >
+  <resultMap id="BaseResultMap" type="com.tmall.order.domain.entity.Order" >
+    <id column="order_id" property="orderId" jdbcType="BIGINT" />
+    <result column="shop_id" property="shopId" jdbcType="INTEGER" />
+    <result column="order_status" property="orderStatus" jdbcType="TINYINT" />
+    <result column="product_price" property="productPrice" jdbcType="DECIMAL" />
+    <result column="order_price" property="orderPrice" jdbcType="DECIMAL" />
+    <result column="logistics_fee" property="logisticsFee" jdbcType="DECIMAL" />
+    <result column="is_unpacking_inspection" property="isUnpackingInspection" jdbcType="BIT" />
+    <result column="invoice_id" property="invoiceId" jdbcType="INTEGER" />
+    <result column="address_id" property="addressId" jdbcType="INTEGER" />
+    <result column="logistics_id" property="logisticsId" jdbcType="INTEGER" />
+    <result column="pay_channel" property="payChannel" jdbcType="VARCHAR" />
+    <result column="escrow_trade_no" property="escrowTradeNo" jdbcType="VARCHAR" />
+    <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+    <result column="payment_date" property="paymentDate" jdbcType="TIMESTAMP" />
+    <result column="ship_date" property="shipDate" jdbcType="TIMESTAMP" />
+    <result column="order_settlement_status" property="orderSettlementStatus" jdbcType="TINYINT" />
+    <result column="order_settlement_time" property="orderSettlementTime" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="user_remark" property="userRemark" jdbcType="VARCHAR" />
+    <result column="modify_date" property="modifyDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    order_id, shop_id, order_status, product_price, order_price, logistics_fee, is_unpacking_inspection, 
+    invoice_id, address_id, logistics_id, pay_channel, escrow_trade_no, create_date, 
+    payment_date, ship_date, order_settlement_status, order_settlement_time, user_id, 
+    user_remark, modify_date
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from TM_ORDER
+    where order_id = #{orderId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from TM_ORDER
+    where order_id = #{orderId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.tmall.order.domain.entity.Order" >
+    insert into TM_ORDER (order_id, shop_id, order_status, 
+      product_price, order_price, logistics_fee, 
+      is_unpacking_inspection, invoice_id, address_id, 
+      logistics_id, pay_channel, escrow_trade_no, 
+      create_date, payment_date, ship_date, 
+      order_settlement_status, order_settlement_time, 
+      user_id, user_remark, modify_date
+      )
+    values (#{orderId,jdbcType=BIGINT}, #{shopId,jdbcType=INTEGER}, #{orderStatus,jdbcType=TINYINT}, 
+      #{productPrice,jdbcType=DECIMAL}, #{orderPrice,jdbcType=DECIMAL}, #{logisticsFee,jdbcType=DECIMAL}, 
+      #{isUnpackingInspection,jdbcType=BIT}, #{invoiceId,jdbcType=INTEGER}, #{addressId,jdbcType=INTEGER}, 
+      #{logisticsId,jdbcType=INTEGER}, #{payChannel,jdbcType=VARCHAR}, #{escrowTradeNo,jdbcType=VARCHAR}, 
+      #{createDate,jdbcType=TIMESTAMP}, #{paymentDate,jdbcType=TIMESTAMP}, #{shipDate,jdbcType=TIMESTAMP}, 
+      #{orderSettlementStatus,jdbcType=TINYINT}, #{orderSettlementTime,jdbcType=INTEGER}, 
+      #{userId,jdbcType=INTEGER}, #{userRemark,jdbcType=VARCHAR}, #{modifyDate,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.tmall.order.domain.entity.Order" >
+    insert into TM_ORDER
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="orderId != null" >
+        order_id,
+      </if>
+      <if test="shopId != null" >
+        shop_id,
+      </if>
+      <if test="orderStatus != null" >
+        order_status,
+      </if>
+      <if test="productPrice != null" >
+        product_price,
+      </if>
+      <if test="orderPrice != null" >
+        order_price,
+      </if>
+      <if test="logisticsFee != null" >
+        logistics_fee,
+      </if>
+      <if test="isUnpackingInspection != null" >
+        is_unpacking_inspection,
+      </if>
+      <if test="invoiceId != null" >
+        invoice_id,
+      </if>
+      <if test="addressId != null" >
+        address_id,
+      </if>
+      <if test="logisticsId != null" >
+        logistics_id,
+      </if>
+      <if test="payChannel != null" >
+        pay_channel,
+      </if>
+      <if test="escrowTradeNo != null" >
+        escrow_trade_no,
+      </if>
+      <if test="createDate != null" >
+        create_date,
+      </if>
+      <if test="paymentDate != null" >
+        payment_date,
+      </if>
+      <if test="shipDate != null" >
+        ship_date,
+      </if>
+      <if test="orderSettlementStatus != null" >
+        order_settlement_status,
+      </if>
+      <if test="orderSettlementTime != null" >
+        order_settlement_time,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="userRemark != null" >
+        user_remark,
+      </if>
+      <if test="modifyDate != null" >
+        modify_date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="orderId != null" >
+        #{orderId,jdbcType=BIGINT},
+      </if>
+      <if test="shopId != null" >
+        #{shopId,jdbcType=INTEGER},
+      </if>
+      <if test="orderStatus != null" >
+        #{orderStatus,jdbcType=TINYINT},
+      </if>
+      <if test="productPrice != null" >
+        #{productPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="orderPrice != null" >
+        #{orderPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="logisticsFee != null" >
+        #{logisticsFee,jdbcType=DECIMAL},
+      </if>
+      <if test="isUnpackingInspection != null" >
+        #{isUnpackingInspection,jdbcType=BIT},
+      </if>
+      <if test="invoiceId != null" >
+        #{invoiceId,jdbcType=INTEGER},
+      </if>
+      <if test="addressId != null" >
+        #{addressId,jdbcType=INTEGER},
+      </if>
+      <if test="logisticsId != null" >
+        #{logisticsId,jdbcType=INTEGER},
+      </if>
+      <if test="payChannel != null" >
+        #{payChannel,jdbcType=VARCHAR},
+      </if>
+      <if test="escrowTradeNo != null" >
+        #{escrowTradeNo,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null" >
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="paymentDate != null" >
+        #{paymentDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="shipDate != null" >
+        #{shipDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="orderSettlementStatus != null" >
+        #{orderSettlementStatus,jdbcType=TINYINT},
+      </if>
+      <if test="orderSettlementTime != null" >
+        #{orderSettlementTime,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="userRemark != null" >
+        #{userRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyDate != null" >
+        #{modifyDate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tmall.order.domain.entity.Order" >
+    update TM_ORDER
+    <set >
+      <if test="shopId != null" >
+        shop_id = #{shopId,jdbcType=INTEGER},
+      </if>
+      <if test="orderStatus != null" >
+        order_status = #{orderStatus,jdbcType=TINYINT},
+      </if>
+      <if test="productPrice != null" >
+        product_price = #{productPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="orderPrice != null" >
+        order_price = #{orderPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="logisticsFee != null" >
+        logistics_fee = #{logisticsFee,jdbcType=DECIMAL},
+      </if>
+      <if test="isUnpackingInspection != null" >
+        is_unpacking_inspection = #{isUnpackingInspection,jdbcType=BIT},
+      </if>
+      <if test="invoiceId != null" >
+        invoice_id = #{invoiceId,jdbcType=INTEGER},
+      </if>
+      <if test="addressId != null" >
+        address_id = #{addressId,jdbcType=INTEGER},
+      </if>
+      <if test="logisticsId != null" >
+        logistics_id = #{logisticsId,jdbcType=INTEGER},
+      </if>
+      <if test="payChannel != null" >
+        pay_channel = #{payChannel,jdbcType=VARCHAR},
+      </if>
+      <if test="escrowTradeNo != null" >
+        escrow_trade_no = #{escrowTradeNo,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null" >
+        create_date = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="paymentDate != null" >
+        payment_date = #{paymentDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="shipDate != null" >
+        ship_date = #{shipDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="orderSettlementStatus != null" >
+        order_settlement_status = #{orderSettlementStatus,jdbcType=TINYINT},
+      </if>
+      <if test="orderSettlementTime != null" >
+        order_settlement_time = #{orderSettlementTime,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="userRemark != null" >
+        user_remark = #{userRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyDate != null" >
+        modify_date = #{modifyDate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where order_id = #{orderId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tmall.order.domain.entity.Order" >
+    update TM_ORDER
+    set shop_id = #{shopId,jdbcType=INTEGER},
+      order_status = #{orderStatus,jdbcType=TINYINT},
+      product_price = #{productPrice,jdbcType=DECIMAL},
+      order_price = #{orderPrice,jdbcType=DECIMAL},
+      logistics_fee = #{logisticsFee,jdbcType=DECIMAL},
+      is_unpacking_inspection = #{isUnpackingInspection,jdbcType=BIT},
+      invoice_id = #{invoiceId,jdbcType=INTEGER},
+      address_id = #{addressId,jdbcType=INTEGER},
+      logistics_id = #{logisticsId,jdbcType=INTEGER},
+      pay_channel = #{payChannel,jdbcType=VARCHAR},
+      escrow_trade_no = #{escrowTradeNo,jdbcType=VARCHAR},
+      create_date = #{createDate,jdbcType=TIMESTAMP},
+      payment_date = #{paymentDate,jdbcType=TIMESTAMP},
+      ship_date = #{shipDate,jdbcType=TIMESTAMP},
+      order_settlement_status = #{orderSettlementStatus,jdbcType=TINYINT},
+      order_settlement_time = #{orderSettlementTime,jdbcType=INTEGER},
+      user_id = #{userId,jdbcType=INTEGER},
+      user_remark = #{userRemark,jdbcType=VARCHAR},
+      modify_date = #{modifyDate,jdbcType=TIMESTAMP}
+    where order_id = #{orderId,jdbcType=BIGINT}
+  </update>
+</mapper>

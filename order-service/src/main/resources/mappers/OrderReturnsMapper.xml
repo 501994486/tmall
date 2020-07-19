@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tmall.order.infrastructure.dao.OrderReturnsMapper" >
+  <resultMap id="BaseResultMap" type="com.tmall.order.domain.entity.OrderReturns" >
+    <id column="order_returns_id" property="orderReturnsId" jdbcType="INTEGER" />
+    <result column="order_id" property="orderId" jdbcType="BIGINT" />
+    <result column="express_no" property="expressNo" jdbcType="VARCHAR" />
+    <result column="consignee_realname" property="consigneeRealname" jdbcType="VARCHAR" />
+    <result column="consignee_telephone" property="consigneeTelephone" jdbcType="VARCHAR" />
+    <result column="consignee_address" property="consigneeAddress" jdbcType="VARCHAR" />
+    <result column="consignee_zip" property="consigneeZip" jdbcType="CHAR" />
+    <result column="logistics_type" property="logisticsType" jdbcType="VARCHAR" />
+    <result column="logistics_id" property="logisticsId" jdbcType="INTEGER" />
+    <result column="logistics_fee" property="logisticsFee" jdbcType="DECIMAL" />
+    <result column="orderlogistics_status" property="orderlogisticsStatus" jdbcType="TINYINT" />
+    <result column="logistics_desc_last" property="logisticsDescLast" jdbcType="VARCHAR" />
+    <result column="logistics_desc" property="logisticsDesc" jdbcType="VARCHAR" />
+    <result column="logistics_create_time" property="logisticsCreateTime" jdbcType="TIMESTAMP" />
+    <result column="logistics_update_time" property="logisticsUpdateTime" jdbcType="TIMESTAMP" />
+    <result column="returns_type" property="returnsType" jdbcType="TINYINT" />
+    <result column="handling_way" property="handlingWay" jdbcType="TINYINT" />
+    <result column="returns_price" property="returnsPrice" jdbcType="DECIMAL" />
+    <result column="return_submit_time" property="returnSubmitTime" jdbcType="TIMESTAMP" />
+    <result column="handling_time" property="handlingTime" jdbcType="TIMESTAMP" />
+    <result column="return_reason" property="returnReason" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    order_returns_id, order_id, express_no, consignee_realname, consignee_telephone, 
+    consignee_address, consignee_zip, logistics_type, logistics_id, logistics_fee, orderlogistics_status, 
+    logistics_desc_last, logistics_desc, logistics_create_time, logistics_update_time, 
+    returns_type, handling_way, returns_price, return_submit_time, handling_time, return_reason
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from TM_ORDER_RETURNS
+    where order_returns_id = #{orderReturnsId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from TM_ORDER_RETURNS
+    where order_returns_id = #{orderReturnsId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.tmall.order.domain.entity.OrderReturns" >
+    insert into TM_ORDER_RETURNS (order_returns_id, order_id, express_no, 
+      consignee_realname, consignee_telephone, 
+      consignee_address, consignee_zip, logistics_type, 
+      logistics_id, logistics_fee, orderlogistics_status, 
+      logistics_desc_last, logistics_desc, logistics_create_time, 
+      logistics_update_time, returns_type, handling_way, 
+      returns_price, return_submit_time, handling_time, 
+      return_reason)
+    values (#{orderReturnsId,jdbcType=INTEGER}, #{orderId,jdbcType=BIGINT}, #{expressNo,jdbcType=VARCHAR}, 
+      #{consigneeRealname,jdbcType=VARCHAR}, #{consigneeTelephone,jdbcType=VARCHAR}, 
+      #{consigneeAddress,jdbcType=VARCHAR}, #{consigneeZip,jdbcType=CHAR}, #{logisticsType,jdbcType=VARCHAR}, 
+      #{logisticsId,jdbcType=INTEGER}, #{logisticsFee,jdbcType=DECIMAL}, #{orderlogisticsStatus,jdbcType=TINYINT}, 
+      #{logisticsDescLast,jdbcType=VARCHAR}, #{logisticsDesc,jdbcType=VARCHAR}, #{logisticsCreateTime,jdbcType=TIMESTAMP}, 
+      #{logisticsUpdateTime,jdbcType=TIMESTAMP}, #{returnsType,jdbcType=TINYINT}, #{handlingWay,jdbcType=TINYINT}, 
+      #{returnsPrice,jdbcType=DECIMAL}, #{returnSubmitTime,jdbcType=TIMESTAMP}, #{handlingTime,jdbcType=TIMESTAMP}, 
+      #{returnReason,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.tmall.order.domain.entity.OrderReturns" >
+    insert into TM_ORDER_RETURNS
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="orderReturnsId != null" >
+        order_returns_id,
+      </if>
+      <if test="orderId != null" >
+        order_id,
+      </if>
+      <if test="expressNo != null" >
+        express_no,
+      </if>
+      <if test="consigneeRealname != null" >
+        consignee_realname,
+      </if>
+      <if test="consigneeTelephone != null" >
+        consignee_telephone,
+      </if>
+      <if test="consigneeAddress != null" >
+        consignee_address,
+      </if>
+      <if test="consigneeZip != null" >
+        consignee_zip,
+      </if>
+      <if test="logisticsType != null" >
+        logistics_type,
+      </if>
+      <if test="logisticsId != null" >
+        logistics_id,
+      </if>
+      <if test="logisticsFee != null" >
+        logistics_fee,
+      </if>
+      <if test="orderlogisticsStatus != null" >
+        orderlogistics_status,
+      </if>
+      <if test="logisticsDescLast != null" >
+        logistics_desc_last,
+      </if>
+      <if test="logisticsDesc != null" >
+        logistics_desc,
+      </if>
+      <if test="logisticsCreateTime != null" >
+        logistics_create_time,
+      </if>
+      <if test="logisticsUpdateTime != null" >
+        logistics_update_time,
+      </if>
+      <if test="returnsType != null" >
+        returns_type,
+      </if>
+      <if test="handlingWay != null" >
+        handling_way,
+      </if>
+      <if test="returnsPrice != null" >
+        returns_price,
+      </if>
+      <if test="returnSubmitTime != null" >
+        return_submit_time,
+      </if>
+      <if test="handlingTime != null" >
+        handling_time,
+      </if>
+      <if test="returnReason != null" >
+        return_reason,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="orderReturnsId != null" >
+        #{orderReturnsId,jdbcType=INTEGER},
+      </if>
+      <if test="orderId != null" >
+        #{orderId,jdbcType=BIGINT},
+      </if>
+      <if test="expressNo != null" >
+        #{expressNo,jdbcType=VARCHAR},
+      </if>
+      <if test="consigneeRealname != null" >
+        #{consigneeRealname,jdbcType=VARCHAR},
+      </if>
+      <if test="consigneeTelephone != null" >
+        #{consigneeTelephone,jdbcType=VARCHAR},
+      </if>
+      <if test="consigneeAddress != null" >
+        #{consigneeAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="consigneeZip != null" >
+        #{consigneeZip,jdbcType=CHAR},
+      </if>
+      <if test="logisticsType != null" >
+        #{logisticsType,jdbcType=VARCHAR},
+      </if>
+      <if test="logisticsId != null" >
+        #{logisticsId,jdbcType=INTEGER},
+      </if>
+      <if test="logisticsFee != null" >
+        #{logisticsFee,jdbcType=DECIMAL},
+      </if>
+      <if test="orderlogisticsStatus != null" >
+        #{orderlogisticsStatus,jdbcType=TINYINT},
+      </if>
+      <if test="logisticsDescLast != null" >
+        #{logisticsDescLast,jdbcType=VARCHAR},
+      </if>
+      <if test="logisticsDesc != null" >
+        #{logisticsDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="logisticsCreateTime != null" >
+        #{logisticsCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="logisticsUpdateTime != null" >
+        #{logisticsUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="returnsType != null" >
+        #{returnsType,jdbcType=TINYINT},
+      </if>
+      <if test="handlingWay != null" >
+        #{handlingWay,jdbcType=TINYINT},
+      </if>
+      <if test="returnsPrice != null" >
+        #{returnsPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="returnSubmitTime != null" >
+        #{returnSubmitTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="handlingTime != null" >
+        #{handlingTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="returnReason != null" >
+        #{returnReason,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tmall.order.domain.entity.OrderReturns" >
+    update TM_ORDER_RETURNS
+    <set >
+      <if test="orderId != null" >
+        order_id = #{orderId,jdbcType=BIGINT},
+      </if>
+      <if test="expressNo != null" >
+        express_no = #{expressNo,jdbcType=VARCHAR},
+      </if>
+      <if test="consigneeRealname != null" >
+        consignee_realname = #{consigneeRealname,jdbcType=VARCHAR},
+      </if>
+      <if test="consigneeTelephone != null" >
+        consignee_telephone = #{consigneeTelephone,jdbcType=VARCHAR},
+      </if>
+      <if test="consigneeAddress != null" >
+        consignee_address = #{consigneeAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="consigneeZip != null" >
+        consignee_zip = #{consigneeZip,jdbcType=CHAR},
+      </if>
+      <if test="logisticsType != null" >
+        logistics_type = #{logisticsType,jdbcType=VARCHAR},
+      </if>
+      <if test="logisticsId != null" >
+        logistics_id = #{logisticsId,jdbcType=INTEGER},
+      </if>
+      <if test="logisticsFee != null" >
+        logistics_fee = #{logisticsFee,jdbcType=DECIMAL},
+      </if>
+      <if test="orderlogisticsStatus != null" >
+        orderlogistics_status = #{orderlogisticsStatus,jdbcType=TINYINT},
+      </if>
+      <if test="logisticsDescLast != null" >
+        logistics_desc_last = #{logisticsDescLast,jdbcType=VARCHAR},
+      </if>
+      <if test="logisticsDesc != null" >
+        logistics_desc = #{logisticsDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="logisticsCreateTime != null" >
+        logistics_create_time = #{logisticsCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="logisticsUpdateTime != null" >
+        logistics_update_time = #{logisticsUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="returnsType != null" >
+        returns_type = #{returnsType,jdbcType=TINYINT},
+      </if>
+      <if test="handlingWay != null" >
+        handling_way = #{handlingWay,jdbcType=TINYINT},
+      </if>
+      <if test="returnsPrice != null" >
+        returns_price = #{returnsPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="returnSubmitTime != null" >
+        return_submit_time = #{returnSubmitTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="handlingTime != null" >
+        handling_time = #{handlingTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="returnReason != null" >
+        return_reason = #{returnReason,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where order_returns_id = #{orderReturnsId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tmall.order.domain.entity.OrderReturns" >
+    update TM_ORDER_RETURNS
+    set order_id = #{orderId,jdbcType=BIGINT},
+      express_no = #{expressNo,jdbcType=VARCHAR},
+      consignee_realname = #{consigneeRealname,jdbcType=VARCHAR},
+      consignee_telephone = #{consigneeTelephone,jdbcType=VARCHAR},
+      consignee_address = #{consigneeAddress,jdbcType=VARCHAR},
+      consignee_zip = #{consigneeZip,jdbcType=CHAR},
+      logistics_type = #{logisticsType,jdbcType=VARCHAR},
+      logistics_id = #{logisticsId,jdbcType=INTEGER},
+      logistics_fee = #{logisticsFee,jdbcType=DECIMAL},
+      orderlogistics_status = #{orderlogisticsStatus,jdbcType=TINYINT},
+      logistics_desc_last = #{logisticsDescLast,jdbcType=VARCHAR},
+      logistics_desc = #{logisticsDesc,jdbcType=VARCHAR},
+      logistics_create_time = #{logisticsCreateTime,jdbcType=TIMESTAMP},
+      logistics_update_time = #{logisticsUpdateTime,jdbcType=TIMESTAMP},
+      returns_type = #{returnsType,jdbcType=TINYINT},
+      handling_way = #{handlingWay,jdbcType=TINYINT},
+      returns_price = #{returnsPrice,jdbcType=DECIMAL},
+      return_submit_time = #{returnSubmitTime,jdbcType=TIMESTAMP},
+      handling_time = #{handlingTime,jdbcType=TIMESTAMP},
+      return_reason = #{returnReason,jdbcType=VARCHAR}
+    where order_returns_id = #{orderReturnsId,jdbcType=INTEGER}
+  </update>
+</mapper>

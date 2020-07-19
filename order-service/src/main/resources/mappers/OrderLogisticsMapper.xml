@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tmall.order.infrastructure.dao.OrderLogisticsMapper" >
+  <resultMap id="BaseResultMap" type="com.tmall.order.domain.entity.OrderLogistics" >
+    <id column="orderlogistics_id" property="orderlogisticsId" jdbcType="INTEGER" />
+    <result column="order_id" property="orderId" jdbcType="BIGINT" />
+    <result column="express_no" property="expressNo" jdbcType="VARCHAR" />
+    <result column="consignee_realname" property="consigneeRealname" jdbcType="VARCHAR" />
+    <result column="consignee_telphone" property="consigneeTelphone" jdbcType="VARCHAR" />
+    <result column="consignee_address" property="consigneeAddress" jdbcType="VARCHAR" />
+    <result column="consignee_zip" property="consigneeZip" jdbcType="CHAR" />
+    <result column="logistics_type" property="logisticsType" jdbcType="VARCHAR" />
+    <result column="logistics_id" property="logisticsId" jdbcType="INTEGER" />
+    <result column="logistics_fee" property="logisticsFee" jdbcType="INTEGER" />
+    <result column="agency_fee" property="agencyFee" jdbcType="DECIMAL" />
+    <result column="delivery_amount" property="deliveryAmount" jdbcType="DECIMAL" />
+    <result column="orderlogistics_status" property="orderlogisticsStatus" jdbcType="TINYINT" />
+    <result column="logistics_settlement_status" property="logisticsSettlementStatus" jdbcType="TINYINT" />
+    <result column="logistics_result_last" property="logisticsResultLast" jdbcType="VARCHAR" />
+    <result column="logistics_desc" property="logisticsDesc" jdbcType="VARCHAR" />
+    <result column="logistics_create_time" property="logisticsCreateTime" jdbcType="TIMESTAMP" />
+    <result column="logistics_update_time" property="logisticsUpdateTime" jdbcType="TIMESTAMP" />
+    <result column="logistics_settlement_time" property="logisticsSettlementTime" jdbcType="TIMESTAMP" />
+    <result column="pay_channel" property="payChannel" jdbcType="VARCHAR" />
+    <result column="payment_order no" property="paymentOrderNo" jdbcType="VARCHAR" />
+    <result column="reconciliation_status" property="reconciliationStatus" jdbcType="TINYINT" />
+    <result column="reconciliation_time" property="reconciliationTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    orderlogistics_id, order_id, express_no, consignee_realname, consignee_telphone, 
+    consignee_address, consignee_zip, logistics_type, logistics_id, logistics_fee, agency_fee, 
+    delivery_amount, orderlogistics_status, logistics_settlement_status, logistics_result_last, 
+    logistics_desc, logistics_create_time, logistics_update_time, logistics_settlement_time, 
+    pay_channel, "payment_order no", reconciliation_status, reconciliation_time
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from TM_ORDER_LOGISTICS
+    where orderlogistics_id = #{orderlogisticsId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from TM_ORDER_LOGISTICS
+    where orderlogistics_id = #{orderlogisticsId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.tmall.order.domain.entity.OrderLogistics" >
+    insert into TM_ORDER_LOGISTICS (orderlogistics_id, order_id, express_no, 
+      consignee_realname, consignee_telphone, consignee_address, 
+      consignee_zip, logistics_type, logistics_id, 
+      logistics_fee, agency_fee, delivery_amount, 
+      orderlogistics_status, logistics_settlement_status, 
+      logistics_result_last, logistics_desc, logistics_create_time, 
+      logistics_update_time, logistics_settlement_time, 
+      pay_channel, "payment_order no", reconciliation_status, 
+      reconciliation_time)
+    values (#{orderlogisticsId,jdbcType=INTEGER}, #{orderId,jdbcType=BIGINT}, #{expressNo,jdbcType=VARCHAR}, 
+      #{consigneeRealname,jdbcType=VARCHAR}, #{consigneeTelphone,jdbcType=VARCHAR}, #{consigneeAddress,jdbcType=VARCHAR}, 
+      #{consigneeZip,jdbcType=CHAR}, #{logisticsType,jdbcType=VARCHAR}, #{logisticsId,jdbcType=INTEGER}, 
+      #{logisticsFee,jdbcType=INTEGER}, #{agencyFee,jdbcType=DECIMAL}, #{deliveryAmount,jdbcType=DECIMAL}, 
+      #{orderlogisticsStatus,jdbcType=TINYINT}, #{logisticsSettlementStatus,jdbcType=TINYINT}, 
+      #{logisticsResultLast,jdbcType=VARCHAR}, #{logisticsDesc,jdbcType=VARCHAR}, #{logisticsCreateTime,jdbcType=TIMESTAMP}, 
+      #{logisticsUpdateTime,jdbcType=TIMESTAMP}, #{logisticsSettlementTime,jdbcType=TIMESTAMP}, 
+      #{payChannel,jdbcType=VARCHAR}, #{paymentOrderNo,jdbcType=VARCHAR}, #{reconciliationStatus,jdbcType=TINYINT}, 
+      #{reconciliationTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.tmall.order.domain.entity.OrderLogistics" >
+    insert into TM_ORDER_LOGISTICS
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="orderlogisticsId != null" >
+        orderlogistics_id,
+      </if>
+      <if test="orderId != null" >
+        order_id,
+      </if>
+      <if test="expressNo != null" >
+        express_no,
+      </if>
+      <if test="consigneeRealname != null" >
+        consignee_realname,
+      </if>
+      <if test="consigneeTelphone != null" >
+        consignee_telphone,
+      </if>
+      <if test="consigneeAddress != null" >
+        consignee_address,
+      </if>
+      <if test="consigneeZip != null" >
+        consignee_zip,
+      </if>
+      <if test="logisticsType != null" >
+        logistics_type,
+      </if>
+      <if test="logisticsId != null" >
+        logistics_id,
+      </if>
+      <if test="logisticsFee != null" >
+        logistics_fee,
+      </if>
+      <if test="agencyFee != null" >
+        agency_fee,
+      </if>
+      <if test="deliveryAmount != null" >
+        delivery_amount,
+      </if>
+      <if test="orderlogisticsStatus != null" >
+        orderlogistics_status,
+      </if>
+      <if test="logisticsSettlementStatus != null" >
+        logistics_settlement_status,
+      </if>
+      <if test="logisticsResultLast != null" >
+        logistics_result_last,
+      </if>
+      <if test="logisticsDesc != null" >
+        logistics_desc,
+      </if>
+      <if test="logisticsCreateTime != null" >
+        logistics_create_time,
+      </if>
+      <if test="logisticsUpdateTime != null" >
+        logistics_update_time,
+      </if>
+      <if test="logisticsSettlementTime != null" >
+        logistics_settlement_time,
+      </if>
+      <if test="payChannel != null" >
+        pay_channel,
+      </if>
+      <if test="paymentOrderNo != null" >
+        "payment_order no",
+      </if>
+      <if test="reconciliationStatus != null" >
+        reconciliation_status,
+      </if>
+      <if test="reconciliationTime != null" >
+        reconciliation_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="orderlogisticsId != null" >
+        #{orderlogisticsId,jdbcType=INTEGER},
+      </if>
+      <if test="orderId != null" >
+        #{orderId,jdbcType=BIGINT},
+      </if>
+      <if test="expressNo != null" >
+        #{expressNo,jdbcType=VARCHAR},
+      </if>
+      <if test="consigneeRealname != null" >
+        #{consigneeRealname,jdbcType=VARCHAR},
+      </if>
+      <if test="consigneeTelphone != null" >
+        #{consigneeTelphone,jdbcType=VARCHAR},
+      </if>
+      <if test="consigneeAddress != null" >
+        #{consigneeAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="consigneeZip != null" >
+        #{consigneeZip,jdbcType=CHAR},
+      </if>
+      <if test="logisticsType != null" >
+        #{logisticsType,jdbcType=VARCHAR},
+      </if>
+      <if test="logisticsId != null" >
+        #{logisticsId,jdbcType=INTEGER},
+      </if>
+      <if test="logisticsFee != null" >
+        #{logisticsFee,jdbcType=INTEGER},
+      </if>
+      <if test="agencyFee != null" >
+        #{agencyFee,jdbcType=DECIMAL},
+      </if>
+      <if test="deliveryAmount != null" >
+        #{deliveryAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="orderlogisticsStatus != null" >
+        #{orderlogisticsStatus,jdbcType=TINYINT},
+      </if>
+      <if test="logisticsSettlementStatus != null" >
+        #{logisticsSettlementStatus,jdbcType=TINYINT},
+      </if>
+      <if test="logisticsResultLast != null" >
+        #{logisticsResultLast,jdbcType=VARCHAR},
+      </if>
+      <if test="logisticsDesc != null" >
+        #{logisticsDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="logisticsCreateTime != null" >
+        #{logisticsCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="logisticsUpdateTime != null" >
+        #{logisticsUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="logisticsSettlementTime != null" >
+        #{logisticsSettlementTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="payChannel != null" >
+        #{payChannel,jdbcType=VARCHAR},
+      </if>
+      <if test="paymentOrderNo != null" >
+        #{paymentOrderNo,jdbcType=VARCHAR},
+      </if>
+      <if test="reconciliationStatus != null" >
+        #{reconciliationStatus,jdbcType=TINYINT},
+      </if>
+      <if test="reconciliationTime != null" >
+        #{reconciliationTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tmall.order.domain.entity.OrderLogistics" >
+    update TM_ORDER_LOGISTICS
+    <set >
+      <if test="orderId != null" >
+        order_id = #{orderId,jdbcType=BIGINT},
+      </if>
+      <if test="expressNo != null" >
+        express_no = #{expressNo,jdbcType=VARCHAR},
+      </if>
+      <if test="consigneeRealname != null" >
+        consignee_realname = #{consigneeRealname,jdbcType=VARCHAR},
+      </if>
+      <if test="consigneeTelphone != null" >
+        consignee_telphone = #{consigneeTelphone,jdbcType=VARCHAR},
+      </if>
+      <if test="consigneeAddress != null" >
+        consignee_address = #{consigneeAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="consigneeZip != null" >
+        consignee_zip = #{consigneeZip,jdbcType=CHAR},
+      </if>
+      <if test="logisticsType != null" >
+        logistics_type = #{logisticsType,jdbcType=VARCHAR},
+      </if>
+      <if test="logisticsId != null" >
+        logistics_id = #{logisticsId,jdbcType=INTEGER},
+      </if>
+      <if test="logisticsFee != null" >
+        logistics_fee = #{logisticsFee,jdbcType=INTEGER},
+      </if>
+      <if test="agencyFee != null" >
+        agency_fee = #{agencyFee,jdbcType=DECIMAL},
+      </if>
+      <if test="deliveryAmount != null" >
+        delivery_amount = #{deliveryAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="orderlogisticsStatus != null" >
+        orderlogistics_status = #{orderlogisticsStatus,jdbcType=TINYINT},
+      </if>
+      <if test="logisticsSettlementStatus != null" >
+        logistics_settlement_status = #{logisticsSettlementStatus,jdbcType=TINYINT},
+      </if>
+      <if test="logisticsResultLast != null" >
+        logistics_result_last = #{logisticsResultLast,jdbcType=VARCHAR},
+      </if>
+      <if test="logisticsDesc != null" >
+        logistics_desc = #{logisticsDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="logisticsCreateTime != null" >
+        logistics_create_time = #{logisticsCreateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="logisticsUpdateTime != null" >
+        logistics_update_time = #{logisticsUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="logisticsSettlementTime != null" >
+        logistics_settlement_time = #{logisticsSettlementTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="payChannel != null" >
+        pay_channel = #{payChannel,jdbcType=VARCHAR},
+      </if>
+      <if test="paymentOrderNo != null" >
+        "payment_order no" = #{paymentOrderNo,jdbcType=VARCHAR},
+      </if>
+      <if test="reconciliationStatus != null" >
+        reconciliation_status = #{reconciliationStatus,jdbcType=TINYINT},
+      </if>
+      <if test="reconciliationTime != null" >
+        reconciliation_time = #{reconciliationTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where orderlogistics_id = #{orderlogisticsId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tmall.order.domain.entity.OrderLogistics" >
+    update TM_ORDER_LOGISTICS
+    set order_id = #{orderId,jdbcType=BIGINT},
+      express_no = #{expressNo,jdbcType=VARCHAR},
+      consignee_realname = #{consigneeRealname,jdbcType=VARCHAR},
+      consignee_telphone = #{consigneeTelphone,jdbcType=VARCHAR},
+      consignee_address = #{consigneeAddress,jdbcType=VARCHAR},
+      consignee_zip = #{consigneeZip,jdbcType=CHAR},
+      logistics_type = #{logisticsType,jdbcType=VARCHAR},
+      logistics_id = #{logisticsId,jdbcType=INTEGER},
+      logistics_fee = #{logisticsFee,jdbcType=INTEGER},
+      agency_fee = #{agencyFee,jdbcType=DECIMAL},
+      delivery_amount = #{deliveryAmount,jdbcType=DECIMAL},
+      orderlogistics_status = #{orderlogisticsStatus,jdbcType=TINYINT},
+      logistics_settlement_status = #{logisticsSettlementStatus,jdbcType=TINYINT},
+      logistics_result_last = #{logisticsResultLast,jdbcType=VARCHAR},
+      logistics_desc = #{logisticsDesc,jdbcType=VARCHAR},
+      logistics_create_time = #{logisticsCreateTime,jdbcType=TIMESTAMP},
+      logistics_update_time = #{logisticsUpdateTime,jdbcType=TIMESTAMP},
+      logistics_settlement_time = #{logisticsSettlementTime,jdbcType=TIMESTAMP},
+      pay_channel = #{payChannel,jdbcType=VARCHAR},
+      "payment_order no" = #{paymentOrderNo,jdbcType=VARCHAR},
+      reconciliation_status = #{reconciliationStatus,jdbcType=TINYINT},
+      reconciliation_time = #{reconciliationTime,jdbcType=TIMESTAMP}
+    where orderlogistics_id = #{orderlogisticsId,jdbcType=INTEGER}
+  </update>
+</mapper>
