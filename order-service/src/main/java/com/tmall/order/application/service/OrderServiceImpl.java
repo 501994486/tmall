@@ -68,7 +68,7 @@ public class OrderServiceImpl implements OrderService {
             return;
         }
 
-        // 令缓存中库存
+        // 令缓存中库存失效
         String key = RedisKeyUtil.getKeyWithColumn("spu","spuId",String.valueOf(spuId),"stock");
         redisService.deleteKey(key);
 
