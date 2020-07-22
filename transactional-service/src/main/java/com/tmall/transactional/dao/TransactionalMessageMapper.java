@@ -5,7 +5,7 @@ import com.tmall.transactional.po.TransactionalMessage;
 import java.time.LocalDateTime;
 import java.util.List;
 
-public interface TransactionalMessageDao {
+public interface TransactionalMessageMapper {
 
 	void insertSelective(TransactionalMessage record);
 

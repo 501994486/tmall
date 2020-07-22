@@ -4,7 +4,7 @@ import com.tmall.transactional.po.TransactionalMessageContent;
 
 import java.util.List;
 
-public interface TransactionalMessageContentDao {
+public interface TransactionalMessageContentMapper {
 
 	void insert(TransactionalMessageContent record);
 

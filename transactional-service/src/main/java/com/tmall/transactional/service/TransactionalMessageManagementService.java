@@ -1,7 +1,7 @@
 package com.tmall.transactional.service;
 
-import com.tmall.transactional.dao.TransactionalMessageContentDao;
-import com.tmall.transactional.dao.TransactionalMessageDao;
+import com.tmall.transactional.dao.TransactionalMessageContentMapper;
+import com.tmall.transactional.dao.TransactionalMessageMapper;
 import com.tmall.transactional.po.TransactionalMessage;
 import com.tmall.transactional.po.TransactionalMessageContent;
 import com.tmall.transactional.support.TxMessageStatus;
@@ -20,8 +20,8 @@ import java.util.stream.Collectors;
 @Service
 public class TransactionalMessageManagementService {
 
-	private final TransactionalMessageDao messageDao;
-	private final TransactionalMessageContentDao contentDao;
+	private final TransactionalMessageMapper messageDao;
+	private final TransactionalMessageContentMapper contentDao;
 	private final RabbitTemplate rabbitTemplate;
 
 	private static final LocalDateTime END = LocalDateTime.of(2999, 1, 1, 0, 0, 0);
