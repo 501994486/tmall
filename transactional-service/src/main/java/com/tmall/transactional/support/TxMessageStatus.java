@@ -1,4 +1,4 @@
-package com.tmall.order.infrastructure.transactional.support;
+package com.tmall.transactional.support;
 
 import lombok.RequiredArgsConstructor;
 

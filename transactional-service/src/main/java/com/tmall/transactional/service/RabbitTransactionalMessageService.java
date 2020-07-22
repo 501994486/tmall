@@ -1,4 +1,4 @@
-package com.tmall.order.infrastructure.transactional.service;
+package com.tmall.transactional.service;
 
 import com.tmall.order.infrastructure.transactional.po.TransactionalMessage;
 import com.tmall.order.infrastructure.transactional.support.Destination;
@@ -6,7 +6,6 @@ import com.tmall.order.infrastructure.transactional.support.ExchangeType;
 import com.tmall.order.infrastructure.transactional.support.TxMessage;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.amqp.core.*;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.support.TransactionSynchronizationAdapter;
 import org.springframework.transaction.support.TransactionSynchronizationManager;

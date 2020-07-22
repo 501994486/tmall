@@ -1,6 +1,6 @@
-package com.tmall.order.infrastructure.config;
+package com.tmall.transactional.config;
 
-import com.tmall.order.infrastructure.transactional.service.TransactionalMessageManagementService;
+import com.tmall.transactional.service.TransactionalMessageManagementService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.redisson.Redisson;

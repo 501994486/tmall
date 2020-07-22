@@ -1,10 +1,10 @@
-package com.tmall.order.infrastructure.transactional.service;
+package com.tmall.transactional.service;
 
-import com.tmall.order.infrastructure.transactional.dao.TransactionalMessageContentDao;
-import com.tmall.order.infrastructure.transactional.dao.TransactionalMessageDao;
-import com.tmall.order.infrastructure.transactional.po.TransactionalMessage;
-import com.tmall.order.infrastructure.transactional.po.TransactionalMessageContent;
-import com.tmall.order.infrastructure.transactional.support.TxMessageStatus;
+import com.tmall.transactional.dao.TransactionalMessageContentDao;
+import com.tmall.transactional.dao.TransactionalMessageDao;
+import com.tmall.transactional.po.TransactionalMessage;
+import com.tmall.transactional.po.TransactionalMessageContent;
+import com.tmall.transactional.support.TxMessageStatus;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;

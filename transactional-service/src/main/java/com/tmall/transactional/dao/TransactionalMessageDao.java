@@ -1,7 +1,6 @@
-package com.tmall.order.infrastructure.transactional.dao;
+package com.tmall.transactional.dao;
 
-import com.tmall.order.infrastructure.transactional.po.TransactionalMessage;
-
+import com.tmall.transactional.po.TransactionalMessage;
 
 import java.time.LocalDateTime;
 import java.util.List;

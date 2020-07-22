@@ -1,6 +1,6 @@
-package com.tmall.order.infrastructure.transactional.dao;
+package com.tmall.transactional.dao;
 
-import com.tmall.order.infrastructure.transactional.po.TransactionalMessageContent;
+import com.tmall.transactional.po.TransactionalMessageContent;
 
 import java.util.List;
 

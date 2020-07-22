@@ -1,4 +1,4 @@
-package com.tmall.order.infrastructure.transactional.po;
+package com.tmall.transactional.po;
 
 import lombok.Data;
 
