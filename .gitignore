@@ -1,13 +1,37 @@
-/.settings/
-/target/
-
-# built application files
-*.apk
-*.ap_
-
-# files for the dex VM
-*.dex
-
-# Java class files
+#ignore the following file
+ 
+#byte code file
 *.class
-*.jar
+ 
+#package file
+#注意，此处没有忽略jar包，因为我们可能会用到第三方jar包，例如支付宝，微信支付
+#需要提交到git仓库中才能保证代码被其他人下载后正常执行。
+#另外，由于maven的jar包存在于本地库中，因此不会被上传到git远程服务器中。
+*.war
+*.ear
+ 
+#maven ignore
+target/
+ 
+#eclipse ignore
+.settings/
+.project
+.classpath
+ 
+#idea ignore
+.idea/
+/idea/
+*.ipr
+*.iml
+*.iws
+ 
+#temp file
+*.log
+*.cache
+*.diff
+*.patch
+*.tmp
+ 
+#system ignore
+.DS_Store
+Thumbs.db
