@@ -1,5 +1,6 @@
 package com.tmall.order.ui;
 
+import com.alipay.api.AlipayApiException;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tmall.common.AppConstants;
@@ -7,7 +8,9 @@ import com.tmall.common.CommonLogic;
 import com.tmall.common.dto.GoodsStock;
 import com.tmall.order.application.service.OrderService;
 import com.tmall.order.application.service.GoodsStockService;
+import com.tmall.order.application.service.PayService;
 import com.tmall.order.domain.entity.Order;
+import com.tmall.order.infrastructure.alipay.AlipayBean;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +19,7 @@ import javax.servlet.http.HttpSession;
 
 
 @RestController
-public class SeckillController {
+public class OrderController {
 
 	@Autowired
 	private OrderService orderService;
@@ -32,6 +35,9 @@ public class SeckillController {
 
 	@Autowired
 	private ObjectMapper jacksonObjectMapper;
+
+	@Autowired
+	private PayService payService;
 
 	/**
 	 * 下单方式接口1：乐观锁更新库存
@@ -134,4 +140,22 @@ public class SeckillController {
 		return AppConstants.ERROR_RESULT;
 	}
 
+	/**
+	 * 阿里支付
+	 * @param outTradeNo
+	 * @param subject
+	 * @param totalAmount
+	 * @param body
+	 * @return
+	 * @throws AlipayApiException
+	 */
+	@PostMapping(value = "/order/alipay")
+	public String alipay(String outTradeNo, String subject, String totalAmount, String body) throws AlipayApiException {
+		AlipayBean alipayBean = new AlipayBean();
+		alipayBean.setOut_trade_no(outTradeNo);
+		alipayBean.setSubject(subject);
+		alipayBean.setTotal_amount(totalAmount);
+		alipayBean.setBody(body);
+		return payService.aliPay(alipayBean);
+	}
 }
